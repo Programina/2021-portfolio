@@ -22,6 +22,21 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/habit-app',
+    name: 'HabitApp',
+    component: Contact
+  },
+  {
+    path: '/fitness-app',
+    name: 'FitnessApp',
+    component: Contact
+  },
+  {
+    path: '/gamification-app',
+    name: 'GamificationApp',
+    component: Contact
   }
 ]
 

@@ -1,15 +1,7 @@
 <template>
   <v-app>
-    <v-app-bar app color="background" light>
+    <v-app-bar app color="background" :class="{'d-flex' : isMobile}" data-qa="data" flat light>
       <div class="d-flex align-center">
-        <!-- <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="./assets/logo1.png"
-          transition="scale-transition"
-          width="160"
-        /> -->
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
@@ -18,33 +10,31 @@
           transition="scale-transition"
           width="40"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
       </div>
 
-      <v-spacer></v-spacer>
+      <!-- <v-spacer v-if="!isMobile"></v-spacer>
 
-      <div id="nav">
+      <div id="nav" v-if="!isMobile">
         <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
+        <router-link to="/about">About</router-link> |
+        <router-link to="/contact">Contact</router-link> 
       </div>
 
-      <v-spacer></v-spacer>
+      <v-spacer v-if="!isMobile"></v-spacer> -->
+
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+          v-if="isMobile" 
+          href="#"
+          target="_blank"
+          fab
+          small
+          depressed
+          color="background"
+          class="button-gradient"
+        > 
+        <v-icon >mdi-menu</v-icon>
       </v-btn>
+
     </v-app-bar>
 
     <v-main>
@@ -73,11 +63,43 @@ export default {
   data: () => ({
     //
   }),
+  
+  computed: {
+      isMobile () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return true
+          case 'sm': return true
+          case 'md': return false
+          case 'lg': return false
+          case 'xl': return false
+        }
+      },
+    },
 };
 </script>
 
-<style lang="scss" scoped>
-  a {
-    color: white !important;
-  } 
+<style lang="scss" >
+html,
+body {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heading1 {
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: 0px;
+}
+.heading2 {
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 0px;
+}
+
 </style>

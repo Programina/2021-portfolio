@@ -12,18 +12,10 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-         FIRST PROJECT
-        </h1>
-
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
+        <div class="heading1">
+         First Project
+        </div>
+        <div class="heading2 mb-3">Subheading</div>
       </v-col>
 
       <v-col
@@ -41,6 +33,7 @@
           >
             <v-card>
               <v-card-title>TITLE CARD</v-card-title>
+              <v-card-text>Text</v-card-text>
             </v-card>
           </a>
         </v-row>
@@ -50,21 +43,19 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
+       
+          <v-btn
+            href="#"
             target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
+            text
+            rounded
+            color="background"
+            class="button-gradient"
+          > 
+        <span class="mr-2">Get in touch</span>
+       
+      </v-btn>
+
       </v-col>
 
     </v-row>
@@ -76,24 +67,21 @@
     name: 'FirstProject',
 
     data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        }
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        }
-      ],
-      whatsNext: [
+      cards: [
         {
           text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
+          href: '/api-explorer',
         }
       ],
     }),
   }
 </script>
+
+<style lang="scss" scoped>
+
+  .button-gradient {
+    background: transparent linear-gradient(351deg, #0093E9 0%, #75CBCA 40%, #80D0C7 49%, #80D0C7 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+  }
+</style>
