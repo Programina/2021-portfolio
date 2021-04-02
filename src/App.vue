@@ -2,21 +2,23 @@
   <v-app>
     <v-app-bar app color="background" :class="{'mobile-spacing' : isMobile}" data-qa="DAATAAAA  " flat light>
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="./assets/logo1.png"
-          transition="scale-transition"
-          width="40"
-        />
+        <router-link to="/">
+           <v-img
+              alt="Vuetify Logo"
+              class="shrink mr-2"
+              contain
+              src="./assets/logo1.png"
+              transition="scale-transition"
+              width="40"
+            />
+        </router-link>
       </div>
 
       <v-spacer v-if="!isMobile"></v-spacer>
 
-      <div id="nav" v-if="!isMobile">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
+      <div id="nav" v-if="!isMobile" >
+        <router-link to="/">Home</router-link> 
+        <router-link to="/about">About</router-link> 
         <router-link to="/contact">Contact</router-link> 
       </div>
 
@@ -107,6 +109,14 @@ body {
       flex-direction: row !important;
       justify-content: space-between !important;
     }
+}
+
+#nav {
+  margin-left: -48px !important;
+
+  a {
+    padding: 0 15px;
+  }
 }
 
 </style>
