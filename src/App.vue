@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="background" :class="{'d-flex' : isMobile}" data-qa="data" flat light>
+    <v-app-bar app color="background" :class="{'mobile-spacing' : isMobile}" data-qa="DAATAAAA  " flat light>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -12,7 +12,7 @@
         />
       </div>
 
-      <!-- <v-spacer v-if="!isMobile"></v-spacer>
+      <v-spacer v-if="!isMobile"></v-spacer>
 
       <div id="nav" v-if="!isMobile">
         <router-link to="/">Home</router-link> |
@@ -20,7 +20,7 @@
         <router-link to="/contact">Contact</router-link> 
       </div>
 
-      <v-spacer v-if="!isMobile"></v-spacer> -->
+      <v-spacer v-if="!isMobile"></v-spacer>
 
       <v-btn
           v-if="isMobile" 
@@ -39,9 +39,6 @@
 
     <v-main>
       <router-view />
-      <!-- <Home/>
-      <About/>
-      <Contact/> -->
     </v-main>
   </v-app>
 </template>
@@ -100,6 +97,16 @@ body {
   font-weight: 400;
   font-size: 17px;
   letter-spacing: 0px;
+}
+
+.mobile-spacing {
+    display: flex !important;
+
+    .v-toolbar__content {
+      width: 100%;
+      flex-direction: row !important;
+      justify-content: space-between !important;
+    }
 }
 
 </style>
