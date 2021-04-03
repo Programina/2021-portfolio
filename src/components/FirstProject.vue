@@ -5,24 +5,25 @@
         <MobileHeader :copy="copy" />
       </v-col>
 
-      <v-col v-if="!isMobile" cols="6">
+      <!-- <v-col v-if="!isMobile" cols="6">
         <v-img
           :src="require('../assets/female-developer-vector.jpg')"
           class="mt-5"
           contain
           :height="height"
         />
-      </v-col>
+      </v-col> -->
       <v-col
         v-if="!isMobile"
         class="d-flex justify-center align-center"
-        cols="6"
+        cols="12"
       >
         <div>
-          <div class="heading1">
+          <div class="heading1" style="
+  color: #0093E9;">
             {{ copy.heading1 }}
           </div>
-          <div class="heading2 mb-3">{{ copy.heading2 }}</div>
+          <div class="heading1 mb-3">{{ copy.heading2 }}</div>
           <p>{{ copy.profile }}</p>
         </div>
       </v-col>
@@ -32,18 +33,33 @@
       </v-col>
 
       <v-col v-if="!isMobile" class="mb-5 px-8" cols="12" justify="center">
-        <v-row v-for="(card, i) in cards" :key="i"> 
-          <v-col cols="6">
-            <v-img
-              height="height"
-              :src="require('@/assets/' + card.imgSrc + '.jpg')"
-            ></v-img>
+        <v-row v-for="(card, i) in cards" :key="i" class="my-5"> 
+            <v-col cols="6" v-if="card.id && card.id % 2 === 0">
+              <v-img
+                width="100%"
+                class="mr-5"
+                :src="require('@/assets/' + card.imgSrc + '')"
+              ></v-img>
           </v-col>
-          <v-col cols="6">
-               <div class="heading2 mb-3"> {{card.title}}</div>
-               <p> {{card.description}}</p>
+          <v-col cols="6" v-if="card.id && card.id % 2 === 0" class="d-flex align-center justify-center">
+                 <div>
+                    <div class="heading2 mb-3"> {{card.title}}</div>
+                    <p> {{card.description}}</p>
+                </div>
           </v-col>
-       
+            <v-col cols="6" class="d-flex align-center justify-center" v-if="card.id && card.id % 2 != 0">
+                <div>
+                    <div class="heading2 mb-3"> {{card.title}}</div>
+                    <p> {{card.description}}</p>
+                </div>
+            </v-col>
+            <v-col cols="6" v-if="card.id && card.id % 2 != 0">
+                <v-img
+                  class="ml-5"
+                  :src="require('@/assets/' + card.imgSrc + '')"
+                ></v-img>
+            </v-col>
+         
         </v-row>
       </v-col>
     </v-row>
@@ -59,10 +75,12 @@ export default {
   data: () => ({
     cards: [
       {
+        id: 1,
         title: "Habit App",
         href: "/habit-app",
-        imgSrc: "1",
-        description: "New Description",
+        imgSrc: "habitApp.png",
+        height: 200,
+        description: "My personal project for an app to create long-term habits. The problem was to think of a target audience other than myself, to find the right layout and sequence of content.",
         tags: [
           {
             tag: "GitHub",
@@ -77,9 +95,11 @@ export default {
         ],
       },
       {
+        id: 2,
         title: "Fitness App",
         href: "/fitness-app",
-        imgSrc: "2",
+        imgSrc: "iphoneCase1.png",
+        height: 200,
         tags: [
           {
             tag: "GitHub",
@@ -94,9 +114,10 @@ export default {
         ],
       },
       {
+        id: 3,
         title: "Gamification App",
         href: "/gamification-app",
-        imgSrc: "3",
+        imgSrc: "iphoneCase2.png",
         tags: [
           {
             tag: "GitHub",
@@ -141,7 +162,7 @@ export default {
         case "xl":
           return 550;
       }
-    },
+    }
   },
 };
 </script>
@@ -149,7 +170,7 @@ export default {
 <style lang="scss" scoped>
 .heading1 {
   font-weight: 500;
-  font-size: 3em;
+  font-size: 4em;
   letter-spacing: 0px;
 }
 .heading2 {
@@ -157,4 +178,5 @@ export default {
   font-size: 2em;
   letter-spacing: 0px;
 }
+
 </style>

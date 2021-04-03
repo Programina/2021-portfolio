@@ -1,29 +1,36 @@
 <template>
   <v-app>
-    <v-app-bar app color="background" :class="{'mobile-spacing' : isMobile}" data-qa="DAATAAAA  " flat light>
+    <v-app-bar
+      app
+      color="background"
+      :class="{ 'mobile-spacing': isMobile }"
+      data-qa="DAATAAAA  "
+      flat
+      light
+    >
       <div class="d-flex align-center">
         <router-link to="/">
-           <v-img
-              alt="Vuetify Logo"
-              class="shrink mr-2"
-              contain
-              src="./assets/logo1.png"
-              transition="scale-transition"
-              width="40"
-            />
+          <v-img
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            contain
+            src="./assets/logo1.png"
+            transition="scale-transition"
+            width="40"
+          />
         </router-link>
       </div>
-
+    
       <v-spacer v-if="!isMobile"></v-spacer>
 
-      <div id="nav" v-if="!isMobile" >
-        <router-link to="/">Home</router-link> 
-        <router-link to="/about">About</router-link> 
-        <router-link to="/contact">Contact</router-link> 
+      <div id="nav" v-if="!isMobile">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/contact">Contact</router-link>
       </div>
 
       <v-spacer v-if="!isMobile"></v-spacer>
-
+      <!-- 
       <v-btn
           v-if="isMobile" 
           href="#"
@@ -34,18 +41,42 @@
           color="background"
           class="button-gradient"
         > 
-        <v-icon >mdi-menu</v-icon>
-      </v-btn>
-
+        
+      </v-btn> -->
+      <v-app-bar-nav-icon
+        v-if="isMobile"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-main>
+    <!-- <v-main>
       <router-view />
-    </v-main>
+    </v-main> -->
+      <v-navigation-drawer v-model="drawer" absolute right temporary>
+        <v-list nav dense>
+          <v-list-item-group
+            v-model="group"
+            active-class="deep-purple--text text--accent-4"
+          >
+            <v-list-item>
+              <v-list-item-title>Foo</v-list-item-title>
+            </v-list-item>
 
-    <footer>
-      Copyright Amina Belabbes (c) 2021
-    </footer>
+            <v-list-item>
+              <v-list-item-title>Bar</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-title>Fizz</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item>
+              <v-list-item-title>Buzz</v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
+    <footer>Copyright Amina Belabbes (c) 2021</footer>
   </v-app>
 </template>
 
@@ -64,20 +95,26 @@ export default {
   },
 
   data: () => ({
-    //
+    drawer: false,
+    group: null,
   }),
-  
+
   computed: {
-      isMobile () {
-        switch (this.$vuetify.breakpoint.name) {
-          case 'xs': return true
-          case 'sm': return true
-          case 'md': return false
-          case 'lg': return false
-          case 'xl': return false
-        }
-      },
+    isMobile() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return true;
+        case "sm":
+          return true;
+        case "md":
+          return false;
+        case "lg":
+          return false;
+        case "xl":
+          return false;
+      }
     },
+  },
 };
 </script>
 
@@ -89,23 +126,24 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, .btn-link a {
+a,
+.btn-link a {
   text-decoration: none;
 }
 
 .mobile-spacing {
-    display: flex !important;
+  display: flex !important;
 
-    .v-toolbar__content {
-      width: 100%;
-      flex-direction: row !important;
-      justify-content: space-between !important;
-    }
+  .v-toolbar__content {
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
 }
 
 #nav {
@@ -125,5 +163,4 @@ footer {
   color: #959595;
   font-size: 0.9em;
 }
-
 </style>
