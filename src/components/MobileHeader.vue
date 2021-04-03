@@ -5,14 +5,15 @@
           :src="require('../assets/female-developer-vector.jpg')"
           class="mt-5"
           contain
-          height="200"
+          :height="height"
         />
       </v-col>
       <v-col >
-        <div class="heading1">
-        First Project
+         <div class="heading1">
+          {{copy.heading1}}
         </div>
-        <div class="heading2 mb-3">Subheading</div>
+        <div class="heading2 mb-3">{{copy.heading2}}</div>
+        <p>{{copy.profile}}</p>
       </v-col>
       <v-col
         class="mb-5"
@@ -40,11 +41,24 @@
 export default {
   name: 'MobileHeader',
   components: {},
-  props: {},
+  props: {
+    copy: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {}
   },
-  mounted() {},
+  computed: {
+    height(){
+       switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return 250
+          case 'sm': return 250
+          case 'md': return 350
+        }
+    }
+  },
   beforeDestroy() {},
   methods: {}
 }
@@ -56,4 +70,16 @@ export default {
     box-shadow: 0px 3px 6px #00000029;
     opacity: 1;
   }
+
+  
+.heading1 {
+  font-weight: 500;
+  font-size: 3em;
+  letter-spacing: 0px;
+}
+.heading2 {
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0px;
+}
 </style>

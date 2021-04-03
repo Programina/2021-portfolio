@@ -42,6 +42,10 @@
     <v-main>
       <router-view />
     </v-main>
+
+    <footer>
+      Copyright Amina Belabbes (c) 2021
+    </footer>
   </v-app>
 </template>
 
@@ -90,15 +94,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.heading1 {
-  font-weight: 500;
-  font-size: 25px;
-  letter-spacing: 0px;
-}
-.heading2 {
-  font-weight: 400;
-  font-size: 17px;
-  letter-spacing: 0px;
+a, .btn-link a {
+  text-decoration: none;
 }
 
 .mobile-spacing {
@@ -117,6 +114,16 @@ body {
   a {
     padding: 0 15px;
   }
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #959595;
+  font-size: 0.9em;
 }
 
 </style>
