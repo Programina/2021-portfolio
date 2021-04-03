@@ -49,10 +49,10 @@
       ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <!-- <v-main>
+    <v-main>
       <router-view />
-    </v-main> -->
-      <v-navigation-drawer v-model="drawer" absolute right temporary>
+    </v-main>
+      <v-navigation-drawer v-if="isMobile" v-model="drawer" absolute right temporary>
         <v-list nav dense>
           <v-list-item-group
             v-model="group"
