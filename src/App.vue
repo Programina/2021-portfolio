@@ -10,23 +10,21 @@
     >
       <div class="d-flex align-center">
         <router-link to="/">
-          <v-img
-            alt="Vuetify Logo"
-            class="shrink mr-2"
-            contain
-            src="./assets/logo1.png"
-            transition="scale-transition"
-            width="40"
-          />
+            <!-- <v-img
+              alt="Vuetify Logo"
+              class="shrink mr-2"
+              contain
+              src="./assets/logo1.png"
+              transition="scale-transition"
+              width="40"
+            /> -->
         </router-link>
       </div>
     
       <v-spacer v-if="!isMobile"></v-spacer>
 
       <div id="nav" v-if="!isMobile">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/contact">Contact</router-link>
+        <router-link v-for="(navItem, i) in navigation" :key="i"  :to="navItem.to">{{navItem.name}}</router-link>
       </div>
 
       <v-spacer v-if="!isMobile"></v-spacer>
@@ -58,20 +56,10 @@
             v-model="group"
             active-class="deep-purple--text text--accent-4"
           >
-            <v-list-item>
-              <v-list-item-title>Foo</v-list-item-title>
-            </v-list-item>
-
-            <v-list-item>
-              <v-list-item-title>Bar</v-list-item-title>
-            </v-list-item>
-
-            <v-list-item>
-              <v-list-item-title>Fizz</v-list-item-title>
-            </v-list-item>
-
-            <v-list-item>
-              <v-list-item-title>Buzz</v-list-item-title>
+            <v-list-item v-for="(navItem, i) in navigation" :key="i" >
+              <v-list-item-title> 
+                <router-link :to="navItem.to">{{navItem.name}}</router-link>
+              </v-list-item-title>
             </v-list-item>
           </v-list-item-group>
         </v-list>
@@ -97,6 +85,20 @@ export default {
   data: () => ({
     drawer: false,
     group: null,
+    navigation: [
+      {
+        to: '/',
+        name: 'Home'
+      },
+      {
+        to: '/contact',
+        name: 'Contact'
+      },
+      {
+        to: '/about',
+        name: 'About'
+      },
+    ]
   }),
 
   computed: {
@@ -147,7 +149,7 @@ a,
 }
 
 #nav {
-  margin-left: -48px !important;
+  // margin-left: -48px !important; needs to be added if there is a logo
 
   a {
     padding: 0 15px;

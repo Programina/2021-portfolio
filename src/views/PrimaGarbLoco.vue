@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'LazesPeaseDose',
+  name: 'PrimaGarbLoco',
   components: {},
   props: {},
   data() {

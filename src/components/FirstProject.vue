@@ -4,26 +4,16 @@
       <v-col v-if="isMobile" class="mb-5" cols="12">
         <MobileHeader :copy="copy" />
       </v-col>
-
-      <!-- <v-col v-if="!isMobile" cols="6">
-        <v-img
-          :src="require('../assets/female-developer-vector.jpg')"
-          class="mt-5"
-          contain
-          :height="height"
-        />
-      </v-col> -->
       <v-col
         v-if="!isMobile"
         class="d-flex justify-center align-center"
         cols="12"
       >
         <div>
-          <div class="heading1" style="
-  color: #0093E9;">
+          <div class="heading1" >
             {{ copy.heading1 }}
           </div>
-          <div class="heading1 mb-3">{{ copy.heading2 }}</div>
+          <div class="heading2 mb-3">{{ copy.heading2 }}</div>
           <p>{{ copy.profile }}</p>
         </div>
       </v-col>
@@ -33,27 +23,45 @@
       </v-col>
 
       <v-col v-if="!isMobile" class="mb-5 px-8" cols="12" justify="center">
-        <v-row v-for="(card, i) in cards" :key="i" class="my-5"> 
-            <v-col cols="6" v-if="card.id && card.id % 2 === 0">
+        <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12"> 
+            <v-card v-if="card.id && card.id % 2 != 0" width="100%">
+
+             <div class="d-flex flex-no-wrap justify-space-between">
+              <div>
+              <v-card-title class="headline">
+                {{card.title}}
+              </v-card-title>
+  
+              <v-card-subtitle>{{card.description}}</v-card-subtitle>
+              </div>
+              <v-avatar
+                class="ma-3"
+                size="125"
+                tile
+              >
+              <v-img
+                class="mr-5"
+                :src="require('@/assets/' + card.imgSrc + '')"
+              ></v-img>
+              </v-avatar>
+             </div>
+            </v-card>
+           
+            <!-- <v-col cols="6" v-if="card.id && card.id % 2 === 0">
               <v-img
                 width="100%"
                 class="mr-5"
                 :src="require('@/assets/' + card.imgSrc + '')"
               ></v-img>
-          </v-col>
+          </v-col> -->
           <v-col cols="6" v-if="card.id && card.id % 2 === 0" class="d-flex align-center justify-center">
                  <div>
                     <div class="heading2 mb-3"> {{card.title}}</div>
                     <p> {{card.description}}</p>
                 </div>
           </v-col>
-            <v-col cols="6" class="d-flex align-center justify-center" v-if="card.id && card.id % 2 != 0">
-                <div>
-                    <div class="heading2 mb-3"> {{card.title}}</div>
-                    <p> {{card.description}}</p>
-                </div>
-            </v-col>
-            <v-col cols="6" v-if="card.id && card.id % 2 != 0">
+           
+            <v-col cols="6" v-if="card.id && card.id % 2 === 0">
                 <v-img
                   class="ml-5"
                   :src="require('@/assets/' + card.imgSrc + '')"
@@ -98,8 +106,26 @@ export default {
         id: 2,
         title: "Fitness App",
         href: "/fitness-app",
-        imgSrc: "iphoneCase1.png",
+        imgSrc: "fitnessapp.png",
         height: 200,
+        tags: [
+          {
+            tag: "Marvel Prototype",
+            tagIcon: "github",
+            tagHref: "https://marvelapp.com/project/2876725",
+          },
+          {
+            tag: "Website",
+            tagIcon: "web",
+            tagHref: "https://github.com/programina-gui/RSS-Testapp",
+          },
+        ],
+      },
+      {
+        id: 3,
+        title: "Gamification App",
+        href: "/gamification-app",
+        imgSrc: "gameApp.png",
         tags: [
           {
             tag: "GitHub",
@@ -114,15 +140,34 @@ export default {
         ],
       },
       {
-        id: 3,
-        title: "Gamification App",
+        id: 4,
+        title: "RSS Feed App",
         href: "/gamification-app",
-        imgSrc: "iphoneCase2.png",
+        imgSrc: "rssFeed.png",
         tags: [
           {
             tag: "GitHub",
             tagIcon: "github",
             tagHref: "https://github.com/programina-gui/RSS-Testapp",
+          },
+          {
+            tag: "Website",
+            tagIcon: "web",
+            tagHref: "https://github.com/programina-gui/RSS-Testapp",
+          },
+        ],
+      },
+      {
+        id: 5,
+        title: "Pareto App",
+        href: "/pareto-app",
+        imgSrc: "pareto.png",
+        height: 200,
+        tags: [
+          {
+            tag: "Marvel Prototype",
+            tagIcon: "github",
+            tagHref: "https://marvelapp.com/60c71ad",
           },
           {
             tag: "Website",
