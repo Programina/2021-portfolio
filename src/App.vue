@@ -4,13 +4,12 @@
       app
       color="background"
       :class="{ 'mobile-spacing': isMobile }"
-      data-qa="DAATAAAA  "
       flat
       light
     >
       <div class="d-flex align-center">
         <router-link to="/">
-            <!-- <v-img
+          <!-- <v-img
               alt="Vuetify Logo"
               class="shrink mr-2"
               contain
@@ -20,11 +19,17 @@
             /> -->
         </router-link>
       </div>
-    
+
       <v-spacer v-if="!isMobile"></v-spacer>
 
       <div id="nav" v-if="!isMobile">
-        <router-link v-for="(navItem, i) in navigation" :key="i"  :to="navItem.to">{{navItem.name}}</router-link>
+        <router-link
+          v-for="(navItem, i) in navigation"
+          :key="i"
+          :to="navItem.to"
+          >{{ navItem.name }}
+          </router-link>
+        <a href="">Resume</a>
       </div>
 
       <v-spacer v-if="!isMobile"></v-spacer>
@@ -50,21 +55,44 @@
     <v-main>
       <router-view />
     </v-main>
-      <v-navigation-drawer v-if="isMobile" v-model="drawer" absolute right temporary>
-        <v-list nav dense>
-          <v-list-item-group
-            v-model="group"
-            active-class="deep-purple--text text--accent-4"
-          >
-            <v-list-item v-for="(navItem, i) in navigation" :key="i" >
-              <v-list-item-title> 
-                <router-link :to="navItem.to">{{navItem.name}}</router-link>
-              </v-list-item-title>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-navigation-drawer>
-    <footer>Copyright Amina Belabbes (c) 2021</footer>
+    <v-navigation-drawer
+      v-if="isMobile"
+      v-model="drawer"
+      absolute
+      right
+      temporary
+    >
+      <v-list nav dense>
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item v-for="(navItem, i) in navigation" :key="i">
+            <v-list-item-title>
+              <router-link :to="navItem.to">{{ navItem.name }}</router-link>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+    <footer class="d-flex align-center justify-center">
+        <div class="footer-icons d-flex align-center justify-center">
+            <a data-v-2c037838="" href="mailto:programina.belabbes@gmail.com"
+              ><i data-v-2c037838="" class="fa fa-envelope"></i></a
+            ><a data-v-2c037838="" href="http://www.twitter.com/MsAminaBelabbes"
+              ><i data-v-2c037838="" class="fa fa-twitter"></i></a
+            ><a data-v-2c037838="" href="https://www.instagram.com/programina/"
+              ><i data-v-2c037838="" class="fa fa-instagram"></i></a
+            ><a data-v-2c037838="" href="https://github.com/programina-gui"
+              ><i data-v-2c037838="" class="fa fa-github"></i></a
+            ><a data-v-2c037838="" href="https://codepen.io/programina-gui"
+              ><i data-v-2c037838="" class="fa fa-codepen"></i></a
+            ><a data-v-2c037838="" href="https://stackblitz.com/@Programina"
+              ><i data-v-2c037838="" class="fa fa-flash"></i
+            ></a>
+          </div>
+        <div class="d-flex align-center justify-center"> Copyright Amina Belabbes (c) 2021</div>
+    </footer>
   </v-app>
 </template>
 
@@ -72,6 +100,7 @@
 import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
+
 
 export default {
   name: "App",
@@ -87,18 +116,18 @@ export default {
     group: null,
     navigation: [
       {
-        to: '/',
-        name: 'Home'
+        to: "/",
+        name: "Home",
       },
       {
-        to: '/contact',
-        name: 'Contact'
+        to: "/contact",
+        name: "Contact",
       },
       {
-        to: '/about',
-        name: 'About'
+        to: "/about",
+        name: "About",
       },
-    ]
+    ],
   }),
 
   computed: {
@@ -160,9 +189,17 @@ footer {
   height: 50px;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   color: #959595;
   font-size: 0.9em;
+
+  .footer-icons {
+    margin: 10px;
+    a, a:hover, a:active {
+      padding: 10px;
+      color: #959595;
+    }
+  }
 }
 </style>

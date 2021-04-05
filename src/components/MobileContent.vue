@@ -17,13 +17,13 @@
         <v-card-text> {{ card.description }} <br/><span> <router-link :to="card.href">See more</router-link></span></v-card-text>
         <v-card-text>
           <div class="d-flex flex-row justify-end" :data-qa="card.title">
-            <a href="" v-for="(tag, j) in card.tags" :key="j">
+            <div v-for="(tag, j) in card.tags" :key="j">
               <v-chip class="ma-2" color="primary" outlined>
                 <span class="px-2"> {{ tag.tag }}</span>
 
                 <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
               </v-chip>
-            </a>
+            </div>
 
            
           </div>

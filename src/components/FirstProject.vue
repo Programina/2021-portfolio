@@ -14,7 +14,7 @@
             {{ copy.heading1 }}
           </div>
           <div class="heading2 mb-3">{{ copy.heading2 }}</div>
-          <p>{{ copy.profile }}</p>
+          <p v-html="copy.profile"></p>
         </div>
       </v-col>
 
@@ -24,49 +24,31 @@
 
       <v-col v-if="!isMobile" class="mb-5 px-8" cols="12" justify="center">
         <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12"> 
-            <v-card v-if="card.id && card.id % 2 != 0" width="100%">
+    
+           
+           <v-col cols="6"  class="d-flex align-center justify-center">
+                <div>
+                  <div class="heading2 mb-3"> {{card.title}}</div>
+                  <p> {{card.description}}</p>
+                  <router-link :to="card.href">See more</router-link>
 
-             <div class="d-flex flex-no-wrap justify-space-between">
-              <div>
-              <v-card-title class="headline">
-                {{card.title}}
-              </v-card-title>
-  
-              <v-card-subtitle>{{card.description}}</v-card-subtitle>
+                   <div v-for="(tag, j) in card.tags" :key="j">
+
+                        <v-chip class="ma-2" color="primary" outlined>
+                          <span class="px-2"> {{ tag.tag }}</span>
+
+                          <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
+                        </v-chip>
+                   </div>
               </div>
-              <v-avatar
-                class="ma-3"
-                size="125"
-                tile
-              >
-              <v-img
-                class="mr-5"
-                :src="require('@/assets/' + card.imgSrc + '')"
-              ></v-img>
-              </v-avatar>
-             </div>
-            </v-card>
-           
-            <!-- <v-col cols="6" v-if="card.id && card.id % 2 === 0">
-              <v-img
-                width="100%"
-                class="mr-5"
-                :src="require('@/assets/' + card.imgSrc + '')"
-              ></v-img>
-          </v-col> -->
-          <v-col cols="6" v-if="card.id && card.id % 2 === 0" class="d-flex align-center justify-center">
-                 <div>
-                    <div class="heading2 mb-3"> {{card.title}}</div>
-                    <p> {{card.description}}</p>
-                </div>
           </v-col>
-           
-            <v-col cols="6" v-if="card.id && card.id % 2 === 0">
-                <v-img
-                  class="ml-5"
-                  :src="require('@/assets/' + card.imgSrc + '')"
-                ></v-img>
-            </v-col>
+          <v-col cols="6" >
+              <v-img
+                class="ml-5"
+                :src="require('@/assets/' + card.imgSrc + '')"
+              ></v-img>
+          </v-col>
+         
          
         </v-row>
       </v-col>
@@ -179,8 +161,8 @@ export default {
     ],
     copy: {
       heading1: "Amina Belabbes",
-      heading2: "UX Designer and Frontend Developer",
-      profile: "Love for detail and for white space",
+      heading2: "Junior UX Designer and Frontend Developer",
+      profile: "I'm a <b>Web Developer</b> with 2+ years of professional experience and about half a year of experience as a <b>UX Designer</b>, looking to transition into UX design. I love helping people transform their ideas into products they and their customers love to use. This is my portfolio which at the moment mostly includes private projects as the professional ones were mostly confidential.",
     },
   }),
   computed: {

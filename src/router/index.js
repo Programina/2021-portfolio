@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
 import About from '../views/About.vue'
-
+import HabitApp from '../views/HabitApp.vue'
+import FitnessApp from '../views/FitnessApp.vue'
 
 Vue.use(VueRouter)
 
@@ -27,12 +28,12 @@ const routes = [
   {
     path: '/habit-app',
     name: 'HabitApp',
-    component: Contact
+    component: HabitApp
   },
   {
     path: '/fitness-app',
     name: 'FitnessApp',
-    component: Contact
+    component: FitnessApp
   },
   {
     path: '/gamification-app',
