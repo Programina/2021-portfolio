@@ -10,7 +10,7 @@
       <v-card>
         <v-img
           height="250"
-          :src="require('@/assets/' + card.imgSrc + '')"
+          :src="require('@/assets/' + card.imgMblSrc + '')"
         ></v-img>
 
         <v-card-title>{{ card.title }}</v-card-title>

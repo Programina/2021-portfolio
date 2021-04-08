@@ -2,13 +2,12 @@
   <v-container class="contact">
     <v-row>
       <v-col class="mb-5" cols="12">
-        <h1>This is an contact page</h1>
-        <h2 class="headline font-weight-bold mb-3">Contact me</h2>
+        <h1>I'd love to hear from you.</h1>
+        <br/>
+        <br/>
         <v-row justify="center">
           <div class="subheading mx-6" target="_blank" width="100%">
-            <v-card>
-              <v-card-title>Contact me</v-card-title> 
-              <v-card-text>
+       
                 <v-form class="px-3">
                   <v-text-field
                       v-model="name"
@@ -17,10 +16,15 @@
                       label="Name"
                       required
                     ></v-text-field>
+                    <v-textarea
+                      v-model="description"
+                      :counter="10"
+                      :error-messages="errors"
+                      label="Name"
+                      required
+                    ></v-textarea>
                
                 </v-form>
-              </v-card-text>
-            </v-card>
           </div>
         </v-row>
       </v-col>
