@@ -88,8 +88,7 @@ export default {
     emailRules: [
       v => v.length >= 3 || 'Minimum length is 3 characters.',
       v => v.indexOf('@') !== 0 || 'Your email needs a username.',
-      v => v.includes('@') !== 0 || 'Your email needs an @ symbol.',
-      v => v.indexOf('.') - v.indexOf('@') > 1 || 'Your email needs valid domain.',
+      v => v.includes('@') !== 0 || 'Your email needs an @ symbol.'
     ]
   }),
 
