@@ -1,3 +1,4 @@
+TODO: Add a loading spinner for while the email attempts to send
 <template>
   <v-container class="contact">
     <v-row>
@@ -7,11 +8,17 @@
         <br />
         <v-row justify="center">
           <v-col class="subheading mx-6" target="_blank" cols="10">
-            <v-form class="px-3" ref="form" v-model="formValidity" @submit.prevent="submit">
+            <v-form
+              class="px-3"
+              ref="form"
+              v-model="formValidity"
+              @submit.prevent="submit"
+            >
               <v-text-field
                 v-model="from_email.name"
                 :counter="40"
                 label="Name"
+                name="from_name"
                 :rules="inputRules"
                 placeholder="Jane Doe"
                 required
@@ -19,6 +26,7 @@
               <v-text-field
                 v-model="from_email.subject"
                 :counter="40"
+                name="subject"
                 label="Subject"
                 :rules="inputRules"
                 required
@@ -26,6 +34,7 @@
               <v-text-field
                 v-model="from_email.email"
                 :counter="40"
+                name="reply_to"
                 label="Email"
                 placeholder="jane@doe.com"
                 :rules="emailRules"
@@ -34,6 +43,7 @@
               <v-textarea
                 v-model="from_email.message"
                 :counter="450"
+                name="message"
                 label="Your message"
                 :rules="inputRules"
                 placeholder="Your message goes here"
@@ -49,7 +59,7 @@
                   text
                   rounded
                   color="background"
-                  :class="{'button-gradient' : formValidity}"
+                  :class="{ 'button-gradient': formValidity }"
                   :disabled="!formValidity"
                 >
                   <span class="mr-2">Submit</span>
@@ -88,24 +98,52 @@ export default {
 
   methods: {
     submit(e) {
+      console.log("TARGET", e.target)
       if (this.$refs.form.validate()) {
-        try {
-          emailjs.sendForm(
+        emailjs
+          .sendForm(
             "service_j01rnvj",
             "template_lzk32dj",
             e.target,
-            "user_WbDXf9Pkmprfenjc8Rw5v",
-            {
-              name: this.from_email.name,
-              email: this.from_email.from_email,
-              subject: this.from_email.subject,
-              message: this.from_email.message
+            // {
+            //   to_name: "Amina",
+            //   from_name: this.from_email.name,
+            //   reply_to: this.from_email.from_email,
+            //   subject: this.from_email.subject,
+            //   message: this.from_email.message,
+            // },
+            "user_WbDXf9Pkmprfenjc8Rw5v"
+          )
+          .then(
+            (result) => {
+              console.log("SUCCESS!", result.status, result.text);
+              this.$router.push('/contact-success')
+            },
+            (error) => {
+              console.error(
+                "Uh oh! Something went wrong. Here are some thoughts on the error that occured:",
+                error
+              );
             }
           );
-          this.$router.push('/contact-success')
-        } catch (error) {
-          err => console.error('Uh oh! Something went wrong. Here are some thoughts on the error that occured:', err)
-        }
+        //   try {
+        //     emailjs.sendForm(
+        //       "service_j01rnvj",
+        //       "template_lzk32dj",
+        //       e.target,
+        //       "user_WbDXf9Pkmprfenjc8Rw5v",
+        //       {
+        //         name: this.from_email.name,
+        //         email: this.from_email.from_email,
+        //         subject: this.from_email.subject,
+        //         message: this.from_email.message
+        //       }
+        //     );
+        //     this.$router.push('/contact-success')
+        //   } catch (error) {
+        //     err => console.error('Uh oh! Something went wrong. Here are some thoughts on the error that occured:', err)
+        //   }
+        // }
       }
     },
     resetValidation() {

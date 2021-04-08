@@ -1,3 +1,5 @@
+TODO: add currentRoute in store to make header only displays when in HOME
+
 <template>
   <v-app>
     <v-app-bar
