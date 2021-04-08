@@ -92,7 +92,7 @@ export default {
         try {
           emailjs.sendForm(
             "service_j01rnvj",
-            "user_WbDXf9Pkmprfenjc8Rw5v",
+            "template_lzk32dj",
             e.target,
             "user_WbDXf9Pkmprfenjc8Rw5v",
             {

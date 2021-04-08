@@ -42,6 +42,29 @@
     </v-app-bar>
 
     <v-main>
+      <v-row class="ma-10">
+          <v-col v-if="isMobile" class="mb-5" cols="12">
+            <MobileHeader :copy="copy" />
+          </v-col>
+          <v-col
+            v-if="!isMobile"
+            class="d-flex align-center my-5 justify-end"
+            cols="6"
+             style="
+    text-align: right;"
+          >
+              <h3 class="mb-3" v-html="copy.profile"></h3>
+          </v-col>
+          <v-col cols="6" class="d-flex justify-start align-center" v-if="!isMobile">
+                <v-img
+                  :src="require('@/assets/design-and-development-process-1721879-1.svg')"
+                  max-height="280"
+                  max-width="450"
+                  contain
+                ></v-img>
+          </v-col>
+
+      </v-row>
       <router-view />
     </v-main>
 
@@ -89,37 +112,41 @@
 </template>
 
 <script>
-import Home from "./views/Home";
-import About from "./views/About";
-import Contact from "./views/Contact";
+import MobileHeader from "@/components/MobileHeader";
 
 export default {
   name: "App",
 
   components: {
-    Home,
-    About,
-    Contact,
+    MobileHeader,
   },
 
-  data: () => ({
-    drawer: false,
-    group: null,
-    navigation: [
-      {
-        to: "/",
-        name: "Home",
-      },
-      {
-        to: "/contact",
-        name: "Contact",
-      },
-      {
-        to: "/about",
-        name: "About",
-      },
+  data() {
+    return {
+      drawer: false,
+      group: null,
+      navigation: [
+        {
+          to: "/",
+          name: "Home",
+        },
+        {
+          to: "/contact",
+          name: "Contact",
+        },
+        {
+          to: "/about",
+          name: "About",
+        }
     ],
-  }),
+    copy: {
+      profile:
+        "Nice to meet you –  I'm Amina Belabbes. <br/> I'm a <b>Junior UX Designer</b> and <b>Web Developer</b> based in Germany.",
+      heading1: "Amina Belabbes",
+    }
+    }
+    
+  },
 
   computed: {
     isMobile() {
@@ -153,11 +180,17 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Muli", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h3 {
+    font-family: "Muli", Sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1.7em;
+}
 a,
 .btn-link a {
   text-decoration: none;
@@ -190,8 +223,8 @@ a,
 }
 
 .footer {
-  color: #959595;
-  font-size: 0.9em;
+  color: #959595 !important;
+  font-size: 0.9em !important;
   padding: 20px;
 
   .footer-icons {
@@ -203,5 +236,9 @@ a,
       color: #959595;
     }
   }
+}
+
+.home {
+  background-color: #f5f5f5;
 }
 </style>
