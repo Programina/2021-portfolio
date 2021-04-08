@@ -13,7 +13,7 @@
           {{copy.heading1}}
         </div>
         <div class="heading2 mb-3">{{copy.heading2}}</div>
-        <p>{{copy.profile}}</p>
+        <p v-html="copy.profile"></p>
       </v-col>
       <v-col
         class="mb-5"
@@ -65,13 +65,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .button-gradient {
-    background: transparent linear-gradient(351deg, #0093E9 0%, #75CBCA 40%, #80D0C7 49%, #80D0C7 100%) 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
-    opacity: 1;
-  }
 
-  
 .heading1 {
   font-weight: 500;
   font-size: 3em;

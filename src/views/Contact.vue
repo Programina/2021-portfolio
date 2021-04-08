@@ -6,8 +6,7 @@
         <br/>
         <br/>
         <v-row justify="center">
-          <div class="subheading mx-6" target="_blank" width="100%">
-       
+          <v-col class="subheading mx-6" target="_blank" cols="10">
                 <v-form class="px-3">
                   <v-text-field
                       v-model="name"
@@ -16,16 +15,22 @@
                       label="Name"
                       required
                     ></v-text-field>
+                    <v-text-field
+                      v-model="email"
+                      :counter="10"
+                      :error-messages="errors"
+                      label="Email"
+                      required
+                    ></v-text-field>
                     <v-textarea
                       v-model="description"
                       :counter="10"
                       :error-messages="errors"
-                      label="Name"
+                      label="Your message"
                       required
                     ></v-textarea>
-               
                 </v-form>
-          </div>
+          </v-col>
         </v-row>
       </v-col>
     </v-row>

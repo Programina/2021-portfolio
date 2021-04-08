@@ -33,26 +33,15 @@
       </div>
 
       <v-spacer v-if="!isMobile"></v-spacer>
-      <!-- 
-      <v-btn
-          v-if="isMobile" 
-          href="#"
-          target="_blank"
-          fab
-          small
-          depressed
-          color="background"
-          class="button-gradient"
-        > 
-        
-      </v-btn> -->
+      
+
       <v-app-bar-nav-icon
         v-if="isMobile"
         @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-main>
+    <v-main class="main">
       <router-view />
     </v-main>
     <v-navigation-drawer
@@ -62,10 +51,11 @@
       right
       temporary
     >
-      <v-list nav dense>
+      <v-list 
+      nav 
+      dense>
         <v-list-item-group
           v-model="group"
-          active-class="deep-purple--text text--accent-4"
         >
           <v-list-item v-for="(navItem, i) in navigation" :key="i">
             <v-list-item-title>
@@ -75,7 +65,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <footer class="d-flex align-center justify-center">
+    <v-footer class="footer d-flex flex-column align-center justify-center">
         <div class="footer-icons d-flex align-center justify-center">
             <a data-v-2c037838="" href="mailto:programina.belabbes@gmail.com"
               ><i data-v-2c037838="" class="fa fa-envelope"></i></a
@@ -92,7 +82,7 @@
             ></a>
           </div>
         <div class="d-flex align-center justify-center"> Copyright Amina Belabbes (c) 2021</div>
-    </footer>
+    </v-footer>
   </v-app>
 </template>
 
@@ -146,6 +136,11 @@ export default {
       }
     },
   },
+  watch: {
+    group () {
+      this.drawer = false
+    },
+  },
 };
 </script>
 
@@ -185,14 +180,17 @@ a,
   }
 }
 
-footer {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.button-gradient {
+  background: transparent linear-gradient(351deg, #0093E9 0%, #75CBCA 40%, #80D0C7 49%, #80D0C7 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+}
+
+.footer {
+
   color: #959595;
   font-size: 0.9em;
+  padding: 20px;
 
   .footer-icons {
     margin: 10px;
