@@ -26,28 +26,56 @@
         <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12"> 
     
            
-           <v-col cols="6"  class="d-flex align-center justify-center">
+           <v-col cols="6" v-if="card.id % 2 === 0" class="d-flex align-center justify-center">
                 <div>
                   <div class="heading2 mb-3"> {{card.title}}</div>
                   <p> {{card.description}}</p>
                   <router-link :to="card.href">See more</router-link>
 
-                   <div v-for="(tag, j) in card.tags" :key="j">
+                  <div class="d-flex">
+                     <div v-for="(tag, j) in card.tags" :key="j" >
 
                         <v-chip class="ma-2" color="primary" outlined>
                           <span class="px-2"> {{ tag.tag }}</span>
 
                           <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
                         </v-chip>
-                   </div>
+                    </div>
+                  </div>
+                  
               </div>
           </v-col>
-          <v-col cols="6" >
+          <v-col cols="6" v-if="card.id % 2 === 0" >
               <v-img
                 class="ml-5"
                 :src="require('@/assets/' + card.imgSrc + '')"
               ></v-img>
           </v-col>
+          
+          <v-col cols="6" v-if="card.id % 2 != 0" >
+              <v-img
+                class="ml-5"
+                :src="require('@/assets/' + card.imgSrc + '')"
+              ></v-img>
+          </v-col>
+          <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center justify-center">
+                <div>
+                  <div class="heading2 mb-3"> {{card.title}}</div>
+                  <p> {{card.description}}</p>
+                  <router-link :to="card.href">See more</router-link>
+
+                   <div class="d-flex"> 
+                    <div v-for="(tag, j) in card.tags" :key="j" class="d-flex ">
+                          <v-chip class="ma-2" color="primary" outlined>
+                            <span class="px-2"> {{ tag.tag }}</span>
+
+                            <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
+                          </v-chip>
+                    </div>
+                   </div>
+              </div>
+          </v-col>
+         
          
          
         </v-row>
@@ -104,29 +132,15 @@ export default {
         ],
       },
       {
-        id: 3,
-        title: "Gamification App",
-        href: "/gamification-app",
-        imgSrc: "gameApp.png",
-        tags: [
-          {
-            tag: "GitHub",
-            tagIcon: "github",
-            tagHref: "https://github.com/programina-gui/RSS-Testapp",
-          },
-          {
-            tag: "Website",
-            tagIcon: "web",
-            tagHref: "https://github.com/programina-gui/RSS-Testapp",
-          },
-        ],
-      },
-      {
         id: 4,
         title: "RSS Feed App",
         href: "/gamification-app",
-        imgSrc: "rssFeed.png",
+        imgSrc: "rssApp.png",
         tags: [
+          {
+            tag: "Development",
+            tagIcon: "code",
+          },
           {
             tag: "GitHub",
             tagIcon: "github",
@@ -135,7 +149,7 @@ export default {
           {
             tag: "Website",
             tagIcon: "web",
-            tagHref: "https://github.com/programina-gui/RSS-Testapp",
+            tagHref: "http://netz98-at-amina.belabb.es/",
           },
         ],
       },
