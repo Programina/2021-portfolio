@@ -28,22 +28,23 @@
           :key="i"
           :to="navItem.to"
           >{{ navItem.name }}
-          </router-link>
+        </router-link>
         <a href="">Resume</a>
       </div>
 
       <v-spacer v-if="!isMobile"></v-spacer>
-      
 
       <v-app-bar-nav-icon
         v-if="isMobile"
         @click.stop="drawer = !drawer"
-      ></v-app-bar-nav-icon>
+      >
+      </v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-main class="main">
+    <v-main>
       <router-view />
     </v-main>
+
     <v-navigation-drawer
       v-if="isMobile"
       v-model="drawer"
@@ -51,37 +52,38 @@
       right
       temporary
     >
-      <v-list 
-      nav 
-      dense>
-        <v-list-item-group
-          v-model="group"
-        >
+      <v-list nav dense>
+        <v-list-item-group v-model="group">
           <v-list-item v-for="(navItem, i) in navigation" :key="i">
-            <v-list-item-title>
-              <router-link :to="navItem.to">{{ navItem.name }}</router-link>
-            </v-list-item-title>
+           <router-link :to="navItem.to">
+              <v-list-item-title class="px-2">
+               {{ navItem.name }}
+              </v-list-item-title>
+            </router-link>
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
+
     <v-footer class="footer d-flex flex-column align-center justify-center">
-        <div class="footer-icons d-flex align-center justify-center">
-            <a data-v-2c037838="" href="mailto:programina.belabbes@gmail.com"
-              ><i data-v-2c037838="" class="fa fa-envelope"></i></a
-            ><a data-v-2c037838="" href="http://www.twitter.com/MsAminaBelabbes"
-              ><i data-v-2c037838="" class="fa fa-twitter"></i></a
-            ><a data-v-2c037838="" href="https://www.instagram.com/programina/"
-              ><i data-v-2c037838="" class="fa fa-instagram"></i></a
-            ><a data-v-2c037838="" href="https://github.com/programina-gui"
-              ><i data-v-2c037838="" class="fa fa-github"></i></a
-            ><a data-v-2c037838="" href="https://codepen.io/programina-gui"
-              ><i data-v-2c037838="" class="fa fa-codepen"></i></a
-            ><a data-v-2c037838="" href="https://stackblitz.com/@Programina"
-              ><i data-v-2c037838="" class="fa fa-flash"></i
-            ></a>
-          </div>
-        <div class="d-flex align-center justify-center"> Copyright Amina Belabbes (c) 2021</div>
+      <div class="footer-icons d-flex align-center justify-center">
+        <a data-v-2c037838="" href="mailto:programina.belabbes@gmail.com"
+          ><i data-v-2c037838="" class="fa fa-envelope"></i></a
+        ><a data-v-2c037838="" href="http://www.twitter.com/MsAminaBelabbes"
+          ><i data-v-2c037838="" class="fa fa-twitter"></i></a
+        ><a data-v-2c037838="" href="https://www.instagram.com/programina/"
+          ><i data-v-2c037838="" class="fa fa-instagram"></i></a
+        ><a data-v-2c037838="" href="https://github.com/programina-gui"
+          ><i data-v-2c037838="" class="fa fa-github"></i></a
+        ><a data-v-2c037838="" href="https://codepen.io/programina-gui"
+          ><i data-v-2c037838="" class="fa fa-codepen"></i></a
+        ><a data-v-2c037838="" href="https://stackblitz.com/@Programina"
+          ><i data-v-2c037838="" class="fa fa-flash"></i
+        ></a>
+      </div>
+      <div class="d-flex align-center justify-center">
+        Copyright Amina Belabbes (c) 2021
+      </div>
     </v-footer>
   </v-app>
 </template>
@@ -90,7 +92,6 @@
 import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
-
 
 export default {
   name: "App",
@@ -137,8 +138,8 @@ export default {
     },
   },
   watch: {
-    group () {
-      this.drawer = false
+    group() {
+      this.drawer = false;
     },
   },
 };
@@ -181,20 +182,23 @@ a,
 }
 
 .button-gradient {
-  background: transparent linear-gradient(351deg, #0093E9 0%, #75CBCA 40%, #80D0C7 49%, #80D0C7 100%) 0% 0% no-repeat padding-box;
+  background: transparent
+    linear-gradient(351deg, #0093e9 0%, #75cbca 40%, #80d0c7 49%, #80d0c7 100%)
+    0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
 }
 
 .footer {
-
   color: #959595;
   font-size: 0.9em;
   padding: 20px;
 
   .footer-icons {
     margin: 10px;
-    a, a:hover, a:active {
+    a,
+    a:hover,
+    a:active {
       padding: 10px;
       color: #959595;
     }
