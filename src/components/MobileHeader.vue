@@ -2,7 +2,7 @@
   <div data-qa="mobile-header">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/female-developer-vector.jpg')"
+          :src="require('@/assets/design-and-development-process-1721879-1.svg')"
           class="mt-5"
           contain
           :height="height"

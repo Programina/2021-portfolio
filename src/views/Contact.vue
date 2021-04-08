@@ -9,21 +9,28 @@
           <v-col class="subheading mx-6" target="_blank" cols="10">
                 <v-form class="px-3" ref="form">
                   <v-text-field
-                      v-model="name"
+                      v-model="from_email.name"
                       :counter="40"
                       label="Name"
                       :rules="inputRules"
                       required
                   ></v-text-field>
+                   <v-text-field
+                      v-model="from_email.subject"
+                      :counter="40"
+                      label="Subject"
+                      :rules="inputRules"
+                      required
+                  ></v-text-field>
                   <v-text-field
-                    v-model="email"
+                    v-model="from_email.email"
                     :counter="40"
                     label="Email"
                     :rules="emailRules"
                     required
                   ></v-text-field>
                   <v-textarea
-                    v-model="message"
+                    v-model="from_email.message"
                     :counter="450"
                     label="Your message"
                     :rules="inputRules"
@@ -67,9 +74,13 @@
 export default {
   name: "FirstProject",
   data: () => ({
-    name: "",
-    email: "",
-    message: "",
+    from_email: {
+      name: "",
+      email: "",
+      message: "",
+      subject: "",
+    },
+    
     items: ["Item 1", "Item 2", "Item 3", "Item 4"],
     inputRules: [
       v => v.length >= 3 || 'Minimum length is 3 characters.'
