@@ -6,8 +6,8 @@
       </v-col>
       <v-col
         v-if="!isMobile"
-        class="d-flex justify-center align-center"
-        cols="12"
+        class="d-flex flex-column justify-start align-center"
+        cols="6"
       >
         <div>
           <div class="heading1">
@@ -16,6 +16,25 @@
           <div class="heading2 mb-3">{{ copy.heading2 }}</div>
           <p v-html="copy.profile"></p>
         </div>
+         <router-link to="/contact">
+         <v-btn
+              href="#"
+              target="_blank"
+              text
+              rounded
+              color="background"
+              class="button-gradient"
+            > 
+          <span class="mr-2">Get in touch</span>
+        
+        </v-btn>
+       </router-link>
+      </v-col>
+      <v-col cols="6" class="d-flex justify-end align-center" v-if="!isMobile">
+            <v-img
+              class="ml-5"
+              :src="require('@/assets/design-and-development-process-1721879-1.svg')"
+            ></v-img>
       </v-col>
 
       <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
@@ -215,7 +234,7 @@ export default {
       heading1: "Amina Belabbes",
       heading2: "Junior UX Designer and Frontend Developer",
       profile:
-        "I'm a <b>Web Developer</b> with 2+ years of professional experience and about half a year of experience as a <b>UX Designer</b>, looking to transition into UX design. I love helping people transform their ideas into products they and their customers love to use. This is my portfolio which at the moment mostly includes private projects as the professional ones were mostly confidential.",
+        "I'm a <b>Web Developer</b> with 2+ years of professional experience and about half a year of experience as a <b>UX Designer</b>, looking to transition into UX design. I love helping people transform their ideas into products they and their customers love to use.",
     },
   }),
   computed: {
