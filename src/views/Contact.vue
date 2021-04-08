@@ -7,11 +7,10 @@
         <br/>
         <v-row justify="center">
           <v-col class="subheading mx-6" target="_blank" cols="10">
-                <v-form class="px-3">
+                <v-form class="px-3" ref="form">
                   <v-text-field
                       v-model="name"
                       :counter="40"
-                      :error-messages="errors"
                       label="Name"
                       :rules="inputRules"
                       required
@@ -19,19 +18,38 @@
                     <v-text-field
                       v-model="email"
                       :counter="40"
-                      :error-messages="errors"
                       label="Email"
-                      :rules="inputRules"
+                      :rules="emailRules"
                       required
                     ></v-text-field>
                     <v-textarea
-                      v-model="description"
+                      v-model="message"
                       :counter="450"
-                      :error-messages="errors"
                       label="Your message"
                       :rules="inputRules"
                       required
                     ></v-textarea>
+
+                    <v-btn
+                          @click="submit"
+                          text
+                          rounded
+                          color="background"
+                          class="button-gradient"
+                        > 
+                      <span class="mr-2">Submit</span>
+                    
+                    </v-btn>
+
+                    <v-btn
+                          @click="resetValidation"
+                          text
+                          rounded
+                          color="warning"
+                        > 
+                      <span class="mr-2">Reset</span>
+                    
+                    </v-btn>
                 </v-form>
           </v-col>
         </v-row>
@@ -47,26 +65,34 @@ export default {
   name: "FirstProject",
   data: () => ({
     name: "",
-    phoneNumber: "",
     email: "",
-    select: null,
+    message: "",
     items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    checkbox: null,
     inputRules: [
-      v => v.length >= 3 || 'Minimum length is 3 characters'
+      v => v.length >= 3 || 'Minimum length is 3 characters.'
+    ],
+    emailRules: [
+      v => v.length >= 3 || 'Minimum length is 3 characters.',
+      v => v.indexOf('@') !== 0 || 'Your email needs a username.',
+      v => v.includes('@') !== 0 || 'Your email needs an @ symbol.',
+      v => v.indexOf('.') - v.indexOf('@') > 1 || 'Your email needs valid domain.',
     ]
   }),
 
   methods: {
     submit() {
-      console.log("Submit")
+      if(this.$refs.form.validate()) {
+        console.log("Submit")
+      }
+    },
+    resetValidation(){
+      this.clear()
+      this.$refs.form.resetValidation()
     },
     clear() {
       this.name = "";
-      this.phoneNumber = "";
       this.email = "";
-      this.select = null;
-      this.checkbox = null;
+      this.message = "";
     },
   },
 };
