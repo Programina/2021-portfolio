@@ -5,6 +5,7 @@ import Contact from '../views/Contact.vue'
 import About from '../views/About.vue'
 import HabitApp from '../views/HabitApp.vue'
 import FitnessApp from '../views/FitnessApp.vue'
+import ContactSuccess from '../views/ContactSuccess.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/gamification-app',
     name: 'GamificationApp',
     component: Contact
+  },
+  {
+    path: '/contact-success',
+    name: 'ContactSuccess',
+    component: ContactSuccess
   }
 ]
 

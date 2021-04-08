@@ -34,6 +34,9 @@
             <v-img
               class="ml-5"
               :src="require('@/assets/design-and-development-process-1721879-1.svg')"
+              max-height="250"
+              max-width="650"
+              contain
             ></v-img>
       </v-col>
 
