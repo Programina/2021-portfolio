@@ -33,14 +33,14 @@
               <router-link :to="card.href">See more</router-link>
 
               <div class="d-flex my-4 justify-start">
-                <div v-for="(tag, j) in card.tags" :key="j">
+                <div v-for="(tag) in card.tags" :key="tag.tag">
                   <v-chip class="ma-2" color="primary" outlined>
                     <span class="px-2"> {{ tag.tag }}</span>
 
                     <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
                   </v-chip>
                 </div>
-                <div v-for="(chip, k) in card.chips" :key="k">
+                <div v-for="(chip) in card.chips" :key="chip.label">
                   <v-chip class="ma-2" filter>
                     {{ chip.label }}
                   </v-chip>
@@ -69,14 +69,14 @@
               <router-link :to="card.href">See more</router-link>
 
               <div class="d-flex my-4 justify-end">
-                <div v-for="(tag, j) in card.tags" :key="j" class="d-flex">
+                <div v-for="(tag) in card.tags" :key="tag.tag" class="d-flex">
                   <v-chip class="ma-2" color="primary" outlined>
                     <span class="px-2"> {{ tag.tag }}</span>
 
                     <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
                   </v-chip>
                 </div>
-                <div v-for="(chip, k) in card.chips" :key="k">
+                <div v-for="(chip) in card.chips" :key="chip.label">
                   <v-chip class="ma-2" filter>
                     {{ chip.label }}
                   </v-chip>
