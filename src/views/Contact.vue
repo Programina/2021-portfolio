@@ -2,7 +2,7 @@
   <v-container class="contact">
     <v-row>
       <v-col class="mb-5" cols="12">
-        <h1>I'd love to hear from you.</h1>
+        <h1 class="px-12">I'd love to hear from you.</h1>
         <br/>
         <br/>
         <v-row justify="center">
@@ -10,23 +10,26 @@
                 <v-form class="px-3">
                   <v-text-field
                       v-model="name"
-                      :counter="10"
+                      :counter="40"
                       :error-messages="errors"
                       label="Name"
+                      :rules="inputRules"
                       required
                     ></v-text-field>
                     <v-text-field
                       v-model="email"
-                      :counter="10"
+                      :counter="40"
                       :error-messages="errors"
                       label="Email"
+                      :rules="inputRules"
                       required
                     ></v-text-field>
                     <v-textarea
                       v-model="description"
-                      :counter="10"
+                      :counter="450"
                       :error-messages="errors"
                       label="Your message"
+                      :rules="inputRules"
                       required
                     ></v-textarea>
                 </v-form>
@@ -49,6 +52,9 @@ export default {
     select: null,
     items: ["Item 1", "Item 2", "Item 3", "Item 4"],
     checkbox: null,
+    inputRules: [
+      v => v.length >= 3 || 'Minimum length is 3 characters'
+    ]
   }),
 
   methods: {
