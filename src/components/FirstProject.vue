@@ -10,7 +10,7 @@
         cols="12"
       >
         <div>
-          <div class="heading1" >
+          <div class="heading1">
             {{ copy.heading1 }}
           </div>
           <div class="heading2 mb-3">{{ copy.heading2 }}</div>
@@ -23,61 +23,67 @@
       </v-col>
 
       <v-col v-if="!isMobile" class="mb-5 px-8" cols="12" justify="center">
-        <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12"> 
-    
-           
-           <v-col cols="6" v-if="card.id % 2 === 0" class="d-flex align-center justify-center">
-                <div>
-                  <div class="heading2 mb-3"> {{card.title}}</div>
-                  <p> {{card.description}}</p>
-                  <router-link :to="card.href">See more</router-link>
+        <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12">
+          <!--image right -->
 
-                  <div class="d-flex">
-                     <div v-for="(tag, j) in card.tags" :key="j" >
+          <v-col cols="6" v-if="card.id % 2 === 0" class="d-flex align-center">
+            <div>
+              <div class="heading2 mb-3">{{ card.title }}</div>
+              <p style="text-align: left">{{ card.description }}</p>
+              <router-link :to="card.href">See more</router-link>
 
-                        <v-chip class="ma-2" color="primary" outlined>
-                          <span class="px-2"> {{ tag.tag }}</span>
+              <div class="d-flex my-4 justify-start">
+                <div v-for="(tag, j) in card.tags" :key="j">
+                  <v-chip class="ma-2" color="primary" outlined>
+                    <span class="px-2"> {{ tag.tag }}</span>
 
-                          <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
-                        </v-chip>
-                    </div>
-                  </div>
-                  
+                    <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
+                  </v-chip>
+                </div>
+                <div v-for="(chip, k) in card.chips" :key="k">
+                  <v-chip class="ma-2" filter>
+                    {{ chip.label }}
+                  </v-chip>
+                </div>
               </div>
+            </div>
           </v-col>
-          <v-col cols="6" v-if="card.id % 2 === 0" >
-              <v-img
-                class="ml-5"
-                :src="require('@/assets/' + card.imgSrc + '')"
-              ></v-img>
+          <v-col cols="6" v-if="card.id % 2 === 0">
+            <v-img
+              class="ml-5"
+              :src="require('@/assets/' + card.imgSrc + '')"
+            ></v-img>
           </v-col>
-          
-          <v-col cols="6" v-if="card.id % 2 != 0" >
-              <v-img
-                class="ml-5"
-                :src="require('@/assets/' + card.imgSrc + '')"
-              ></v-img>
-          </v-col>
-          <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center justify-center">
-                <div>
-                  <div class="heading2 mb-3"> {{card.title}}</div>
-                  <p> {{card.description}}</p>
-                  <router-link :to="card.href">See more</router-link>
 
-                   <div class="d-flex"> 
-                    <div v-for="(tag, j) in card.tags" :key="j" class="d-flex ">
-                          <v-chip class="ma-2" color="primary" outlined>
-                            <span class="px-2"> {{ tag.tag }}</span>
+          <!--image left -->
+          <v-col cols="6" v-if="card.id % 2 != 0">
+            <v-img
+              class="ml-5"
+              :src="require('@/assets/' + card.imgSrc + '')"
+            ></v-img>
+          </v-col>
+          <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center">
+            <div>
+              <div class="heading2 mb-3">{{ card.title }}</div>
+              <p style="text-align: right">{{ card.description }}</p>
+              <router-link :to="card.href">See more</router-link>
 
-                            <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
-                          </v-chip>
-                    </div>
-                   </div>
+              <div class="d-flex my-4 justify-end">
+                <div v-for="(tag, j) in card.tags" :key="j" class="d-flex">
+                  <v-chip class="ma-2" color="primary" outlined>
+                    <span class="px-2"> {{ tag.tag }}</span>
+
+                    <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
+                  </v-chip>
+                </div>
+                <div v-for="(chip, k) in card.chips" :key="k">
+                  <v-chip class="ma-2" filter>
+                    {{ chip.label }}
+                  </v-chip>
+                </div> 
               </div>
+            </div>
           </v-col>
-         
-         
-         
         </v-row>
       </v-col>
     </v-row>
@@ -99,7 +105,8 @@ export default {
         imgSrc: "habitApp.png",
         imgMblSrc: "habit.png",
         height: 200,
-        description: "My personal project for an app to create long-term habits. The problem was to think of a target audience other than myself, to find the right layout and sequence of content.",
+        description:
+          "My personal project for an app to create long-term habits. The problem was to think of a target audience other than myself, to find the right layout and sequence of content.",
         tags: [
           {
             tag: "GitHub",
@@ -112,6 +119,11 @@ export default {
             tagHref: "https://github.com/programina-gui/RSS-Testapp",
           },
         ],
+        chips: [
+          {
+            label: "Marvel",
+          },
+        ],
       },
       {
         id: 2,
@@ -119,7 +131,8 @@ export default {
         href: "/fitness-app",
         imgSrc: "fitnessapp.png",
         imgMblSrc: "pareto.png",
-        description: 'Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.',
+        description:
+          "Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.",
         height: 200,
         tags: [
           {
@@ -133,6 +146,11 @@ export default {
             tagHref: "https://github.com/programina-gui/RSS-Testapp",
           },
         ],
+        chips: [
+          {
+            label: "Marvel",
+          },
+        ],
       },
       {
         id: 3,
@@ -140,7 +158,8 @@ export default {
         href: "/gamification-app",
         imgSrc: "rssApp.png",
         imgMblSrc: "rssApp.png",
-        description: 'Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.',
+        description:
+          "Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.",
         height: 200,
         tags: [
           {
@@ -158,6 +177,11 @@ export default {
             tagHref: "http://netz98-at-amina.belabb.es/",
           },
         ],
+        chips: [
+          {
+            label: "Marvel",
+          },
+        ],
       },
       {
         id: 4,
@@ -165,7 +189,8 @@ export default {
         href: "/pareto-app",
         imgSrc: "pareto.png",
         imgMblSrc: "pareto.png",
-        description: 'Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.',
+        description:
+          "Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.",
         height: 200,
         tags: [
           {
@@ -179,12 +204,18 @@ export default {
             tagHref: "https://github.com/programina-gui/RSS-Testapp",
           },
         ],
+        chips: [
+          {
+            label: "Marvel",
+          },
+        ],
       },
     ],
     copy: {
       heading1: "Amina Belabbes",
       heading2: "Junior UX Designer and Frontend Developer",
-      profile: "I'm a <b>Web Developer</b> with 2+ years of professional experience and about half a year of experience as a <b>UX Designer</b>, looking to transition into UX design. I love helping people transform their ideas into products they and their customers love to use. This is my portfolio which at the moment mostly includes private projects as the professional ones were mostly confidential.",
+      profile:
+        "I'm a <b>Web Developer</b> with 2+ years of professional experience and about half a year of experience as a <b>UX Designer</b>, looking to transition into UX design. I love helping people transform their ideas into products they and their customers love to use. This is my portfolio which at the moment mostly includes private projects as the professional ones were mostly confidential.",
     },
   }),
   computed: {
@@ -211,7 +242,7 @@ export default {
         case "xl":
           return 550;
       }
-    }
+    },
   },
 };
 </script>
@@ -227,5 +258,4 @@ export default {
   font-size: 2em;
   letter-spacing: 0px;
 }
-
 </style>

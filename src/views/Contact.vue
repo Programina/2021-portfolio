@@ -14,22 +14,32 @@
                       label="Name"
                       :rules="inputRules"
                       required
-                    ></v-text-field>
-                    <v-text-field
-                      v-model="email"
-                      :counter="40"
-                      label="Email"
-                      :rules="emailRules"
-                      required
-                    ></v-text-field>
-                    <v-textarea
-                      v-model="message"
-                      :counter="450"
-                      label="Your message"
-                      :rules="inputRules"
-                      required
-                    ></v-textarea>
-
+                  ></v-text-field>
+                  <v-text-field
+                    v-model="email"
+                    :counter="40"
+                    label="Email"
+                    :rules="emailRules"
+                    required
+                  ></v-text-field>
+                  <v-textarea
+                    v-model="message"
+                    :counter="450"
+                    label="Your message"
+                    :rules="inputRules"
+                    required
+                  ></v-textarea>
+                  
+                  <v-row class="justify-end my-8">
+                   
+                     <v-btn
+                          @click="resetValidation"
+                          text
+                          rounded
+                          color="warning"
+                        > 
+                      <span class="mr-2">Reset</span>
+                    </v-btn>
                     <v-btn
                           @click="submit"
                           text
@@ -38,18 +48,11 @@
                           class="button-gradient"
                         > 
                       <span class="mr-2">Submit</span>
-                    
                     </v-btn>
 
-                    <v-btn
-                          @click="resetValidation"
-                          text
-                          rounded
-                          color="warning"
-                        > 
-                      <span class="mr-2">Reset</span>
+                   
                     
-                    </v-btn>
+                  </v-row>
                 </v-form>
           </v-col>
         </v-row>
@@ -86,13 +89,7 @@ export default {
       }
     },
     resetValidation(){
-      this.clear()
-      this.$refs.form.resetValidation()
-    },
-    clear() {
-      this.name = "";
-      this.email = "";
-      this.message = "";
+      this.$refs.form.reset()
     },
   },
 };
