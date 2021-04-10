@@ -1,8 +1,8 @@
 TODO: add currentRoute in store to make header only displays when in HOME
 
 <template>
-  <v-app>
-    <v-app-bar
+  <v-app id="app-wrapper">
+    <v-toolbar
       app
       color="background"
       :class="{ 'mobile-spacing': isMobile }"
@@ -19,6 +19,7 @@ TODO: add currentRoute in store to make header only displays when in HOME
               transition="scale-transition"
               width="40"
             /> -->
+            <div>Amina</div>
         </router-link>
       </div>
 
@@ -31,17 +32,17 @@ TODO: add currentRoute in store to make header only displays when in HOME
           :to="navItem.to"
           >{{ navItem.name }}
         </router-link>
-        <a href="">Resume</a>
+        <a href="@/assets/abelabbesCV2020.pdf">Resume</a>
       </div>
 
-      <v-spacer v-if="!isMobile"></v-spacer>
+      <v-spacer v-if="isMobile"></v-spacer>
 
       <v-app-bar-nav-icon
         v-if="isMobile"
         @click.stop="drawer = !drawer"
       >
       </v-app-bar-nav-icon>
-    </v-app-bar>
+    </v-toolbar>
 
     <v-main>
       <v-row class="ma-10">
@@ -52,8 +53,7 @@ TODO: add currentRoute in store to make header only displays when in HOME
             v-if="!isMobile"
             class="d-flex align-center my-5 justify-end"
             cols="6"
-             style="
-    text-align: right;"
+             style="text-align: right;"
           >
               <h3 class="mb-3" v-html="copy.profile"></h3>
           </v-col>
@@ -65,9 +65,10 @@ TODO: add currentRoute in store to make header only displays when in HOME
                   contain
                 ></v-img>
           </v-col>
-
       </v-row>
+
       <router-view />
+
     </v-main>
 
     <v-navigation-drawer
@@ -115,6 +116,7 @@ TODO: add currentRoute in store to make header only displays when in HOME
 
 <script>
 import MobileHeader from "@/components/MobileHeader";
+import { mapState } from "vuex";
 
 export default {
   name: "App",
@@ -151,6 +153,15 @@ export default {
   },
 
   computed: {
+    // ...mapState({currentRoute: state => state.currentRoute}),
+    // currentRoutePath() {
+    //   console.log(this.currentRoute.path)
+    //   return this.currentRoute.path
+    // },
+    currentRoute(){
+      console.log("Current Route, ", this.$router.currentRoute)
+      return this.$router.currentRoute
+    },
     isMobile() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
@@ -176,27 +187,32 @@ export default {
 
 <style lang="scss" >
 html,
-body {
-  background: #fff;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Muli", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Muli", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-h3 {
-    font-family: "Muli", Sans-serif;
-    font-size: 1.6em;
-    font-weight: 400;
-    line-height: 1.7em;
-}
-a,
-.btn-link a {
-  text-decoration: none;
-}
+  h3 {
+      font-family: "Muli", Sans-serif;
+      font-size: 1.6em;
+      font-weight: 400;
+      line-height: 1.7em;
+  }
+
+  a,
+  .btn-link a {
+    text-decoration: none;
+  }
+
+  #app-wrapper {
+    overflow-x: hidden;
+  }
 
 .mobile-spacing {
   display: flex !important;
