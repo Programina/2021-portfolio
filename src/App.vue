@@ -32,7 +32,7 @@ TODO: add currentRoute in store to make header only displays when in HOME
           :to="navItem.to"
           >{{ navItem.name }}
         </router-link>
-        <a href="@/assets/abelabbesCV2020.pdf">Resume</a>
+        <a href="@/assets/abelabbesCV2020.pdf" download="Amina Belabbes CV 2021">Resume</a>
       </div>
 
       <v-spacer v-if="isMobile"></v-spacer>
