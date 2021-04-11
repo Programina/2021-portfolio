@@ -1,0 +1,100 @@
+<template>
+  <v-col v-if="!isMobile" class="mb-5 px-8" cols="12" justify="center">
+    <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12">
+      <!--image right -->
+
+      <v-col cols="6" v-if="card.id % 2 === 0" class="d-flex align-center">
+        <div>
+          <h3 class="heading2 mb-3" style="text-align: right">
+            {{ card.title }}
+          </h3>
+          <p style="text-align: right">{{ card.description }}</p>
+          <div class="d-flex mt-2 mb-10 justify-end">
+            <div v-for="tag in card.tags" :key="tag.tag">
+              <v-chip class="ma-2" color="primary" outlined>
+                <span class="px-2"> {{ tag.tag }}</span>
+
+                <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
+              </v-chip>
+            </div>
+            <div v-for="chip in card.chips" :key="chip.label">
+              <v-chip class="ma-2" filter>
+                {{ chip.label }}
+              </v-chip>
+            </div>
+          </div>
+
+          <router-link :to="card.href">
+            <v-btn color="primary">See Case Study </v-btn>
+          </router-link>
+        </div>
+      </v-col>
+      <v-col cols="6" v-if="card.id % 2 === 0">
+        <v-img
+          class="ml-5"
+          :src="require('@/assets/' + card.imgSrc + '')"
+        ></v-img>
+      </v-col>
+
+      <!--image left -->
+      <v-col cols="6" v-if="card.id % 2 != 0">
+        <v-img
+          class="ml-5"
+          :src="require('@/assets/' + card.imgSrc + '')"
+        ></v-img>
+      </v-col>
+      <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center">
+        <div>
+          <h3 class="heading2 mb-3" style="text-align: left">
+            {{ card.title }}
+          </h3>
+          <p style="text-align: left">{{ card.description }}</p>
+
+          <div class="d-flex mt-2 mb-10 justify-start">
+            <div v-for="tag in card.tags" :key="tag.tag" class="d-flex">
+              <v-chip class="ma-2" color="primary" outlined>
+                <span class="px-2"> {{ tag.tag }}</span>
+
+                <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
+              </v-chip>
+            </div>
+            <div v-for="chip in card.chips" :key="chip.label">
+              <v-chip class="ma-2" filter>
+                {{ chip.label }}
+              </v-chip>
+            </div>
+          </div>
+
+          <router-link :to="card.href">
+            <v-btn color="primary">See Case Study </v-btn></router-link
+          >
+        </div>
+      </v-col>
+    </v-row>
+  </v-col>
+</template>
+
+<script>
+import ismobile from '@/mixins/ismobile.js'
+
+export default {
+  name: "DesktopContentTemplate",
+  components: {},
+  mixins: [ismobile],
+  props: {
+    card: {
+      
+    }
+  },
+  data() {
+    return {
+      components: [{ name: "DateSaver" }, { name: "HabitStacks" }],
+    };
+  },
+  mounted() {},
+  beforeDestroy() {},
+  methods: {},
+};
+</script>
+
+<style lang="css" scoped></style>

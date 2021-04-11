@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Contact from '../views/Contact.vue'
-import About from '../views/About.vue'
-import HabitApp from '../views/HabitApp.vue'
-import FitnessApp from '../views/FitnessApp.vue'
-import ContactSuccess from '../views/ContactSuccess.vue'
+import Home from '../views/mainmenu/Home.vue'
+import Contact from '../views/mainmenu/Contact.vue'
+import About from '../views/mainmenu/About.vue'
+import HabitStacks from '../views/showroom/HabitStacks.vue'
+import DateSaver from '../views/showroom/DateSaver.vue'
+import ContactSuccess from '../views/mainmenu/ContactSuccess.vue'
+import UxUi from '../views/UxUi.vue'
+import Dev from '../views/Dev.vue'
+
 
 Vue.use(VueRouter)
 
@@ -14,7 +17,24 @@ const routes = [
     path: '/',
     alias: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: '/ux-ui',
+        name: 'UxUi',
+        component: UxUi
+      },
+      {
+        path: '/other',
+        name: 'Other',
+        component: ContactSuccess
+      },
+      {
+        path: '/development',
+        name: 'development',
+        component: Dev
+      }
+    ]
   },
   {
     path: '/about',
@@ -28,24 +48,19 @@ const routes = [
   },
   {
     path: '/habit-app',
-    name: 'HabitApp',
-    component: HabitApp
+    name: 'HabitStacks',
+    component: HabitStacks
   },
   {
-    path: '/fitness-app',
-    name: 'FitnessApp',
-    component: FitnessApp
-  },
-  {
-    path: '/gamification-app',
-    name: 'GamificationApp',
-    component: Contact
+    path: '/date-saver',
+    name: 'DateSaver',
+    component: DateSaver
   },
   {
     path: '/contact-success',
     name: 'ContactSuccess',
     component: ContactSuccess
-  }
+  },
 ]
 
 const router = new VueRouter({
