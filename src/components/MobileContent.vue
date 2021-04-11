@@ -16,7 +16,7 @@
         <v-card-title>{{ card.title }}</v-card-title>
         <v-card-text> {{ card.description }} <br/><span> <router-link :to="card.href">See more</router-link></span></v-card-text>
         <v-card-text>
-          <div class="d-flex flex-row justify-end" :data-qa="card.title">
+          <div class="d-flex flex-row flex-wrap justify-end" :data-qa="card.title">
             <div v-for="(tag, j) in card.tags" :key="j">
               <v-chip class="ma-2" color="primary" outlined>
                 <span class="px-2"> {{ tag.tag }}</span>
@@ -44,11 +44,6 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {};
-  },
-  mounted() {},
-  beforeDestroy() {},
   methods: {},
 };
 </script>

@@ -8,16 +8,16 @@
           :height="height"
         />
       </v-col>
-      <v-col >
+      <v-col style="text-align: center">
          <div class="heading1">
           {{copy.heading1}}
         </div>
-        <div class="heading2 mb-3">{{copy.heading2}}</div>
         <p v-html="copy.profile"></p>
       </v-col>
       <v-col
         class="mb-5"
         cols="12"
+         style="text-align: center"
       >
        <router-link to="/contact">
          <v-btn

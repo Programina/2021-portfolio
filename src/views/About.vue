@@ -7,5 +7,25 @@
         </div>
        </v-col>
       </v-row>
+      <v-row>
+        <v-col class="mb-3">
+          <Svgs/>
+        </v-col>
+      </v-row>
   </v-container>
 </template>
+
+
+<script>
+import Svgs from '@/components/Svgs'
+
+export default {
+  name: "About",
+  components: {Svgs},
+  props: {
+  },
+  methods: {},
+};
+</script>
+
+<style lang="css" scoped></style>
