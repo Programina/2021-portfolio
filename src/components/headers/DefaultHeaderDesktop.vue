@@ -1,7 +1,7 @@
 <template>
-  <v-row v-if="isMobile" class="ma-10">
+  <v-row class="ma-10">
     <v-col
-      v-if="!isMobile && this.currentRoutePath === '/'"
+      v-if="this.currentRoute.path === '/'"
       class="d-flex align-center my-5 justify-end"
       cols="6"
       style="text-align: right"
@@ -12,7 +12,7 @@
     <v-col
       cols="6"
       class="d-flex justify-start align-center"
-      v-if="!isMobile && this.currentRoutePath === '/'"
+      v-if="this.currentRoute.path === '/'"
     >
       <v-img
         :src="require('@/assets/design-and-development-process-1721879-1.svg')"
@@ -25,18 +25,16 @@
 </template>
 
 <script>
-import currentRouteMx from '@/mixins/currentRouteMx.js'
-
+import { mapState } from 'vuex'
 export default {
   name: "DefaultHeaderDesktop",
   
-  mixins: [ismobile, currentRouteMx],
   props: {},
   data() {
     return {};
   },
   mounted() {},
-  beforeDestroy() {},
+  computed: mapState(['currentRoute']) ,
   methods: {},
 };
 </script>

@@ -4,13 +4,15 @@
 
 <script>
 
-import currentRouteMx from '@/mixins/currentRouteMx.js'
+import DefaultHeaderDesktop from '@/components/headers/DefaultHeaderDesktop'
+import ContactHeader from '@/components/headers/ContactHeader'
+import HabitStacksHeader from '@/components/headers/HabitStacksHeader'
+import DateSaverHeader from '@/components/headers/DateSaverHeader'
+import { mapState } from 'vuex'
+
 export default {
   name: "DesktopHeaderTemplate",
-  components: {},
-  mixins: { 
-    currentRouteMx
-  },
+  components: {DefaultHeaderDesktop, ContactHeader, DateSaverHeader, HabitStacksHeader},
   data() {
     return {
       components: [   
@@ -18,12 +20,16 @@ export default {
           componentName: 'DefaultHeaderDesktop',
           path: '/home'
         },
+        {  
+          componentName: 'DefaultHeaderDesktop',
+          path: '/'
+        },
          { 
-          componentName: 'About',
+          componentName: 'AboutHeader',
           path: '/about'
         }, 
         {
-          componentName: 'Contact',
+          componentName: 'ContactHeader',
           path: '/contact'
         }, 
         { 
@@ -38,9 +44,19 @@ export default {
     };
   },
   computed:{
+    ...mapState(['currentRoute']) ,
     component(){
-      let comp = this.components.filter(val => val.path === this.currentRoutePath)
-      console.log("COmponent name ", comp.componentName)
+      let comp;
+      if(this.currentRoute.path) {
+        comp = this.components.find(val => val.path === this.currentRoute.path)
+      } else {
+        comp = {
+          componentName: 'DefaultHeaderDesktop', 
+          path: '/'
+          }
+      }
+      
+      console.log("Component name ", comp.componentName)
       return comp.componentName
     }
   }
