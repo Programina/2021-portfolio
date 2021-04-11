@@ -5,27 +5,13 @@ TODO: add currentRoute in store to make header only displays when in HOME
     <NavBar/>
 
     <v-main>
-      <v-row class="ma-10" >
-          <v-col v-if="isMobile" class="mb-5" cols="12">
+      <v-row v-if="isMobile"  class="ma-10" >
+          <v-col class="mb-5" cols="12">
             <MobileHeader :copy="copy" />
           </v-col>
-          <v-col
-            v-if="!isMobile && this.currentRoutePath === '/'"
-            class="d-flex align-center my-5 justify-end"
-            cols="6"
-            style="text-align: right;"
-            data-qa="desktop-showcase"
-          >
-              <h3 class="mb-3" v-html="copy.profile"></h3>
-          </v-col>
-          <v-col cols="6" class="d-flex justify-start align-center" v-if="!isMobile && this.currentRoutePath === '/'">
-                <v-img
-                  :src="require('@/assets/design-and-development-process-1721879-1.svg')"
-                  max-height="280"
-                  max-width="450"
-                  contain
-                ></v-img>
-          </v-col>
+      </v-row>
+      <v-row v-if="!isMobile">
+        <DesktopHeaderTemplate/>
       </v-row>
 
       <router-view />
@@ -79,13 +65,14 @@ TODO: add currentRoute in store to make header only displays when in HOME
 import MobileHeader from "@/components/MobileHeader"
 import ismobile from '@/mixins/ismobile.js'
 import NavBar from '@/components/NavBar'
-import { mapState } from 'vuex'
+import DesktopHeaderTemplate from '@/components/DesktopHeaderTemplate'
+
 
 export default {
   name: "App",
   mixins: [ismobile],
   components: {
-    MobileHeader, NavBar
+    MobileHeader, NavBar, DesktopHeaderTemplate
   },
 
   data() {
@@ -103,21 +90,11 @@ export default {
   },
 
   computed: {
-    ...mapState({currentRoute: state => state.currentRoute}),
-    currentRoutePath() {
-      console.log("Store", this.currentRoute.path, "router", this.$router.currentRoute)
-      return this.currentRoute.path
-    }
+   
   },
   watch: {
     group() {
       this.drawer = false;
-    },
-    'currentRoutePath': {
-      immediate: true,
-      handler(val) {
-        console.log("currentRoute changed value")
-      }
     }
   },
 };
