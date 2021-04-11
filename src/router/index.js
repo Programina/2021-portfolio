@@ -8,6 +8,7 @@ import DateSaver from '../views/showroom/DateSaver.vue'
 import ContactSuccess from '../views/mainmenu/ContactSuccess.vue'
 import UxUi from '../views/UxUi.vue'
 import Dev from '../views/Dev.vue'
+import NavService from '@/services/NavService'
 
 
 Vue.use(VueRouter)
@@ -67,6 +68,11 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  NavService.setCurrentRoute(to)
+  next()
 })
 
 export default router

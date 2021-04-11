@@ -2,7 +2,7 @@ TODO: add currentRoute in store to make header only displays when in HOME
 
 <template>
   <v-app id="app-wrapper">
-
+    <NavBar/>
 
     <v-main>
       <v-row class="ma-10" >
@@ -10,7 +10,7 @@ TODO: add currentRoute in store to make header only displays when in HOME
             <MobileHeader :copy="copy" />
           </v-col>
           <v-col
-            v-if="!isMobile && this.currentRoute.path === '/'"
+            v-if="!isMobile && this.currentRoutePath === '/'"
             class="d-flex align-center my-5 justify-end"
             cols="6"
             style="text-align: right;"
@@ -18,7 +18,7 @@ TODO: add currentRoute in store to make header only displays when in HOME
           >
               <h3 class="mb-3" v-html="copy.profile"></h3>
           </v-col>
-          <v-col cols="6" class="d-flex justify-start align-center" v-if="!isMobile && this.currentRoute.path === '/'">
+          <v-col cols="6" class="d-flex justify-start align-center" v-if="!isMobile && this.currentRoutePath === '/'">
                 <v-img
                   :src="require('@/assets/design-and-development-process-1721879-1.svg')"
                   max-height="280"
@@ -78,32 +78,21 @@ TODO: add currentRoute in store to make header only displays when in HOME
 <script>
 import MobileHeader from "@/components/MobileHeader"
 import ismobile from '@/mixins/ismobile.js'
+import NavBar from '@/components/NavBar'
+import { mapState } from 'vuex'
 
 export default {
   name: "App",
   mixins: [ismobile],
   components: {
-    MobileHeader,
+    MobileHeader, NavBar
   },
 
   data() {
     return {
       drawer: false,
       group: null,
-      navigation: [
-        {
-          to: "/",
-          name: "Home",
-        },
-        {
-          to: "/contact",
-          name: "Contact",
-        },
-        {
-          to: "/about",
-          name: "About",
-        }
-    ],
+      
     copy: {
       profile:
         "Nice to meet you –  I'm Amina Belabbes. <br/> I'm a <b>Junior UX Designer</b> and <b>Web Developer</b> based in Germany.",
@@ -114,20 +103,22 @@ export default {
   },
 
   computed: {
-    // ...mapState({currentRoute: state => state.currentRoute}),
-    // currentRoutePath() {
-    //   console.log(this.currentRoute.path)
-    //   return this.currentRoute.path
-    // },
-    currentRoute(){
-      console.log("Current Route, ", this.$router.currentRoute)
-      return this.$router.currentRoute
+    ...mapState({currentRoute: state => state.currentRoute}),
+    currentRoutePath() {
+      console.log("Store", this.currentRoute.path, "router", this.$router.currentRoute)
+      return this.currentRoute.path
     }
   },
   watch: {
     group() {
       this.drawer = false;
     },
+    'currentRoutePath': {
+      immediate: true,
+      handler(val) {
+        console.log("currentRoute changed value")
+      }
+    }
   },
 };
 </script>

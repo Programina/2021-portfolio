@@ -41,12 +41,27 @@
 </template>
 
 <script>
+import ismobile from '@/mixins/ismobile.js'
 export default {
   name: "NavBar",
-  components: {},
-  props: {},
+  mixins: [ismobile],
   data() {
-    return {};
+    return {
+      navigation: [
+        {
+          to: "/",
+          name: "Home",
+        },
+        {
+          to: "/contact",
+          name: "Contact",
+        },
+        {
+          to: "/about",
+          name: "About",
+        }
+      ]
+    };
   }
 };
 </script>
