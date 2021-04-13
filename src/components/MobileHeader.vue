@@ -1,6 +1,6 @@
 <template>
   <div data-qa="mobile-header">
-      <v-col cols="12">
+      <v-col cols="12" transition="slide-x-transition">
         <v-img
           v-if="designerImageDisplayed"
           :src="require('@/assets/designer.gif')"
@@ -16,12 +16,12 @@
           :height="height"
         />
       </v-col>
-      <v-col style="text-align: center">
+      <!-- <v-col style="text-align: center">
          <div class="heading1">
           {{copy.heading1}}
         </div>
         <p v-html="copy.profile"></p>
-      </v-col>
+      </v-col> -->
       <v-col
         class="mb-5"
         cols="12"
@@ -73,7 +73,7 @@ export default {
   methods: {
     imageIntervall(){
       this.interval = setInterval( 
-        ()=> this.designerImageDisplayed =! this.designerImageDisplayed, 600);
+        ()=> this.designerImageDisplayed =! this.designerImageDisplayed, 5000);
     },
     stopSwitch(){
       clearInterval(this.interval)

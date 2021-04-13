@@ -27,7 +27,7 @@
       </router-link>
       <a
         :style="{'color': fontColor}"
-        href="@/assets/abelabbesResume.pdf"
+        href="./abelabbesResume.pdf"
         download="Amina_Belabbes_Resume_2021.pdf"
         filetype="pdf"
         >Resume (German)</a
