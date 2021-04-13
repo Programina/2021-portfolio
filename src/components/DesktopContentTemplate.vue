@@ -31,14 +31,14 @@
       </v-col>
       <v-col cols="6" v-if="card.id % 2 === 0">
         <v-img
-          class="ml-5"
+          class="ml-5" :alt="card.imgSrc"
           :src="require('@/assets/' + card.imgSrc + '')"
         ></v-img>
       </v-col>
 
       <!--image left -->
       <v-col cols="6" v-if="card.id % 2 != 0">
-        <v-img
+        <v-img :alt="card.imgSrc"
           class="ml-5"
           :src="require('@/assets/' + card.imgSrc + '')"
         ></v-img>
@@ -89,10 +89,7 @@ export default {
     return {
       components: [{ name: "DateSaver" }, { name: "HabitStacks" }],
     };
-  },
-  mounted() {},
-  beforeDestroy() {},
-  methods: {},
+  }
 };
 </script>
 

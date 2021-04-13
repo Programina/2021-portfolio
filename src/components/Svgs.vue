@@ -1,94 +1,85 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
-        <div style="height: 50px; width: 50px">
-          <svg
-            style="height: 100%"
-            fill="none"
-            height="512"
-            viewBox="0 0 512 512"
-            width="512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect fill="#00000029" height="512" rx="50" width="512" />
-            <rect fill="#00000029" height="512" rx="50" width="512" />
-            <path
-              clip-rule="evenodd"
-              d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z"
-              fill="#fff"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <!--Typescript-->
+      <v-col class="ma-2" cols="2">
+        <img
+          alt="Angular"
+          class="cld-responsive"
+          src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/angular"
+      /></v-col>
+      <v-col class="ma-2" cols="2">
+        <img
+          alt="React"
+          data-src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_auto,g_center,w_auto/v1/academind.com/site/topics/react"
+          class="cld-responsive"
+          src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/react"
+        />
       </v-col>
-      <v-col>
-        <div style="height: 50px; width: 50px">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630">
-            <rect width="630" height="630" fill="#00000029" />
-            <path
-              fill="#fff"
-              d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z"
-            />
-          </svg>
-        </div>
+      <v-col class="ma-2" cols="2">
+        <img
+          alt="Vue.js"
+          data-src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_auto,g_center,w_auto/v1/academind.com/site/topics/vue"
+          class="cld-responsive"
+          data-width="50"
+          src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/vue"
+        />
       </v-col>
+      <v-col class="ma-2" cols="2"
+        ><img
+          alt="JavaScript"
+          data-src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_auto,g_center,w_auto/v1/academind.com/site/topics/javascript"
+          class="cld-responsive"
+          data-width="50"
+          src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/javascript"
+      /></v-col>
+    </v-row>
 
-      <v-col>
-        <div style="height: 50px; width: 50px">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 16 16"
-          >
-            <defs>
-              <linearGradient
-                y2="534.53"
-                x2="497.84"
-                y1="516.8"
-                x1="480.12"
-                gradientUnits="userSpaceOnUse"
-                xlink:href="#0"
-              />
-              <linearGradient
-                y2="527.53"
-                x2="494.84"
-                y1="509.8"
-                x1="477.12"
-                gradientUnits="userSpaceOnUse"
-                xlink:href="#0"
-              />
-              <linearGradient
-                xlink:href="#0"
-                gradientUnits="userSpaceOnUse"
-                x1="479.57"
-                y1="516.45"
-                x2="494.57"
-                y2="531.45"
-              />
-              <linearGradient id="0">
-                <stop stop-color="#2e5d89" />
-                <stop offset="1" stop-color="#1b92f4" />
-              </linearGradient>
-              <linearGradient
-                xlink:href="#0"
-                gradientUnits="userSpaceOnUse"
-                x1="399.12"
-                y1="510.3"
-                x2="416.84"
-                y2="528.03"
-              />
-            </defs>
-            <path
-              d="m-31.845 21.912c-1.527.012-3.45.12-5.507.471v19.528h4.638v-7.06c0 0 9.138.848 9.311-5.833 0 0 1.205-7.179-8.442-7.101m.471 3.478c2.814.011 3.55 1.01 3.623 2.862 0 3.887-4.964 2.935-4.964 2.935v-5.724c.491-.038.939-.074 1.341-.072m14.467 1.703c-1.126.051-2.237.313-3.225.87-1.83 1.079-2.059 3.713-1.051 5.435 1.26 1.86 3.684 2.127 5.398 3.406.87.578.422 2.044-.58 2.138-1.846.302-3.703-.365-5.362-1.123v2.645c-.23.784.732.803 1.268 1.014 1.993.484 4.152.556 6.123-.072 1.741-.512 2.992-2.247 2.898-4.058-.0001-.485-.093-.953-.254-1.413-.686-1.901-2.815-2.521-4.456-3.333-1.043-.267-2.579-1.572-1.196-2.464 1.554-.488 3.161.239 4.565.87l1.014-2.427c.339-.763-1.306-.752-1.812-1.087-1.066-.3-2.207-.45-3.333-.399"
-              transform="matrix(.54999 0 0 .54999 21.404-9.572)"
-              fill="#4d4d4d"
-              stroke="none"
-            />
-          </svg>
-        </div>
-      </v-col>
+      <v-row>
+        <v-col class="ma-2" cols="2"
+          ><img
+            alt="NodeJS"
+            src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/nodejs"
+        /></v-col>
+        <v-col class="ma-2" cols="2">
+          <img
+            alt="TypeScript"
+            src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/typescript"
+          />
+        </v-col>
+        <v-col class="ma-2" cols="2">
+          <img
+            alt="HTML"
+            src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/html"
+        /></v-col>
+        <v-col class="ma-2" cols="2">
+          <img
+            alt="CSS"
+            src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/css"
+        /></v-col>
+      </v-row>
+      <v-row>
+        <v-col class="ma-2" cols="2">
+          <img
+            alt="Svelte"
+            src="@/assets/Svelte.png"
+            style="width: 70px"
+        /></v-col>
+        <v-col class="ma-2" cols="2"
+          ><img
+            alt="Flutter"
+            src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/flutter"
+        /></v-col>
+        <v-col class="ma-2" cols="2"
+          ><img
+            alt="Python"
+            src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/python"
+        /></v-col>
+        <v-col class="ma-2" cols="2">
+          <img
+            alt="Bootstrap"
+            style="width: 120px; margin-top: -25px;"
+            src="@/assets/bootstrap.png"
+        /></v-col>
     </v-row>
   </v-container>
 </template>
@@ -107,4 +98,12 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100px;
+}
+</style>

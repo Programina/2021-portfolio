@@ -42,11 +42,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
 
     <v-footer class="footer d-flex flex-column align-center justify-center">
       <div class="footer-icons d-flex align-center justify-center">
-        <a data-v-2c037838="" href="mailto:programina.belabbes@gmail.com"
-          ><i data-v-2c037838="" class="fa fa-envelope"></i></a
-        ><a data-v-2c037838="" href="http://www.twitter.com/MsAminaBelabbes"
-          ><i data-v-2c037838="" class="fa fa-twitter"></i></a
-        ><a data-v-2c037838="" href="https://www.instagram.com/programina/"
+        <a data-v-2c037838="" href="https://www.instagram.com/programina/"
           ><i data-v-2c037838="" class="fa fa-instagram"></i></a
         ><a data-v-2c037838="" href="https://github.com/programina-gui"
           ><i data-v-2c037838="" class="fa fa-github"></i></a
@@ -55,6 +51,14 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
         ><a data-v-2c037838="" href="https://stackblitz.com/@Programina"
           ><i data-v-2c037838="" class="fa fa-flash"></i
         ></a>
+        <a data-v-2c037838="" href="https://www.linkedin.com/in/amina-b-b98703149/"
+          ><i data-v-2c037838="" class="fa fa-linkedin"></i
+        ></a>
+        <a data-v-2c037838="" href="https://www.xing.com/profile/Amina_Belabbes/cv"
+          ><i data-v-2c037838="" class="fa fa-xing"></i
+        ></a>
+
+        
       </div>
       <router-link to="/imprint" class="d-flex align-center justify-center">
         Imprint
