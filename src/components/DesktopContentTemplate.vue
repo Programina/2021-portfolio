@@ -1,11 +1,5 @@
 <template>
   <v-col class="mb-5 px-8" cols="12" justify="center">
-
-    <h3>As you can imagine, having been employed full-time for most of my developer days, I have not yet had a massive amount of professional projects to put into my portfolio. My companies’ products were mostly proprietary and not for me to share.
-
-    </h3>
-
-    You will notice, the private projects I share are mostly works in progress, too. There are a lot of funny memes about programmers and their side-projects and I am afraid for me they are true.
     <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12">
       <!--image right -->
 
@@ -37,14 +31,16 @@
       </v-col>
       <v-col cols="6" v-if="card.id % 2 === 0">
         <v-img
-          class="ml-5" :alt="card.imgSrc"
+          class="ml-5"
+          :alt="card.imgSrc"
           :src="require('@/assets/' + card.imgSrc + '')"
         ></v-img>
       </v-col>
 
       <!--image left -->
       <v-col cols="6" v-if="card.id % 2 != 0">
-        <v-img :alt="card.imgSrc"
+        <v-img
+          :alt="card.imgSrc"
           class="ml-5"
           :src="require('@/assets/' + card.imgSrc + '')"
         ></v-img>
@@ -77,11 +73,23 @@
         </div>
       </v-col>
     </v-row>
+    <v-row>
+      <h3>
+        As you can imagine, having been employed full-time for most of my
+        developer days, I have not yet had a massive amount of professional
+        projects to put into my portfolio. My companies’ products were mostly
+        proprietary and not for me to share.
+      </h3>
+      <p>
+        You will notice, the private projects I share are mostly works in
+        progress, too. There are a lot of funny memes about programmers and
+        their side-projects and I am afraid for me they are true.
+      </p>
+    </v-row>
   </v-col>
 </template>
 
 <script>
-
 export default {
   name: "DesktopContentTemplate",
   components: {},
@@ -95,7 +103,7 @@ export default {
     return {
       components: [{ name: "DateSaver" }, { name: "HabitStacks" }],
     };
-  }
+  },
 };
 </script>
 

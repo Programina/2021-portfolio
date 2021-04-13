@@ -51,19 +51,19 @@ export default {
         },
         {
           componentName: "HabitStacksHeader",
-          path: "/home/habit-stacks",
+          path: "/habit-stacks",
         },
         {
           componentName: "DateSaverHeader",
-          path: "/home/date-saver",
+          path: "/date-saver",
         },
         {
           componentName: "DefaultHeaderDesktop",
-          path: "/home/ux-ui",
+          path: "/ux-ui",
         },
         {
           componentName: "DefaultHeaderDesktop",
-          path: "/home/development",
+          path: "/development",
         },
         {
           componentName: "OtherHeader",

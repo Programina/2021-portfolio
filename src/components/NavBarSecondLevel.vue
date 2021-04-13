@@ -19,7 +19,7 @@ export default {
           name: "UX & UI",
         },
         {
-          to: "/home/development",
+          to: "/development",
           name: "Development",
         },
         {

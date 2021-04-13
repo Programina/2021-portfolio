@@ -131,22 +131,22 @@ export default {
         { 
           color: '#89b1cc',
           fontColor: '#fff',
-          path: '/home/habit-stacks'
+          path: '/habit-stacks'
         },
         { 
           color: '#de8579',
           fontColor: '#fff',
-          path: '/home/date-saver'
+          path: '/date-saver'
         },
         { 
           color: '#de8579',
           fontColor: '#fff',
-          path: '/home/ux-ui'
+          path: '/ux-ui'
         },
         { 
           color: '#8D5A97',
           fontColor: '#fff',
-          path: '/home/development'
+          path: '/development'
         },
         { 
           color: '#e8cf7d',
