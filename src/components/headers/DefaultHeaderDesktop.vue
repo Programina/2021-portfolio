@@ -1,14 +1,14 @@
 <template>
-  <v-row class="ma-10"  :style="{ 'background-color': color, 'color': fontColor, 'height': height + 'px'}">
-    <v-col
-      class="d-flex align-center my-5 justify-end"
+  <div data-qa="default-header" class="d-flex justify-center" :style="{ 'background-color': color, 'color': fontColor, 'height': height + 'px'}">
+    <div
+      class="d-flex align-center justify-end"
       cols="6"
       style="text-align: right"
       data-qa="desktop-showcase"
     >
       <h3 class="mb-3" v-html="profileText"></h3>
-    </v-col>
-    <v-col
+    </div>
+    <div
       cols="6"
       class="d-flex justify-start align-center"
     >
@@ -18,17 +18,21 @@
         max-width="450"
         contain
       ></v-img>
-    </v-col>
-  </v-row>
+    </div>
+  </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import {mapState} from 'vuex'
 export default {
   name: "DefaultHeaderDesktop",
 
   props: {
-     color: {
+    copy: {
+      type: Object,
+      required: true
+    },
+    color: {
       type: String,
       required: false
     },   
@@ -43,12 +47,7 @@ export default {
   },
   data() {
     return {
-      copy: {
-        profile1:
-          "Nice to meet you –  I'm Amina Belabbes. <br/> ",
-        profile2: "based in Germany.",
-        transitionItem: '<b>Junior UX Designer</b> '
-      },
+     
     };
   },
   mounted() {},

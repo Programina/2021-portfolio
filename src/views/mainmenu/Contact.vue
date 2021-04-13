@@ -58,13 +58,12 @@ TODO: Add a loading spinner for while the email attempts to send
                   type="submit"
                   text
                   rounded
-                  color="background"
+                  color="primary"
                   :class="{ 'button-gradient': formValidity }"
                   :disabled="!formValidity"
                 >
                   <span class="mr-2">Submit</span>
                 </v-btn>
-                <!-- <input type="submit" class="button-gradient" value="Send" /> -->
               </v-row>
             </v-form>
           </v-col>

@@ -2,7 +2,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
 
 <template>
   <v-app id="app-wrapper">
-    <NavBar :color="colr.color" :fontColor="colr.fontColor" />
+    <NavBar :color="colr.color" :fontColor="colr.fontColor" @toggle-drawer="toggleDrawer"/>
 
     <v-main>
       <v-row v-if="isMobile"  class="ma-10" >
@@ -10,8 +10,8 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
             <MobileHeader :copy="copy" />
           </v-col>
       </v-row>
-      <v-row v-if="!isMobile" class="justify-center">
-        <DesktopHeaderTemplate :fontColor="colr.fontColor" :color="colr.color" :height="height" style="width: 100%"/>
+      <v-row v-if="!isMobile">
+        <DesktopHeaderTemplate :copy="copy" :fontColor="colr.fontColor" :color="colr.color" :height="height" style="width: 100%"/>
       </v-row>
       <v-row class="ma-10 justify-center" >
          <NavBarSecondLevel/>
@@ -56,9 +56,9 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
           ><i data-v-2c037838="" class="fa fa-flash"></i
         ></a>
       </div>
-      <div class="d-flex align-center justify-center">
-        Copyright Amina Belabbes (c) 2021
-      </div>
+      <router-link to="/imprint" class="d-flex align-center justify-center">
+        Imprint
+      </router-link>
     </v-footer>
   </v-app>
 </template>
@@ -80,28 +80,48 @@ export default {
 
   data() {
     return {
+      navigation: [
+        {
+          to: "/",
+          name: "Home",
+        },
+        {
+          to: "/about",
+          name: "About",
+        },
+        {
+          to: "/contact",
+          name: "Contact",
+        }
+      ],
+      copy: {
+        profile1:
+          "Nice to meet you –  I'm Amina Belabbes. <br/> I am a",
+        profile2: "based in Germany.",
+        transitionItem: ['<b>UX designer</b> ', '<b>frontend developer</b> ']
+      },
       drawer: false,
       group: null,
       height: '400',
       colors: [
         {  
-          color: '#fff',
+          color: '#b8ddf9',
           fontColor: 'black',
           path: '/home'
         },
         {  
-          color: '#fff',
+          color: '#b8ddf9',
           fontColor: 'black',
           path: '/'
         },
          { 
-          color: '#2BC2CA', 
-          fontColor: '#fff',
+          color: '#98e5cd', 
+          fontColor: 'black',
           path: '/about'
         }, 
         {
-          color: '#304C89',
-          fontColor: '#fff',
+          color: '#ffebf2',
+          fontColor: 'black',
           path: '/contact'
         }, 
         { 
@@ -115,7 +135,7 @@ export default {
           path: '/home/date-saver'
         },
         { 
-          color: '#824670',
+          color: '#de8579',
           fontColor: '#fff',
           path: '/home/ux-ui'
         },
@@ -125,15 +145,19 @@ export default {
           path: '/home/development'
         },
         { 
-          color: '#662C91',
-          fontColor: '#fff',
+          color: '#e8cf7d',
+          fontColor: 'black',
           path: '/other'
         }
       ]
     }
     
   },
-
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer
+    }
+  } ,
   computed: {
   ...mapState(["currentRoute"]), 
    colr() {
@@ -158,17 +182,37 @@ export default {
 };
 </script>
 
-<style lang="scss" >
-.test {
-  color: #662C91;
-  color: #1F2041;
-  color: #824670;
-  color: #de8579;
-  color: #304C89;
-  // unused
-  color: #4C4C9D;
-}
+<style lang="scss">
+// .swatch {
+//   color: #662C91;
+//   color: #1F2041;
+//   color: #824670;
+//   color: #de8579;
+//   color: #304C89;
+//   color: #e8cf7d;
+//   color: #4C4C9D;
+//   color: #b8ddf9;
+// }
 
+blockquote {
+  max-width: 630px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-style: solid;
+  border-width: 0px 0px 0px 2px;
+  border-color: #000 #000 #000 #89b1cc;
+  background-color: transparent;
+  line-height: 36px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding: 40px;
+  float: none;
+  clear: none;
+  letter-spacing: 0.2px;
+  font-size: 24px;
+  font-family: 'Libre Baskerville', sans-serif;
+}
 
 html,
 body {
@@ -178,6 +222,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Muli", sans-serif;
+    font-size: 18px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -192,6 +237,12 @@ body {
   a,
   .btn-link a {
     text-decoration: none;
+    text-transform: uppercase;
+    color: black !important;
+  }
+
+  a:hover, a:active, a:focus {
+    text-decoration: underline;
   }
 
   #app-wrapper {

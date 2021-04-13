@@ -1,27 +1,40 @@
 <template>
   <div data-qa="mobile-header">
-      <v-col cols="12" transition="slide-x-transition">
-        <v-img
+      <v-col cols="12" >
+        <v-scroll-y-transition hide-on-leave="true" mode="in">
+          <v-img
           v-if="designerImageDisplayed"
-          :src="require('@/assets/designer.gif')"
+          :src="require('@/assets/designer.png')"
+          
           class="mt-5"
           contain
           :height="height"
         />
         <v-img
           v-else
-          :src="require('@/assets/developer.gif')"
+          :src="require('@/assets/developer.png')"
           class="mt-5"
           contain
+          :key="'dev-gif'"
           :height="height"
         />
+        </v-scroll-y-transition>
+      
       </v-col>
-      <!-- <v-col style="text-align: center">
-         <div class="heading1">
-          {{copy.heading1}}
-        </div>
-        <p v-html="copy.profile"></p>
-      </v-col> -->
+      <v-col class="mb-3"  style="text-align: center" >
+        
+        <div class="heading-animated" v-html="copy.profile1"/>
+        <v-slide-x-transition hide-on-leave="true" mode="in">
+          <span v-if="designerImageDisplayed" >
+            <div class="heading-animated" v-html="copy.transitionItem[0]"/>
+          </span>
+         <span class="mb-3" v-else>
+          <div class="heading-animated" v-html="copy.transitionItem[1]"></div>
+        </span>
+        </v-slide-x-transition>
+       
+         <div class="heading-animated"> {{copy.profile2}}</div>
+      </v-col>
       <v-col
         class="mb-5"
         cols="12"
@@ -33,8 +46,7 @@
               target="_blank"
               text
               rounded
-              color="background"
-              class="button-gradient"
+              color="primary"
             > 
           <span class="mr-2">Get in touch</span>
         
@@ -73,7 +85,7 @@ export default {
   methods: {
     imageIntervall(){
       this.interval = setInterval( 
-        ()=> this.designerImageDisplayed =! this.designerImageDisplayed, 5000);
+        ()=> this.designerImageDisplayed =! this.designerImageDisplayed, 3000);
     },
     stopSwitch(){
       clearInterval(this.interval)
@@ -90,14 +102,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.heading1 {
-  font-weight: 500;
-  font-size: 3em;
-  letter-spacing: 0px;
-}
-.heading2 {
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0px;
+.heading-animated {
+    font-family: "Muli", Sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1.7em;
 }
 </style>

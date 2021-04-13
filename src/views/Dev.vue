@@ -1,11 +1,27 @@
 <template>
-  <div></div>
+   <v-container>
+    <v-row class="text-center">
+     
+      <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
+        <MobileContent :cards="cards" />
+      </v-col>
+   <v-col v-else class="mb-5 px-8" cols="12" justify="center">
+        <DesktopContentTemplate :cards="cards" />
+      </v-col>
+     
+    </v-row>
+  </v-container>
 </template>
 
 <script>
+
+import MobileHeader from "@/components/MobileHeader";
+import MobileContent from "@/components/MobileContent";
+import DesktopContentTemplate from "@/components/DesktopContentTemplate";
+
 export default {
   name: 'Dev',
-  components: {},
+  components: { MobileHeader, MobileContent, DesktopContentTemplate },
   props: {},
   data() {
     return {cards: [

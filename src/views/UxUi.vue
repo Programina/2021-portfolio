@@ -5,7 +5,9 @@
       <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
         <MobileContent :cards="cards" />
       </v-col>
-
+   <v-col v-else class="mb-5 px-8" cols="12" justify="center">
+        <DesktopContentTemplate :cards="cards" />
+      </v-col>
      
     </v-row>
   </v-container>
@@ -14,9 +16,11 @@
 <script>
 import MobileHeader from "@/components/MobileHeader";
 import MobileContent from "@/components/MobileContent";
+import DesktopContentTemplate from "@/components/DesktopContentTemplate";
+
 export default {
   name: "UxUi",
-  components: { MobileHeader, MobileContent },
+  components: { MobileHeader, MobileContent, DesktopContentTemplate },
   data: () => ({
     cards: [
       {

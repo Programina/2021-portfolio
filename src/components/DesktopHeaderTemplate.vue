@@ -1,10 +1,11 @@
 <template>
-  <div v-if="component">
+  <div data-qa="header-template" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;" v-if="component">
     <component
       :is="component"
       :color="color"
       :fontColor="fontColor"
       :height="height"
+      :copy="component === 'DefaultHeaderDesktop' ? copy : undefined"
     />
   </div>
 </template>
@@ -72,6 +73,10 @@ export default {
     };
   },
   props: {
+    copy: {
+      type: Object,
+      required: true
+    },
     fontColor: {
       type: String,
       required: false,

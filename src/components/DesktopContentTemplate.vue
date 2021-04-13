@@ -80,9 +80,10 @@ export default {
   name: "DesktopContentTemplate",
   components: {},
   props: {
-    card: {
-      
-    }
+    cards: {
+      type: Array,
+      required: true,
+    },
   },
   data() {
     return {

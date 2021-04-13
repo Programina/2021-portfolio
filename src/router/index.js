@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/mainmenu/Home.vue'
 import Contact from '../views/mainmenu/Contact.vue'
 import About from '../views/mainmenu/About.vue'
+import Imprint from '../views/Imprint.vue'
 import HabitStacks from '../views/showroom/HabitStacks.vue'
 import DateSaver from '../views/showroom/DateSaver.vue'
 import ContactSuccess from '../views/mainmenu/ContactSuccess.vue'
@@ -47,6 +48,11 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/imprint',
+    name: 'Imprint',
+    component: Imprint
   },
   {
     path: '/habit-stacks',

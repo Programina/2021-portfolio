@@ -1,5 +1,6 @@
 <template>
   <v-toolbar
+    data-qa="navbar"
     :style="[{'flex': '0 1 auto'}, { 'background-color': color}]"
     :class="{ 'mobile-spacing': isMobile }"
     flat
@@ -7,15 +8,14 @@
   >
     <div class="d-flex align-center">
       <router-link :style="{'color': fontColor}" to="/">
-        <!-- <v-img
+        <v-img
               alt="Vuetify Logo"
               class="shrink mr-2"
               contain
-              src="./assets/logo.png"
+              src="@/assets/logo_transparent.png"
               transition="scale-transition"
-              width="40"
-            /> -->
-        <div>Amina</div>
+              width="80"
+            />
       </router-link>
     </div>
 
@@ -32,11 +32,14 @@
         filetype="pdf"
         >Resume (German)</a
       >
+      <router-link :style="{'color': fontColor}" to="contact"
+        >Contact
+      </router-link>
     </div>
 
     <v-spacer v-if="isMobile"></v-spacer>
 
-    <v-app-bar-nav-icon v-if="isMobile" @click.stop="drawer = !drawer">
+    <v-app-bar-nav-icon v-if="isMobile" @click.stop="toggleDrawer">
     </v-app-bar-nav-icon>
   </v-toolbar>
 </template>
@@ -49,12 +52,17 @@ export default {
   props: {
     color: {
       type: String,
-      required: false
+      required: true
     },
     fontColor: {
       type: String,
-      required: false
+      required: true
     },
+  },
+  methods: {
+    toggleDrawer(){
+      this.$emit('toggle-drawer')
+    }
   },
   data() {
     return {
@@ -62,10 +70,6 @@ export default {
         {
           to: "/",
           name: "Home",
-        },
-        {
-          to: "/contact",
-          name: "Contact",
         },
         {
           to: "/about",
