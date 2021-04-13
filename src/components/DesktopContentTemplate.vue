@@ -1,5 +1,11 @@
 <template>
   <v-col class="mb-5 px-8" cols="12" justify="center">
+
+    <h3>As you can imagine, having been employed full-time for most of my developer days, I have not yet had a massive amount of professional projects to put into my portfolio. My companies’ products were mostly proprietary and not for me to share.
+
+    </h3>
+
+    You will notice, the private projects I share are mostly works in progress, too. There are a lot of funny memes about programmers and their side-projects and I am afraid for me they are true.
     <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12">
       <!--image right -->
 
