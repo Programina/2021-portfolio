@@ -1,8 +1,5 @@
 <template>
   <v-container class="about">
-      <div class="mb-5 d-flex justify-center" cols="12">
-          <h1>This is an about page</h1>
-      </div>
       <p>
         Hi, I am Amina Belabbes and I am passionate about making the web a more beautiful, easy to use and fun place. I love creating designs that make an impact 😊 .
         I'm a full-time frontend developer with 2+ years of professional experience and about half a year of experience as a UX Designer, looking to transition into UX design. 
