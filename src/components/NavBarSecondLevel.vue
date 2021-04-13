@@ -15,7 +15,7 @@ export default {
     return {
       navigation: [
         {
-          to: "/home/ux-ui",
+          to: "/ux-ui",
           name: "UX & UI",
         },
         {
