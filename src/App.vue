@@ -152,6 +152,11 @@ export default {
           color: '#e8cf7d',
           fontColor: 'black',
           path: '/other'
+        },
+        { 
+          color: '#e8cf7d',
+          fontColor: 'black',
+          path: '/imprint'
         }
       ]
     }

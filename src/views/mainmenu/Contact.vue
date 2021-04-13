@@ -16,7 +16,6 @@ TODO: Add a loading spinner for while the email attempts to send
             >
               <v-text-field
                 v-model="from_email.name"
-                :counter="40"
                 label="Name"
                 name="from_name"
                 :rules="inputRules"
@@ -25,7 +24,6 @@ TODO: Add a loading spinner for while the email attempts to send
               ></v-text-field>
               <v-text-field
                 v-model="from_email.subject"
-                :counter="40"
                 name="subject"
                 label="Subject"
                 :rules="inputRules"
@@ -33,7 +31,6 @@ TODO: Add a loading spinner for while the email attempts to send
               ></v-text-field>
               <v-text-field
                 v-model="from_email.email"
-                :counter="40"
                 name="reply_to"
                 label="Email"
                 placeholder="jane@doe.com"
