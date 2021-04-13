@@ -8,6 +8,7 @@ import DateSaver from '../views/showroom/DateSaver.vue'
 import ContactSuccess from '../views/mainmenu/ContactSuccess.vue'
 import UxUi from '../views/UxUi.vue'
 import Dev from '../views/Dev.vue'
+import Other from '../views/Other.vue'
 import NavService from '@/services/NavService'
 
 
@@ -28,7 +29,7 @@ const routes = [
       {
         path: '/other',
         name: 'Other',
-        component: ContactSuccess
+        component: Other
       },
       {
         path: '/development',
@@ -48,7 +49,7 @@ const routes = [
     component: Contact
   },
   {
-    path: '/habit-app',
+    path: '/habit-stacks',
     name: 'HabitStacks',
     component: HabitStacks
   },

@@ -1,5 +1,5 @@
 <template>
-  <v-col v-if="!isMobile" class="mb-5 px-8" cols="12" justify="center">
+  <v-col class="mb-5 px-8" cols="12" justify="center">
     <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12">
       <!--image right -->
 
@@ -75,12 +75,10 @@
 </template>
 
 <script>
-import ismobile from '@/mixins/ismobile.js'
 
 export default {
   name: "DesktopContentTemplate",
   components: {},
-  mixins: [ismobile],
   props: {
     card: {
       

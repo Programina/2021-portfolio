@@ -1,27 +1,26 @@
 <template>
-  <div class="d-flex justify-center align-center habit-background" :style="{ 'background-color': color, 'color': fontColor, 'height': height + 'px'}">
-    <h1>HabitStacks</h1>
+  <div class="d-flex justify-center align-center other-background" :style="{ 'background-color': color, 'height': height + 'px'}">
+    <h1 :style="{'color': fontColor}">Other things I do</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HabitStacksHeader',
+  name: 'OtherHeader',
   components: {},
   props: {
     color: {
       type: String,
-      required: false
+      required: true
     },   
     fontColor: {
       type: String,
-      required: false
+      required: true
     },
     height: {
       type: String,
       required: true
-    }
-  },
+    }},
   data() {
     return {}
   },
@@ -32,7 +31,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .habit-background {
+  .other-background {
     width: 100%;
   }
 </style>
+

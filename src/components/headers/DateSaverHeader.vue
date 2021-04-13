@@ -1,25 +1,40 @@
 <template>
-   <v-container>
-    <v-row>
-      <v-col class="d-flex jutsify-center align-center" style="background-color: #de8579">
-        <h1></h1>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div
+    class="d-flex justify-center align-center date-background"
+    :style="{ 'background-color': color, height: height + 'px' }"
+  >
+    <h1>HabitStacks</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'DateSaverHeader',
+  name: "DateSaverHeader",
   components: {},
-  props: {},
-  data() {
-    return {}
+  props: {
+    color: {
+      type: String,
+      required: false
+    },  
+    fontColor: {
+      type: String,
+      required: false
+    },
+    height: {
+      type: String,
+      required: true
+    }
   },
-  mounted() {},
-  beforeDestroy() {},
-  methods: {}
-}
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+.date-background {
+  background-color: #de8579;
+  width: 100%;
+  height: 300px;
+}
+</style>

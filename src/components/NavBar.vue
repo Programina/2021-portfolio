@@ -1,17 +1,17 @@
 <template>
   <v-toolbar
-    color="background"
+    :style="[{'flex': '0 1 auto'}, { 'background-color': color}]"
     :class="{ 'mobile-spacing': isMobile }"
     flat
     light
   >
     <div class="d-flex align-center">
-      <router-link to="/">
+      <router-link :style="{'color': fontColor}" to="/">
         <!-- <v-img
               alt="Vuetify Logo"
               class="shrink mr-2"
               contain
-              src="./assets/logo1.png"
+              src="./assets/logo.png"
               transition="scale-transition"
               width="40"
             /> -->
@@ -22,14 +22,15 @@
     <v-spacer v-if="!isMobile"></v-spacer>
 
     <div id="nav" v-if="!isMobile">
-      <router-link v-for="(navItem, i) in navigation" :key="i" :to="navItem.to"
+      <router-link :style="{'color': fontColor}" v-for="(navItem, i) in navigation" :key="i" :to="navItem.to"
         >{{ navItem.name }}
       </router-link>
       <a
-        href="@/assets/abelabbesCV2020.pdf"
+        :style="{'color': fontColor}"
+        href="@/assets/abelabbesResume.pdf"
         download="Amina_Belabbes_Resume_2021.pdf"
         filetype="pdf"
-        >Resume</a
+        >Resume (German)</a
       >
     </div>
 
@@ -45,6 +46,16 @@ import ismobile from '@/mixins/ismobile.js'
 export default {
   name: "NavBar",
   mixins: [ismobile],
+  props: {
+    color: {
+      type: String,
+      required: false
+    },
+    fontColor: {
+      type: String,
+      required: false
+    },
+  },
   data() {
     return {
       navigation: [

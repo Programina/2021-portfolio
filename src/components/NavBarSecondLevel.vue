@@ -1,18 +1,9 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-column>
-        <div id="nav" v-if="!isMobile">
-          <router-link
-            v-for="(navItem, i) in navigation"
-            :key="i"
-            :to="navItem.to"
-            >{{ navItem.name }}
-          </router-link>
-        </div></v-column
-      >
-    </v-row>
-  </v-container>
+  <div id="nav" >
+    <router-link v-for="(navItem, i) in navigation" :key="i" :to="navItem.to" class="mx-5"
+      >{{ navItem.name }}
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -21,22 +12,23 @@ export default {
   components: {},
   props: {},
   data() {
-    return { navigation: [
+    return {
+      navigation: [
         {
-          to: "/",
-          name: "Home",
+          to: "/home/ux-ui",
+          name: "UX & UI",
         },
         {
-          to: "/contact",
-          name: "Contact",
+          to: "/home/development",
+          name: "Development",
         },
         {
-          to: "/about",
-          name: "About",
-        }
-      ]};
-  },
-  methods: {},
+          to: "/other",
+          name: "Other",
+        },
+      ],
+    };
+  }
 };
 </script>
 

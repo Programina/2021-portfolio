@@ -1,19 +1,32 @@
 <template>
-  <div></div>
+  <div class="d-flex justify-center align-center about-background" :style="{ 'background-color': color, 'height': height + 'px'}">
+    <h1 :style="{'color': fontColor}">About me</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'AboutHeader',
+  name: "AboutHeader",
   components: {},
-  props: {},
-  data() {
-    return {}
+  props: {
+    color: {
+      type: String,
+      required: true
+    },   
+    fontColor: {
+      type: String,
+      required: true
+    },
+    height: {
+      type: String,
+      required: true
+    }
   },
-  mounted() {},
-  beforeDestroy() {},
-  methods: {}
-}
+};
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+  .about-background {
+    width: 100%;
+  }
+</style>

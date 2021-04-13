@@ -1,8 +1,8 @@
-TODO: add currentRoute in store to make header only displays when in HOME
+TODO: add currentRoute in store to make header only displays when in HOME, change navigation drawer
 
 <template>
   <v-app id="app-wrapper">
-    <NavBar/>
+    <NavBar :color="colr.color" :fontColor="colr.fontColor" />
 
     <v-main>
       <v-row v-if="isMobile"  class="ma-10" >
@@ -10,10 +10,12 @@ TODO: add currentRoute in store to make header only displays when in HOME
             <MobileHeader :copy="copy" />
           </v-col>
       </v-row>
-      <v-row v-if="!isMobile">
-        <DesktopHeaderTemplate/>
+      <v-row v-if="!isMobile" class="justify-center">
+        <DesktopHeaderTemplate :fontColor="colr.fontColor" :color="colr.color" :height="height" style="width: 100%"/>
       </v-row>
-
+      <v-row class="ma-10 justify-center" >
+         <NavBarSecondLevel/>
+      </v-row>
       <router-view />
 
     </v-main>
@@ -66,31 +68,87 @@ import MobileHeader from "@/components/MobileHeader"
 import ismobile from '@/mixins/ismobile.js'
 import NavBar from '@/components/NavBar'
 import DesktopHeaderTemplate from '@/components/DesktopHeaderTemplate'
-
+import NavBarSecondLevel from '@/components/NavBarSecondLevel'
+import { mapState } from "vuex";
 
 export default {
   name: "App",
   mixins: [ismobile],
   components: {
-    MobileHeader, NavBar, DesktopHeaderTemplate
+    MobileHeader, NavBar, DesktopHeaderTemplate, NavBarSecondLevel
   },
 
   data() {
     return {
       drawer: false,
       group: null,
-      
-    copy: {
-      profile:
-        "Nice to meet you –  I'm Amina Belabbes. <br/> I'm a <b>Junior UX Designer</b> and <b>Web Developer</b> based in Germany.",
-      heading1: "Amina Belabbes",
-    }
+      height: '400',
+      colors: [
+        {  
+          color: '#fff',
+          fontColor: 'black',
+          path: '/home'
+        },
+        {  
+          color: '#fff',
+          fontColor: 'black',
+          path: '/'
+        },
+         { 
+          color: '#2BC2CA', 
+          fontColor: '#fff',
+          path: '/about'
+        }, 
+        {
+          color: '#304C89',
+          fontColor: '#fff',
+          path: '/contact'
+        }, 
+        { 
+          color: '#89b1cc',
+          fontColor: '#fff',
+          path: '/home/habit-stacks'
+        },
+        { 
+          color: '#de8579',
+          fontColor: '#fff',
+          path: '/home/date-saver'
+        },
+        { 
+          color: '#824670',
+          fontColor: '#fff',
+          path: '/home/ux-ui'
+        },
+        { 
+          color: '#8D5A97',
+          fontColor: '#fff',
+          path: '/home/development'
+        },
+        { 
+          color: '#662C91',
+          fontColor: '#fff',
+          path: '/other'
+        }
+      ]
     }
     
   },
 
   computed: {
-   
+  ...mapState(["currentRoute"]), 
+   colr() {
+     let colr;
+      if(this.currentRoute.path) {
+        colr = this.colors.find(val => val.path === this.currentRoute.path)
+      } else {
+        colr = {
+          color: '#fff', 
+          fontColor: "black",
+          path: '/'
+        }
+      }
+      return colr
+   }
   },
   watch: {
     group() {
@@ -101,8 +159,19 @@ export default {
 </script>
 
 <style lang="scss" >
+.test {
+  color: #662C91;
+  color: #1F2041;
+  color: #824670;
+  color: #de8579;
+  color: #304C89;
+  // unused
+  color: #4C4C9D;
+}
+
+
 html,
-  body {
+body {
     background: #fff;
     height: 100%;
     width: 100%;

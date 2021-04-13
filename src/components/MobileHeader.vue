@@ -2,7 +2,15 @@
   <div data-qa="mobile-header">
       <v-col cols="12">
         <v-img
-          :src="require('@/assets/design-and-development-process-1721879-1.svg')"
+          v-if="designerImageDisplayed"
+          :src="require('@/assets/designer.gif')"
+          class="mt-5"
+          contain
+          :height="height"
+        />
+        <v-img
+          v-else
+          :src="require('@/assets/developer.gif')"
           class="mt-5"
           contain
           :height="height"
@@ -48,7 +56,10 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      designerImageDisplayed: false,
+      interval: null
+    }
   },
   computed: {
     height(){
@@ -59,8 +70,21 @@ export default {
         }
     }
   },
-  beforeDestroy() {},
-  methods: {}
+  methods: {
+    imageIntervall(){
+      this.interval = setInterval( 
+        ()=> this.designerImageDisplayed =! this.designerImageDisplayed, 600);
+    },
+    stopSwitch(){
+      clearInterval(this.interval)
+    }
+  },
+  mounted() {
+    this.imageIntervall()
+  }, 
+  beforeDestroy() {
+    this.stopSwitch()
+  }
 }
 </script>
 
