@@ -3,7 +3,11 @@
     class="d-flex justify-center align-center date-background"
     :style="{ 'background-color': color, height: height + 'px' }"
   >
-    <h1>HabitStacks</h1>
+    <div class="d-flex flex-column justify-center" style="text-align: center">
+      <h1>HabitStacks</h1>
+
+      <h3>Making date night more fun</h3>
+    </div>
   </div>
 </template>
 
@@ -14,16 +18,16 @@ export default {
   props: {
     color: {
       type: String,
-      required: false
-    },  
+      required: false,
+    },
     fontColor: {
       type: String,
-      required: false
+      required: false,
     },
     height: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {};
