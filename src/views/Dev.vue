@@ -10,6 +10,20 @@
       </v-col>
      
     </v-row>
+    
+    <v-row class="justify-center align-center my-10">
+      <v-col cols="6">
+        <h3>Honorable Mentions</h3>
+
+        <div class="frame">
+            <v-img alt="lotto" src="@/assets/lotto.jpg"/>
+        </div>
+
+      </v-col>
+      <v-col cols="6">
+         <v-img alt="lotto" src="@/assets/gardena.jpg" />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -29,8 +43,8 @@ export default {
     return {cards: [
       {
         id: 1,
-        title: "Habit App",
-        href: "/habit-app",
+        title: "This Portfolio",
+        href: "/portfolio",
         imgSrc: "habitApp.png",
         imgMblSrc: "habit.png",
         height: 200,
@@ -53,10 +67,10 @@ export default {
         id: 2,
         title: "DateSaver",
         href: "/date-saver",
-        imgSrc: "fitnessapp.png",
-        imgMblSrc: "pareto.png",
+        imgSrc: "datesaver.jpg",
+        imgMblSrc: "datesaver.jpg",
         description:
-          "This is an app I developed with little to no fancy bling bling design, however there was some thought put into the user experience beforehand. I am about to redesign. It grew out of a need to automate the decision making process my boyfriend and I had to go through every evening to find out what to do. I did all the coding myself and am on a mission to improve design and UX.",
+          "This is an app I developed with little to no fancy visual design. However I put some thought into the user experience. Also, I am about to redesign it. The idea is simple: help people have less decisions to make about what to do on a date.",
         height: 200,
         tags: [
           {
@@ -70,64 +84,6 @@ export default {
             label: "VueJs",
           },
         ],
-      },
-      {
-        id: 3,
-        title: "RSS Feed App",
-        href: "/gamification-app",
-        imgSrc: "rssApp.png",
-        imgMblSrc: "rssApp.png",
-        description:
-          "Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.",
-        height: 200,
-        tags: [
-          {
-            tag: "Development",
-            tagIcon: "code",
-          },
-          {
-            tag: "GitHub",
-            tagIcon: "github",
-            tagHref: "https://github.com/programina-gui/RSS-Testapp",
-          },
-          {
-            tag: "Website",
-            tagIcon: "web",
-            tagHref: "http://netz98-at-amina.belabb.es/",
-          },
-        ],
-        chips: [
-          {
-            label: "Marvel",
-          },
-        ],
-      },
-      {
-        id: 4,
-        title: "Pareto App",
-        href: "/pareto-app",
-        imgSrc: "pareto.png",
-        imgMblSrc: "pareto.png",
-        description:
-          "Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.",
-        height: 200,
-        tags: [
-          {
-            tag: "Marvel Prototype",
-            tagIcon: "github",
-            tagHref: "https://marvelapp.com/60c71ad",
-          },
-          {
-            tag: "Website",
-            tagIcon: "web",
-            tagHref: "https://github.com/programina-gui/RSS-Testapp",
-          },
-        ],
-        chips: [
-          {
-            label: "Marvel",
-          },
-        ],
       }
     ],}
   },
@@ -137,4 +93,12 @@ export default {
 }
 </script>
 
-<style lang="css" scoped></style>
+
+<style lang="css" scoped>
+  .frame {
+  box-shadow: 0px 3px 6px #00000029;
+  border: 2px solid white;
+  }
+
+</style>
+

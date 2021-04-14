@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'StoryTemplate',
+  name: 'Portfolio',
   components: {},
   props: {},
   data() {

@@ -38,7 +38,9 @@
         </v-card-text>
       </v-card>
       <br />
+
     </div>
+
   </div>
 </template>
 
@@ -100,5 +102,3 @@ export default {
   },
 }
 </script>
-
-<style lang="css" scoped></style>
