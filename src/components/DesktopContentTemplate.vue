@@ -12,7 +12,7 @@
           <div class="d-flex mt-2 mb-10 justify-end">
             <div v-for="tag in card.tags" :key="tag.tag">
               <v-chip class="ma-2" color="primary" outlined>
-                <span class="px-2"> {{ tag.tag }}</span>
+                <a :href="tag.tagHref" class="px-2" style="text-decoration: none !important; text-transform: none !important; color: inherit !important;"> {{ tag.tag }}</a>
 
                 <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
               </v-chip>
@@ -59,7 +59,7 @@
           <div class="d-flex mt-2 mb-10 justify-start">
             <div v-for="tag in card.tags" :key="tag.tag" class="d-flex">
               <v-chip class="ma-2" color="primary" outlined>
-                <span class="px-2"> {{ tag.tag }}</span>
+                <a :href="tag.tagHref" class="px-2" style="text-decoration: none !important; text-transform: none !important; color: inherit !important;"> {{ tag.tag }}</a>
 
                 <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
               </v-chip>
@@ -89,7 +89,7 @@
       <p>
         You will notice, the private projects I share are mostly works in
         progress, too. There are a lot of funny memes about programmers and
-        their side-projects and I am afraid for me they are true.
+        their side-projects and I am afraid they are very accurate in my case.
       </p>
     </v-row>
   </v-col>

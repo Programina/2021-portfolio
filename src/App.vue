@@ -72,7 +72,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
 </template>
 
 <script>
-import MobileHeader from "@/components/MobileHeader"
+import MobileHeader from "@/components/headers/MobileHeader"
 import ismobile from '@/mixins/ismobile.js'
 import NavBar from '@/components/NavBar'
 import DesktopHeaderTemplate from '@/components/DesktopHeaderTemplate'

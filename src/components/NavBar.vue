@@ -9,7 +9,7 @@
     <div class="d-flex align-center">
       <router-link :style="{'color': fontColor}" to="/">
         <v-img
-              alt="Vuetify Logo"
+              alt="Amina Belabbes Logo"
               class="shrink mr-2"
               contain
               src="@/assets/logo_transparent.png"
@@ -22,17 +22,17 @@
     <v-spacer v-if="!isMobile"></v-spacer>
 
     <div id="nav" v-if="!isMobile">
-      <router-link :style="{'color': fontColor}" v-for="(navItem, i) in navigation" :key="i" :to="navItem.to"
+      <router-link :style="{'color': fontColor + ' !important'}" v-for="(navItem, i) in navigation" :key="i" :to="navItem.to"
         >{{ navItem.name }}
       </router-link>
       <a
-        :style="{'color': fontColor}"
+        :style="{'color': fontColor + ' !important'}"
         href="./abelabbesResume.pdf"
         download="Amina_Belabbes_Resume_2021.pdf"
         filetype="pdf"
         >Resume (German)</a
       >
-      <router-link :style="{'color': fontColor}" to="contact"
+      <router-link :style="{'color': fontColor + ' !important'}" to="contact"
         >Contact
       </router-link>
     </div>

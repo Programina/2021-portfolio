@@ -64,16 +64,7 @@
             src="@/assets/Svelte.png"
             style="width: 70px"
         /></v-col>
-        <v-col class="ma-2" cols="2"
-          ><img
-            alt="Flutter"
-            src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/flutter"
-        /></v-col>
-        <v-col class="ma-2" cols="2"
-          ><img
-            alt="Python"
-            src="https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/python"
-        /></v-col>
+      
         <v-col class="ma-2" cols="2">
           <img
             alt="Bootstrap"

@@ -10,7 +10,7 @@
       </v-col>
      
     </v-row>
-    
+<!--     
     <v-row class="justify-center align-center my-10">
       <v-col cols="6">
         <h3>Honorable Mentions</h3>
@@ -23,14 +23,14 @@
       <v-col cols="6">
          <v-img alt="lotto" src="@/assets/gardena.jpg" />
       </v-col>
-    </v-row>
+    </v-row> -->
   </v-container>
 </template>
 
 <script>
 
 import ismobile from '@/mixins/ismobile'
-import MobileHeader from "@/components/MobileHeader";
+import MobileHeader from "@/components/headers/MobileHeader";
 import MobileContentTemplate from "@/components/MobileContentTemplate";
 import DesktopContentTemplate from "@/components/DesktopContentTemplate";
 
@@ -45,16 +45,16 @@ export default {
         id: 1,
         title: "This Portfolio",
         href: "/portfolio",
-        imgSrc: "habitApp.png",
-        imgMblSrc: "habit.png",
+        imgSrc: "portfolio.jpg",
+        imgMblSrc: "portfolio.jpg",
         height: 200,
         description:
-          "My personal project for an app to create long-term habits. The problem was to think of a target audience other than myself, to find the right layout and sequence of content.",
+          "This portfolio is still work in progress. I am documenting my changes and intentions.",
         tags: [
           {
             tag: "Adobe Creative Cloud",
             tagIcon: "web",
-            tagHref: "https://xd.adobe.com/view/af881c31-3473-4945-8b4a-4208e189d823-fadb/",
+            tagHref: "https://xd.adobe.com/view/340e7b2d-309f-4edb-b067-cc86ad272e08-615d/",
           },
         ],
         chips: [

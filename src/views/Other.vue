@@ -20,7 +20,9 @@
 
         <v-card-title>{{ card.title }}</v-card-title>
         <v-card-text> {{ card.description }} <br/>
-        <span v-if="card.href"> <router-link :to="card.href">See more</router-link></span>
+        <span v-if="card.href">  <router-link :to="card.href">
+            <v-btn color="primary">See Case Study </v-btn></router-link
+          ></span>
         
         </v-card-text>
         <v-card-text>

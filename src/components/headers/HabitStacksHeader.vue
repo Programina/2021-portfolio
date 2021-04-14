@@ -1,6 +1,9 @@
 <template>
   <div class="d-flex justify-center align-center habit-background" :style="{ 'background-color': color, 'color': fontColor, 'height': height + 'px'}">
-    <h1>HabitStacks</h1>
+    <div class="d-flex flex-column" style="text-align: center" >
+      <h1>HabitStacks</h1>
+      <h2>Build habits taking baby steps without losing sight of the bigger picture.</h2>
+    </div>
   </div>
 </template>
 

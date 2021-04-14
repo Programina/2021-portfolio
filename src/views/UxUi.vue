@@ -16,7 +16,7 @@
 <script>
 
 import ismobile from '@/mixins/ismobile'
-import MobileHeader from "@/components/MobileHeader";
+import MobileHeader from "@/components/headers/MobileHeader";
 import DesktopContentTemplate from "@/components/DesktopContentTemplate";
 import MobileContentTemplate from "@/components/MobileContentTemplate";
 
@@ -28,8 +28,8 @@ export default {
     cards: [
       {
         id: 1,
-        title: "Habit App",
-        href: "/habit-app",
+        title: "Habit Stacks",
+        href: "/habit-stacks",
         imgSrc: "habitApp.png",
         imgMblSrc: "habit.png",
         height: 200,
@@ -45,28 +45,6 @@ export default {
         chips: [
           {
             label: "Adobe Xd",
-          },
-        ],
-      },
-      {
-        id: 2,
-        title: "This Portfolio",
-        href: "/portfolio",
-        imgSrc: "fitnessapp.png",
-        imgMblSrc: "pareto.png",
-        description:
-          "This is an app I developed with little to no fancy bling bling design, however there was some thought put into the user experience beforehand. I am about to redesign. It grew out of a need to automate the decision making process my boyfriend and I had to go through every evening to find out what to do. I did all the coding myself and am on a mission to improve design and UX.",
-        height: 200,
-        tags: [
-          {
-            tag: "DateSaver",
-            tagIcon: "web",
-            tagHref: "http://love.frontendpoint.com/",
-          }
-        ],
-        chips: [
-          {
-            label: "VueJs",
           },
         ],
       }
