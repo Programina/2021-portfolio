@@ -4,12 +4,12 @@
       <!--image right -->
 
       <v-col cols="6" v-if="card.id % 2 === 0" class="d-flex align-center">
-        <div>
+        <div data-qa="desktop-content-template" style="width: inherit">
           <h3 class="heading2 mb-3" style="text-align: right">
             {{ card.title }}
           </h3>
           <p style="text-align: right">{{ card.description }}</p>
-          <div class="d-flex mt-2 mb-10 justify-end">
+          <div class="d-flex mt-2 justify-end" style="display: flex; flex-wrap: wrap">
             <div v-for="tag in card.tags" :key="tag.tag">
               <v-chip class="ma-2" color="primary" outlined>
                 <a :href="tag.tagHref" class="px-2" style="text-decoration: none !important; text-transform: none !important; color: inherit !important;"> {{ tag.tag }}</a>
@@ -17,7 +17,11 @@
                 <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
               </v-chip>
             </div>
-            <div v-for="chip in card.chips" :key="chip.label">
+            
+          </div>
+          
+          <div class="d-flex mb-10 justify-end">
+            <div v-for="chip in card.chips" :key="chip.label" style="display: flex; flex-wrap: wrap">
               <v-chip class="ma-2" filter>
                 {{ chip.label }}
               </v-chip>
@@ -49,27 +53,30 @@
         ></v-img>
       </v-col>
 
-      <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center">
-        <div>
+      <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center" >
+        <div data-qa="desktop-content-template" style="width: inherit">
           <h3 class="heading2 mb-3" style="text-align: left">
             {{ card.title }}
           </h3>
           <p style="text-align: left">{{ card.description }}</p>
 
-          <div class="d-flex mt-2 mb-10 justify-start">
-            <div v-for="tag in card.tags" :key="tag.tag" class="d-flex">
+          <div class="d-flex mt-2  justify-start">
+            <div v-for="tag in card.tags" :key="tag.tag">
               <v-chip class="ma-2" color="primary" outlined>
                 <a :href="tag.tagHref" class="px-2" style="text-decoration: none !important; text-transform: none !important; color: inherit !important;"> {{ tag.tag }}</a>
 
                 <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
               </v-chip>
             </div>
-            <div v-for="chip in card.chips" :key="chip.label">
+          </div>
+          <div class="d-flex mb-10">
+            <span v-for="chip in card.chips" :key="chip.label" style="display: flex; flex-direction: row">
               <v-chip class="ma-2" filter>
                 {{ chip.label }}
               </v-chip>
-            </div>
+            </span>
           </div>
+          
 
           <router-link :to="card.href">
             <v-btn color="primary">See Case Study </v-btn></router-link

@@ -1,11 +1,5 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <h2>DateSaver</h2>
-        <h3>Making date night more fun  </h3>
-      </v-col>
-    </v-row>
+  <v-container class="dates">
     <v-row>
       <v-col>
         <v-row>
@@ -20,7 +14,7 @@
       </v-col>
     </v-row>
     <v-row >
-      <v-col  class="d-flex flex-column justify-center">
+      <v-col  class="d-flex flex-column justify-center mt-10">
         <p>Two years into our relationship, my boyfriend and I had developed the same routine every evening, where he'd say "Honey, what are we going to do tonight?" and I'd think long and hard, trying to be creative, but, after a long day at work, the only things I could think of were "Let's watch a movie" or "Let's play a video game". That got boring quickly.
 </p>
            <v-img height="250" width="400"
@@ -51,4 +45,21 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+.dates {
+  max-width: 630px;
+  padding: 0 20px;
+}
+
+ul {
+  li {
+    a,
+    a:visited,
+    a:hover,
+    a:active,
+    a:focus {
+      text-transform: inherit;
+    }
+  }
+}
+</style>

@@ -8,10 +8,7 @@
      
       <p>I got my Master’s degree in Translation Studies, specializing in Computer Science, so technically I should have had a little bit of knowledge. Unfortunately, most of it got lost during the six years I spent working as a translator and a PA prior to working in development. So by now, most of my knowledge on both design and programming is self-taught.
       </p>
-      <p>
-        I had set out to become a translator. I had passed my degree and felt qualified to translate. What I did not feel qualified for was programming or designing. I usually give it my all, once my mind is set on a goal. But I really did not think I was fit to pursue a career in tech, back then. As a result, I ended up spending six years in jobs involving translation and assistance, always being “the nerdy one”. That ended up making me feel really unfulfilled, so I decided to find a way to get into software development. Development not so much because I did not consider design, but because I had taken more classes in development rather than design back in the day and I felt it was, again, the “safe way” to getting a foot in the door.
-      </p>
-      <v-row class="my-8 justify-center">
+          <v-row class="my-8 justify-center">
         <v-col >
           <h3>My skills</h3>
 
@@ -65,8 +62,7 @@ export default {
 
 ul {
   li {
-    a, a:visited, a:hover, a:active, a:focus {
-      
+    a, a:visited, a:hover, a:active, a:focus {     
       text-transform: inherit;
     }
   } 

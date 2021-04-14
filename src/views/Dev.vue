@@ -56,10 +56,23 @@ export default {
             tagIcon: "web",
             tagHref: "https://xd.adobe.com/view/340e7b2d-309f-4edb-b067-cc86ad272e08-615d/",
           },
+          {
+            tag: "GitHub Repo",
+            tagIcon: "github", 
+            tagHref: "https://github.com/Programina/2021-portfolio"
+          }
         ],
         chips: [
           {
             label: "Adobe Xd",
+          },
+          {
+            label: "VueJS",
+          },
+          {
+            label: "Vuetify",
+          },{
+            label: "Photoshop 2021",
           },
         ],
       },
