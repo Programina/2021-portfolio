@@ -25,18 +25,22 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
       v-model="drawer"
       absolute
       right
+      clipped 
+      floating
+      app
       temporary
     >
-      <v-list nav dense>
-        <v-list-item-group v-model="group">
-          <v-list-item v-for="(navItem, i) in navigation" :key="i">
-           <router-link :to="navItem.to">
-              <v-list-item-title class="px-2">
-               {{ navItem.name }}
-              </v-list-item-title>
-            </router-link>
-          </v-list-item>
-        </v-list-item-group>
+      <v-list nav two-line>
+         <v-list-item 
+          v-for="(nav, index) in navigation"
+          :key="index"
+          link
+          @click="$router.push({ path: nav.to })"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-html="nav.name"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item >
       </v-list>
     </v-navigation-drawer>
 
@@ -100,7 +104,8 @@ export default {
       ],
       copy: {
         profile1:
-          "Nice to meet you –  I'm Amina Belabbes. <br/> I am a",
+          "Nice to meet you –  I'm Amina Belabbes. ",
+        profile1_2: "<br/> I am a", 
         profile2: "based in Germany.",
         transitionItem: ['<b>UX designer</b> ', '<b>frontend developer</b> ']
       },

@@ -1,19 +1,26 @@
 <template>
   <div id="home">
-    <UxUi />
+    <div v-if="currentRoute.path === ('/' || '/home' || 'ux-ui')">
+      <UxUi/>
+    </div>
+    <div v-else>
+     <router-view />
+    </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 // @ is an alias to /src
 import UxUi from '@/views/UxUi.vue'
-import Dev from '@/views/Dev.vue'
-import Other from '@/views/Other.vue'
 
 export default {
   name: 'Home',
   components: {
-    UxUi, Dev, Other
+    UxUi
+  },
+  computed: {
+    ...mapState(["currentRoute"])
   }
 }
 </script>

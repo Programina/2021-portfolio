@@ -3,7 +3,7 @@
     <v-row class="text-center">
      
       <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
-        <MobileContent :cards="cards" />
+        <MobileContentTemplate :cards="cards" />
       </v-col>
    <v-col v-else class="mb-5 px-8" cols="12" justify="center">
         <DesktopContentTemplate :cards="cards" />
@@ -15,13 +15,15 @@
 
 <script>
 
+import ismobile from '@/mixins/ismobile'
 import MobileHeader from "@/components/MobileHeader";
-import MobileContent from "@/components/MobileContent";
+import MobileContentTemplate from "@/components/MobileContentTemplate";
 import DesktopContentTemplate from "@/components/DesktopContentTemplate";
 
 export default {
   name: 'Dev',
-  components: { MobileHeader, MobileContent, DesktopContentTemplate },
+  mixins: [ismobile],
+  components: { MobileHeader, MobileContentTemplate, DesktopContentTemplate },
   props: {},
   data() {
     return {cards: [

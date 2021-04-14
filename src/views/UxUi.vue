@@ -3,7 +3,7 @@
     <v-row class="text-center">
      
       <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
-        <MobileContent :cards="cards" />
+        <MobileContentTemplate :cards="cards" />
       </v-col>
    <v-col v-else class="mb-5 px-8" cols="12" justify="center">
         <DesktopContentTemplate :cards="cards" />
@@ -14,13 +14,16 @@
 </template>
 
 <script>
+
+import ismobile from '@/mixins/ismobile'
 import MobileHeader from "@/components/MobileHeader";
-import MobileContent from "@/components/MobileContent";
 import DesktopContentTemplate from "@/components/DesktopContentTemplate";
+import MobileContentTemplate from "@/components/MobileContentTemplate";
 
 export default {
   name: "UxUi",
-  components: { MobileHeader, MobileContent, DesktopContentTemplate },
+  mixins: [ismobile],
+  components: { MobileHeader, MobileContentTemplate, DesktopContentTemplate },
   data: () => ({
     cards: [
       {

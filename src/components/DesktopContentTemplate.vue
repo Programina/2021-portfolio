@@ -1,6 +1,6 @@
 <template>
   <v-col class="mb-5 px-8" cols="12" justify="center">
-    <v-row v-for="(card, i) in cards" :key="i" class="my-5" cols="12">
+    <v-row  v-for="(card, i) in cards" :key="i" class="align-center my-5" cols="12">
       <!--image right -->
 
       <v-col cols="6" v-if="card.id % 2 === 0" class="d-flex align-center">
@@ -29,6 +29,8 @@
           </router-link>
         </div>
       </v-col>
+
+      <!--IMAGE -->
       <v-col cols="6" v-if="card.id % 2 === 0">
         <v-img
           class="ml-5"
@@ -39,12 +41,14 @@
 
       <!--image left -->
       <v-col cols="6" v-if="card.id % 2 != 0">
+        <!--IMAGE -->
         <v-img
           :alt="card.imgSrc"
           class="ml-5"
           :src="require('@/assets/' + card.imgSrc + '')"
         ></v-img>
       </v-col>
+
       <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center">
         <div>
           <h3 class="heading2 mb-3" style="text-align: left">
@@ -73,6 +77,8 @@
         </div>
       </v-col>
     </v-row>
+
+
     <v-row>
       <h3>
         As you can imagine, having been employed full-time for most of my

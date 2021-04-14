@@ -1,7 +1,7 @@
 <template>
   <div data-qa="mobile-header">
-      <v-col cols="12" >
-        <v-scroll-y-transition hide-on-leave="true" mode="in">
+      <!-- <v-col cols="12" >
+        <v-scroll-y-transition hide-on-leave in>
           <v-img
           v-if="designerImageDisplayed"
           :src="require('@/assets/designer.png')"
@@ -24,10 +24,10 @@
       <v-col class="mb-3"  style="text-align: center" >
         
         <div class="heading-animated" v-html="copy.profile1"/>
-        <v-slide-x-transition hide-on-leave="true" mode="in">
-          <span v-if="designerImageDisplayed" >
-            <div class="heading-animated" v-html="copy.transitionItem[0]"/>
-          </span>
+        <v-slide-x-transition hide-on-leave in>
+        <span v-if="designerImageDisplayed" >
+          <div class="heading-animated" v-html="copy.transitionItem[0]"/>
+        </span>
          <span class="mb-3" v-else>
           <div class="heading-animated" v-html="copy.transitionItem[1]"></div>
         </span>
@@ -53,7 +53,7 @@
         </v-btn>
        </router-link>
        
-      </v-col>
+      </v-col> -->
   </div>
 </template>
 

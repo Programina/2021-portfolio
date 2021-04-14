@@ -1,29 +1,71 @@
 <template>
-  <div>TADAAA</div>
+  <div id="other">
+    <div class="d-flex justify-center align-center my-10"> 
+      <div  style="max-width: 400px; text-align: center;">
+        <h3>Here are some things I also enjoyed doing, either at work or in my free time.</h3>
+      </div>
+    </div>
+    
+    <div
+      v-for="(card, i) in cards"
+      :key="i"
+      class="mx-3"
+      target="_blank"
+    >
+      <v-card>
+        <v-img
+          height="250"
+          :src="require('@/assets/' + card.imgMblSrc + '')"
+        ></v-img>
+
+        <v-card-title>{{ card.title }}</v-card-title>
+        <v-card-text> {{ card.description }} <br/>
+        <span v-if="card.href"> <router-link :to="card.href">See more</router-link></span>
+        
+        </v-card-text>
+        <v-card-text>
+          <div class="d-flex flex-row flex-wrap justify-end" :data-qa="card.title">
+            <div v-for="(tag, j) in card.tags" :key="j">
+              <v-chip class="ma-2" color="primary" outlined>
+                <span class="px-2"> {{ tag.tag }}</span>
+
+                <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
+              </v-chip>
+            </div>
+
+           
+          </div>
+        </v-card-text>
+      </v-card>
+      <br />
+    </div>
+  </div>
 </template>
 
 <script>
+
+import ismobile from '@/mixins/ismobile'
 export default {
   name: 'Other',
   components: {},
-  props: {},
+  mixins: [ismobile],
   data() {
     return {
       cards: [
       {
         id: 1,
-        title: "Habit App",
-        href: "/habit-app",
-        imgSrc: "habitApp.png",
-        imgMblSrc: "habit.png",
+        title: "Live Event Drawing",
+        href: "",
+        imgSrc: "livedrawing.jpg",
+        imgMblSrc: "livedrawing.jpg",
         height: 200,
         description:
-          "My personal project for an app to create long-term habits. The problem was to think of a target audience other than myself, to find the right layout and sequence of content.",
+          "I really enjoyed doing this fun project at my first development job. It was a company goal brought to life on a white board. I'd seen someone do it on a Tedx Talk in Frankfurt and wanted to try it myself. Would definitely do it again. :) ",
         tags: [
           {
-            tag: "Adobe Creative Cloud",
+            tag: "The Event - Xyna Conference",
             tagIcon: "web",
-            tagHref: "https://xd.adobe.com/view/af881c31-3473-4945-8b4a-4208e189d823-fadb/",
+            tagHref: "https://www.gip.com/doc-bernds-futurelab/xyna-konferenz-reviews/2018/",
           },
         ],
         chips: [
@@ -34,18 +76,18 @@ export default {
       },
       {
         id: 2,
-        title: "DateSaver",
-        href: "/date-saver",
-        imgSrc: "fitnessapp.png",
-        imgMblSrc: "pareto.png",
+        title: "Rails Girls Frankfurt 2017",
+        href: "",
+        imgSrc: "railsgirls2017.jpg",
+        imgMblSrc: "railsgirls2017.jpg",
         description:
-          "This is an app I developed with little to no fancy bling bling design, however there was some thought put into the user experience beforehand. I am about to redesign. It grew out of a need to automate the decision making process my boyfriend and I had to go through every evening to find out what to do. I did all the coding myself and am on a mission to improve design and UX.",
+          "This was the first time I got to do modern coding and had so much fun being around other enthusiastic teachers and learners and I made new friends. After the event, I joined a club called Techettes e.V. (Women in Tech) of which I have been a member since.",
         height: 200,
         tags: [
           {
-            tag: "DateSaver",
+            tag: "Rails Girls Frankfurt ",
             tagIcon: "web",
-            tagHref: "http://love.frontendpoint.com/",
+            tagHref: "https://www.facebook.com/RailsGirlsFrankfurt/",
           }
         ],
         chips: [
@@ -53,70 +95,9 @@ export default {
             label: "VueJs",
           },
         ],
-      },
-      {
-        id: 3,
-        title: "RSS Feed App",
-        href: "/gamification-app",
-        imgSrc: "rssApp.png",
-        imgMblSrc: "rssApp.png",
-        description:
-          "Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.",
-        height: 200,
-        tags: [
-          {
-            tag: "Development",
-            tagIcon: "code",
-          },
-          {
-            tag: "GitHub",
-            tagIcon: "github",
-            tagHref: "https://github.com/programina-gui/RSS-Testapp",
-          },
-          {
-            tag: "Website",
-            tagIcon: "web",
-            tagHref: "http://netz98-at-amina.belabb.es/",
-          },
-        ],
-        chips: [
-          {
-            label: "Marvel",
-          },
-        ],
-      },
-      {
-        id: 4,
-        title: "Pareto App",
-        href: "/pareto-app",
-        imgSrc: "pareto.png",
-        imgMblSrc: "pareto.png",
-        description:
-          "Eiusmod in labore est consequat dolore ea voluptate pariatur ad dolore incididunt labore irure. Mollit culpa cillum exercitation in laborum amet eu. Minim ipsum nostrud nulla labore anim. Reprehenderit nisi adipisicing incididunt esse consequat dolore Lorem labore aute irure occaecat quis. Culpa elit commodo voluptate nisi. Eu sint occaecat ex adipisicing eu duis ipsum nostrud proident duis.",
-        height: 200,
-        tags: [
-          {
-            tag: "Marvel Prototype",
-            tagIcon: "github",
-            tagHref: "https://marvelapp.com/60c71ad",
-          },
-          {
-            tag: "Website",
-            tagIcon: "web",
-            tagHref: "https://github.com/programina-gui/RSS-Testapp",
-          },
-        ],
-        chips: [
-          {
-            label: "Marvel",
-          },
-        ],
       }
     ],}
   },
-  mounted() {},
-  beforeDestroy() {},
-  methods: {}
 }
 </script>
 
