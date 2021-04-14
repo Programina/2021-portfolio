@@ -7,7 +7,7 @@ TODO: Add a loading spinner for while the email attempts to send
         <br />
         <br />
         <v-row justify="center">
-          <v-col class="subheading mx-6" target="_blank" cols="10">
+          <v-col class="mx-6" target="_blank" cols="10">
             <v-form
               class="px-3"
               ref="form"
