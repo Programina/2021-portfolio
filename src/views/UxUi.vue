@@ -35,13 +35,7 @@ export default {
         height: 200,
         description:
           "My personal project for an app to create long-term habits. The problem was to think of a target audience other than myself, to find the right layout and sequence of content.",
-        tags: [
-          {
-            tag: "Adobe Creative Cloud",
-            tagIcon: "web",
-            tagHref: "https://xd.adobe.com/view/af881c31-3473-4945-8b4a-4208e189d823-fadb/",
-          },
-        ],
+        
         chips: [
           {
             label: "Adobe Xd",

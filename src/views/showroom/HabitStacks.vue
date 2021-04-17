@@ -1,43 +1,117 @@
 <template>
-  <div>
-    <v-container class="habits">
-      <p>
-        HabitStacks is the working name for an app I am in the process of
-        realizing and have started with a design. I had a weekend and was super
-        eager to use a design I felt was really pretty and cutting-edge.
-      </p>
+  <v-container class="habits">
+    <v-row>
+      <stats-overview-card :stats="stats"></stats-overview-card>
+    </v-row>
 
-      <p>
-        I am subscribed to hundreds of UX design channels on my private and my
-        public instagram, so there was no lack of inspiration. At the time, I
-        was tired of the mostly cute, soft, hip color schemes I had seen on
-        other habit apps. I wanted the focus to be on the functionality rather
-        on the design, but without the finish looking cheap, pale and boring.
-      </p>
+    <v-row>
+      <v-col>
+        <h3>The Problem</h3>
+        <p>Having goals is easy, creating change can be hard. Want to change your habits? I wanted to change mine.  I read a some books, downloaded some apps. Little stuck long-term 
+        </p>
 
-      <p>
-        For future iterations of this app, I would also like to find an
-        intuitive and appealing way to make people aware of already existing
-        habits and for them to be able to cluster them together with new habits.
-        I would add advice to keep it to the lowest possible unit and build up
-        on that periodically, using automation.
-      </p>
-      <h3>Learnings:</h3>
-      <p>
-        -After checking out other habit apps and designs on Dribbble & Co.,
-        After a few days the design felt Without user acceptance tests
-      </p>
-    </v-container>
-  </div>
+        <p>I later found out I made these <strong>four mistakes</strong> over and over again: </p>
+
+
+        <p>
+          <ol class="ml-6">
+            <li>wanting to work on too many habits at the same time</li>
+            <li>wanting to progress to the next level too early</li>
+            <li>“Shiny object syndrome”</li>
+            <li>not taking advantage of already existing habits</li>
+          </ol>
+        </p>
+
+
+
+        <v-img
+          height="250"
+          alt="A woman's face looking at objects"
+          :src="require('@/assets/habits.jpg')"
+        ></v-img>
+
+        <h3 class="mt-12">Example</h3>
+        
+        <p>
+
+          <ul class="ml-6">
+            <li>Your goal is to have a healthier diet this year.</li>
+            <li>You start incorporating more vegetables into your diet.</li>
+            <li>Three days later, you watch a YouTube video by some influencer who lost weight.</li>
+            <li>You take their advice, change course and start incorporating more protein.</li>
+            <li> You do the protein, but forget about the vegetables.</li>
+            <li>Five days later, you watch another YouTube video.</li>
+            <li>You start leaving out sugar.</li>
+            <li>You try to keep the protein.</li>
+            <li>Three days later, you managed neither to incorporate the protein nor leave out the sugar.</li>
+          </ul>
+
+        </p>
+        <p>I wanted to get out of the loop of making those mistakes, so I created HabitStacks.</p>
+
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <h3>The conception</h3>
+        <p>
+          HabitStacks is the working name for an app I am in the process of
+          creating. So far, all I have is a design.
+        </p>
+
+        <p>
+          I got inspiration from this design on Instagram. I had a weekend and was super
+          eager to try and create my own version of an inspiring design I had found on Instagram.
+        </p>
+
+        <v-img
+          alt="Instagram mobile design"
+          height="250"
+          :src="require('@/assets/idea.jpg')"
+        ></v-img>
+
+        <h3>Going forward</h3>
+        <p>
+          Next, I will implement a way to highlight existing
+          habits to connect them to existing ones. Another important focus will be to prevent users from overwhelm by picking habits that are realistically not doable longterm. 
+        </p>
+        <h3>Learnings</h3>
+        <p>
+          I will have to either change software or figure out a way to make sure my prototypes are not re-formatted as they are downloaded from the cloud.
+          </p>
+          <p>
+The design looks nice and modern, but too cool and emotionally not engaging. Wanting to change a habit, you have to be emotionally invested. So I will likely spend some time on re-iterating the design.</p>
+
+     <p>
+I will not skip the steps of research on user acceptance with a prototype next time. </p>
+
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
+import StatsOverviewCard from "../../components/StatsOverviewCard.vue";
 export default {
   name: "HabitStacks",
-  components: {},
+  components: { StatsOverviewCard },
   props: {},
   data() {
-    return {};
+    return {
+      stats: {
+        client: "Me and other self-development fans - most likely millenials",
+        time: "A weekend in 2020 - ongoing",
+        role: "Creator, includes branding strategist, UX designer, developer",
+        sector: "Self-development",
+        tags: [
+          {
+            tag: "Check out the mockup",
+            tagIcon: "web",
+            tagHref: "https://xd.adobe.com/view/af881c31-3473-4945-8b4a-4208e189d823-fadb/",
+          },
+        ],
+      },
+    };
   },
 };
 </script>
@@ -58,5 +132,13 @@ ul {
       text-transform: inherit;
     }
   }
+}
+
+p {
+  margin-bottom: 26px;
+}
+
+h3 {
+  margin: 6px 0 16px 0;
 }
 </style>

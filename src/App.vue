@@ -104,8 +104,8 @@ export default {
       ],
       copy: {
         profile1:
-          "Nice to meet you –  I'm Amina Belabbes. ",
-        profile1_2: "<br/> I am a", 
+          "Nice to meet you –  I'm Amina Belabbes. <br/> I am a ",
+        profile1_2: "<br/> I am a ", 
         profile2: "based in Germany.",
         transitionItem: ['<b>UX designer</b> ', '<b>frontend developer</b> ']
       },
