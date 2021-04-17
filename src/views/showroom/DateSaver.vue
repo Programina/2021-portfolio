@@ -58,6 +58,13 @@ export default {
         time: "A weekend in 2020",
         role: "Creator, includes branding strategist, UX designer, developer",
         sector: "Entertainment",
+        tags: [
+          {
+            tag: "DateSaver",
+            tagIcon: "web",
+            tagHref: "http://love.frontendpoint.com/",
+          }
+        ],
       },
     };
   },

@@ -20,9 +20,11 @@
           <v-list-item-subtitle>{{ stats.sector }}</v-list-item-subtitle>
         </div>
       </v-list-item-content>
-      <!-- <v-card-actions>
+
+    </v-list-item>
+          <v-card-actions>
         <div
-          class="d-flex mt-2 justify-end"
+          class="d-flex mt-2 justify-start"
           style="display: flex; flex-wrap: wrap"
         >
           <div v-for="tag in stats.tags" :key="tag.tag">
@@ -43,8 +45,7 @@
             </v-chip>
           </div>
         </div>
-      </v-card-actions> -->
-    </v-list-item>
+      </v-card-actions>
   </v-card>
 </template>
 

@@ -3,7 +3,7 @@
     <v-row  v-for="(card, i) in cards" :key="i" class="align-center my-5" cols="12">
       <!--image right -->
 
-      <v-col cols="6" v-if="card.id % 2 === 0" class="d-flex align-center">
+      <v-col cols="6" v-if="card.id % 2 === 0" class="d-flex align-center mb-6">
         <div data-qa="desktop-content-template" style="width: inherit">
           <h3 class="heading2 mb-3" style="text-align: right">
             {{ card.title }}
@@ -18,14 +18,14 @@
             </div>
           </div>
 
-          <router-link :to="card.href">
+          <router-link :to="card.href" class="d-flex mb-10 justify-end">
             <v-btn color="primary">See Case Study </v-btn>
           </router-link>
         </div>
       </v-col>
 
       <!--IMAGE -->
-      <v-col cols="6" v-if="card.id % 2 === 0">
+      <v-col cols="6" v-if="card.id % 2 === 0" class="mb-6">
         <v-img
           class="ml-5"
           :alt="card.imgSrc"
@@ -34,7 +34,7 @@
       </v-col>
 
       <!--image left -->
-      <v-col cols="6" v-if="card.id % 2 != 0">
+      <v-col cols="6" v-if="card.id % 2 != 0" class="mb-6">
         <!--IMAGE -->
         <v-img
           :alt="card.imgSrc"
@@ -43,7 +43,7 @@
         ></v-img>
       </v-col>
 
-      <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center" >
+      <v-col cols="6" v-if="card.id % 2 != 0" class="d-flex align-center mb-6" >
         <div data-qa="desktop-content-template" style="width: inherit">
           <h3 class="heading2 mb-3" style="text-align: left">
             {{ card.title }}
@@ -58,7 +58,7 @@
           </div>
           
 
-          <router-link :to="card.href">
+          <router-link :to="card.href" class="d-flex mb-10 justify-start">
             <v-btn color="primary">See Case Study </v-btn></router-link
           >
         </div>
@@ -67,13 +67,13 @@
 
 
     <v-row>
-      <h3>
+      <div class="my-10" style="font-size: 1.1em; text-align: left;">
         As you can imagine, having been employed full-time for most of my
-        developer days, I have not yet had a massive amount of professional
-        projects to put into my portfolio. My companies’ products were mostly
+        developer days. I have not yet had a massive amount of professional
+        projects to put here. My companies’ products were mostly
         proprietary and not for me to share.
-      </h3>
-      <p>
+      </div>
+      <p  style="text-align: left;">
         You will notice, the private projects I share are mostly works in
         progress, too. There are a lot of funny memes about programmers and
         their side-projects and I am afraid they are very accurate in my case.

@@ -11,6 +11,7 @@ import UxUi from '../views/UxUi.vue'
 import Dev from '../views/Dev.vue'
 import Other from '../views/Other.vue'
 import NavService from '@/services/NavService'
+import Portfolio from '@/views/showroom/Portfolio.vue'
 
 
 Vue.use(VueRouter)
@@ -63,6 +64,11 @@ const routes = [
     path: '/date-saver',
     name: 'DateSaver',
     component: DateSaver
+  },
+  {
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: Portfolio
   },
   {
     path: '/contact-success',

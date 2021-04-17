@@ -70,6 +70,10 @@ export default {
           path: "/imprint",
         },
         {
+          componentName: "DefaultHeaderDesktop",
+          path: "/portfolio",
+        },
+        {
           componentName: "OtherHeader",
           path: "/other",
         },

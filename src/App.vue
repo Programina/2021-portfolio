@@ -162,7 +162,13 @@ export default {
           color: '#e8cf7d',
           fontColor: 'black',
           path: '/imprint'
-        }
+        },
+        { 
+          color: '#f5e29e',
+          fontColor: 'black',
+          path: '/portfolio'
+        },
+
       ]
     }
     

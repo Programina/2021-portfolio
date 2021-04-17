@@ -50,18 +50,7 @@ export default {
         height: 200,
         description:
           "This portfolio is still work in progress. I am documenting my changes and intentions.",
-        tags: [
-          {
-            tag: "Adobe Creative Cloud",
-            tagIcon: "web",
-            tagHref: "https://xd.adobe.com/view/340e7b2d-309f-4edb-b067-cc86ad272e08-615d/",
-          },
-          {
-            tag: "GitHub Repo",
-            tagIcon: "github", 
-            tagHref: "https://github.com/Programina/2021-portfolio"
-          }
-        ],
+        
         chips: [
           {
             label: "Adobe Xd",
@@ -85,13 +74,7 @@ export default {
         description:
           "This is an app I developed with little to no fancy visual design. However I put some thought into the user experience. Also, I am about to redesign it. The idea is simple: help people have less decisions to make about what to do on a date.",
         height: 200,
-        tags: [
-          {
-            tag: "DateSaver",
-            tagIcon: "web",
-            tagHref: "http://love.frontendpoint.com/",
-          }
-        ],
+       
         chips: [
           {
             label: "VueJs",
