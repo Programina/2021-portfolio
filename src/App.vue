@@ -68,6 +68,22 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
         Imprint
       </router-link>
     </v-footer>
+     <!-- <v-snackbar
+      v-model="snackbar"
+    >
+      {{ text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="pink"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar> -->
   </v-app>
 </template>
 
@@ -184,6 +200,7 @@ export default {
      let colr;
       if(this.currentRoute.path) {
         colr = this.colors.find(val => val.path === this.currentRoute.path)
+        
       } else {
         colr = {
           color: '#fff', 
@@ -191,7 +208,17 @@ export default {
           path: '/'
         }
       }
-      return colr
+
+      if(colr) {   
+        return colr
+      } else 
+      {
+        colr = {
+          color: '#fff', 
+          fontColor: "black",
+          path: '/'
+        }
+      }
    }
   },
   watch: {

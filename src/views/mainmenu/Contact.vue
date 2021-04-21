@@ -2,7 +2,7 @@ TODO: Add a loading spinner for while the email attempts to send
 <template>
   <v-container class="contact">
     <v-row>
-      <v-col class="mb-5" cols="12">
+      <v-col v-if="!isLoading" class="mb-5" cols="12">
         <h1 class="px-12">I'd love to hear from you.</h1>
         <br />
         <br />
@@ -51,11 +51,12 @@ TODO: Add a loading spinner for while the email attempts to send
                 <v-btn @click="resetValidation" text rounded color="warning">
                   <span class="mr-2">Reset</span>
                 </v-btn>
-                <v-btn
+                <v-btn 
                   type="submit"
+                  elevation="10"
                   text
                   rounded
-                  color="primary"
+                  color="background"
                   :class="{ 'button-gradient': formValidity }"
                   :disabled="!formValidity"
                 >
@@ -66,6 +67,16 @@ TODO: Add a loading spinner for while the email attempts to send
           </v-col>
         </v-row>
       </v-col>
+      <v-col v-if="isLoading" class="d-flex my-10 justify-center">
+        <v-progress-circular
+          :size="50"
+          color="primary"
+          indeterminate
+        ></v-progress-circular>
+      </v-col>
+    </v-row>
+    <v-row>
+      <contact-success></contact-success>
     </v-row>
   </v-container>
 </template>
@@ -73,8 +84,10 @@ TODO: Add a loading spinner for while the email attempts to send
 
 <script>
 import emailjs from "emailjs-com";
+import ContactSuccess from "@/views/mainmenu/ContactSuccess"
 export default {
   name: "Contact",
+  components: {ContactSuccess},
   data: () => ({
     from_email: {
       name: "",
@@ -90,30 +103,27 @@ export default {
       (v) => v.indexOf("@") !== 0 || "Your email needs a username.",
       (v) => v.includes("@") !== 0 || "Your email needs an @ symbol.",
     ],
+    isLoading: false
   }),
 
   methods: {
     submit(e) {
-      console.log("TARGET", e.target)
+      this.isLoading = true
       if (this.$refs.form.validate()) {
         emailjs
           .sendForm(
             "service_j01rnvj",
             "template_lzk32dj",
             e.target,
-            // {
-            //   to_name: "Amina",
-            //   from_name: this.from_email.name,
-            //   reply_to: this.from_email.from_email,
-            //   subject: this.from_email.subject,
-            //   message: this.from_email.message,
-            // },
             "user_WbDXf9Pkmprfenjc8Rw5v"
           )
           .then(
             (result) => {
               console.log("SUCCESS!", result.status, result.text);
-              this.$router.push('/contact-success')
+              if(result) {
+                this.isLoading = false
+                this.$router.push('/contact-success')
+              }
             },
             (error) => {
               console.error(
@@ -122,24 +132,6 @@ export default {
               );
             }
           );
-        //   try {
-        //     emailjs.sendForm(
-        //       "service_j01rnvj",
-        //       "template_lzk32dj",
-        //       e.target,
-        //       "user_WbDXf9Pkmprfenjc8Rw5v",
-        //       {
-        //         name: this.from_email.name,
-        //         email: this.from_email.from_email,
-        //         subject: this.from_email.subject,
-        //         message: this.from_email.message
-        //       }
-        //     );
-        //     this.$router.push('/contact-success')
-        //   } catch (error) {
-        //     err => console.error('Uh oh! Something went wrong. Here are some thoughts on the error that occured:', err)
-        //   }
-        // }
       }
     },
     resetValidation() {
