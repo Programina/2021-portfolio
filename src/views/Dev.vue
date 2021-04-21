@@ -60,7 +60,8 @@ export default {
           },
           {
             label: "Vuetify",
-          },{
+          },
+          {
             label: "Photoshop 2021",
           },
         ],

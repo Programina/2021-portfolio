@@ -74,7 +74,7 @@
         <v-col class="ma-2" cols="2">
           <img
             alt="Photoshop"
-            style="width: 120px; margin-top: -25px;"
+            style="width: 70px; margin-left: 17px;"
             src="@/assets/photoshop.png"
         /></v-col>
     </v-row>
