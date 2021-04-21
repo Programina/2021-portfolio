@@ -27,26 +27,11 @@
         <v-img
           height="250"
           alt="A woman's face looking at objects"
+          class="my-12"
           :src="require('@/assets/habits.jpg')"
         ></v-img>
 
-        <h3 class="mt-12">Example</h3>
         
-        <p>
-
-          <ul class="ml-6">
-            <li>Your goal is to have a healthier diet this year.</li>
-            <li>You start incorporating more vegetables into your diet.</li>
-            <li>Three days later, you watch a YouTube video by some influencer who lost weight.</li>
-            <li>You take their advice, change course and start incorporating more protein.</li>
-            <li> You do the protein, but forget about the vegetables.</li>
-            <li>Five days later, you watch another YouTube video.</li>
-            <li>You start leaving out sugar.</li>
-            <li>You try to keep the protein.</li>
-            <li>Three days later, you managed neither to incorporate the protein nor leave out the sugar.</li>
-          </ul>
-
-        </p>
         <p>I wanted to get out of the loop of making those mistakes, so I created HabitStacks.</p>
 
       </v-col>
@@ -67,6 +52,7 @@
         <v-img
           alt="Instagram mobile design"
           height="250"
+          class="my-12"
           :src="require('@/assets/idea.jpg')"
         ></v-img>
 
@@ -105,7 +91,7 @@ export default {
         sector: "Self-development",
         tags: [
           {
-            tag: "Check out the mockup",
+            tag: "Mockup in Adobe Xd",
             tagIcon: "web",
             tagHref: "https://xd.adobe.com/view/af881c31-3473-4945-8b4a-4208e189d823-fadb/",
           },

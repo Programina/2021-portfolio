@@ -60,7 +60,7 @@ export default {
         sector: "Entertainment",
         tags: [
           {
-            tag: "DateSaver",
+            tag: "DateSaver Website",
             tagIcon: "web",
             tagHref: "http://love.frontendpoint.com/",
           }

@@ -114,7 +114,7 @@ export default {
         sector: "IT / Tech",
         tags: [
           {
-            tag: "Portfolio with Adobe Xd",
+            tag: "Mockup in Adobe Xd",
             tagIcon: "web",
             tagHref:
               "https://xd.adobe.com/view/340e7b2d-309f-4edb-b067-cc86ad272e08-615d/",
