@@ -56,7 +56,7 @@ export default {
   computed: {
     ...mapState(["currentRoute"]), 
     text(){
-      return 'Nice to meet you – I am Amina Belabbes, <strong>frontend developer</strong> and aspiring <strong>UX Designer</strong> based in  Germany.'
+      return 'Nice to meet you – I am Amina Belabbes, <strong>frontend developer</strong> and aspiring <strong>UX designer</strong> based in  Germany.'
     },
     profileText(){
       return this.copy.profile1 + this.copy.transitionItem + this.copy.profile2

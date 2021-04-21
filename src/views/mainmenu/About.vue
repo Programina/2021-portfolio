@@ -2,7 +2,7 @@
   <v-container class="about">
       <p>
         Hi, I am Amina Belabbes and I am passionate about making the web a more beautiful, easy to use and fun place. I love creating designs that make an impact 😊 .
-        I'm a full-time frontend developer with 2+ years of professional experience and about half a year of experience as a UX Designer, looking to transition into UX design. 
+        I'm a full-time frontend developer with 2+ years of professional experience and about half a year of experience as a UX designer, looking to transition into UX design. 
       </p>
         <blockquote class="my-5">“You can fail at what you don't want, so you might as well take a chance on doing what you love.” – Jim Carrey</blockquote>
      
