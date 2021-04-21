@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <div v-if="currentRoute.path === ('/' || '/home' || 'ux-ui')">
+    <div v-if="currentRoute.path === '/'  || currentRoute.path ===  '/home' || currentRoute.path ===  '/ux-ui'  ">
       <UxUi/>
     </div>
     <div v-else>

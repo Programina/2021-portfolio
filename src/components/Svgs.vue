@@ -71,6 +71,12 @@
             style="width: 120px; margin-top: -25px;"
             src="@/assets/bootstrap.png"
         /></v-col>
+        <v-col class="ma-2" cols="2">
+          <img
+            alt="Photoshop"
+            style="width: 120px; margin-top: -25px;"
+            src="@/assets/photoshop.png"
+        /></v-col>
     </v-row>
   </v-container>
 </template>

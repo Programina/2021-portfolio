@@ -5,40 +5,18 @@
         <h3>Here are some things I also enjoyed doing, either at work or in my free time.</h3>
       </div>
     </div>
-    
+     <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
+        <MobileContentTemplate :cards="cards" />
+      </v-col>
+   <v-col v-else class="mb-5 px-8" cols="12" justify="center">
+        <DesktopContentTemplate :cards="cards" />
+      </v-col>
     <div
       v-for="(card, i) in cards"
       :key="i"
       class="mx-3"
       target="_blank"
     >
-      <v-card>
-        <v-img
-          height="250"
-          :src="require('@/assets/' + card.imgMblSrc + '')"
-        ></v-img>
-
-        <v-card-title>{{ card.title }}</v-card-title>
-        <v-card-text> {{ card.description }} <br/>
-        <span v-if="card.href">  <router-link :to="card.href">
-            <v-btn color="primary">See Case Study </v-btn></router-link
-          ></span>
-        
-        </v-card-text>
-        <v-card-text>
-          <div class="d-flex flex-row flex-wrap justify-end" :data-qa="card.title">
-            <div v-for="(tag, j) in card.tags" :key="j">
-              <v-chip class="ma-2" color="primary" outlined>
-                <span class="px-2"> {{ tag.tag }}</span>
-
-                <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
-              </v-chip>
-            </div>
-
-           
-          </div>
-        </v-card-text>
-      </v-card>
       <br />
 
     </div>
@@ -48,11 +26,15 @@
 
 <script>
 
+import MobileHeader from "@/components/headers/MobileHeader";
+import MobileContentTemplate from "@/components/MobileContentTemplate";
+import DesktopContentTemplate from "@/components/DesktopContentTemplate";
 import ismobile from '@/mixins/ismobile'
 export default {
   name: 'Other',
   components: {},
   mixins: [ismobile],
+  components: { MobileHeader, MobileContentTemplate, DesktopContentTemplate },
   data() {
     return {
       cards: [
@@ -72,11 +54,7 @@ export default {
             tagHref: "https://www.gip.com/doc-bernds-futurelab/xyna-konferenz-reviews/2018/",
           },
         ],
-        chips: [
-          {
-            label: "Adobe Xd",
-          },
-        ],
+        chips: [],
       },
       {
         id: 2,
@@ -94,13 +72,10 @@ export default {
             tagHref: "https://www.facebook.com/RailsGirlsFrankfurt/",
           }
         ],
-        chips: [
-          {
-            label: "VueJs",
-          },
-        ],
+        chips: [],
       }
-    ],}
+      ]
+    }
   },
 }
 </script>

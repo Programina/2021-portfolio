@@ -1,8 +1,8 @@
 <template>
   <v-row :class="[isMobile ? 'd-flex flex-column justify-center align-center' : undefined]">
-    <v-col cols="6" class="d-flex flex-column justify-center align-center" style="text-align: right;">
-      <h1>YAY!</h1>
-      <h2>I love getting feedback! Thanks!</h2> 
+    <v-col cols="6" class="d-flex flex-column justify-center align-center" >
+      <h1 style="width: 100%" :class="[!isMobile ?  'text-right' : 'text-center']">YAY!</h1>
+      <h2 style="width: 100%"  :class="[!isMobile ?  'text-right' : 'text-center']">I love getting feedback! Thanks!</h2> 
     </v-col>
     <v-col cols="6" class="d-flex justify-center align-center" style="text-align: left;">
           <v-img

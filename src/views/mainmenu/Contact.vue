@@ -57,7 +57,7 @@ TODO: Add a loading spinner for while the email attempts to send
                   text
                   rounded
                   color="background"
-                  :class="{ 'button-gradient': formValidity }"
+                  :class="{ 'button-gradient pa-2': formValidity }"
                   :disabled="!formValidity"
                 >
                   <span class="mr-2">Submit</span>
@@ -74,9 +74,6 @@ TODO: Add a loading spinner for while the email attempts to send
           indeterminate
         ></v-progress-circular>
       </v-col>
-    </v-row>
-    <v-row>
-      <contact-success></contact-success>
     </v-row>
   </v-container>
 </template>

@@ -40,8 +40,8 @@
         cols="12"
          style="text-align: center"
       >
-       <router-link to="/contact">
-          <v-btn class="mr-2" color="primary">Get in touch </v-btn>
+       <router-link  v-if="currentRoute.path != ('/contact' || '/contact-success') " to="/contact">
+          <v-btn elevation="10" rounded class="button-gradient pa-6 mr-2">Get in touch </v-btn>
        </router-link>
        
       </v-col>
@@ -49,6 +49,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: 'MobileHeader',
   components: {},
@@ -65,13 +67,15 @@ export default {
     }
   },
   computed: {
+  ...mapState(["currentRoute"]),
     height(){
        switch (this.$vuetify.breakpoint.name) {
           case 'xs': return 250
           case 'sm': return 250
           case 'md': return 350
         }
-    }
+    },
+   
   },
   methods: {
     imageIntervall(){
@@ -97,5 +101,9 @@ export default {
     font-size: 1.6em;
     font-weight: 400;
     line-height: 1.7em;
+}
+
+a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
+  color: white !important;
 }
 </style>

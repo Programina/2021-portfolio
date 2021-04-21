@@ -50,6 +50,10 @@ export default {
           path: "/contact",
         },
         {
+          componentName: "ContactHeader",
+          path: "/contact-success",
+        },
+        {
           componentName: "HabitStacksHeader",
           path: "/habit-stacks",
         },

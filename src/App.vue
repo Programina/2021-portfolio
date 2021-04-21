@@ -93,13 +93,16 @@ import ismobile from '@/mixins/ismobile.js'
 import NavBar from '@/components/NavBar'
 import DesktopHeaderTemplate from '@/components/DesktopHeaderTemplate'
 import NavBarSecondLevel from '@/components/NavBarSecondLevel'
-import { mapState } from "vuex";
+import { mapState } from "vuex"
 
 export default {
   name: "App",
   mixins: [ismobile],
   components: {
-    MobileHeader, NavBar, DesktopHeaderTemplate, NavBarSecondLevel
+    MobileHeader, 
+    NavBar, 
+    DesktopHeaderTemplate, 
+    NavBarSecondLevel
   },
 
   data() {
@@ -149,6 +152,11 @@ export default {
           fontColor: 'black',
           path: '/contact'
         }, 
+        {
+          color: '#ffebf2',
+          fontColor: 'black',
+          path: '/contact-success'
+        },
         { 
           color: '#89b1cc',
           fontColor: '#fff',
@@ -239,6 +247,8 @@ export default {
 //   color: #e8cf7d;
 //   color: #4C4C9D;
 //   color: #b8ddf9;
+//   color: #ffebf2;
+//   color: #98e5cd;
 // }
 
 blockquote {

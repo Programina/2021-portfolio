@@ -46,7 +46,7 @@ export default {
   }, 
   watch: {
     'currentRoute.path'(newVal, oldVal) {
-      if(newVal != oldVal) {
+      if(newVal != oldVal && this.uxEl) {
         this.isHomeScreen = false
         this.uxEl.removeAttribute("style")
       }

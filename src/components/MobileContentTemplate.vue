@@ -1,5 +1,6 @@
 <template>
-  <div><div
+  <div>
+    <div
       v-for="(card, i) in cards"
       :key="i"
       class="mx-3"
@@ -24,15 +25,37 @@
             </div>
           </div>
         </v-card-text>
-           <router-link :to="card.href"> <v-btn color="primary" class="ma-6">See Case Study </v-btn></router-link
+           <router-link :to="card.href"> <v-btn  :color="background" elevation="10" rounded class="button-gradient  pa-6  ma-6">See Case Study </v-btn></router-link
           ></span></v-card-text>
   
       </v-card>
       <br />
-    </div></div>
+    </div>
+    <v-container v-if="currentRoute.path === '/ux-ui' || currentRoute.path === '/development'  ">
+       <v-row>
+      <v-col>
+        
+      <div class="my-10" style="font-size: 1.1em; text-align: left;">
+        As you can imagine, having been employed full-time for most of my
+        developer days. I have not yet had a massive amount of professional
+        projects to put here. My companies’ products were mostly
+        proprietary and not for me to share.
+      </div>
+      <p  style="text-align: left;">
+        You will notice, the private projects I share are mostly works in
+        progress, too. There are a lot of funny memes about programmers and
+        their side-projects and I am afraid they are very accurate in my case.
+      </p>
+      </v-col>
+    </v-row>
+    </v-container>
+    </div>
 </template>
 
 <script>
+
+import { mapState } from "vuex"
+
 export default {
   name: 'MobileContentTemplate',
   components: {},
@@ -45,10 +68,16 @@ export default {
   data() {
     return {}
   },
-  mounted() {},
-  beforeDestroy() {},
-  methods: {}
+  computed: {
+  ...mapState(["currentRoute"]),
+   }
 }
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+    a, 
+    a:hover, 
+    a:active, a:focus, .btn-link a, .theme--light.v-btn {
+      color: white !important
+    } 
+</style>
