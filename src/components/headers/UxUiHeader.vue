@@ -1,18 +1,17 @@
 <template>
-    <div class="d-flex flex-column justify-center align-center portfolio-background"  :style="{ 'background-image': 'url(' + computedImage + ')', 'background-color': color, 'height': height + 'px'}">
+    <div class="d-flex flex-column justify-center align-center ux-background"  :style="{ 'background-image': 'url(' + computedImage + ')', 'background-color': color, 'height': height + 'px'}">
    
-   <span class="text-center">
-     <h1 :style="{'color': fontColor}">Portfolio</h1>
-     <h3 :style="{'color': fontColor}">The one you are currently looking at.</h3>
-  </span> 
+      <span class="text-center">
+        <h1 :style="{'color': fontColor}">UX and UI</h1>
+        <h3 :style="{'color': fontColor}">This is what I design</h3>
+      </span> 
 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PortfolioHeader',
-  components: {},
+  name: 'UxUiHeader',
   props: {
       color: {
       type: String,
@@ -44,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .portfolio-background {
+  .ux-background {
     width: 100%;
     background-repeat: no-repeat;
     background-position: left bottom; 

@@ -1,12 +1,12 @@
 <template>
-   <div class="d-flex justify-center align-center contact-background" :style="{ 'background-color': color, 'color': fontColor, 'height': height + 'px'}">
-    <h1 :style="{'color': fontColor}">Contact me</h1>
+   <div class="d-flex justify-center align-center imprint-background" :style="{ 'background-color': color, 'color': fontColor, 'height': height + 'px'}">
+    <h1 :style="{'color': fontColor}">Imprint</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ContactHeader',
+  name: 'ImprintHeader',  
   props: {
      fontColor: {
       type: String,
@@ -24,9 +24,8 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
-  .contact-background {
+  .imprint-background {
     width: 100%;
   }
 </style>

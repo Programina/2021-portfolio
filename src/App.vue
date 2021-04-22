@@ -121,76 +121,76 @@ export default {
           name: "Contact",
         }
       ],
+      
       copy: {
-        profile1:
-          "Nice to meet you –  I'm Amina Belabbes. <br/> I am a ",
+        profile1: "Nice to meet you –  I'm Amina Belabbes. <br/> I am a ",
         profile1_2: "<br/> I am a ", 
         profile2: "based in Germany.",
-        transitionItem: ['<b>UX designer</b> ', '<b>frontend developer</b> ']
+        transitionItem: ['designer ', 'developer ']
       },
       drawer: false,
       group: null,
       height: '400',
       colors: [
         {  
-          color: '#b8ddf9',
+          color: '#87FADD',
           fontColor: 'black',
           path: '/home'
         },
         {  
-          color: '#b8ddf9',
+          color: '#87FADD',
           fontColor: 'black',
           path: '/'
         },
          { 
-          color: '#98e5cd', 
-          fontColor: 'black',
+          color: '#B48CFA', 
+          fontColor: '#fff',
           path: '/about'
         }, 
         {
-          color: '#ffebf2',
-          fontColor: 'black',
+          color: '#FA8F6E',
+          fontColor: '#fff',
           path: '/contact'
         }, 
         {
-          color: '#ffebf2',
-          fontColor: 'black',
+          color: '#FA8F6E',
+          fontColor: '#fff',
           path: '/contact-success'
         },
         { 
-          color: '#89b1cc',
-          fontColor: '#fff',
+          color: '#FAF47A',
+          fontColor: 'black',
           path: '/habit-stacks'
         },
         { 
-          color: '#de8579',
+          color: '#FA8F6E',
           fontColor: '#fff',
           path: '/date-saver'
         },
         { 
-          color: '#de8579',
+          color: '#B48CFA',
           fontColor: '#fff',
+          path: '/portfolio'
+        },
+        { 
+          color: '#87FADD',
+          fontColor: 'black',
           path: '/ux-ui'
         },
         { 
-          color: '#8D5A97',
+          color: '#B48CFA',
           fontColor: '#fff',
           path: '/development'
         },
         { 
-          color: '#e8cf7d',
-          fontColor: 'black',
+          color: '#FA8F6E',
+          fontColor: '#fff',
           path: '/other'
         },
         { 
-          color: '#e8cf7d',
+          color: '#FAF47A',
           fontColor: 'black',
           path: '/imprint'
-        },
-        { 
-          color: '#f5e29e',
-          fontColor: 'black',
-          path: '/portfolio'
         },
 
       ]

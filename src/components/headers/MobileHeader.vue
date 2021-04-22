@@ -40,7 +40,7 @@
         cols="12"
          style="text-align: center"
       >
-       <router-link  v-if="currentRoute.path != ('/contact' || '/contact-success') " to="/contact">
+       <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact">
           <v-btn elevation="10" rounded class="button-gradient pa-6 mr-2">Get in touch </v-btn>
        </router-link>
        
@@ -106,4 +106,4 @@ export default {
 a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
   color: white !important;
 }
-</style>
+</style>box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

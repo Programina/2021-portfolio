@@ -1,11 +1,12 @@
 <template>
-  <div data-qa="header-template" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;" v-if="component">
+  <div data-qa="header-template" v-if="component">
     <component
-      :is="component"
+      :is="component.componentName"
       :color="color"
       :fontColor="fontColor"
       :height="height"
-      :copy="component === 'DefaultHeaderDesktop' ? copy : undefined"
+      :image="component.img"
+      :copy="component.componentName === 'DefaultHeaderDesktop' ? copy : undefined"
     />
   </div>
 </template>
@@ -17,6 +18,11 @@ import HabitStacksHeader from "@/components/headers/HabitStacksHeader";
 import DateSaverHeader from "@/components/headers/DateSaverHeader";
 import AboutHeader from "@/components/headers/AboutHeader";
 import OtherHeader from "@/components/headers/OtherHeader";
+import ImprintHeader from "@/components/headers/ImprintHeader";
+import UxUiHeader from "@/components/headers/UxUiHeader";
+import PortfolioHeader from "@/components/headers/PortfolioHeader";
+import DevelopmentHeader from "@/components/headers/DevelopmentHeader";
+
 
 import { mapState } from "vuex";
 
@@ -29,13 +35,17 @@ export default {
     HabitStacksHeader,
     AboutHeader,
     OtherHeader,
+    ImprintHeader,
+    UxUiHeader,
+    PortfolioHeader,
+    DevelopmentHeader
   },
   data() {
     return {
       components: [
         {
           componentName: "DefaultHeaderDesktop",
-          path: "/home",
+          path: "/home"
         },
         {
           componentName: "DefaultHeaderDesktop",
@@ -44,45 +54,58 @@ export default {
         {
           componentName: "AboutHeader",
           path: "/about",
+          img: "brushes.png"
         },
         {
           componentName: "ContactHeader",
           path: "/contact",
+          img: "brushes.png"
         },
         {
           componentName: "ContactHeader",
           path: "/contact-success",
+          img: "brushes.png"
         },
         {
           componentName: "HabitStacksHeader",
           path: "/habit-stacks",
+          img: "brushes.png"
         },
         {
           componentName: "DateSaverHeader",
           path: "/date-saver",
+          img: "brushes.png"
         },
         {
-          componentName: "DefaultHeaderDesktop",
+          componentName: "UxUiHeader",
           path: "/ux-ui",
+          img: "brushes.png"
         },
         {
-          componentName: "DefaultHeaderDesktop",
+          componentName: "DevelopmentHeader",
           path: "/development",
+          img: "brushes.png"
         },
         {
-          componentName: "DefaultHeaderDesktop",
+          componentName: "ImprintHeader",
           path: "/imprint",
+          img: "brushes.png"
         },
         {
-          componentName: "DefaultHeaderDesktop",
+          componentName: "PortfolioHeader",
           path: "/portfolio",
+          img: "brushes.png"
         },
         {
           componentName: "OtherHeader",
           path: "/other",
+          img: "brushes.png"
         },
       ],
     };
+  },
+  mounted(){
+    console.log("copy", this.copy)
   },
   props: {
     copy: {
@@ -113,13 +136,13 @@ export default {
       } else {
         comp = {
           componentName: "DefaultHeaderDesktop",
-          path: "/",
+          path: "/"
         };
       }
 
       console.log("Component name ", comp ? comp.componentName : "Kein Name");
-      return comp ? comp.componentName : undefined;
-    },
+      return comp ? comp : undefined;
+    }
   },
 };
 </script>

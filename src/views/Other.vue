@@ -1,8 +1,10 @@
 <template>
-  <div id="other">
-    <div class="d-flex justify-center align-center my-10"> 
+  <v-container id="other">
+    <v-row>
+      <v-col>
+            <div class="d-flex justify-center align-center my-10"> 
       <div  style="max-width: 400px; text-align: center;">
-        <h3>Here are some things I also enjoyed doing, either at work or in my free time.</h3>
+       
       </div>
     </div>
      <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
@@ -17,11 +19,13 @@
       class="mx-3"
       target="_blank"
     >
-      <br />
 
     </div>
+      </v-col>
+    </v-row>
 
-  </div>
+
+  </v-container>
 </template>
 
 <script>

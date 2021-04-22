@@ -25,7 +25,7 @@
             </div>
           </div>
         </v-card-text>
-           <router-link :to="card.href"> <v-btn  :color="background" elevation="10" rounded class="button-gradient  pa-6  ma-6">See Case Study </v-btn></router-link
+           <router-link :to="card.href"> <v-btn  color="background" elevation="10" rounded class="button-gradient  pa-6  ma-6">See Case Study </v-btn></router-link
           ></span></v-card-text>
   
       </v-card>

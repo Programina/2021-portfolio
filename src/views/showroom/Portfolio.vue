@@ -8,14 +8,13 @@
       <v-col>
         <h3>The Problem</h3>
         <p>
-          The first idea was to give potential clients and employers a digital
-          business card so they would know how to get in touch.
+          I had been a developer for years and had started designing, but was scattered all over the net with my designs and with my code. <strong>I needed a single business-card type of website to show to people.</strong>
         </p>
 
         <div class="enumeration mt-12">01</div>
         <p>
           To start coding, I started with something that felt
-          <strong>doable</strong> and to just include the social media links as
+          doable and to just include the social media links as
           sort of a
           <a href="https://en.wikipedia.org/wiki/Call_to_action_(marketing)"
             >"Call to Action (CTA)"</a
@@ -43,15 +42,26 @@
           the piece and that they would to good to keep it simple.
         </p>
 
+        <v-img
+          width="620"
+          alt="Amina's first Website"
+          :src="require('@/assets/portfoliomoodboard.jpg')"
+        ></v-img>
+
+
         <div class="enumeration mt-12">04</div>
         <p>
-          After reading an article on "best in class" UX design portfolios, however,
-          I realized that a lot of
-          emphasis was placed on personality and that color could be okay.
+          I then designed a mobile mockup in Adobe Xd, knowing that development is usually mobile first and that I was likely to start coding before I had a finished design.
         </p>
 
+        <v-img
+          width="620"
+          alt="Amina's first Website"
+          :src="require('@/assets/portfolio.jpg')"
+        ></v-img>
+
          <div class="enumeration mt-12">05</div>
-        <p>Now I had done three mobile frames and got so excited that I started coding right away. The result was ok, but I realized I did not need the time lines on the left, they added little to the visuals and would have been a pain to implement.</p>
+        <p>Now I switched between coding and redesigning.</p>
 
         <h3>First iteration</h3>
 
@@ -93,6 +103,22 @@
           </v-col>
         </v-row>
 
+         <div class="enumeration mt-12">06</div>
+
+    
+        <p>I wanted colors, but had no color scheme in place, so I used the Adobe color wheel, picked one color I liked and got matching colors.</p>
+        <v-row class="my-5">
+          <v-col>
+               <v-img
+          width="620"
+          alt="Third iteration"
+          :src="require('@/assets/adobecolors.jpg')"
+        ></v-img>
+
+          </v-col>
+        </v-row>
+        
+      
 
       </v-col>
     </v-row>
