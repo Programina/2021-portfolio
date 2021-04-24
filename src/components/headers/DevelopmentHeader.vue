@@ -8,8 +8,8 @@
     }"
   >
     <span class="text-center">
-      <h1 :style="{ color: fontColor }">Other</h1>
-      <h3 :style="{ color: fontColor }">Other things I enjoy doing.</h3>
+      <h1 :style="{ color: fontColor }">Development</h1>
+      <h3 :style="{ color: fontColor }">Have a look at my code.</h3>
     </span>
   </div>
 </template>

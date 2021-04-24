@@ -3,7 +3,7 @@
    
       <span class="text-center">
         <h1 :style="{'color': fontColor}">UX and UI</h1>
-        <h3 :style="{'color': fontColor}">This is what I design</h3>
+        <h3 :style="{'color': fontColor}">Design is my passion.</h3>
       </span> 
 
   </div>

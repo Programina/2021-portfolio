@@ -54,52 +54,52 @@ export default {
         {
           componentName: "AboutHeader",
           path: "/about",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "ContactHeader",
           path: "/contact",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "ContactHeader",
           path: "/contact-success",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "HabitStacksHeader",
           path: "/habit-stacks",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "DateSaverHeader",
           path: "/date-saver",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "UxUiHeader",
           path: "/ux-ui",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "DevelopmentHeader",
           path: "/development",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "ImprintHeader",
           path: "/imprint",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "PortfolioHeader",
           path: "/portfolio",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
         {
           componentName: "OtherHeader",
           path: "/other",
-          img: "brushes.png"
+          // img: "brushes.png"
         },
       ],
     };
