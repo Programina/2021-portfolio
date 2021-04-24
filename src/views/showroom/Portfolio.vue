@@ -13,8 +13,7 @@
 
         <div class="enumeration mt-12">01</div>
         <p>
-          To start coding, I started with something that felt
-          doable and to just include the social media links as
+          To start coding, I started including the social media links as
           sort of a
           <a href="https://en.wikipedia.org/wiki/Call_to_action_(marketing)"
             >"Call to Action (CTA)"</a
@@ -29,17 +28,12 @@
 
         <div class="enumeration mt-12">02</div>
         <p>
-          I set the background image to a female programmer, because being
-          female in the industry is still rare and stands out about me. I used
-          this particular shade of green, because I work with VueJs and I wanted
-          to use their main color. It felt fresh and modern.
+          I set the background image to a female programmer, because I am proud to be a female developer. 
         </p>
 
         <div class="enumeration mt-12">03</div>
         <p>
-          Next, I created a mood board with images using blue and green. I had
-          learned that more than two colors in a beginner’s portfolio could ruin
-          the piece and that they would to good to keep it simple.
+          Next, I created a mood board with images using two colors, trying to be minimal. 
         </p>
 
         <v-img
@@ -90,15 +84,8 @@
           <v-col>
                <v-img
           alt="design1"
-          width="400"
-          :src="require('@/assets/secondIteration.jpg')"
-        ></v-img>
-          </v-col>
-          <v-col>
-             <v-img
-          alt="design1 mobile"
-          width="100"
-          :src="require('@/assets/seconditerationmobile.jpg')"
+          width="100%"
+          :src="require('@/assets/seconditeration.gif')"
         ></v-img>
           </v-col>
         </v-row>
