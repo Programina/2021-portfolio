@@ -4,7 +4,7 @@
       <h1 style="width: 100%" :class="[!isMobile ?  'text-right' : 'text-center']">YAY!</h1>
       <h2 style="width: 100%"  :class="[!isMobile ?  'text-right' : 'text-center']">I love getting feedback! Thanks!</h2> 
     </v-col>
-    <v-col cols="6" class="d-flex justify-center align-center" style="text-align: left;">
+    <v-col cols="6" class="d-flex justify-start align-center" style="text-align: left;">
           <v-img
             class="ml-5"
             :src="require('@/assets/catching-bird-during-busy-day.png')"

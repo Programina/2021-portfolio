@@ -67,6 +67,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
       <router-link to="/imprint" class="d-flex align-center justify-center">
         Imprint
       </router-link>
+      <div class="ma-5">Last update April 2021</div>
     </v-footer>
      <!-- <v-snackbar
       v-model="snackbar"
