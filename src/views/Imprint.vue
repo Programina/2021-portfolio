@@ -2,7 +2,7 @@
   <div class="d-flex justify-center imprint">
     <div class="column mb-12">
       <h2>Information pursuant to Sect. 5 German Telemedia Act (TMG)</h2>
-      <p>Amina Belabbes<br />Annemarie-Renger-Str. 1k<br />5130 Mainz</p>
+      <p>Amina Belabbes<br />Postfach 3820  <br />55116 Mainz</p>
       <h2>EU dispute resolution<br /></h2>
       <p>
         The European Commission provides a platform for online dispute
