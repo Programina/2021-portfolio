@@ -22,6 +22,7 @@ export default {
         time: "A weekend in 2019",
         role: "UI Designer, Developer",
         sector: "E-Commerce",
+        status: "Finished (could do with a re-design)",
         tags: [
           {
             tag: "RSS Website",

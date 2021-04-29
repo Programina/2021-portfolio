@@ -69,11 +69,10 @@ TODO: Add a loading spinner for while the email attempts to send
                   elevation="10"
                   text
                   rounded
-                  color="background"
-                  :class="{ 'button-gradient pa-2': formValidity }"
+                  color="primary"
                   :disabled="!formValidity"
                 >
-                  <span class="mr-2">Submit</span>
+                  <span>Submit</span>
                 </v-btn>
               </v-row>
             </v-form>

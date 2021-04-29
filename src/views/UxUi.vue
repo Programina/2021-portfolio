@@ -40,22 +40,23 @@ export default {
             label: "Adobe Xd",
           },
         ],
-      },
-       {
-        id: 2,
-        title: "Rep Set Go",
-        href: "/rep-set-go",
-        imgSrc: "fitnessapp.png",
-        imgMblSrc: "fitx2.png",
-        description:
-          "A first attempt at designing a workout app with customized sets and reps.",
-        
-        chips: [
-          {
-            label: "Adobe Xd",
-          },
-        ],
       }
+      // ,
+      //  {
+      //   id: 2,
+      //   title: "Rep Set Go",
+      //   href: "/rep-set-go",
+      //   imgSrc: "fitnessapp.png",
+      //   imgMblSrc: "fitx2.png",
+      //   description:
+      //     "A first attempt at designing a workout app with customized sets and reps.",
+        
+      //   chips: [
+      //     {
+      //       label: "Adobe Xd",
+      //     },
+      //   ],
+      // }
     ],
     
   }),

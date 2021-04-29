@@ -41,7 +41,7 @@
          style="text-align: center"
       >
        <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact">
-          <v-btn elevation="10" rounded class="button-gradient pa-6 mr-2">Get in touch </v-btn>
+          <v-btn rounded elevation="10" color="primary" class="pa-6 mr-2">Get in touch </v-btn>
        </router-link>
        
       </v-col>

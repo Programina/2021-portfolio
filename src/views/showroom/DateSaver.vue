@@ -5,52 +5,128 @@
     </v-row>
     <v-row>
       <v-col class="d-flex flex-column justify-center mt-10">
+
+      
         <h3>Problem</h3>
         <p>
           Two years into our relationship, my boyfriend and I had developed the
-          same routine every evening, where he'd say "Honey, what are we going
-          to do tonight?" and everytime I was so overwhelmed with decision fatigue that we'd end up doing the same things.
+          habit of ping-ponging our decision on how to spend our time together.
         </p>
-        <v-img
-          height="250"
+        <v-row >
+          <v-col class="d-flex justify-center">
+             <v-img
           width="400"
           :src="require('@/assets/bored-couch.jpg')"
         ></v-img>
-        <p>
-          We both love variety and changing things up every once in a while, so
+          </v-col>
+        </v-row>
+       
+        <p class="my-5">
+          We both love variety, but tire easily of making decisions.
           I thought of a way to approach this recurring problem strategically. I
           created an app.
         </p>
-
-        <h3>Requirements</h3>
-        <p>
-          We needed something simple that took away the effort of considering our current budget, the weather and time of day. 
-           
-        </p>
+        <strong>
+          We needed something simple to help make viable decisions on the activity. It should not take much time to type in further considerations like our current budget, the weather and time of day. 
+        </strong>
 
         
-        <h3>Process</h3>
-         <div class="enumeration mt-12">01</div>
+        <h3 class="mt-16">Process</h3>
+         <div class="enumeration mt-5">01</div>
         <p> 
           I wanted the interface to be familiar and fun. What is
           often used to reach a decision?
-          Two things that came to mind were tossing a coin and a Magic 8 Ball
-          works well too. Both have a super simple user interface. :)
+          Two things that came to mind were tossing a coin and a magic 8 ball
+          works well too.
         </p>
-
-        <v-img
-          height="250"
+        <v-row >
+          <v-col class="d-flex justify-center">
+              <v-img
           width="400"
           :src="require('@/assets/magic-8.jpg')"
         ></v-img>
 
-         <div class="enumeration mt-12">02</div>
+          </v-col>
+        </v-row>
+      
+        <div class="enumeration mt-12">02</div>
         <p> 
-         I took a weekend to code, getting the local time and weather from APIs, writing down a set of data. I listed a bunch of activities, attributed times of day in which you would do them, attribute a type of weather that was suitable and a budget. 
-         It is still work in progress, but usually we got some good guesses from the program. 
+         I took a weekend to code, getting the local time and weather from APIs. </p>
+         <p>
+         The current version works like this: You click a button and get a suggestion for what to do. 
+        </p>
+        <p>
+          The suggestions are mostly random, but with a subset of factors that are taken into account. 
+          The app takes into consideration the local time and weather (just in Mainz so far) and lets you choose between three price ranges for your activities.
         </p>
 
         
+        <v-row >
+          <v-col class="d-flex justify-center">
+             <a href="http://love.frontendpoint.com/">
+        <v-img
+          width="400"
+          :src="require('@/assets/datesaverold.jpg')"
+        ></v-img>
+      </a>
+          </v-col>
+        </v-row>
+     
+        
+
+        <div class="enumeration mt-12">03</div>
+        <p> 
+         I had not put much effort into the design, so I redesigned it recently. I started making a rough sketch on paper.
+        </p>
+      
+
+        
+        <v-row>
+          <v-col class="d-flex justify-center">
+              <v-img
+              width="400"
+              :src="require('@/assets/redesignone.jpg')"
+            ></v-img>
+          </v-col>
+        </v-row>
+
+        <div class="enumeration mt-12">04</div>
+        <p> 
+         Next was a moodboard. I tried finding the layout and colors of a magic 8 ball.
+        </p>
+
+
+        <v-row >
+          <v-col class="d-flex justify-center">
+            
+        <v-img
+          width="400"
+          :src="require('@/assets/moodboarddatesaver.jpg')"
+        ></v-img>
+          </v-col>
+        </v-row>
+
+
+
+         <div class="enumeration mt-12">05</div>
+        <p> 
+        Thankfully the app was meant to be simple, so it did not take long to get to a nerly finished high fidelity mockup.
+        </p>
+
+
+        <v-row >
+          <v-col class="d-flex justify-center">
+            
+        <v-img
+          width="400"
+          class="mb-12"
+          :src="require('@/assets/datesavertwo.jpg')"
+        ></v-img>
+
+          </v-col>
+        </v-row>
+
+
       </v-col>
     </v-row>
   </v-container>
@@ -67,8 +143,9 @@ export default {
       stats: {
         client: "My boyfriend and I",
         time: "A weekend in 2020",
-        role: "Creator, includes branding strategist, UX designer, developer",
+        role: "Creator, designer, developer",
         sector: "Entertainment",
+        status: "WIP",
         tags: [
           {
             tag: "DateSaver Website",

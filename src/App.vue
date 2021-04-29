@@ -18,6 +18,10 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
       </v-row>
       <router-view />
 
+      
+      <div :class="['back-to-top', [isScrolled ? 'on-scroll' : undefined]]" @click="scrollToTop">
+        <span class="back-to-top__icon"></span>
+      </div>
     </v-main>
 
     <v-navigation-drawer
@@ -64,27 +68,12 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
 
         
       </div>
+
       <router-link to="/imprint" class="d-flex align-center justify-center">
         Imprint
       </router-link>
       <div class="ma-5">Last update April 2021</div>
     </v-footer>
-     <!-- <v-snackbar
-      v-model="snackbar"
-    >
-      {{ text }}
-
-      <template v-slot:action="{ attrs }">
-        <v-btn
-          color="pink"
-          text
-          v-bind="attrs"
-          @click="snackbar = false"
-        >
-          Close
-        </v-btn>
-      </template>
-    </v-snackbar> -->
   </v-app>
 </template>
 
@@ -108,6 +97,8 @@ export default {
 
   data() {
     return {
+      isScrolled: false,
+      scrolling: null,
       navigation: [
         {
           to: "/",
@@ -121,8 +112,7 @@ export default {
           to: "/contact",
           name: "Contact",
         }
-      ],
-      
+      ],     
       copy: {
         profile1: "Nice to meet you –  I'm Amina Belabbes. <br/> I am a ",
         profile1_2: "<br/> I am a ", 
@@ -206,7 +196,20 @@ export default {
   methods: {
     toggleDrawer() {
       this.drawer = !this.drawer
+    },
+    scrollToTop(){
+      window.scrollTo(0, 0);
+      this.isScrolled = true
+      this.scrolling = setTimeout(() => 
+      {
+        this.isScrolled = false
+      }, 1000)
+    },
+    stopScrolling(){
+      clearTimeout(this.scrolling)
+      this.isScrolled = false
     }
+    
   } ,
   computed: {
   ...mapState(["currentRoute"]), 
@@ -277,6 +280,10 @@ blockquote {
   font-family: 'Libre Baskerville', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
     background: #fff;
@@ -330,13 +337,13 @@ body {
   }
 }
 
-.button-gradient {
-  background: transparent
-    linear-gradient(351deg, #2c0f1a 0%, #421726 20%, #a37367 49%, #c5aea9 100%)
-    0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
-  opacity: 1;
-}
+// .button-gradient {
+//   background: transparent
+//     linear-gradient(351deg, #2c0f1a 0%, #421726 20%, #a37367 49%, #c5aea9 100%)
+//     0% 0% no-repeat padding-box;
+//   box-shadow: 0px 3px 6px #00000029;
+//   opacity: 1;
+// }
 
 .footer {
   color: #959595 !important;
@@ -364,6 +371,30 @@ body {
 .enumeration {
   font-size: 2em;
   color: #C0E589;
+}
+
+.back-to-top {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  bottom: 90px;
+  right: 3%;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s;
+
+  &.on-scroll {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .back-to-top__icon {
+    display: block;
+    background: url(/assets/arrow-up.svg) no-repeat;
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 </style>

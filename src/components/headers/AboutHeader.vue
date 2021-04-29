@@ -1,6 +1,7 @@
 <template>
-  <div class="d-flex justify-center align-center about-background" :style="{ 'background-color': color, 'height': height + 'px'}">
-    <h1 :style="{'color': fontColor}">About me</h1>
+  <div class="d-flex flex-column justify-center align-center about-background" :style="{ 'background-color': color, 'height': height + 'px'}">
+    <h1 :style="{'color': fontColor}">Hi, I am Amina!</h1>
+    <h3 :style="{'color': fontColor}">I am a designer and developer with a love for detail and white space.</h3>
   </div>
 </template>
 

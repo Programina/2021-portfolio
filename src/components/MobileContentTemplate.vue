@@ -25,7 +25,7 @@
             </div>
           </div>
         </v-card-text>
-           <router-link :to="card.href"> <v-btn  color="background" elevation="10" rounded class="button-gradient  pa-6  ma-6">See Case Study </v-btn></router-link
+           <router-link :to="card.href"> <v-btn rounded elevation="10" color="primary" class="pa-6  ma-6">See Case Study </v-btn></router-link
           ></span></v-card-text>
   
       </v-card>
@@ -33,19 +33,11 @@
     </div>
     <v-container v-if="currentRoute.path === '/ux-ui' || currentRoute.path === '/development'  ">
        <v-row>
-      <v-col>
-        
-      <div class="my-10" style="font-size: 1.1em; text-align: left;">
-        As you can imagine, having been employed full-time for most of my
-        developer days. I have not yet had a massive amount of professional
-        projects to put here. My companies’ products were mostly
-        proprietary and not for me to share.
-      </div>
-      <p  style="text-align: left;">
-        You will notice, the private projects I share are mostly works in
-        progress, too. There are a lot of funny memes about programmers and
-        their side-projects and I am afraid they are very accurate in my case.
-      </p>
+     <v-col class="d-flex justify-center">
+        <div class="my-10" style="max-width: 630px; font-size: 1.1em; text-align: left">
+          I have been employed full-time ever since I became a developer. Everything I code and design on here, I do in my free time. 
+          My companies’ products were mostly proprietary, so I have very little to share.
+        </div>
       </v-col>
     </v-row>
     </v-container>

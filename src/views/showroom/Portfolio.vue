@@ -125,6 +125,7 @@ export default {
         time: "Beginning of 2020 – ongoing",
         role: "Creator, includes branding strategist, UX designer, developer",
         sector: "IT / Tech",
+        status: "WIP",
         tags: [
           {
             tag: "Mockup in Adobe Xd",

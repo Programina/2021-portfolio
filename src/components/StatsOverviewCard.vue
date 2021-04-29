@@ -19,6 +19,10 @@
           <v-list-item-title class="overline mb-1">Sector</v-list-item-title>
           <v-list-item-subtitle>{{ stats.sector }}</v-list-item-subtitle>
         </div>
+        <div class="mb-4" v-if="stats.status">
+          <v-list-item-title class="overline mb-1">Status</v-list-item-title>
+          <v-list-item-subtitle>{{ stats.status }}</v-list-item-subtitle>
+        </div>
       </v-list-item-content>
 
     </v-list-item>

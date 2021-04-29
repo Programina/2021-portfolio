@@ -185,7 +185,7 @@ img {
 
 
 #svelte {
-  background-image: require('@/assets/Svelte.png');
+  background-image: url('/assets/Svelte.png');
   background-position: center center;
   background-size: cover;
 }
@@ -195,7 +195,7 @@ img {
 }
 
 #bootstrap {
-  background-image:  require('@/assets/bootstrap.png');
+  background-image:  url('/assets/bootstrap.png');
   background-position: center center;
   background-size: cover;
 }
@@ -205,7 +205,7 @@ img {
 }
 
 #photoshop {
-  background-image: require('@/assets/photoshop.png');
+  background-image: url('/assets/photoshop.png');
   background-position: center center;
   background-size: cover;
 }

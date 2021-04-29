@@ -32,7 +32,7 @@
             :to="card.href"
             class="d-flex mb-10 justify-end"
           >
-            <v-btn rounded elevation="10" class="button-gradient pa-6"
+            <v-btn rounded elevation="10" color="primary" class="pa-6"
               >See Case Study
             </v-btn>
           </router-link>
@@ -82,7 +82,7 @@
             :to="card.href"
             class="d-flex mb-10 justify-start"
           >
-            <v-btn rounded elevation="10" class="button-gradient pa-6 pa-2"
+            <v-btn rounded elevation="10" color="primary" class="pa-6 pa-2"
               >See Case Study
             </v-btn></router-link
           >
@@ -91,14 +91,10 @@
     </v-row>
 
     <v-row v-if="currentRoute.path === '/ux-ui' || currentRoute.path === '/development' ">
-      <v-col>
-        <div class="my-10" style="font-size: 1.1em; text-align: left">
-          As you can imagine, having been employed full-time for most of my
-          developer days. I have not yet had a massive amount of professional
-          projects to put here. My companies’ products were mostly proprietary
-          and not for me to share. 
-          You will notice, the private projects I share are mostly works in
-          progress, too. 
+      <v-col class="d-flex justify-center">
+        <div class="my-10" style="max-width: 630px; font-size: 1.1em; text-align: left">
+          I have been employed full-time ever since I became a developer. Everything I code and design on here, I do in my free time. 
+          My companies’ products were mostly proprietary, so I have very little to share.
         </div>
       </v-col>
     </v-row>
