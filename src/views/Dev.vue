@@ -47,7 +47,6 @@ export default {
         href: "/portfolio",
         imgSrc: "portfolio.jpg",
         imgMblSrc: "portfolio.jpg",
-        height: 200,
         description:
           "This portfolio is still work in progress. I am documenting my changes and intentions.",
         
@@ -70,18 +69,29 @@ export default {
         id: 2,
         title: "DateSaver",
         href: "/date-saver",
-        imgSrc: "datesaver.jpg",
-        imgMblSrc: "datesaver.jpg",
+        imgSrc: "datesaver.png",
+        imgMblSrc: "datesaver.png",
         description:
-          "This is an app I developed with little to no fancy visual design. However I put some thought into the user experience. Also, I am about to redesign it. The idea is simple: help people have less decisions to make about what to do on a date.",
-        height: 200,
-       
+          "This is an app I developed with little to no fancy visual design. However I put some thought into the user experience. Also, I am about to redesign it. The idea is simple: help people have less decisions to make about what to do on a date.",       
         chips: [
           {
             label: "VueJs",
           },
         ],
-      }
+      },
+      {
+        id: 3,
+        title: "RSS Feed",
+        href: "/rss",
+        imgSrc: "rssApp.png",
+        imgMblSrc: "rssApp.png",
+        description: 'Simple RSS Feed SPA I made for an interview.',
+        chips: [
+          {
+            label: "Angular",
+          },
+        ],
+      },
     ],}
   },
   mounted() {},

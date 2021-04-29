@@ -99,7 +99,7 @@
                <v-img
           width="620"
           alt="Third iteration"
-          :src="require('@/assets/adobecolors.jpg')"
+          :src="require('@/assets/colorpallette.jpg')"
         ></v-img>
 
           </v-col>
@@ -180,8 +180,4 @@ h3 {
   margin: 6px 0 16px 0;
 }
 
-.enumeration {
-  font-size: 2em;
-  color: #f5e29e;
-}
 </style>

@@ -17,11 +17,12 @@ import ContactHeader from "@/components/headers/ContactHeader";
 import HabitStacksHeader from "@/components/headers/HabitStacksHeader";
 import DateSaverHeader from "@/components/headers/DateSaverHeader";
 import AboutHeader from "@/components/headers/AboutHeader";
-import OtherHeader from "@/components/headers/OtherHeader";
+import OtherH from "@/components/headers/OtherH";
 import ImprintHeader from "@/components/headers/ImprintHeader";
 import UxUiHeader from "@/components/headers/UxUiHeader";
-import PortfolioHeader from "@/components/headers/PortfolioHeader";
+import PortfolioH from "@/components/headers/PortfolioH";
 import DevelopmentHeader from "@/components/headers/DevelopmentHeader";
+import RssH from "@/components/headers/RssH";
 
 
 import { mapState } from "vuex";
@@ -34,10 +35,11 @@ export default {
     DateSaverHeader,
     HabitStacksHeader,
     AboutHeader,
-    OtherHeader,
+    OtherH,
     ImprintHeader,
     UxUiHeader,
-    PortfolioHeader,
+    RssH,
+    PortfolioH,
     DevelopmentHeader
   },
   data() {
@@ -92,13 +94,18 @@ export default {
           // img: "brushes.png"
         },
         {
-          componentName: "PortfolioHeader",
+          componentName: "PortfolioH",
           path: "/portfolio",
           // img: "brushes.png"
         },
         {
-          componentName: "OtherHeader",
+          componentName: "OtherH",
           path: "/other",
+          // img: "brushes.png"
+        },
+        {
+          componentName: "RssH",
+          path: "/rss",
           // img: "brushes.png"
         },
       ],

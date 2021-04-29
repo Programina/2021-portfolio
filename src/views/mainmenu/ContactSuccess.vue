@@ -22,8 +22,6 @@ import ismobile from '@/mixins/ismobile.js'
 
 export default {
   name: 'ContactSuccess',
-  components: {},
-  props: {},
   mixins: [ismobile]
 }
 </script>

@@ -32,9 +32,23 @@ export default {
         href: "/habit-stacks",
         imgSrc: "habitApp.png",
         imgMblSrc: "habit.png",
-        height: 200,
         description:
-          "My personal project for an app to create long-term habits. The problem was to think of a target audience other than myself, to find the right layout and sequence of content.",
+          "My personal project for an app to create long-term habits.",
+        
+        chips: [
+          {
+            label: "Adobe Xd",
+          },
+        ],
+      },
+       {
+        id: 2,
+        title: "Rep Set Go",
+        href: "/rep-set-go",
+        imgSrc: "fitnessapp.png",
+        imgMblSrc: "fitx2.png",
+        description:
+          "A first attempt at designing a workout app with customized sets and reps.",
         
         chips: [
           {

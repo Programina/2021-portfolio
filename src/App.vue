@@ -50,7 +50,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
           ><i data-v-2c037838="" class="fa fa-instagram"></i></a
         ><a data-v-2c037838="" href="https://github.com/programina-gui"
           ><i data-v-2c037838="" class="fa fa-github"></i></a
-        ><a data-v-2c037838="" href="https://codepen.io/programina-gui"
+        ><a data-v-2c037838="" href="https://codepen.io/programina"
           ><i data-v-2c037838="" class="fa fa-codepen"></i></a
         ><a data-v-2c037838="" href="https://stackblitz.com/@Programina"
           ><i data-v-2c037838="" class="fa fa-flash"></i
@@ -134,65 +134,70 @@ export default {
       height: '400',
       colors: [
         {  
-          color: '#87FADD',
-          fontColor: 'black',
+          color: '#2c0f1a',
+          fontColor: '#fff',
           path: '/home'
         },
         {  
-          color: '#87FADD',
-          fontColor: 'black',
+          color: '#2c0f1a',
+          fontColor: '#fff',
           path: '/'
         },
          { 
-          color: '#B48CFA', 
+          color: '#715a55', 
           fontColor: '#fff',
           path: '/about'
         }, 
         {
-          color: '#FA8F6E',
+          color: '#4f1f13',
           fontColor: '#fff',
           path: '/contact'
         }, 
         {
-          color: '#FA8F6E',
+          color: '#4f1f13',
           fontColor: '#fff',
           path: '/contact-success'
         },
         { 
-          color: '#FAF47A',
-          fontColor: 'black',
+          color: '#80636e',
+          fontColor: '#fff',
           path: '/habit-stacks'
         },
         { 
-          color: '#FA8F6E',
-          fontColor: '#fff',
+          color: '#c5aea9',
+          fontColor: 'black',
           path: '/date-saver'
         },
         { 
-          color: '#B48CFA',
+          color: '#a37367',
           fontColor: '#fff',
           path: '/portfolio'
         },
         { 
-          color: '#87FADD',
-          fontColor: 'black',
+          color: '#421726',
+          fontColor: '#fff',
           path: '/ux-ui'
         },
         { 
-          color: '#B48CFA',
-          fontColor: '#fff',
+          color: '#a8867e',
+          fontColor: 'black',
           path: '/development'
         },
         { 
-          color: '#FA8F6E',
+          color: '#752e1d',
           fontColor: '#fff',
           path: '/other'
         },
         { 
-          color: '#FAF47A',
-          fontColor: 'black',
+          color: '#421726',
+          fontColor: '#fff',
           path: '/imprint'
         },
+        { 
+          color: '#2c0f1a',
+          fontColor: '#fff',
+          path: '/rss'
+        }
 
       ]
     }
@@ -258,7 +263,7 @@ blockquote {
   padding-bottom: 0px;
   border-style: solid;
   border-width: 0px 0px 0px 2px;
-  border-color: #000 #000 #000 #89b1cc;
+  border-color: #000 #000 #000 #69ae95;
   background-color: transparent;
   line-height: 36px;
   margin-right: auto;
@@ -327,7 +332,7 @@ body {
 
 .button-gradient {
   background: transparent
-    linear-gradient(351deg, #0093e9 0%, #75cbca 40%, #80d0c7 49%, #80d0c7 100%)
+    linear-gradient(351deg, #2c0f1a 0%, #421726 20%, #a37367 49%, #c5aea9 100%)
     0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
@@ -342,11 +347,23 @@ body {
     margin: 10px;
     a,
     a:hover,
+    a:visited,
     a:active {
       padding: 10px;
       color: #959595;
     }
+
+    i{
+      color: #959595;
+      font-size: 1.6em;
+      padding: 10px;
+    }
   }
+}
+
+.enumeration {
+  font-size: 2em;
+  color: #C0E589;
 }
 
 </style>

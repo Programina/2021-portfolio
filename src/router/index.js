@@ -12,6 +12,7 @@ import Dev from '../views/Dev.vue'
 import Other from '../views/Other.vue'
 import NavService from '@/services/NavService'
 import Portfolio from '@/views/showroom/Portfolio.vue'
+import Rss from '@/views/showroom/Rss.vue'
 
 
 Vue.use(VueRouter)
@@ -75,6 +76,11 @@ const routes = [
     name: 'ContactSuccess',
     component: ContactSuccess
   },
+  {
+    path: '/rss',
+    name: 'RSSApp',
+    component: Rss
+  }
 ]
 
 const router = new VueRouter({

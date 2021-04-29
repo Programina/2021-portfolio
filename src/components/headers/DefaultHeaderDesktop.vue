@@ -161,7 +161,7 @@ export default {
 }
 
 ::v-deep .word:after {
-  background-color: #87fadd;
+  background-color: #2c0f1a;
 }
 </style>
 
@@ -187,7 +187,7 @@ export default {
 
 .word:after {
   animation: hide-cover calc(var(--dur) * 2) ease-out infinite;
-  border-top: 4px solid black;
+  border-top: 4px solid #fff;
   content: "";
   height: 150%;
   left: -5%;

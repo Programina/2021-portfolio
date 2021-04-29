@@ -5,13 +5,11 @@
     </v-row>
     <v-row>
       <v-col class="d-flex flex-column justify-center mt-10">
+        <h3>Problem</h3>
         <p>
           Two years into our relationship, my boyfriend and I had developed the
           same routine every evening, where he'd say "Honey, what are we going
-          to do tonight?" and I'd think long and hard, trying to be creative,
-          but, after a long day at work, the only things I could think of were
-          "Let's watch a movie" or "Let's play a video game". That got boring
-          quickly.
+          to do tonight?" and everytime I was so overwhelmed with decision fatigue that we'd end up doing the same things.
         </p>
         <v-img
           height="250"
@@ -23,15 +21,20 @@
           I thought of a way to approach this recurring problem strategically. I
           created an app.
         </p>
+
+        <h3>Requirements</h3>
         <p>
-          Creating a user persona seemed a bit of an overkill for two people.
-          When I thought of the interface and what it would have to look like, I
-          went back to thinking about the reality of me and my boyfriend sitting
-          on the couch trying to think as little as possible. I thought: What is
-          the easiest and fastest way to reach a decision?
+          We needed something simple that took away the effort of considering our current budget, the weather and time of day. 
+           
         </p>
-        <p>
-          My initial thought: toss a coin. On second thought: a Magic 8 Ball
+
+        
+        <h3>Process</h3>
+         <div class="enumeration mt-12">01</div>
+        <p> 
+          I wanted the interface to be familiar and fun. What is
+          often used to reach a decision?
+          Two things that came to mind were tossing a coin and a Magic 8 Ball
           works well too. Both have a super simple user interface. :)
         </p>
 
@@ -40,6 +43,14 @@
           width="400"
           :src="require('@/assets/magic-8.jpg')"
         ></v-img>
+
+         <div class="enumeration mt-12">02</div>
+        <p> 
+         I took a weekend to code, getting the local time and weather from APIs, writing down a set of data. I listed a bunch of activities, attributed times of day in which you would do them, attribute a type of weather that was suitable and a budget. 
+         It is still work in progress, but usually we got some good guesses from the program. 
+        </p>
+
+        
       </v-col>
     </v-row>
   </v-container>
@@ -62,7 +73,7 @@ export default {
           {
             tag: "DateSaver Website",
             tagIcon: "web",
-            tagHref: "http://love.frontendpoint.com/",
+            tagHref: "http://netz98-at-amina.belabb.es/",
           }
         ],
       },
