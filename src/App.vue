@@ -144,17 +144,17 @@ export default {
           path: '/'
         },
          { 
-          color: '#715a55', 
+          color: '#69ae95', 
           fontColor: '#fff',
           path: '/about'
         }, 
         {
-          color: '#4f1f13',
+          color: '#80636e',
           fontColor: '#fff',
           path: '/contact'
         }, 
         {
-          color: '#4f1f13',
+          color: '#80636e',
           fontColor: '#fff',
           path: '/contact-success'
         },
@@ -184,7 +184,7 @@ export default {
           path: '/development'
         },
         { 
-          color: '#752e1d',
+          color: '#a37367',
           fontColor: '#fff',
           path: '/other'
         },

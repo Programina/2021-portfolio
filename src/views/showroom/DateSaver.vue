@@ -73,7 +73,12 @@ export default {
           {
             tag: "DateSaver Website",
             tagIcon: "web",
-            tagHref: "http://netz98-at-amina.belabb.es/",
+            tagHref: "http://love.frontendpoint.com/",
+          },
+          {
+            tag: "Adobe Mockup",
+            tagIcon: "web",
+            tagHref: "https://xd.adobe.com/view/dcb3ae1a-d272-464a-bd2d-89fa33031f24-89e0/",
           }
         ],
       },

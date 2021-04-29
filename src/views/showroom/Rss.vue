@@ -24,9 +24,9 @@ export default {
         sector: "E-Commerce",
         tags: [
           {
-            tag: "DateSaver Website",
+            tag: "RSS Website",
             tagIcon: "web",
-            tagHref: "http://love.frontendpoint.com/",
+            tagHref: "http://netz98-at-amina.belabb.es/",
           },
           {
             tag: "Github",

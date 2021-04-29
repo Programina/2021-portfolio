@@ -77,6 +77,9 @@ export default {
           {
             label: "VueJs",
           },
+          {
+            label: "AdobeXd",
+          },
         ],
       },
       {
