@@ -40,13 +40,15 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
             <v-list-item-title v-html="nav.name"></v-list-item-title>
           </v-list-item-content>
         </v-list-item >
-           <a
-        :style="{'color': fontColor + ' !important'}"
+
+        <v-list-item 
+          link
+        ><a
         href="./abelabbesResume.pdf"
         download="Amina_Belabbes_Resume_2021.pdf"
         filetype="pdf"
         >Resume (German)</a
-      >
+      > </v-list-item>
       </v-list>
     </v-navigation-drawer>
 

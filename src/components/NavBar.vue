@@ -1,10 +1,9 @@
 <template>
   <v-app-bar
     id="navbar"
-    color="white"
-    flat
+    elevate-on-scroll
     :style="{'flex': '0 1 auto'}, { 'background-color': color}"
-    :class="[{ 'mobile-spacing v-app-bar--elevate-on-scroll': isMobile }, [isMobile ? 'navbar' : undefined]]"
+    :class="[{ 'mobile-spacing': isMobile }, [isMobile ? 'navbar' : undefined]]"
   >
     <div class="d-flex align-center">
       <router-link :style="{'color': fontColor}" to="/">
@@ -39,8 +38,8 @@
 
     <v-spacer v-if="isMobile"></v-spacer>
 
-    <v-app-bar-nav-icon v-if="isMobile" @click.stop="toggleDrawer">
-    </v-app-bar-nav-icon>
+    <v-app-bar-nav-icon style="color: black !important" v-if="isMobile" @click.stop="toggleDrawer">
+    </v-app-bar-nav-icon> 
   </v-app-bar>
 </template>
 

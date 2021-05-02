@@ -1,7 +1,7 @@
 <template>
   <div id="header-template" v-if="component">
 
-  <div v-if="component.title != 'Default'" class="d-flex flex-column justify-center align-center rss-background"  :style="{ 'background-image': 'url(' + computedImage + ')', 'background-color': component.backgroundColor}">
+  <div v-if="component.title != 'Default'" class="d-flex flex-column justify-center align-center rss-background"  :style="{ 'background-image': 'url(' + computedImage + ')', 'background-color': component.backgroundColor}, {'height' : heightAndTop.height}, {'margin-top' : heightAndTop.top}">
    
    <span class="text-center" style="padding: 0 50px;">
      <h1 :style="{'color': component.fontColor}">{{component.title}}</h1>
@@ -11,8 +11,9 @@
   </div>
 
   
-   <component v-else
-      is="DefaultHeaderDesktop"
+   <component v-else 
+      is="DefaultHeader"
+      :style="{'height' : heightAndTop.height}, {'margin-top' : heightAndTop.top}"
       :color="component.backgroundColor"
       :fontColor="component.fontColor"
       :image="component.img"
@@ -22,7 +23,9 @@
 </template>
 
 <script>
-import DefaultHeaderDesktop from "@/components/headers/DefaultHeaderDesktop";
+
+import ismobile from '@/mixins/ismobile.js'
+import DefaultHeader from "@/components/headers/DefaultHeader";
 // import ContactHeader from "@/components/headers/ContactHeader";
 // import HabitStacksHeader from "@/components/headers/HabitStacksHeader";
 // import DateSaverHeader from "@/components/headers/DateSaverHeader";
@@ -52,7 +55,7 @@ import { mapState } from "vuex";
 export default {
   name: "HeaderTemplate",
   components: {
-    DefaultHeaderDesktop,
+    DefaultHeader,
     
   },
   data() {
@@ -147,8 +150,23 @@ export default {
       required: true
     }
   },
+  mixins: [ismobile],
   computed: {
     ...mapState(["currentRoute"]),
+    heightAndTop(){
+      if(!this.isMobile){
+       return {
+          height: '350px',
+          top: '50px'
+        }
+      } else {
+        return {
+          height: '600px',
+          top: '100px'
+        }
+       
+      }
+    },
     component() {
       let comp;
       let mappedComponent;
@@ -186,14 +204,13 @@ export default {
 
 <style lang="scss" scoped>
    #header-template {
-    margin-top: 48px;
     width: 100%;
     background-repeat: no-repeat;
     background-position: left bottom; 
     background-size: 400px 300px;
 
       div:first-child {
-        height: 350px;
+       
       }
   }
 
