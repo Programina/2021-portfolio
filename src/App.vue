@@ -5,13 +5,13 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
     <NavBar :color="colr.color" :fontColor="colr.fontColor" @toggle-drawer="toggleDrawer"/>
 
     <v-main>
-      <v-row v-if="isMobile"  class="ma-10" >
+      <!--<v-row v-if="isMobile"  class="ma-10" >
           <v-col class="mb-5" cols="12">
             <MobileHeader :copy="copy" />
           </v-col>
-      </v-row>
-      <v-row v-if="!isMobile">
-        <DesktopHeaderTemplate :copy="copy" :fontColor="colr.fontColor" :color="colr.color" :height="height" style="width: 100%"/>
+      </v-row>-->
+      <v-row>
+        <HeaderTemplate :colr="colr" />
       </v-row>
       <v-row class="ma-10 justify-center" >
          <NavBarSecondLevel/>
@@ -65,8 +65,6 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
         <a data-v-2c037838="" href="https://www.xing.com/profile/Amina_Belabbes/cv"
           ><i data-v-2c037838="" class="fa fa-xing"></i
         ></a>
-
-        
       </div>
 
       <router-link to="/imprint" class="d-flex align-center justify-center">
@@ -81,7 +79,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
 import MobileHeader from "@/components/headers/MobileHeader"
 import ismobile from '@/mixins/ismobile.js'
 import NavBar from '@/components/NavBar'
-import DesktopHeaderTemplate from '@/components/DesktopHeaderTemplate'
+import HeaderTemplate from '@/components/HeaderTemplate'
 import NavBarSecondLevel from '@/components/NavBarSecondLevel'
 import { mapState } from "vuex"
 
@@ -91,7 +89,7 @@ export default {
   components: {
     MobileHeader, 
     NavBar, 
-    DesktopHeaderTemplate, 
+    HeaderTemplate, 
     NavBarSecondLevel
   },
 
@@ -112,13 +110,7 @@ export default {
           to: "/contact",
           name: "Contact",
         }
-      ],     
-      copy: {
-        profile1: "Nice to meet you –  I'm Amina Belabbes. <br/> I am a ",
-        profile1_2: "<br/> I am a ", 
-        profile2: "based in Germany.",
-        transitionItem: ['designer ', 'developer ']
-      },
+      ],
       drawer: false,
       group: null,
       height: '400',
@@ -216,8 +208,7 @@ export default {
    colr() {
      let colr;
       if(this.currentRoute.path) {
-        colr = this.colors.find(val => val.path === this.currentRoute.path)
-        
+        colr = this.colors.find(val => val.path === this.currentRoute.path) 
       } else {
         colr = {
           color: '#fff', 
@@ -225,17 +216,7 @@ export default {
           path: '/'
         }
       }
-
-      if(colr) {   
-        return colr
-      } else 
-      {
-        colr = {
-          color: '#fff', 
-          fontColor: "black",
-          path: '/'
-        }
-      }
+      return colr;
    }
   },
   watch: {
