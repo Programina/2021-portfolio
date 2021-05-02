@@ -8,7 +8,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
       <v-row>
         <HeaderTemplate :colr="colr" />
       </v-row>
-      <v-row v-if="currentRoute.path !== '/contact' && currentRoute.path !== 'contact-success' && currentRoute.path !== '/imprint' " class="ma-10 justify-center" >
+      <v-row class="ma-10 justify-center" >
          <NavBarSecondLevel/>
       </v-row>
       <router-view />
