@@ -1,42 +1,7 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-col v-if="isMobile" class="mb-5" cols="12">
-        <MobileHeader :copy="copy" />
-      </v-col>
-      <v-col
-        v-if="!isMobile"
-        class="d-flex flex-column justify-start align-center"
-        cols="6"
-      >
-        <div>
-          <div class="heading1">
-            {{ copy.heading1 }}
-          </div>
-          <div class="heading2 mb-3">{{ copy.heading2 }}</div>
-          <p v-html="copy.profile"></p>
-        </div>
-         <router-link to="/contact">
-         <v-btn
-              href="#"
-              target="_blank"
-              text
-              rounded
-              color="background"
-              class="button-gradient"
-            > 
-          <span class="mr-2">Get in touch</span>
-        
-        </v-btn>
-       </router-link>
-      </v-col>
-      <v-col cols="6" class="d-flex justify-end align-center" v-if="!isMobile">
-            <v-img
-              class="ml-5"
-              :src="require('@/assets/design-and-development-process-1721879-1.svg')"
-            ></v-img>
-      </v-col>
-
+     
       <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
         <MobileContent :cards="cards" />
       </v-col>
@@ -52,14 +17,14 @@
               <router-link :to="card.href">See more</router-link>
 
               <div class="d-flex my-4 justify-start">
-                <div v-for="(tag, j) in card.tags" :key="j">
+                <div v-for="(tag) in card.tags" :key="tag.tag">
                   <v-chip class="ma-2" color="primary" outlined>
                     <span class="px-2"> {{ tag.tag }}</span>
 
                     <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
                   </v-chip>
                 </div>
-                <div v-for="(chip, k) in card.chips" :key="k">
+                <div v-for="(chip) in card.chips" :key="chip.label">
                   <v-chip class="ma-2" filter>
                     {{ chip.label }}
                   </v-chip>
@@ -88,14 +53,14 @@
               <router-link :to="card.href">See more</router-link>
 
               <div class="d-flex my-4 justify-end">
-                <div v-for="(tag, j) in card.tags" :key="j" class="d-flex">
+                <div v-for="(tag) in card.tags" :key="tag.tag" class="d-flex">
                   <v-chip class="ma-2" color="primary" outlined>
                     <span class="px-2"> {{ tag.tag }}</span>
 
                     <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
                   </v-chip>
                 </div>
-                <div v-for="(chip, k) in card.chips" :key="k">
+                <div v-for="(chip) in card.chips" :key="chip.label">
                   <v-chip class="ma-2" filter>
                     {{ chip.label }}
                   </v-chip>
@@ -230,12 +195,7 @@ export default {
         ],
       },
     ],
-    copy: {
-      heading1: "Amina Belabbes",
-      heading2: "Junior UX Designer and Frontend Developer",
-      profile:
-        "I'm a <b>Web Developer</b> with 2+ years of professional experience and about half a year of experience as a <b>UX Designer</b>, looking to transition into UX design. I love helping people transform their ideas into products they and their customers love to use.",
-    },
+    
   }),
   computed: {
     isMobile() {
@@ -265,16 +225,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.heading1 {
-  font-weight: 500;
-  font-size: 4em;
-  letter-spacing: 0px;
-}
-.heading2 {
-  font-weight: 400;
-  font-size: 2em;
-  letter-spacing: 0px;
-}
-</style>
