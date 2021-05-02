@@ -8,7 +8,9 @@ export default new Vuex.Store({
     currentRoute: {
       path: '',
       name: ''
-    }
+    },      
+    disclaimer: '<strong>Please note:</strong> I have been employed full-time ever since I became a developer. Everything I code and design on here, I do in my free time. My companies’ products were mostly proprietary, so I have very little to share.',
+
   },
   mutations: {
     UPDATE_CURRENT_ROUTE(state, routeResult) {

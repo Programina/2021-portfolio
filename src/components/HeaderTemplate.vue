@@ -3,7 +3,7 @@
 
   <div v-if="component.title != 'Default'" class="d-flex flex-column justify-center align-center rss-background"  :style="{ 'background-image': 'url(' + computedImage + ')', 'background-color': component.backgroundColor}">
    
-   <span class="text-center">
+   <span class="text-center" style="padding: 0 50px;">
      <h1 :style="{'color': component.fontColor}">{{component.title}}</h1>
      <h3 :style="{'color': component.fontColor}">{{component.subtitle}}</h3>
   </span> 
@@ -103,14 +103,14 @@ export default {
           // img: "brushes.png"
         },
         {
-          title: "UxUi",
-          subtitle: "",
+          title: "UX Design",
+          subtitle: "Visual Design, Interaction Design, Wireframing, Prototyping, User Research",
           path: "/ux-ui",
           // img: "brushes.png"
         },
         {
           title: "Development",
-          subtitle: "",
+          subtitle: "Have a look at my code.",
           path: "/development",
           // img: "brushes.png"
         },

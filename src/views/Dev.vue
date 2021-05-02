@@ -5,7 +5,7 @@
       <v-col v-if="isMobile" class="mb-5 px-8" cols="12" justify="center">
         <MobileContentTemplate :cards="cards" />
       </v-col>
-   <v-col v-else class="mb-5 px-8" cols="12" justify="center">
+      <v-col v-else class="mb-5 px-8" cols="12" justify="center">
         <DesktopContentTemplate :cards="cards" />
       </v-col>
      
@@ -83,7 +83,6 @@ export default {
   name: "Dev",
   mixins: [ismobile],
   components: { MobileHeader, MobileContentTemplate, DesktopContentTemplate },
-  props: {},
   data() {
     return {
       cards: [

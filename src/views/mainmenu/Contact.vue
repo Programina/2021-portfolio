@@ -1,26 +1,14 @@
 TODO: Add a loading spinner for while the email attempts to send
 <template>
   <v-container class="contact">
-    <v-row justify="center">
-      <v-col v-if="!isLoading" class="mb-5 contact-rows" cols="12">
-       
-        <v-row cols="12" justify="center">
-          <v-col class="mx-12">
-             <h1>I'd love to hear from you.</h1>
-              <br />
-              <br />
-          </v-col>
-        </v-row>
+    <v-row justify="center" class="contact-row">
+      <v-col v-if="!isLoading" class="mb-5" >
 
-        <v-row cols="12" justify="center">
-          <v-col>I am very keen on getting feedback on how to improve my portfolio. Please check out my open <a href="https://github.com/Programina/2021-portfolio/issues">issues list</a> on Github and feel free to add to it. </v-col>
-      
-          <br />
-          <br />
-        
-        </v-row>
         <v-row justify="center">
-          <v-col class="mx-6" target="_blank" cols="10">
+          <v-col>I am very keen on getting feedback on how to improve my portfolio. Please check out my open <a href="https://github.com/Programina/2021-portfolio/issues">issues list</a> on Github and feel free to add to it. </v-col>
+        </v-row>
+        <v-row  justify="center">
+          <v-col class="mx-6" target="_blank">
             <v-form
               class="px-3"
               ref="form"
@@ -78,6 +66,7 @@ TODO: Add a loading spinner for while the email attempts to send
             </v-form>
           </v-col>
         </v-row>
+        
       </v-col>
       <v-col v-if="isLoading" class="d-flex my-10 justify-center">
         <v-progress-circular
@@ -153,12 +142,11 @@ export default {
 <style lang="scss" scoped>
 
 .contact {
-  .contact-rows  {
-    div.row {
-      div.col {
-        max-width: 900px;
-      }
-    }
+  .contact-row  {
+    
+    padding: 0 90px; 
+    max-width: 900px;
+
   }
 
 }

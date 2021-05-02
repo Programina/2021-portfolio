@@ -156,7 +156,7 @@ export default {
 }
 
 ::v-deep .word:after {
-  background-color: #2c0f1a;
+  background-color: #fff;
 }
 </style>
 

@@ -5,11 +5,6 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
     <NavBar :color="colr.color" :fontColor="colr.fontColor" @toggle-drawer="toggleDrawer"/>
 
     <v-main>
-      <!--<v-row v-if="isMobile"  class="ma-10" >
-          <v-col class="mb-5" cols="12">
-            <MobileHeader :copy="copy" />
-          </v-col>
-      </v-row>-->
       <v-row>
         <HeaderTemplate :colr="colr" />
       </v-row>
@@ -76,7 +71,6 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
 </template>
 
 <script>
-import MobileHeader from "@/components/headers/MobileHeader"
 import ismobile from '@/mixins/ismobile.js'
 import NavBar from '@/components/NavBar'
 import HeaderTemplate from '@/components/HeaderTemplate'
@@ -87,7 +81,6 @@ export default {
   name: "App",
   mixins: [ismobile],
   components: {
-    MobileHeader, 
     NavBar, 
     HeaderTemplate, 
     NavBarSecondLevel
@@ -116,68 +109,68 @@ export default {
       height: '400',
       colors: [
         {  
-          color: '#2c0f1a',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/home'
         },
         {  
-          color: '#2c0f1a',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/'
         },
          { 
-          color: '#69ae95', 
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/about'
         }, 
         {
-          color: '#80636e',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/contact'
         }, 
         {
-          color: '#80636e',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/contact-success'
         },
         { 
-          color: '#80636e',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/habit-stacks'
         },
         { 
-          color: '#c5aea9',
+          color: '#fff',
           fontColor: 'black',
           path: '/date-saver'
         },
         { 
-          color: '#a37367',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/portfolio'
         },
         { 
-          color: '#421726',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/ux-ui'
         },
         { 
-          color: '#a8867e',
+          color: '#fff',
           fontColor: 'black',
           path: '/development'
         },
         { 
-          color: '#a37367',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/other'
         },
         { 
-          color: '#421726',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/imprint'
         },
         { 
-          color: '#2c0f1a',
-          fontColor: '#fff',
+          color: '#fff',
+          fontColor: 'black',
           path: '/rss'
         }
 

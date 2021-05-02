@@ -33,11 +33,8 @@
     </div>
     <v-container v-if="currentRoute.path === '/ux-ui' || currentRoute.path === '/development'  ">
        <v-row>
-     <v-col class="d-flex justify-center">
-        <div class="my-10" style="max-width: 630px; font-size: 1.1em; text-align: left">
-          I have been employed full-time ever since I became a developer. Everything I code and design on here, I do in my free time. 
-          My companies’ products were mostly proprietary, so I have very little to share.
-        </div>
+     <v-col v-if="disclaimer" class="d-flex justify-center">
+        <div class="my-10" style="max-width: 630px; font-size: 0.7em; text-align: left" v-html="disclaimer"/>
       </v-col>
     </v-row>
     </v-container>
@@ -55,13 +52,13 @@ export default {
      cards: {
       type: Array,
       required: true,
-    },
+    }
   },
   data() {
     return {}
   },
   computed: {
-  ...mapState(["currentRoute"]),
+  ...mapState(["currentRoute", "disclaimer"]),
    }
 }
 </script>
