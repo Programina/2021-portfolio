@@ -40,6 +40,13 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
             <v-list-item-title v-html="nav.name"></v-list-item-title>
           </v-list-item-content>
         </v-list-item >
+           <a
+        :style="{'color': fontColor + ' !important'}"
+        href="./abelabbesResume.pdf"
+        download="Amina_Belabbes_Resume_2021.pdf"
+        filetype="pdf"
+        >Resume (German)</a
+      >
       </v-list>
     </v-navigation-drawer>
 
@@ -176,7 +183,6 @@ export default {
 
       ]
     }
-    
   },
   methods: {
     toggleDrawer() {
@@ -250,7 +256,7 @@ blockquote {
   float: none;
   clear: none;
   letter-spacing: 0.2px;
-  font-size: 24px;
+  font-size: 1.3rem;
   font-family: 'Libre Baskerville', sans-serif;
 }
 
@@ -260,7 +266,7 @@ html {
 
 html,
 body {
-    background: #fff;
+    background: #eefcff;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -271,11 +277,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
 
+  h1 {
+    font-size: 2.5rem;
+  }
+
   h3 {
       font-family: "Muli", Sans-serif;
-      font-size: 1.6em;
+      font-size: 1.6rem;
       font-weight: 400;
-      line-height: 1.7em;
+      line-height: 2rem;
+      padding: 20px 0;
   }
 
   a,

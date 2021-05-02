@@ -1,10 +1,10 @@
 <template>
-  <v-toolbar
-    data-qa="navbar"
-    :style="[{'flex': '0 1 auto'}, { 'background-color': color}]"
-    :class="{ 'mobile-spacing': isMobile }"
+  <v-app-bar
+    id="navbar"
+    color="white"
     flat
-    light
+    :style="{'flex': '0 1 auto'}, { 'background-color': color}"
+    :class="[{ 'mobile-spacing v-app-bar--elevate-on-scroll': isMobile }, [isMobile ? 'navbar' : undefined]]"
   >
     <div class="d-flex align-center">
       <router-link :style="{'color': fontColor}" to="/">
@@ -41,7 +41,7 @@
 
     <v-app-bar-nav-icon v-if="isMobile" @click.stop="toggleDrawer">
     </v-app-bar-nav-icon>
-  </v-toolbar>
+  </v-app-bar>
 </template>
 
 <script>
@@ -81,4 +81,10 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+  .navbar {
+    position: fixed !important; 
+    top: 0 !important;
+    z-index: 2 !important;
+  }
+</style>

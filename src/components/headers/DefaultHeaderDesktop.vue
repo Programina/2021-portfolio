@@ -36,7 +36,7 @@
             :src="require('@/assets/designer.png')"
             class="mt-5"
             contain
-            :width="320"
+            :width="220"
           />
           <v-img
             v-else
@@ -44,7 +44,7 @@
             class="mt-5"
             contain
             :key="'dev-gif'"
-            :width="320"
+            :width="220"
           />
         </v-slide-x-transition>
       </div>

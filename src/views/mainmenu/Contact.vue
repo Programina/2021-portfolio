@@ -1,6 +1,6 @@
 TODO: Add a loading spinner for while the email attempts to send
 <template>
-  <v-container class="contact">
+  <v-container class="contact d-flex justify-center">
     <v-row justify="center" class="contact-row">
       <v-col v-if="!isLoading" class="mb-5" >
 

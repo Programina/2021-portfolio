@@ -5,15 +5,17 @@
       beautiful, easy to use and fun.
       </h3>
       
-      <p class="my-5">I love creating designs that make an
-      impact 😊 . I'm a full-time frontend developer with 3 years of
-      professional experience and about half a year of experience as a UX
-      designer, looking to transition into UX design.
+      <p class="my-5">Hi, I am Amina. I a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year experience as a designer. I am currently employed full-time, but feel free to get in touch, I am always open to hear how I can help. 😊
     </p>
 
-    <p>
-      I got my Master’s degree in Translation Studies, specializing in Computer
-      Science and Media Design. Not feeling confident that I had learned enough, I took a detour of six years, working as a translator and as a PA.
+    <p>  
+      I am largely self-taught. Working in software, you never stop learning. However, I also have a Master's degree and a little background in IT and Design. For a more precise overview, have a look at my    <a
+        style="text-transform: inherit; color: #3bcea0 !important"
+        href="./abelabbesResume.pdf"
+        download="Amina_Belabbes_Resume_2021.pdf"
+        filetype="pdf"
+        >Resume</a
+      >.
     </p>
     <blockquote class="my-5">
       “You can fail at what you don't want, so you might as well take a chance
@@ -22,8 +24,8 @@
 
     
     <p>
-      I printed my first business card calling myself "Web Designer" when I was still at university. 
-      Six years and endless tutorials later, I made it a reality. I am building the web. 
+      I printed my first business card calling myself "Web Designer" when I was still at university, could not stop talking to everyone about the importance of user experience, since I started developing. 
+      I even applied to a couple of design jobs, having nothing but a prototype I created on <a href="https://marvelapp.com/prototype/60c71ad/screen/38925966" style="text-transform: inherit; color: #3bcea0 !important">Marvel</a>. Needless to say, I needed a portfolio and more structured education.
     </p>
     <p>
       It took me even longer to admit that my deepest desire was to create and to make people happy and satisfied along the way. I do not feel complete unless I also design. 

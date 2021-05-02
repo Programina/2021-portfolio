@@ -73,8 +73,8 @@ export default {
           path: "/",
         },
         {
-          title: "Hi, I am Amina!",
-          subtitle: "I am a designer and developer with a love for detail and white space.",
+          title: "I am Amina",
+          subtitle: "Design is my passion and I strive to improve a little every day.",
           path: "/about",
           // img: "brushes.png"
         },
@@ -186,13 +186,14 @@ export default {
 
 <style lang="scss" scoped>
    #header-template {
+    margin-top: 48px;
     width: 100%;
     background-repeat: no-repeat;
     background-position: left bottom; 
     background-size: 400px 300px;
 
       div:first-child {
-        height: 400px;
+        height: 350px;
       }
   }
 
