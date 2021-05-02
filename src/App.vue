@@ -8,15 +8,13 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
       <v-row>
         <HeaderTemplate :colr="colr" />
       </v-row>
-      <v-row class="ma-10 justify-center" >
+      <v-row v-if="currentRoute.path !== '/contact' && currentRoute.path !== 'contact-success' && currentRoute.path !== '/imprint' " class="ma-10 justify-center" >
          <NavBarSecondLevel/>
       </v-row>
       <router-view />
 
       
-      <div :class="['back-to-top', [isScrolled ? 'on-scroll' : undefined]]" @click="scrollToTop">
-        <span class="back-to-top__icon"></span>
-      </div>
+  
     </v-main>
 
     <v-navigation-drawer
@@ -41,14 +39,20 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
           </v-list-item-content>
         </v-list-item >
 
-        <v-list-item 
-          link
-        ><a
-        href="./abelabbesResume.pdf"
-        download="Amina_Belabbes_Resume_2021.pdf"
-        filetype="pdf"
-        >Resume (German)</a
-      > </v-list-item>
+          <v-list-item 
+            link
+          >
+          <a
+          href="./abelabbesResume.pdf"
+          download="Amina_Belabbes_Resume_2021.pdf"
+          filetype="pdf"
+          >
+              <v-list-item-content>
+              <v-list-item-title v-html="'Resume (German)'"></v-list-item-title>
+            </v-list-item-content>
+          
+        </a
+        > </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -75,6 +79,10 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
         Imprint
       </router-link>
       <div class="ma-5">Last update April 2021</div>
+
+      <div :class="['back-to-top', [isScrolled ? 'on-scroll' : undefined]]" @click="scrollToTop">
+        <span class="back-to-top__icon"></span>
+      </div>
     </v-footer>
   </v-app>
 </template>
@@ -291,6 +299,14 @@ body {
       padding: 20px 0;
   }
 
+  .v-navigation-drawer__content {
+    a, a:hover, a:visited, a:active, a:focus {
+      color: black !important;
+      text-decoration: none;
+      text-transform: initial;
+    }
+  }
+
   a,
   .btn-link a {
     text-decoration: none;
@@ -363,8 +379,8 @@ body {
 .back-to-top {
   opacity: 1;
   visibility: visible;
-  position: fixed;
-  bottom: 90px;
+  position: absolute;
+  bottom: 30px;
   right: 3%;
   cursor: pointer;
   z-index: 5;

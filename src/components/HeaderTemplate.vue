@@ -17,7 +17,6 @@
       :color="component.backgroundColor"
       :fontColor="component.fontColor"
       :image="component.img"
-      :copy="copy"
     /> 
   </div>
 </template>
@@ -26,29 +25,6 @@
 
 import ismobile from '@/mixins/ismobile.js'
 import DefaultHeader from "@/components/headers/DefaultHeader";
-// import ContactHeader from "@/components/headers/ContactHeader";
-// import HabitStacksHeader from "@/components/headers/HabitStacksHeader";
-// import DateSaverHeader from "@/components/headers/DateSaverHeader";
-// import AboutHeader from "@/components/headers/AboutHeader";
-// import OtherH from "@/components/headers/OtherH";
-// import ImprintHeader from "@/components/headers/ImprintHeader";
-// import UxUiHeader from "@/components/headers/UxUiHeader";
-// import PortfolioH from "@/components/headers/PortfolioH";
-// import DevelopmentHeader from "@/components/headers/DevelopmentHeader";
-// import RssH from "@/components/headers/RssH";
-
-// ContactHeader,
-//     DateSaverHeader,
-//     HabitStacksHeader,
-//     AboutHeader,
-//     OtherH,
-//     ImprintHeader,
-//     UxUiHeader,
-//     RssH,
-//     PortfolioH,
-//     DevelopmentHeader
-
-
 import { mapState } from "vuex";
 
 
@@ -60,12 +36,6 @@ export default {
   },
   data() {
     return {
-      copy: {
-        profile1: "Nice to meet you –  I'm Amina Belabbes. <br/> I am a ",
-        profile1_2: "<br/> I am a ", 
-        profile2: "based in Germany.",
-        transitionItem: ['designer ', 'developer ']
-      },
       components: [
         {
           title: "Default",
@@ -107,13 +77,13 @@ export default {
         },
         {
           title: "UX Design",
-          subtitle: "Visual Design, Interaction Design, Wireframing, Prototyping, User Research",
+          subtitle: "Everything design-related",
           path: "/ux-ui",
           // img: "brushes.png"
         },
         {
           title: "Development",
-          subtitle: "Have a look at my code.",
+          subtitle: "Have a look at my code",
           path: "/development",
           // img: "brushes.png"
         },
@@ -125,19 +95,19 @@ export default {
         },
         {
           title: "Portfolio",
-          subtitle: "",
+          subtitle: "The one you are currently looking at",
           path: "/portfolio",
           // img: "brushes.png"
         },
         {
           title: "Other",
-          subtitle: "Other things I enjoy doing.",
+          subtitle: "Other things I enjoy doing",
           path: "/other",
           // img: "brushes.png"
         },
         {
           title: "Rss Feed",
-          subtitle: "",
+          subtitle: "A simple RSS feed single page application",
           path: "/rss",
           // img: "brushes.png"
         },

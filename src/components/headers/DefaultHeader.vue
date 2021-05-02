@@ -50,8 +50,8 @@
       </div>
     </div>
 
-    <div v-else>
-      <v-col cols="12" class="d-flex justify-center">
+    <div v-else id="mobile-header" class="px-15 d-flex flex-column justify-center" >
+      <v-col>
         <v-scroll-y-transition hide-on-leave >
           <v-img
           v-if="designerImageDisplayed"
@@ -72,23 +72,26 @@
         </v-scroll-y-transition>
       
       </v-col>
-      <v-col class="mb-3"  style="text-align: center" >
+      <v-col  class="flex-column mb-3"  style="text-align: center" >
         
-        <div class="heading-animated" v-html="copy.profile1"/>
-        <v-slide-x-transition hide-on-leave>
-          <span v-if="designerImageDisplayed" >
-            <div class="heading-animated" v-html="copy.transitionItem[0]"/>
-          </span>
-         <span class="mb-3" v-else>
-          <div class="heading-animated" v-html="copy.transitionItem[1]"></div>
-        </span>
-        </v-slide-x-transition>
+        <div class="heading-animated mx-16 px-5" v-html="copy.profile1"/>
+            <v-slide-x-transition hide-on-leave>
+              <span v-if="designerImageDisplayed" >
+                <div class="heading-animated">
+                 <strong>{{ copy.transitionItem[0] }}</strong>
+                </div>
+              </span>
+            <span class="mb-3" v-else>
+              <div class="heading-animated">
+                 <strong>{{ copy.transitionItem[1] }}</strong>
+              </div>
+            </span>
+            </v-slide-x-transition>
        
          <div class="heading-animated"> {{copy.profile2}}</div>
       </v-col>
       <v-col
-        class="mb-5"
-        cols="12"
+          class="mb-5"
          style="text-align: center"
       >
        <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact">
@@ -112,10 +115,6 @@ export default {
   name: "DefaultHeader",
   mixins: [ismobile],
   props: {
-    copy: {
-      type: Object,
-      required: true,
-    },
     color: {
       type: String,
       required: false,
@@ -129,7 +128,13 @@ export default {
     return {
       designerImageDisplayed: false,
       interval: null,
-      pseudoColor: null
+      pseudoColor: null,
+      copy: {
+        profile1: "Nice to meet you.<br/> I'm Amina Belabbes.<br/>  I am a ",
+        profile1_2: "<br/> I am a ", 
+        profile2: "based in Germany.",
+        transitionItem: ['designer ', 'developer ']
+      },
     };
   },
   methods: {
@@ -217,6 +222,14 @@ export default {
     font-size: 1.6em;
     font-weight: 400;
     line-height: 1.7em;
+}
+
+#mobile-header {
+  div.col {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
