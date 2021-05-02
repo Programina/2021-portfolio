@@ -316,6 +316,7 @@ body {
 
   a:hover, a:active, a:focus {
     text-decoration: underline;
+    color: black !important;
   }
 
   #app-wrapper {

@@ -5,7 +5,7 @@
       beautiful, easy to use and fun.
       </h3>
       
-      <p class="my-5">Hi, I am Amina. I a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year experience as a designer. I am currently employed full-time, but feel free to get in touch, I am always open to hear how I can help. 😊
+      <p class="my-5">Hi, I am Amina. I a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year experience as a designer. I am currently employed full-time, but feel free to get in touch. I am always open to hear how I can help. 😊
     </p>
 
     <p>  
@@ -24,11 +24,7 @@
 
     
     <p>
-      I printed my first business card calling myself "Web Designer" when I was still at university, could not stop talking to everyone about the importance of user experience, since I started developing. 
-      I even applied to a couple of design jobs, having nothing but a prototype I created on <a href="https://marvelapp.com/prototype/60c71ad/screen/38925966" style="text-transform: inherit; color: #3bcea0 !important">Marvel</a>. Needless to say, I needed a portfolio and more structured education.
-    </p>
-    <p>
-      It took me even longer to admit that my deepest desire was to create and to make people happy and satisfied along the way. I do not feel complete unless I also design. 
+      I printed my first business card calling myself "Web Designer" when I was still at university, even applied to a couple of design jobs, but it was tough without a portfolio.
       What gave me confidence to explore that side of me, was learning that creativity was a structured process that did not depend on luck or subjectivity. 
     </p>
 
@@ -86,27 +82,28 @@
         <h3> Sources I learn from</h3>
         <div class="my-5">
           <p>
-          I found that having projects I really wanted to see come to life were
-          my greatest motivator to progress. However, I would have never gotten
-          very far without the internet and all the free and high-quality
-          opportunities to learn.
+          Having projects I really wanted to see come to life are
+          my greatest motivators. So I am an avid learner and these are my go-to places. 
+          Feel free to <router-link to="/contact" style="text-transform: inherit; color: #3bcea0 !important">contact me</router-link> for any recommendations. 
         </p>
         <blockquote class="my-3">
           “An investment in knowledge pays the best interest.” – Benjamin
           Franklin
         </blockquote>
         <ul>
-          <li>AJ&Smart</li>
-          <li>Coursetro</li>
+          <li><a href="https://www.youtube.com/channel/UCeB_OpLspKJGiKv1CYkWFFw">AJ&Smart</a></li>
+          <li><a href="https://coursetro.com/"> Coursetro</a></li>
           <li><a href="https://www.kevinpowell.co/">Kevin Powell</a></li>
-          <li>Skillshare (the quality of information varies here)</li>
-          <li>Team Treehouse</li>
-          <li>Traversy Media</li>
-          <li>Academind</li>
-          <li>OpenClassrooms</li>
-          <li>Udacity</li>
-          <li>Medium (the quality of information varies here)</li>
-          <li>Nearly no need to mention: Stackoverflow</li>
+          <li><a href="https://www.skillshare.com/"> Skillshare (the quality of information varies here)</a></li>
+          <li><a href="https://teamtreehouse.com/">Team Treehouse</a></li>
+          <li><a href="https://careerfoundry.com/en/courses/become-a-ux-designer/" >Career Foundry</a></li>
+          <li><a href="https://www.traversymedia.com/">Traversy Media</a></li>
+          <li><a href="https://academind.com/" >Academind</a></li>
+          <li><a href="http://openclassrooms.com/">OpenClassrooms</a></li>
+          <li><a href="https://www.udacity.com/">Udacity</a></li>
+          <li><a href="https://xd.adobe.com/ideas/"> Adobe Ideas</a></li>
+          <li><a href="https://medium.com/topic/ux"> Medium (the quality of information varies here)</a></li>
+          <li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
           <li>
             <a href="https://uibreakfast.com/getting-started-ui-ux/"
               >UX Breakfast by Jane Portman, a very kind friend of a friend</a
