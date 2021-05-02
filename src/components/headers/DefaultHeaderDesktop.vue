@@ -4,8 +4,7 @@
     class="d-flex justify-center align-center"
     :style="{
       'background-color': color,
-      color: fontColor,
-      height: height + 'px',
+      color: fontColor
     }"
   >
     <div class="d-flex justify-center align-center" style="max-width: 80%">
@@ -73,11 +72,7 @@ export default {
     fontColor: {
       type: String,
       required: false,
-    },
-    height: {
-      type: String,
-      required: true,
-    },
+    }
   },
   data() {
     return {

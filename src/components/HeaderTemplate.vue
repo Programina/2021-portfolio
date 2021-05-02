@@ -13,9 +13,8 @@
   
    <component v-else
       is="DefaultHeaderDesktop"
-      :color="color"
-      :fontColor="fontColor"
-      :height="height"
+      :color="component.backgroundColor"
+      :fontColor="component.fontColor"
       :image="component.img"
       :copy="copy"
     /> 
@@ -67,35 +66,33 @@ export default {
       components: [
         {
           title: "Default",
-          subtitle: "",
           path: "/home"
         },
         {
           title: "Default",
-          subtitle: "",
           path: "/",
         },
         {
-          title: "About",
-          subtitle: "",
+          title: "Hi, I am Amina!",
+          subtitle: "I am a designer and developer with a love for detail and white space.",
           path: "/about",
           // img: "brushes.png"
         },
         {
-          title: "Contact",
-          subtitle: "",
+          title: "Contact me",
+          subtitle: "I'd love to hear from you.",
           path: "/contact",
           // img: "brushes.png"
         },
         {
-          title: "Contact",
-          subtitle: "",
+          title: "Thank you!",
+          subtitle: "I am glad you got in touch.",
           path: "/contact-success",
           // img: "brushes.png"
         },
         {
           title: "HabitStacks",
-          subtitle: "",
+          subtitle: "Build habits taking baby steps without losing sight of the bigger picture.",
           path: "/habit-stacks",
           // img: "brushes.png"
         },
@@ -113,26 +110,31 @@ export default {
         },
         {
           title: "Development",
+          subtitle: "",
           path: "/development",
           // img: "brushes.png"
         },
         {
           title: "Imprint",
+          subtitle: "",
           path: "/imprint",
           // img: "brushes.png"
         },
         {
-          title: "PortfolioH",
+          title: "Portfolio",
+          subtitle: "",
           path: "/portfolio",
           // img: "brushes.png"
         },
         {
-          title: "OtherH",
+          title: "Other",
+          subtitle: "Other things I enjoy doing.",
           path: "/other",
           // img: "brushes.png"
         },
         {
-          title: "RssH",
+          title: "Rss Feed",
+          subtitle: "",
           path: "/rss",
           // img: "brushes.png"
         },
@@ -188,5 +190,11 @@ export default {
     background-repeat: no-repeat;
     background-position: left bottom; 
     background-size: 400px 300px;
+
+      div:first-child {
+        height: 400px;
+      }
   }
+
+ 
 </style>
