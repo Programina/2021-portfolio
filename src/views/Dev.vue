@@ -11,10 +11,12 @@
      
     </v-row>
     
-     <h3>Honorable Mentions</h3>
+    
+     
     <v-row class="d-flex justify-center align-center ma-10">
-  
-       
+    <v-col>
+       <h3>Honorable Mentions</h3>
+    </v-col>
 
       <v-col cols="12" class="ma-5">
          <v-row>
