@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import MobileHeader from "@/components/headers/MobileHeader";
 import MobileContentTemplate from "@/components/MobileContentTemplate";
 import DesktopContentTemplate from "@/components/DesktopContentTemplate";
 import ismobile from "@/mixins/ismobile";
@@ -20,7 +19,7 @@ export default {
   name: "Other",
   components: {},
   mixins: [ismobile],
-  components: { MobileHeader, MobileContentTemplate, DesktopContentTemplate },
+  components: { MobileContentTemplate, DesktopContentTemplate },
   data() {
     return {
       cards: [

@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div data-qa="mobile-content-template">
     <div
       v-for="(card, i) in cards"
       :key="i"
       class="mx-3"
       target="_blank"
+      ref="scrollTransition"
     >
       <v-card>
         <v-img
@@ -44,10 +45,11 @@
 <script>
 
 import { mapState } from "vuex"
+import scrollbehavior from "@/mixins/scrollbehavior.js"
 
 export default {
   name: 'MobileContentTemplate',
-  components: {},
+  misins: [scrollbehavior],
   props: {
      cards: {
       type: Array,
