@@ -127,7 +127,7 @@ export default {
       if(!this.isMobile){
        return {
           height: '350px',
-          top: '50px'
+          top: '0px'
         }
       } else {
         return {
