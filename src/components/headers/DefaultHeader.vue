@@ -1,75 +1,77 @@
 <template>
   <div
     data-qa="default-header"
-    class="d-flex justify-center align-center"
+    
     :style="{
       'background-color': color,
       color: fontColor
     }"
   >
-    <div v-if="!isMobile" class="d-flex justify-center align-center" style="max-width: 80%">
+    
+
+    <div v-if="!isMobile" class="d-flex justify-center align-center">
 
       <div class="pr-8" style="text-align: right">
         <span class="heading-animated" v-html="copy.profile1"></span>
-        <span v-show="designerImageDisplayed">
-          <span
-            data-splitting
-            class="heading-animated headline headline--hide"
-            >{{ copy.transitionItem[0] }}</span
-          >
-        </span>
-        <span v-show="!designerImageDisplayed">
-          <span
-            data-splitting
-            class="heading-animated headline headline--hide"
-            >{{ copy.transitionItem[1] }}</span
-          >
-        </span>
 
+        <div v-if="designerImageDisplayed" style="display: inline-block; margin: 0 10px;">
+           <v-scroll-y-transition>
+             <div class="heading-animated slideInDown" style="display: inline-block;">{{ copy.transitionItem[0] }}</div>
+          </v-scroll-y-transition>
+        </div>
+        <div v-if="!designerImageDisplayed" style="display: inline-block; margin: 0 10px;" >
+            <v-scroll-y-transition>
+            <div class="heading-animated slideInDown" >{{ copy.transitionItem[1] }}</div>
+            </v-scroll-y-transition>
+        </div>
         <span class="heading-animated" v-html="copy.profile2"></span>
       </div>
 
-      <div cols="6" class="d-flex justify-start align-center">
-        <v-slide-x-transition hide-on-leave>
-          <v-img
-            v-if="designerImageDisplayed"
+      <div class="d-flex justify-start align-center flip-card" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">    
+            <v-img
+                :src="require('@/assets/developer.png')"
+                contain
+                :key="'dev-gif'"
+                :height="220"
+              />
+        </div>
+        <div class="flip-card-back">
+           <v-img
             :src="require('@/assets/designer.png')"
-            class="mt-5"
             contain
-            :width="220"
+            :height="220"
           />
-          <v-img
-            v-else
-            :src="require('@/assets/developer.png')"
-            class="mt-5"
-            contain
-            :key="'dev-gif'"
-            :width="220"
-          />
-        </v-slide-x-transition>
+        </div>
       </div>
+        
+         
+      </div>
+
     </div>
 
     <div v-else id="mobile-header" class="px-15 d-flex flex-column justify-center" >
       <v-col>
-        <v-scroll-y-transition hide-on-leave >
+        <v-scroll-x-transition  v-if="designerImageDisplayed">
           <v-img
-          v-if="designerImageDisplayed"
+         
           :src="require('@/assets/designer.png')"
-          
           class="mt-5"
           contain
           height="300"
         />
+        </v-scroll-x-transition>
+        <v-scroll-x-transition v-else>
         <v-img
-          v-else
+          
           :src="require('@/assets/developer.png')"
           class="mt-5"
           contain
           :key="'dev-gif'"
           height="300"
         />
-        </v-scroll-y-transition>
+        </v-scroll-x-transition>
       
       </v-col>
       <v-col  class="flex-column mb-3"  style="text-align: center" >
@@ -100,6 +102,9 @@
        
       </v-col>
   </div>
+
+
+
   </div>
 </template>
 
@@ -127,13 +132,14 @@ export default {
   data() {
     return {
       designerImageDisplayed: false,
+      scrollY: false,
       interval: null,
       pseudoColor: null,
       copy: {
         profile1: "Nice to meet you.<br/> I'm Amina Belabbes.<br/>  I am a ",
         profile1_2: "<br/> I am a ", 
         profile2: "based in Germany.",
-        transitionItem: ['designer ', 'developer ']
+        transitionItem: ['UX designer ', 'frontend developer ']
       },
     };
   },
@@ -141,8 +147,11 @@ export default {
     imageIntervall() {
       this.interval = setInterval(
         () => (this.designerImageDisplayed = !this.designerImageDisplayed),
-        9000
+        2500
       );
+    },
+    toggleScrollY() {
+      this.scrollY = !this.scrollY;
     },
     stopSwitch() {
       clearInterval(this.interval);
@@ -155,7 +164,6 @@ export default {
     //    this.pseudoColor = window.getComputedStyle( document.querySelector('span'), ':after'
     //   ).getPropertyValue('background-color')
     // }
-   
     this.imageIntervall();
     Splitting();
   },
@@ -237,100 +245,63 @@ a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
 }
 
 
-.headline--hide {
-  --dur: 4.5s;
+
+@keyframes slideInDown {
+  0%   {transform: translate3d(0, -100%, 0); opacity: 1;}
+  50%  {transform: translate3d(0, -3%, 0); opacity: 1;}
+  65%  {transform: translate3d(0, 0, 0);opacity: 1;}
+  85%  {transform: translate3d(0, 0, 0); opacity: 0.8;}
+  100% {transform: translate3d(0, 30%, 0); opacity: 0;}
+  
+	// from {
+	// 	transform: translate3d(0, -100%, 0);
+	// 	opacity: visible
+	// }
+	// to {
+	// 	transform: translate3d(0, 0, 0)
+	// }
 }
 
-.word,
-.char {
-  animation-delay: var(--del);
-  animation-direction: var(--dir, normal);
-  animation-duration: var(--dur);
-  animation-iteration-count: var(--it, infinite);
-  animation-name: var(--name);
-  animation-timing-function: var(--tf);
-  animation-fill-mode: var(--fill, forwards);
-  display: inline-block;
+.slideInDown {
+	animation-name: slideInDown;
+  animation: slideInDown 2.5s infinite;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
   position: relative;
-  transform-origin: 50% 100%;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.word:after {
-  animation: hide-cover calc(var(--dur) * 2) ease-out infinite;
-  border-top: 4px solid #fff;
-  content: "";
-  height: 150%;
-  left: -5%;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
   position: absolute;
-  top: 100%;
-  width: 110%;
-  z-index: 2;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-.char {
-  --name: hide-jump;
-  --del: calc(var(--char-index) * 0.02s);
-  --td: cubic-bezier(0.215, 0.61, 0.355, 1);
-  --dir: alternate;
-
-  transform-origin: 50% 100%;
-
-  &[data-char="i"]:after {
-    --name: hide-peek;
-    --dir: alternate;
-
-    animation: var(--name) var(--dur) var(--td) infinite var(--dir);
-    content: attr(data-char);
-    visibility: visible;
-  }
+.flip-card-front {
 }
 
-@keyframes hide-jump {
-  0%,
-  10% {
-    transform: translateY(0);
-  }
-  15% {
-    transform: translateY(-25%);
-  }
-  20%,
-  100% {
-    transform: translateY(100%);
-  }
+.flip-card-back {
+  transform: rotateY(180deg);
 }
 
-@keyframes hide-peek {
-  0%,
-  35% {
-    transform: translateY(0);
-  }
-  40%,
-  60% {
-    transform: translateY(-40%);
-  }
-  70%,
-  90% {
-    transform: translateY(-45%) skewY(10deg);
-  }
-  95%,
-  100% {
-    transform: translateY(-46%) skewY(-10deg);
-  }
-}
-
-@keyframes hide-cover {
-  0%,
-  7% {
-    transform: scaleX(0);
-  }
-  8%,
-  95% {
-    transform: scaleX(1);
-  }
-  98%,
-  100% {
-    transform: scaleX(0);
-  }
-}
 </style>
