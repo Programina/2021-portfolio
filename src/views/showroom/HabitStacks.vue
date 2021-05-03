@@ -7,32 +7,8 @@
     <v-row>
       <v-col>
         <h3>The Problem</h3>
-        <p>Having goals is easy, creating change can be hard. Want to change your habits? I wanted to change mine.  I read a some books, downloaded some apps. Little stuck long-term 
+        <p>Having goals is easy, creating change can be hard. I wanted to create an app that helps facilitate long-term change.
         </p>
-
-        <p>I later found out I made these <strong>four mistakes</strong> over and over again: </p>
-
-
-        <p>
-          <ol class="ml-6">
-            <li>wanting to work on too many habits at the same time</li>
-            <li>wanting to progress to the next level too early</li>
-            <li>“Shiny object syndrome”</li>
-            <li>not taking advantage of already existing habits</li>
-          </ol>
-        </p>
-
-
-
-        <v-img
-          height="250"
-          alt="A woman's face looking at objects"
-          class="my-12"
-          :src="require('@/assets/habits.jpg')"
-        ></v-img>
-
-        
-        <p>I wanted to get out of the loop of making those mistakes, so I created HabitStacks.</p>
 
       </v-col>
     </v-row>
@@ -43,6 +19,13 @@
           HabitStacks is the working name for an app I am in the process of
           creating. So far, all I have is a design.
         </p>
+
+        <v-img
+          alt="Instagram mobile design"
+          height="250"
+          class="my-12"
+          :src="require('@/assets/habit.png')"
+        ></v-img>
 
         <p>
           I got inspiration from this design on Instagram. I had a weekend and was super
@@ -58,8 +41,7 @@
 
         <h3>Going forward</h3>
         <p>
-          Next, I will implement a way to highlight existing
-          habits to connect them to existing ones. Another important focus will be to prevent users from overwhelm by picking habits that are realistically not doable longterm. 
+          I intend on going back to wireframing and designing a few more frames. Then start development and testing the stages with friends and possible users.
         </p>
         <h3>Learnings</h3>
         <p>
@@ -85,7 +67,7 @@ export default {
   data() {
     return {
       stats: {
-        client: "Me and other self-development fans - most likely millenials",
+        client: "Me",
         time: "A weekend in 2020 - ongoing",
         role: "Creator, includes branding strategist, UX designer, developer",
         sector: "Self-development",

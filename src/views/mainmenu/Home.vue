@@ -32,7 +32,6 @@ export default {
      &.isMobile {
        padding: 0 30px; 
      }
-   
    }
  
 </style>

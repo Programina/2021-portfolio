@@ -1,106 +1,66 @@
 <template>
   <div
     data-qa="default-header"
-    
     :style="{
       'background-color': color,
       color: fontColor
     }"
+    :class="[isMobile ? 'd-flex flex-column justify-center align-center' : undefined]"
   >
-    
 
-    <div v-if="!isMobile" class="d-flex justify-center align-center">
+    <div :class="['d-flex justify-center align-center', [isMobile ? 'mobile-header flex-column' : 'desktop-header']]">
 
-      <div class="pr-8" style="text-align: right">
-        <span class="heading-animated" v-html="copy.profile1"></span>
-
-        <div v-if="designerImageDisplayed" style="display: inline-block; margin: 0 10px;">
-           <v-scroll-y-transition>
-             <div class="heading-animated slideInDown" style="display: inline-block;">{{ copy.transitionItem[0] }}</div>
-          </v-scroll-y-transition>
-        </div>
-        <div v-if="!designerImageDisplayed" style="display: inline-block; margin: 0 10px;" >
-            <v-scroll-y-transition>
-            <div class="heading-animated slideInDown" >{{ copy.transitionItem[1] }}</div>
-            </v-scroll-y-transition>
-        </div>
-        <span class="heading-animated" v-html="copy.profile2"></span>
-      </div>
-
-      <div class="d-flex justify-start align-center flip-card" >
-        <div class="flip-card-inner">
-          <div class="flip-card-front">    
-            <v-img
-                :src="require('@/assets/developer.png')"
-                contain
-                :key="'dev-gif'"
-                :height="220"
-              />
-        </div>
-        <div class="flip-card-back">
-           <v-img
-            :src="require('@/assets/designer.png')"
-            contain
-            :height="220"
-          />
-        </div>
-      </div>
-        
-         
-      </div>
-
-    </div>
-
-    <div v-else id="mobile-header" class="px-15 d-flex flex-column justify-center" >
-      <v-col>
-        <v-scroll-x-transition  v-if="designerImageDisplayed">
-          <v-img
-         
-          :src="require('@/assets/designer.png')"
-          class="mt-5"
-          contain
-          height="300"
-        />
-        </v-scroll-x-transition>
-        <v-scroll-x-transition v-else>
-        <v-img
-          
-          :src="require('@/assets/developer.png')"
-          class="mt-5"
-          contain
-          :key="'dev-gif'"
-          height="300"
-        />
-        </v-scroll-x-transition>
       
-      </v-col>
-      <v-col  class="flex-column mb-3"  style="text-align: center" >
-        
-        <div class="heading-animated mx-16 px-5" v-html="copy.profile1"/>
-            <v-slide-x-transition hide-on-leave>
-              <span v-if="designerImageDisplayed" >
-                <div class="heading-animated">
-                 <strong>{{ copy.transitionItem[0] }}</strong>
-                </div>
-              </span>
-            <span class="mb-3" v-else>
-              <div class="heading-animated">
-                 <strong>{{ copy.transitionItem[1] }}</strong>
+            <div class="flip-card" cols="4">
+                <div class="flip-card-inner mb-5">
+                  <div class="flip-card-front">    
+                    <v-img
+                        :src="require('@/assets/developer.png')"
+                        contain
+                        :key="'dev-gif'"
+                        :height="height"
+                      />
+                  </div>
+                  <div class="flip-card-back">
+                    <v-img
+                      :src="require('@/assets/designer.png')"
+                      contain
+                      :height="height"
+                    />
+                  </div>
               </div>
-            </span>
-            </v-slide-x-transition>
-       
-         <div class="heading-animated"> {{copy.profile2}}</div>
-      </v-col>
-      <v-col
-          class="mb-5"
-         style="text-align: center"
-      >
-       <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact">
+            </div>
+            <div cols="1" style="width: 50px"> </div>
+
+            <div cols="7" class="pr-8" :class="[isMobile ? 'text-container mobile': 'text-container']">
+                <span class="heading-animated" v-html="copy.profile1"></span>
+
+                <div v-if="designerImageDisplayed" style="display: inline-block; margin: 0 10px;">
+                  <v-scroll-y-transition>
+                    <div class="heading-animated slideInDown" style="display: inline-block;">{{ copy.transitionItem[0] }}</div>
+                  </v-scroll-y-transition>
+                </div>
+                <div v-if="!designerImageDisplayed" style="display: inline-block; margin: 0 10px;" >
+                    <v-scroll-y-transition>
+                    <div class="heading-animated slideInDown" >{{ copy.transitionItem[1] }}</div>
+                    </v-scroll-y-transition>
+                </div>
+                <span class="heading-animated" v-html="copy.profile2"></span>
+          </div>
+
+
+       <div  v-if="isMobile" >
+        <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact">
           <v-btn rounded elevation="10" color="primary" class="pa-6 mr-2">Get in touch </v-btn>
        </router-link>
-       
-      </v-col>
+      </div>
+         
+      </div>
+     
+      
+    </div>
+
+   
   </div>
 
 
@@ -139,7 +99,7 @@ export default {
         profile1: "Nice to meet you.<br/> I'm Amina Belabbes.<br/>  I am a ",
         profile1_2: "<br/> I am a ", 
         profile2: "based in Germany.",
-        transitionItem: ['UX designer ', 'frontend developer ']
+        transitionItem: ['UX designer ', 'web developer ']
       },
     };
   },
@@ -171,12 +131,28 @@ export default {
     this.stopSwitch();
   },
   computed: {
-    ...mapState(["currentRoute"])
+    ...mapState(["currentRoute"]),
+    height() {
+      if(this.isMobile) {
+        return 200
+      } else {
+        return 200
+      }
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
+
+.text-container {
+  text-align: left;
+  margin: 30px 0;
+  &.mobile {
+    text-align: center;
+  }
+}
+
 .heading-animated {
   font-family: "Muli", Sans-serif;
   font-size: 1.6em;
@@ -231,8 +207,14 @@ export default {
     font-weight: 400;
     line-height: 1.7em;
 }
-
-#mobile-header {
+.desktop-header {
+  height: 360px;
+  margin: 40px 0;
+}
+.mobile-header {
+  height: 560px;
+  margin: 0 20px;
+  max-width: 350px;
   div.col {
     width: 100%;
     display: flex;

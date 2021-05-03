@@ -132,7 +132,7 @@ export default {
       } else {
         return {
           height: '600px',
-          top: '100px'
+          top: '60px'
         }
        
       }
@@ -178,9 +178,8 @@ export default {
     background-repeat: no-repeat;
     background-position: left bottom; 
     background-size: 400px 300px;
-
-      div:first-child {
-       
-      }
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
