@@ -20,7 +20,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
     <v-navigation-drawer
       v-if="isMobile"
       v-model="drawer"
-      absolute
+      fixed
       right
       clipped 
       floating
