@@ -59,7 +59,7 @@ ul {
 
 img {
   width: 100px;
-  box-shadow: 0 0 0 100px inset, 0 0 5px grey;
+  box-shadow: 0 0 0 100px inset, 0 0 5px lightgrey;
 }
 
 .shadow-box {
@@ -71,15 +71,17 @@ img {
   justify-content: center;
   align-items: center;
   /* overlay */
-  box-shadow: 0 0 0 100px inset, 0 0 5px grey;
+  box-shadow: 0 0 0 100px inset, 0 0 5px lightgrey;
   /* hover out transition */
   transition: box-shadow 1s;
   float: left;
   margin: 10px;
+  
+  color: rgba(93, 175, 141, 0.9);
 }
 
 .shadow-box:hover {
-  box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+  box-shadow: 0 0 0 5px inset, 0 0 5px lightgrey, 0 0 10px lightgrey inset;
   transition: box-shadow 1s;
 }
 
