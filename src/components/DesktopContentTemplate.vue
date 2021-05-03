@@ -1,5 +1,5 @@
 <template>
-  <v-col class="mb-5 px-8" cols="12" justify="center">
+  <v-col class="mb-5 px-8 desktop-content-template" cols="12" justify="center">
     <v-row
       v-for="(card, i) in cards"
       :key="i"
@@ -125,6 +125,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  
+
     a, 
     a:hover, 
     a:active, a:focus, .btn-link a, .theme--light.v-btn {
