@@ -1,7 +1,7 @@
 <template>
-  <div id="header-template" v-if="component">
+  <div id="header-template" v-if="component" :style="{'height' : heightAndTop.height}">
 
-  <div v-if="component.title != 'Default'" class="d-flex flex-column justify-center align-center rss-background"  :style="{ 'background-image': 'url(' + computedImage + ')', 'background-color': component.backgroundColor}, {'height' : heightAndTop.height}, {'margin-top' : heightAndTop.top}">
+  <div v-if="component.title != 'Default'" class="d-flex flex-column justify-center align-center"  :style="{ 'background-image': 'url(' + computedImage + ')', 'background-color': component.backgroundColor}, {'height' : '100%'}, {'margin-top' : heightAndTop.top}">
    
    <span class="text-center" style="padding: 0 50px;">
      <h1 :style="{'color': component.fontColor}">{{component.title}}</h1>
@@ -126,7 +126,7 @@ export default {
     heightAndTop(){
       if(!this.isMobile){
        return {
-          height: '400px',
+          height: '350px',
           top: '0px'
         }
       } else {

@@ -126,67 +126,67 @@ export default {
       height: '400',
       colors: [
         {  
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/home'
         },
         {  
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/'
         },
          { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/about'
         }, 
         {
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/contact'
         }, 
         {
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/contact-success'
         },
         { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/habit-stacks'
         },
         { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/date-saver'
         },
         { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/portfolio'
         },
         { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/ux-ui'
         },
         { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/development'
         },
         { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/other'
         },
         { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/imprint'
         },
         { 
-          color: '#fff',
+          color: 'transparent',
           fontColor: 'black',
           path: '/rss'
         }
@@ -219,7 +219,7 @@ export default {
         colr = this.colors.find(val => val.path === this.currentRoute.path) 
       } else {
         colr = {
-          color: '#fff', 
+          color: 'transparent', 
           fontColor: "black",
           path: '/'
         }
@@ -275,7 +275,7 @@ html {
 
 html,
 body {
-    background: #eefcff;
+    background: #fff;
     height: 100%;
     width: 100%;
     margin: 0;
