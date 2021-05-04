@@ -209,9 +209,8 @@ export default {
     stopScrolling(){
       clearTimeout(this.scrolling)
       this.isScrolled = false
-    }
-    
-  } ,
+    },
+  },
   computed: {
   ...mapState(["currentRoute"]), 
    colr() {

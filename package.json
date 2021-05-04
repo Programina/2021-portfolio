@@ -10,6 +10,7 @@
     "core-js": "^3.11.2",
     "emailjs-com": "^2.6.4",
     "is-svg": "^4.3.1",
+    "gsap": "^3.6.1",
     "splitting": "^1.0.6",
     "ssri": "^8.0.1",
     "vee-validate": "^4.3.5",

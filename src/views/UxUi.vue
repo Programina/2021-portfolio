@@ -16,14 +16,13 @@
 <script>
 
 import ismobile from '@/mixins/ismobile'
-import MobileHeader from "@/components/headers/MobileHeader";
 import DesktopContentTemplate from "@/components/DesktopContentTemplate";
 import MobileContentTemplate from "@/components/MobileContentTemplate";
 
 export default {
   name: "UxUi",
   mixins: [ismobile],
-  components: { MobileHeader, MobileContentTemplate, DesktopContentTemplate },
+  components: { MobileContentTemplate, DesktopContentTemplate },
   data: () => ({
     cards: [
       {

@@ -1,11 +1,13 @@
 <template>
   <v-container class="about">
-      <h3>
-      I am passionate about making software
-      beautiful, easy to use and fun.
-      </h3>
+
+
+    <h3>
+    I am passionate about making software
+    beautiful, easy to use and fun.
+    </h3>
       
-      <p class="my-5">Hi, I am Amina. I a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year experience as a designer. I am currently employed full-time, but feel free to get in touch. I am always open to hear how I can help. 😊
+    <p  class="my-5">Hi, I am Amina. I a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year experience as a designer. I am currently employed full-time, but feel free to get in touch. I am always open to hear how I can help. 😊
     </p>
 
     <p>  
@@ -23,13 +25,13 @@
     </blockquote>
 
     
-    <p>
+    <p >
       I printed my first business card calling myself "Web Designer" when I was still at university, even applied to a couple of design jobs, but it was tough without a portfolio.
       What gave me confidence to explore that side of me, was learning that creativity was a structured process that did not depend on luck or subjectivity. 
     </p>
 
     <v-row class="my-5">
-      <v-col>
+      <v-col >
         <h3>Current projects</h3>
         
         <v-card class="my-5" :color="'#fff'">
@@ -39,7 +41,7 @@
                 >Google UX Design Certificate</v-card-title
               >
 
-              <v-card-subtitle class="pt-5"> 
+              <v-card-subtitle class="pt-5" > 
                 <ul>
                   <li>I attend Google's Coursera course to get the <a href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20design%20certificate&matchtype=p&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwsqmEBhDiARIsANV8H3ZFaveHjHXxApoC19Ly3i9HZPQdbKla8R2BvqkrM_vaJCNSSTvBNHMaAtjuEALw_wcB">Google UX Design Certificate</a></li>
                   <li>
@@ -123,11 +125,13 @@
 
 
 <script>
+import scrollbehavior from "@/mixins/scrollbehavior.js"
 import Svgs from "@/components/Svgs";
 
 export default {
   name: "About",
-  components: { Svgs },
+  mixins: [scrollbehavior],
+  components: { Svgs }
 };
 </script>
 

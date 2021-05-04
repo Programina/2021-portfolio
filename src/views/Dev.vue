@@ -77,14 +77,13 @@
 
 <script>
 import ismobile from "@/mixins/ismobile";
-import MobileHeader from "@/components/headers/MobileHeader";
 import MobileContentTemplate from "@/components/MobileContentTemplate";
 import DesktopContentTemplate from "@/components/DesktopContentTemplate";
 
 export default {
   name: "Dev",
   mixins: [ismobile],
-  components: { MobileHeader, MobileContentTemplate, DesktopContentTemplate },
+  components: { MobileContentTemplate, DesktopContentTemplate },
   data() {
     return {
       cards: [

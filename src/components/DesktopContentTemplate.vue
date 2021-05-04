@@ -8,7 +8,7 @@
     >
       <!--text left -->
 
-      <v-col cols="6" v-if="card.id % 2 === 0" class="pr-12 d-flex align-center mb-6">
+      <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 === 0" class="pr-12 d-flex align-center mb-6">
         <div data-qa="desktop-content-template" style="width: inherit">
           <h3 class="heading2 mb-3" style="text-align: right">
             {{ card.title }}
@@ -40,7 +40,7 @@
       </v-col>
       
       <!--image right -->
-      <v-col cols="6" v-if="card.id % 2 === 0" class="pl-12 mb-6">
+      <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 === 0" class="pl-12 mb-6">
         <v-img
           class="ml-5"
           :alt="card.imgSrc"
@@ -49,7 +49,7 @@
       </v-col>
 
       <!--image left -->
-      <v-col cols="6" v-if="card.id % 2 != 0" class="pr-12 mb-6">
+      <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 != 0" class="pr-12 mb-6">
         <v-img
           :alt="card.imgSrc"
           class="ml-5"
@@ -59,7 +59,7 @@
       <v-spacer></v-spacer>
 
       <!-- text right -->
-      <v-col cols="6" v-if="card.id % 2 != 0" class="pl-12 d-flex align-center mb-6">
+      <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 != 0" class="pl-12 d-flex align-center mb-6">
         <div data-qa="desktop-content-template" style="width: inherit">
           <h3 class="heading2 mb-3" style="text-align: left">
             {{ card.title }}
@@ -99,10 +99,14 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { gsap } from "gsap"
+import { mapState } from "vuex"
+import scrollbehavior from "@/mixins/scrollbehavior.js"
+
+
 export default {
   name: "DesktopContentTemplate",
-  components: {},
+  mixins: [scrollbehavior],
   props: {
     cards: {
       type: Array,
@@ -116,7 +120,7 @@ export default {
   },
   computed: {
     ...mapState(["currentRoute", "disclaimer"]),
-  },
+  }
 };
 </script>
 
