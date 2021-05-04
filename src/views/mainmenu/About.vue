@@ -5,17 +5,19 @@
       beautiful, easy to use and fun.
       </h3>
       
-      <p class="my-5">Hi, I am Amina. I a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year experience as a designer. I am currently employed full-time, but feel free to get in touch. I am always open to hear how I can help. 😊
-    </p>
+      <p class="my-5">I'm a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year of experience as a designer. </p>
+      <p>        
+        At the moment, I am employed full-time, but feel free to get in touch. I am always open to hear how I can help. 😊
+      </p>
 
     <p>  
-      I am largely self-taught. Working in software, you never stop learning. However, I also have a Master's degree and a little background in IT and Design. For a more precise overview, have a look at my    <a
+      I am largely self-taught and will hopefully never stop learning. If you are after degrees, I have one of those Master's degrees and you may find my  <a
         style="text-transform: inherit; color: #3bcea0 !important"
         href="./abelabbesResume.pdf"
         download="Amina_Belabbes_Resume_2021.pdf"
         filetype="pdf"
-        >Resume</a
-      >.
+        >resume</a
+      > interesting.
     </p>
     <blockquote class="my-5">
       “You can fail at what you don't want, so you might as well take a chance
@@ -24,30 +26,27 @@
 
     
     <p>
-      I printed my first business card calling myself "Web Designer" when I was still at university, even applied to a couple of design jobs, but it was tough without a portfolio.
-      What gave me confidence to explore that side of me, was learning that creativity was a structured process that did not depend on luck or subjectivity. 
+      I printed my first business card calling myself "Web Designer" when I was still at university - I think it's fair to say it took me a while to get there and I'm still working at it. 
     </p>
 
     <v-row class="my-5">
       <v-col>
         <h3>Current projects</h3>
         
-        <v-card class="my-5" :color="'#fff'">
+    <a
+              href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20certification&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwgtWDBhDZARIsADEKwgOsbdETicgHXbb_Q--9T0REBsLycMQK29MHZc2XbwS6yc175Pkl8LsaAhioEALw_wcB"
+              style="text-transform: none;"
+              >
+          <v-card class="my-5" :color="'#fff'">
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
               <v-card-title class="text-h5"
                 >Google UX Design Certificate</v-card-title
               >
 
-              <v-card-subtitle class="pt-5"> 
-                <ul>
-                  <li>I attend Google's Coursera course to get the <a href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20design%20certificate&matchtype=p&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwsqmEBhDiARIsANV8H3ZFaveHjHXxApoC19Ly3i9HZPQdbKla8R2BvqkrM_vaJCNSSTvBNHMaAtjuEALw_wcB">Google UX Design Certificate</a></li>
-                  <li>
-                    Also currently teaching myself Photoshop with Skillshare and
-                    Youtube
-                  </li>
-                </ul>
-              </v-card-subtitle>
+                <v-card-subtitle class="pt-5"> 
+                  I attend Google's Coursera course to get the <a href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20design%20certificate&matchtype=p&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwsqmEBhDiARIsANV8H3ZFaveHjHXxApoC19Ly3i9HZPQdbKla8R2BvqkrM_vaJCNSSTvBNHMaAtjuEALw_wcB" style="text-transform: inherit; color: #3bcea0 !important">Google UX Design Certificate</a>
+                </v-card-subtitle>
 
               <!-- <v-card-actions>
               
@@ -57,12 +56,46 @@
 
             <a
               href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20certification&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwgtWDBhDZARIsADEKwgOsbdETicgHXbb_Q--9T0REBsLycMQK29MHZc2XbwS6yc175Pkl8LsaAhioEALw_wcB"
-              style="text-transform: normal"
+              style="text-transform: inherit; color: #3bcea0 !important"
               ><v-avatar class="ma-3" size="150" tile>
               <v-img src="@/assets/designcertificate.jpg"></v-img>
             </v-avatar></a>
           </div>
         </v-card>
+        </a>
+
+
+
+      <a href="https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/1810443793/projects" style="text-transform: inherit; color: #3bcea0 !important">
+            <v-card class="my-5" :color="'#fff'">
+          <div class="d-flex flex-no-wrap justify-space-between">
+            <div>
+              <v-card-title class="text-h5"
+                >Photoshop Tutorial</v-card-title
+              >
+
+                <v-card-subtitle class="pt-5"> 
+                  I teach myself Photoshop <a href="https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/1810443793/projects" style="text-transform: inherit; color: #3bcea0 !important">with Daniel Scott on Skillshare </a>
+                </v-card-subtitle>
+
+              <!-- <v-card-actions>
+              
+
+                </v-card-actions> -->
+            </div>
+
+            <a
+              href="https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/1810443793/projects"
+              ><v-avatar class="ma-3" size="150" tile>
+              <v-img src="@/assets/photoshop.png"></v-img>
+            </v-avatar></a>
+          </div>
+        </v-card>
+        </a>
+
+
+
+
       </v-col>
     </v-row>
 
