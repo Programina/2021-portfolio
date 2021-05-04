@@ -126,7 +126,7 @@ export default {
     heightAndTop(){
       if(!this.isMobile){
        return {
-          height: '350px',
+          height: '400px',
           top: '0px'
         }
       } else {
