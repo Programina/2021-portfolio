@@ -37,7 +37,7 @@
         
     <a
               href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20certification&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwgtWDBhDZARIsADEKwgOsbdETicgHXbb_Q--9T0REBsLycMQK29MHZc2XbwS6yc175Pkl8LsaAhioEALw_wcB"
-              style="text-transform: none;"
+              style="text-transform: none; text-decoration: none;"
               >
           <v-card class="my-5" :color="'#fff'">
           <div class="d-flex flex-no-wrap justify-space-between">
@@ -68,7 +68,7 @@
 
 
 
-      <a href="https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/1810443793/projects" style="text-transform: inherit; color: #3bcea0 !important">
+      <a href="https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/1810443793/projects" style="text-decoration: none; text-transform: inherit; color: #3bcea0 !important">
             <v-card class="my-5" :color="'#fff'">
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
@@ -77,7 +77,7 @@
               >
 
                 <v-card-subtitle class="pt-5"> 
-                  I teach myself Photoshop <a href="https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/1810443793/projects" style="text-transform: inherit; color: #3bcea0 !important">with Daniel Scott on Skillshare </a>
+                  I teach myself Photoshop with <a href="https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/1810443793/projects" style="text-transform: inherit; color: #3bcea0 !important">Daniel Scott on Skillshare </a>
                 </v-card-subtitle>
 
               <!-- <v-card-actions>
