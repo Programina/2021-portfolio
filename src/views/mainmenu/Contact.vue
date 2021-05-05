@@ -1,11 +1,13 @@
 TODO: Add a loading spinner for while the email attempts to send
 <template>
   <v-container class="contact d-flex justify-center">
-    <v-row justify="center" class="contact-row">
+    <v-row justify="center" :class="[!isMobile ? 'contact-row' : 'contact-row is-mobile']">
       <v-col v-if="!isLoading" class="mb-5" >
 
         <v-row justify="center">
-          <v-col>I am very keen on getting feedback on how to improve my portfolio. Please check out my open <a href="https://github.com/Programina/2021-portfolio/issues">issues list</a> on Github and feel free to add to it. </v-col>
+          <v-col class="contact-copy">
+             I am very keen on getting feedback on how to improve my portfolio. Please check out my open <a href="https://github.com/Programina/2021-portfolio/issues">issues list</a> on Github and feel free to add to it. 
+          </v-col>
         </v-row>
         <v-row  justify="center">
           <v-col class="mx-6" target="_blank">
@@ -81,11 +83,13 @@ TODO: Add a loading spinner for while the email attempts to send
 
 
 <script>
-import emailjs from "emailjs-com";
+import emailjs from "emailjs-com"
+import ismobile from "@/mixins/ismobile.js"
 import ContactSuccess from "@/views/mainmenu/ContactSuccess"
 export default {
   name: "Contact",
   components: {ContactSuccess},
+  mixins: [ismobile],
   data: () => ({
     from_email: {
       name: "",
@@ -143,12 +147,16 @@ export default {
 
 .contact {
   .contact-row  {
-    
     padding: 0 90px; 
     max-width: 900px;
-
+    &.is-mobile {
+      padding: 0;
+    }
   }
 
+  .contact-copy {
+    padding: 0 46px;
+  }
 }
 
 a,

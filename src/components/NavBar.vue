@@ -1,7 +1,7 @@
 <template>
   <v-app-bar
     id="navbar"
-    elevate-on-scroll
+    flat
     :style="{'flex': '0 1 auto'}, { 'background-color': color}"
     :class="[{ 'mobile-spacing': isMobile }, [isMobile ? 'navbar' : undefined]]"
   >
@@ -31,7 +31,7 @@
         filetype="pdf"
         >Resume (German)</a
       >
-      <router-link :style="{'color': fontColor + ' !important'}" to="contact"
+      <router-link :style="{'color': fontColor + ' !important', 'font-weight': 'bolder'}" to="contact"
         >Contact
       </router-link>
     </div>
@@ -81,9 +81,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  a, a:hover, a:active, a:visited, a:focus {
+    text-decoration: none;
+  }
+
   .navbar {
     position: fixed !important; 
     top: 0 !important;
     z-index: 2 !important;
   }
+
+  #nav {
+    a:hover, a:active {
+      background-image: linear-gradient(transparent 50%, #C9F8F7 0%);
+    }
+  }
+ 
 </style>

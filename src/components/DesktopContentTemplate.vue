@@ -33,7 +33,7 @@
             class="d-flex mb-10 justify-end"
           >
             <v-btn rounded elevation="10" color="primary" class="pa-6"
-              >See Case Study
+              >Case Study
             </v-btn>
           </router-link>
         </div>
@@ -83,7 +83,7 @@
             class="d-flex mb-10 justify-start"
           >
             <v-btn rounded elevation="10" color="primary" class="pa-6 pa-2"
-              >See Case Study
+              >Case Study
             </v-btn></router-link
           >
         </div>

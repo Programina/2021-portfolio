@@ -1,5 +1,5 @@
 <template>
-  <div id="header-template" v-if="component" :style="{'height' : heightAndTop.height}">
+  <div id="header-template" v-if="component" :style="{'height' : headerHeight}">
 
   <div v-if="component.title != 'Default'" class="d-flex flex-column justify-center align-center"  :style="{ 'background-image': 'url(' + computedImage + ')', 'background-color': component.backgroundColor}, {'height' : '100%'}, {'margin-top' : heightAndTop.top}">
    
@@ -32,7 +32,6 @@ export default {
   name: "HeaderTemplate",
   components: {
     DefaultHeader,
-    
   },
   data() {
     return {
@@ -47,7 +46,7 @@ export default {
         },
         {
           title: "I am Amina",
-          subtitle: "Design is my passion and I strive to improve a little every day.",
+          subtitle: "Design is my passion.",
           path: "/about",
           // img: "brushes.png"
         },
@@ -65,7 +64,7 @@ export default {
         },
         {
           title: "HabitStacks",
-          subtitle: "Build habits taking baby steps without losing sight of the bigger picture.",
+          subtitle: "Build habits that last.",
           path: "/habit-stacks",
           // img: "brushes.png"
         },
@@ -127,15 +126,21 @@ export default {
       if(!this.isMobile){
        return {
           height: '350px',
+          defaultHeight: '350px',
           top: '0px'
         }
       } else {
         return {
-          height: '600px',
+          height: '400px',
+          defaultHeight: '660px',
           top: '60px'
         }
-       
       }
+    },
+     headerHeight(){
+        let height;
+        (this.component.title === 'Default') ? height = this.heightAndTop.defaultHeight : height =  this.heightAndTop.height
+        return height
     },
     component() {
       let comp;

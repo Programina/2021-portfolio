@@ -10,15 +10,9 @@
         <h3>Problem</h3>
         <p>
           Two years into our relationship, my boyfriend and I had developed the
-          habit of ping-ponging our decision on how to spend our time together.
+          habit of ping-ponging our decision on how to spend our evenings together.
         </p>
         <v-row >
-          <v-col class="d-flex justify-center">
-             <v-img
-          width="400"
-          :src="require('@/assets/bored-couch.jpg')"
-        ></v-img>
-          </v-col>
         </v-row>
        
         <p class="my-5">
@@ -34,19 +28,9 @@
         <h3 class="mt-16">Process</h3>
          <div class="enumeration mt-5">01</div>
         <p> 
-          I wanted the interface to be familiar and fun. What is
-          often used to reach a decision?
-          Two things that came to mind were tossing a coin and a magic 8 ball
-          works well too.
+          I wanted the interface to be familiar and fun, so I thought of a magic 8 ball.
         </p>
         <v-row >
-          <v-col class="d-flex justify-center">
-              <v-img
-          width="400"
-          :src="require('@/assets/magic-8.jpg')"
-        ></v-img>
-
-          </v-col>
         </v-row>
       
         <div class="enumeration mt-12">02</div>
@@ -56,8 +40,7 @@
          The current version works like this: You click a button and get a suggestion for what to do. 
         </p>
         <p>
-          The suggestions are mostly random, but with a subset of factors that are taken into account. 
-          The app takes into consideration the local time and weather (just in Mainz so far) and lets you choose between three price ranges for your activities.
+          The suggestions are based on the local time in Mainz, the weather and the price range the user decided on.
         </p>
 
         

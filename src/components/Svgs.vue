@@ -5,16 +5,22 @@
         <div class="shadow-box" id="angular"></div>
       </v-col>
       <v-col  cols="3">
-        <div class="shadow-box" id="react"></div>
+        <div class="shadow-box" id="vue"></div>
       </v-col>
       <v-col  cols="3">
-        <div class="shadow-box" id="vue"></div>
+        <div class="shadow-box" id="nodejs"></div>
       </v-col>
       <v-col  cols="3">
         <div class="shadow-box" id="javascript"></div>
       </v-col>
       <v-col  cols="3">
-        <div class="shadow-box" id="nodejs"></div>
+        <div class="shadow-box" id="adobexd"></div>
+      </v-col>
+          <v-col  cols="3">
+        <div class="shadow-box" id="figma"></div>
+      </v-col>
+      <v-col  cols="3">
+        <div class="shadow-box" id="photoshop"></div>
       </v-col>
       <v-col  cols="3">
         <div class="shadow-box" id="typescript"></div>
@@ -31,9 +37,6 @@
      <v-col  cols="3">
         <div class="shadow-box" id="bootstrap"></div>
      </v-col>
-      <v-col  cols="3">
-        <div class="shadow-box" id="photoshop"></div>
-      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -63,8 +66,8 @@ img {
 }
 
 .shadow-box {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50px;
   /* center content using flex box */
   display: flex;
@@ -214,5 +217,25 @@ img {
 
 #photoshop::after {
   content: "Photoshop";
+}
+
+#adobexd {
+  background-image: url('/assets/adobexd.png');
+  background-position: center center;
+  background-size: cover;
+}
+
+#adobexd::after {
+  content: "AdobeXd";
+}
+
+#figma {
+  background-image: url('/assets/figma.png');
+  background-position: center center;
+  background-size: cover;
+}
+
+#figma::after {
+  content: "Figma";
 }
 </style>

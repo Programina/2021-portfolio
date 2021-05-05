@@ -6,15 +6,15 @@
 
     <v-row>
       <v-col>
-        <h3>The Problem</h3>
-        <p>Having goals is easy, creating change can be hard. I wanted to create an app that helps facilitate long-term change.
+        <h3>Problem</h3>
+        <p>I wanted to create an app that helps facilitate long-term change.
         </p>
 
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <h3>The conception</h3>
+        <h3>Conception</h3>
         <p>
           HabitStacks is the working name for an app I am in the process of
           creating. So far, all I have is a design.
@@ -29,7 +29,7 @@
 
         <p>
           I got inspiration from this design on Instagram. I had a weekend and was super
-          eager to try and create my own version of an inspiring design I had found on Instagram.
+          eager to try and create my own version of it.
         </p>
 
         <v-img
@@ -40,15 +40,11 @@
         ></v-img>
 
         <h3>Going forward</h3>
-        <p>
-          I intend on going back to wireframing and designing a few more frames. Then start development and testing the stages with friends and possible users.
-        </p>
+
+         <p>
+          I will have to test the design on some users other than myself. It might give off too cool and distanced vibes, I want it to be engaging and fun. </p>
         <h3>Learnings</h3>
-        <p>
-          I will have to either change software or figure out a way to make sure my prototypes are not re-formatted as they are downloaded from the cloud.
-          </p>
-          <p>
-The design looks nice and modern, but too cool and emotionally not engaging. Wanting to change a habit, you have to be emotionally invested. So I will likely spend some time on re-iterating the design.</p>
+         
 
      <p>
 I will not skip the steps of research on user acceptance with a prototype next time. </p>

@@ -22,12 +22,12 @@
          <v-row justify="center" :class="[isMobile ? 'flex-column' : undefined]">
             <v-col cols="12" class="d-flex justify-center">
               <a href="https://www.lotto-thueringen.de/eurojackpot/eurojackpot/spielschein.html ">
-                <v-img height="300" width="400" alt="lotto" src="@/assets/lotto.png"/>
+                <v-img :height="[isMobile ? 170 : 300]" :width="[isMobile ? 250 : 400]" alt="lotto" src="@/assets/lotto.png"/>
               </a>           
             </v-col>
             <v-col cols="12" class="py-5 justify-center" >
-                  <div style="width: 400px">
-                    <p>
+                  <div>
+                    <p :class="[isMobile ? undefined : 'mx-10  px-16']">
                       For about two months I worked on the corporate website for Lotto Thüringen as part of a team of frontend developers and UX designers. 
                     </p>
                     <div class="d-flex justify-center" style="flex-wrap: wrap;">
@@ -52,12 +52,12 @@
         <v-row justify="center" :class="[isMobile ? 'flex-column' : undefined]">
           <v-col cols="12" class="d-flex justify-center">
               <a href="https://www.gardena.com/de/">
-                <v-img height="300" width="400" alt="gardena" src="@/assets/gardena.png" />
+                <v-img :height="[isMobile ? 170 : 300]" :width="[isMobile ? 250 : 400]"  alt="gardena" src="@/assets/gardena.png" />
               </a>
           </v-col>
           <v-col cols="12" class="py-5 justify-center">
-            <div style="width: 400px">
-              <p>For about three months I worked on the corporate website for Gardena as part of a team of frontend developers and UX designers. </p>
+            <div>
+              <p :class="[isMobile ? undefined : 'mx-10  px-16']">For about three months I worked on the corporate website for Gardena as part of a team of frontend developers and UX designers. </p>
               <div class="d-flex justify-center" style="flex-wrap: wrap;">
                 <v-chip class="ma-2">
                   HTML
@@ -133,20 +133,21 @@ export default {
               label: "AdobeXd",
             },
           ],
-        },
-        {
-          id: 3,
-          title: "RSS Feed",
-          href: "/rss",
-          imgSrc: "rssApp.png",
-          imgMblSrc: "rssApp.png",
-          description: "Simple RSS Feed SPA I made for an interview.",
-          chips: [
-            {
-              label: "Angular",
-            },
-          ],
-        },
+        }
+        // ,
+        // {
+        //   id: 3,
+        //   title: "RSS Feed",
+        //   href: "/rss",
+        //   imgSrc: "rssApp.png",
+        //   imgMblSrc: "rssApp.png",
+        //   description: "Simple RSS Feed SPA I made for an interview.",
+        //   chips: [
+        //     {
+        //       label: "Angular",
+        //     },
+        //   ],
+        // },
       ],
     };
   }

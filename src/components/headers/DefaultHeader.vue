@@ -1,6 +1,6 @@
 <template>
   <div
-    data-qa="default-header"
+    id="default-header"
     :style="{
       'background-color': color,
       color: fontColor
@@ -8,10 +8,10 @@
     :class="[isMobile ? 'd-flex flex-column justify-center align-center' : undefined]"
   >
 
-    <div :class="['d-flex justify-center align-center', [isMobile ? 'mobile-header flex-column' : 'desktop-header']]">
+    <div :class="['header-container d-flex justify-center align-center', [isMobile ? 'mobile-header flex-column' : 'desktop-header']]" >
 
       
-            <div class="flip-card" cols="4">
+            <div class="flip-card" cols="6">
                 <div class="flip-card-inner mb-5">
                   <div class="flip-card-front">    
                     <v-img
@@ -32,7 +32,7 @@
             </div>
             <div cols="1" style="width: 50px"> </div>
 
-            <div cols="7" class="pr-8" :class="[isMobile ? 'text-container mobile': 'text-container']">
+            <div cols="5" class="pr-8" :class="[isMobile ? 'text-container mobile': 'text-container']">
                 <span class="heading-animated" v-html="copy.profile1"></span>
 
                 <div v-if="designerImageDisplayed" style="display: inline-block; margin: 0 10px;">
@@ -46,24 +46,19 @@
                     </v-scroll-y-transition>
                 </div>
                 <span class="heading-animated" v-html="copy.profile2"></span>
-          </div>
+            </div>
 
 
-       <div  v-if="isMobile" >
-        <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact">
-          <v-btn rounded elevation="10" color="primary" class="pa-6 mr-2">Get in touch </v-btn>
-       </router-link>
-      </div>
+            <div  v-if="isMobile" >
+              <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact">
+                <v-btn rounded elevation="10" color="primary" class="pa-6 mr-2">Get in touch </v-btn>
+              </router-link>
+            </div>
          
       </div>
      
       
     </div>
-
-   
-  </div>
-
-
 
   </div>
 </template>
@@ -136,7 +131,7 @@ export default {
       if(this.isMobile) {
         return 200
       } else {
-        return 200
+        return 300
       }
     }
   },
@@ -144,6 +139,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+#default-header {
+  width: 100%;
+
+   .header-container {
+     width: 100%;
+   }
+}
 
 .text-container {
   text-align: left;
@@ -209,7 +212,7 @@ export default {
 }
 .desktop-header {
   height: 360px;
-  margin: 40px 0;
+  // margin: 40px 0;
 }
 .mobile-header {
   height: 560px;
@@ -234,14 +237,6 @@ a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
   65%  {transform: translate3d(0, 0, 0);opacity: 1;}
   85%  {transform: translate3d(0, 0, 0); opacity: 0.8;}
   100% {transform: translate3d(0, 30%, 0); opacity: 0;}
-  
-	// from {
-	// 	transform: translate3d(0, -100%, 0);
-	// 	opacity: visible
-	// }
-	// to {
-	// 	transform: translate3d(0, 0, 0)
-	// }
 }
 
 .slideInDown {
@@ -252,8 +247,8 @@ a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
 
 .flip-card {
   background-color: transparent;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   perspective: 1000px;
 }
 
@@ -264,7 +259,6 @@ a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card:hover .flip-card-inner {

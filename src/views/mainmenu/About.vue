@@ -107,7 +107,9 @@
     <v-row class="mb-8 justify-center">
       <v-col>
         <h3>Skills</h3>
-
+          <p>
+          The list is not exclusive, but these are my favorites.
+          </p>
         <Svgs />
       </v-col>
     </v-row>

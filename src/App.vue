@@ -59,19 +59,19 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
     <v-footer class="footer d-flex flex-column align-center justify-center">
       <div class="footer-icons d-flex align-center justify-center">
         <a data-v-2c037838="" href="https://www.instagram.com/programina/"
-          ><i data-v-2c037838="" class="fa fa-instagram"></i></a
+          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-instagram' : 'fa fa-instagram is-mobile']"></i></a
         ><a data-v-2c037838="" href="https://github.com/programina-gui"
-          ><i data-v-2c037838="" class="fa fa-github"></i></a
+          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-github' : 'fa fa-github is-mobile']"></i></a
         ><a data-v-2c037838="" href="https://codepen.io/programina"
-          ><i data-v-2c037838="" class="fa fa-codepen"></i></a
+          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-codepen' : 'fa fa-codepen is-mobile']"></i></a
         ><a data-v-2c037838="" href="https://stackblitz.com/@Programina"
-          ><i data-v-2c037838="" class="fa fa-flash"></i
+          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-flash' : 'fa fa-flash is-mobile']"></i
         ></a>
         <a data-v-2c037838="" href="https://www.linkedin.com/in/amina-b-b98703149/"
-          ><i data-v-2c037838="" class="fa fa-linkedin"></i
+          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-linkedin' : 'fa fa-linkedin is-mobile']"></i
         ></a>
         <a data-v-2c037838="" href="https://www.xing.com/profile/Amina_Belabbes/cv"
-          ><i data-v-2c037838="" class="fa fa-xing"></i
+          ><i data-v-2c037838="" :class=" [!isMobile ? 'fa fa-xing' : 'fa fa-xing is-mobile']"></i
         ></a>
       </div>
 
@@ -351,7 +351,7 @@ body {
 .footer {
   color: #959595 !important;
   font-size: 0.9em !important;
-  padding: 20px;
+ 
 
   .footer-icons {
     margin: 10px;
@@ -367,13 +367,16 @@ body {
       color: #959595;
       font-size: 1.6em;
       padding: 10px;
+       &.is-mobile {
+        font-size: 1em;
+      }
     }
   }
 }
 
 .enumeration {
   font-size: 2em;
-  color: #C0E589;
+  color: #F9E062;
 }
 
 .back-to-top {
