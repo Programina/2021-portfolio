@@ -28,11 +28,6 @@
 
         <div class="enumeration mt-12">02</div>
         <p>
-          I set the background image to a female programmer, because I am proud to be a female developer. 
-        </p>
-
-        <div class="enumeration mt-12">03</div>
-        <p>
           Next, I created a mood board with images using two colors, trying to be minimal. 
         </p>
 
@@ -43,7 +38,7 @@
         ></v-img>
 
 
-        <div class="enumeration mt-12">04</div>
+        <div class="enumeration mt-12">03</div>
         <p>
           I then designed a mobile mockup in Adobe Xd, knowing that development is usually mobile first and that I was likely to start coding before I had a finished design.
         </p>
@@ -54,7 +49,7 @@
           :src="require('@/assets/portfolio.jpg')"
         ></v-img>
 
-         <div class="enumeration mt-12">05</div>
+         <div class="enumeration mt-12">04</div>
         <p>Now I switched between coding and redesigning.</p>
 
         <h3>First iteration</h3>
@@ -77,23 +72,10 @@
         </v-row>
        
 
-        <h3>Second iteration</h3>
-
-        
-        <v-row class="my-5">
-          <v-col>
-               <v-img
-          alt="design1"
-          width="100%"
-          :src="require('@/assets/seconditeration.gif')"
-        ></v-img>
-          </v-col>
-        </v-row>
-
-         <div class="enumeration mt-12">06</div>
+         <div class="enumeration mt-12">05</div>
 
     
-        <p>I wanted colors, but had no color scheme in place, so I used the Adobe color wheel, picked one color I liked and got matching colors.</p>
+        <p>I messed up trying to find a matching color scheme. I thought I'd go for colors I found in my profile pic, but the contrast was terribly off - not good for accessibility.</p>
         <v-row class="my-5">
           <v-col>
                <v-img

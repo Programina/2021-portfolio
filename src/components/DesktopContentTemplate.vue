@@ -41,20 +41,32 @@
       
       <!--image right -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 === 0" class="pl-12 mb-6">
+       <router-link
+            v-if="card.href"
+            :to="card.href"
+            class="d-flex mb-10 justify-end"
+          >
         <v-img
           class="ml-5"
           :alt="card.imgSrc"
           :src="require('@/assets/' + card.imgSrc + '')"
         ></v-img>
+        </router-link>
       </v-col>
 
       <!--image left -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 != 0" class="pr-12 mb-6">
+       <router-link
+            v-if="card.href"
+            :to="card.href"
+            class="d-flex mb-10 justify-end"
+          >
         <v-img
           :alt="card.imgSrc"
           class="ml-5"
           :src="require('@/assets/' + card.imgSrc + '')"
         ></v-img>
+        </router-link>
       </v-col>
       <v-spacer></v-spacer>
 
