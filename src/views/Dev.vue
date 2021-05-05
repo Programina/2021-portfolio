@@ -124,7 +124,7 @@ export default {
           imgSrc: "datesaver.png",
           imgMblSrc: "datesaver.png",
           description:
-            "This is an app I developed with little to no fancy visual design. However I put some thought into the user experience. Also, I am about to redesign it. The idea is simple: help people have less decisions to make about what to do on a date.",
+            "An app I am in the processelp people have less decisions to make about what to do on a date.",
           chips: [
             {
               label: "VueJs",

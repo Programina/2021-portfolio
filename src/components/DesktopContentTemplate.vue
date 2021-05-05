@@ -92,7 +92,7 @@
 
     <v-row v-if="currentRoute.path === '/ux-ui' || currentRoute.path === '/development' ">
       <v-col v-if="disclaimer" class="d-flex justify-center">
-        <div class="my-10" style="max-width: 630px; font-size: 0.7em; text-align: left" v-html="disclaimer"/>
+        <div class="my-10" style="max-width: 630px; font-size: 1em; text-align: left" v-html="disclaimer"/>
       </v-col>
     </v-row>
   </v-col>
