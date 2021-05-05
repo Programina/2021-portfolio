@@ -124,7 +124,7 @@ export default {
           imgSrc: "datesaver.png",
           imgMblSrc: "datesaver.png",
           description:
-            "An app I am in the processelp people have less decisions to make about what to do on a date.",
+            "An app I am in the process of making to help people make  decisions about what to do on a date.",
           chips: [
             {
               label: "VueJs",
