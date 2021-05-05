@@ -50,7 +50,7 @@
 
 
             <div  v-if="isMobile" >
-              <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact">
+              <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact" style="text-decoration: none">
                 <v-btn rounded elevation="10" color="primary" class="pa-6 mr-2">Get in touch </v-btn>
               </router-link>
             </div>

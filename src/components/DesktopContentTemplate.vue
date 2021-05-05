@@ -31,6 +31,7 @@
             v-if="card.href"
             :to="card.href"
             class="d-flex mb-10 justify-end"
+             style="text-decoration: none"
           >
             <v-btn rounded elevation="10" color="primary" class="pa-6"
               >Case Study
@@ -93,6 +94,7 @@
             v-if="card.href"
             :to="card.href"
             class="d-flex mb-10 justify-start"
+             style="text-decoration: none"
           >
             <v-btn rounded elevation="10" color="primary" class="pa-6 pa-2"
               >Case Study
