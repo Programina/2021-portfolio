@@ -255,7 +255,7 @@ blockquote {
   padding-bottom: 0px;
   border-style: solid;
   border-width: 0px 0px 0px 2px;
-  border-color: #000 #000 #000 #69ae95;
+  border-color: #000 #000 #000 #3BCEA0;
   background-color: transparent;
   line-height: 36px;
   margin-right: auto;

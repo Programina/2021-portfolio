@@ -7,10 +7,7 @@
     beautiful, easy to use and fun.
     </h3>
       
-      <p class="my-5">I'm a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year of experience as a designer. </p>
-      <p>        
-        At the moment, I am employed full-time, but feel free to get in touch. I am always open to hear how I can help. 😊
-      </p>
+    <p class="my-5">I'm a frontend developer and UX designer from Germany with 3 years of experience as a developer and half a year of experience as a designer. </p>
 
     <p>  
       I am largely self-taught and will hopefully never stop learning. If you are after degrees, I have one of those Master's degrees and you may find my  <a
@@ -25,6 +22,9 @@
       “You can fail at what you don't want, so you might as well take a chance
       on doing what you love.” – Jim Carrey
     </blockquote>
+
+    <p>It has been my dream for years to work as a designer and pursue a creative career. I know I can do outstanding work in that area with not nearly as much effort as I put into learning how to code.</p> 
+    <p>However, learning how to code gave me great confidence and the advantage of being able to not only have ideas, but to make them come to life. </p>
 
     
 
@@ -127,6 +127,7 @@
               <li>
                 I printed my first business card calling myself "Web Designer" when I was still at university.
               </li>
+              <li>I cannot stand musicals.</li>
               <li>One big motivator that kept me going on becoming a programmer was the hope to one day work at a company that had a ball pit.</li>
           </ul>
       </v-col>
