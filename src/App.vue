@@ -435,12 +435,21 @@ top: 0px;
   position: relative;
   height: 350px;
   max-width: 450px;
+
+  &.is-vertical {
+    height: 450px;
+    max-width: 350px;
+  }
 }
 
 .lightbox-img-container-lg {
   overflow: hidden;
-  height: 850px;
-  max-width: 1100px;
+  max-height: 850px;
+  max-width: 900px;
+  &.is-vertical {
+    height: 1100px ;
+    max-width: 850px;
+  }
 }
 
 .lightbox-target .v-image {
