@@ -27,9 +27,6 @@
     </blockquote>
 
     
-    <p>
-      I printed my first business card calling myself "Web Designer" when I was still at university - I think it's fair to say it took me a while to get there and I'm still working at it. 
-    </p>
 
     <v-row class="my-5">
       <v-col >
@@ -107,54 +104,34 @@
     <v-row class="mb-8 justify-center">
       <v-col>
         <h3>Skills</h3>
-          <p>
-          The list is not exclusive, but these are my favorites.
-          </p>
         <Svgs />
       </v-col>
     </v-row>
 
+
     <v-row class="my-8 justify-center">
       <v-col>
-        <h3> Sources I learn from</h3>
-        <div class="my-5">
-          <p>
-          Having projects I really wanted to see come to life are
-          my greatest motivators. So I am an avid learner and these are my go-to places. 
-          Feel free to <router-link to="/contact" style="text-transform: inherit; color: #3bcea0 !important">contact me</router-link> for any recommendations. 
-        </p>
-        <blockquote class="my-3">
-          “An investment in knowledge pays the best interest.” – Benjamin
-          Franklin
-        </blockquote>
-        <ul>
-          <li><a href="https://www.youtube.com/channel/UCeB_OpLspKJGiKv1CYkWFFw">AJ&Smart</a></li>
-          <li><a href="https://coursetro.com/"> Coursetro</a></li>
-          <li><a href="https://www.kevinpowell.co/">Kevin Powell</a></li>
-          <li><a href="https://www.skillshare.com/"> Skillshare (the quality of information varies here)</a></li>
-          <li><a href="https://teamtreehouse.com/">Team Treehouse</a></li>
-          <li><a href="https://careerfoundry.com/en/courses/become-a-ux-designer/" >Career Foundry</a></li>
-          <li><a href="https://www.traversymedia.com/">Traversy Media</a></li>
-          <li><a href="https://academind.com/" >Academind</a></li>
-          <li><a href="http://openclassrooms.com/">OpenClassrooms</a></li>
-          <li><a href="https://www.udacity.com/">Udacity</a></li>
-          <li><a href="https://xd.adobe.com/ideas/"> Adobe Ideas</a></li>
-          <li><a href="https://medium.com/topic/ux"> Medium (the quality of information varies here)</a></li>
-          <li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
-          <li>
-            <a href="https://uibreakfast.com/getting-started-ui-ux/"
-              >UX Breakfast by Jane Portman, a very kind friend of a friend</a
-            >
-          </li>
-
-          <li>
-            Coursera
-          </li>
-        </ul>
-        </div>
-        
+      
+        <h3>Personal interests and fun facts</h3>
+          <ul>
+              <li>My favorite pastime with friends is singing karaoke at bars and pubs.</li>
+              <li>
+                I really enjoy listening to jars of Nutella being opened and I love popping bubble wrap.
+              </li>
+              <li>
+                My favorite countries are Scotland and Japan. I learned a little Japanese, but forgot most of it.
+              </li>
+              <li> I love British culture, tea time, British botanical gardens and British literature.
+              </li> 
+              <li>I enjoy fantasy movies and literature, but rarely science fiction.</li>
+              <li>
+                I printed my first business card calling myself "Web Designer" when I was still at university.
+              </li>
+              <li>One big motivator that kept me going on becoming a programmer was the hope to one day work at a company that had a ball pit.</li>
+          </ul>
       </v-col>
     </v-row>
+  
   </v-container>
 </template>
 
