@@ -19,25 +19,14 @@
           HabitStacks is the working name for an app I am in the process of
           creating. So far, all I have is a design.
         </p>
-
-        <v-img
-          alt="Instagram mobile design"
-          height="250"
-          class="my-12"
-          :src="require('@/assets/habit.png')"
-        ></v-img>
-
+        <LightBox image="habit.png" height="250" imgClass="my-12" alt="habit app adobe xd mockup" :order="7"/>
+       
         <p>
           I got inspiration from this design on Instagram. I had a weekend and was super
           eager to try and create my own version of it.
         </p>
-
-        <v-img
-          alt="Instagram mobile design"
-          height="250"
-          class="my-12"
-          :src="require('@/assets/idea.jpg')"
-        ></v-img>
+        <LightBox image="idea.jpg" height="250" imgClass="my-12" alt="Instagram mobile design" :order="8"/>
+       
 
         <h3>Going forward</h3>
 
@@ -55,10 +44,11 @@ I will not skip the steps of research on user acceptance with a prototype next t
 </template>
 
 <script>
+import LightBox from '@/components/LightBox';
 import StatsOverviewCard from "../../components/StatsOverviewCard.vue";
 export default {
   name: "HabitStacks",
-  components: { StatsOverviewCard },
+  components: { StatsOverviewCard, LightBox },
   props: {},
   data() {
     return {

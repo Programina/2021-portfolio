@@ -8,97 +8,103 @@
       <v-col>
         <h3>The Problem</h3>
         <p>
-          I had been a developer for years and had started designing, but was scattered all over the net with my designs and with my code. <strong>I needed a single business-card type of website to show to people.</strong>
+          I had been a developer for years and had started designing, but was
+          scattered all over the net with my designs and with my code.
+          <strong
+            >I needed a single business-card type of website to show to
+            people.</strong
+          >
         </p>
 
         <div class="enumeration mt-12">01</div>
         <p>
-          To start coding, I started including the social media links as
-          sort of a
+          To start coding, I started including the social media links as sort of
+          a
           <a href="https://en.wikipedia.org/wiki/Call_to_action_(marketing)"
             >"Call to Action (CTA)"</a
           >.
         </p>
-
-        <v-img
+        <LightBox
+          image="firstwebsite.jpg"
           height="550"
+          imgClass="my-12"
           alt="Amina's first Website"
-          :src="require('@/assets/firstwebsite.jpg')"
-        ></v-img>
+          :order="11"
+        />
 
         <div class="enumeration mt-12">02</div>
         <p>
-          Next, I created a mood board with images using two colors, trying to be minimal. 
+          Next, I created a mood board with images using two colors, trying to
+          be minimal.
         </p>
 
-        <v-img
+        <LightBox
+          image="portfoliomoodboard.jpg"
           width="620"
-          alt="Amina's first Website"
-          :src="require('@/assets/portfoliomoodboard.jpg')"
-        ></v-img>
-
+          alt="Moodboard"
+          :order="11"
+        />
 
         <div class="enumeration mt-12">03</div>
         <p>
-          I then designed a mobile mockup in Adobe Xd, knowing that development is usually mobile first and that I was likely to start coding before I had a finished design.
+          I then designed a mobile mockup in Adobe Xd, knowing that development
+          is usually mobile first and that I was likely to start coding before I
+          had a finished design.
         </p>
-
-        <v-img
+        <LightBox
+          image="portfolio.jpg"
           width="620"
           alt="Amina's first Website"
-          :src="require('@/assets/portfolio.jpg')"
-        ></v-img>
+          :order="12"
+        />
 
-         <div class="enumeration mt-12">04</div>
+        <div class="enumeration mt-12">04</div>
         <p>Now I switched between coding and redesigning.</p>
 
         <h3>First iteration</h3>
 
         <v-row class="my-5">
           <v-col>
-               <v-img
-          alt="design1"
-          width="400"
-          :src="require('@/assets/old2.jpg')"
-        ></v-img>
+            <LightBox image="old2.jpg" width="400" alt="design1" :order="13" />
           </v-col>
           <v-col>
-             <v-img
-          alt="design1 mobile"
-          width="100"
-          :src="require('@/assets/old3.jpg')"
-        ></v-img>
+            <LightBox
+              image="old3.jpg"
+              width="130"
+              alt="design1 mobile"
+              :order="14"
+            />
           </v-col>
         </v-row>
-       
 
-         <div class="enumeration mt-12">05</div>
+        <div class="enumeration mt-12">05</div>
 
-    
-        <p>I messed up trying to find a matching color scheme. I thought I'd go for colors I found in my profile pic, but the contrast was terribly off - not good for accessibility.</p>
+        <p>
+          I messed up trying to find a matching color scheme. I thought I'd go
+          for colors I found in my profile pic, but the contrast was terribly
+          off - not good for accessibility.
+        </p>
         <v-row class="my-5">
           <v-col>
-               <v-img
-          width="620"
-          alt="Third iteration"
-          :src="require('@/assets/colorpallette.jpg')"
-        ></v-img>
-
+            <LightBox
+              image="colorpallette.jpg"
+              width="620"
+              alt="Third iteration"
+              :order="15"
+            />
           </v-col>
         </v-row>
-        
-      
-
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import StatsOverviewCard from '../../components/StatsOverviewCard.vue';
+import LightBox from "@/components/LightBox";
+import StatsOverviewCard from "../../components/StatsOverviewCard.vue";
 export default {
   name: "Portfolio",
-  components: {StatsOverviewCard},
+  components: { StatsOverviewCard, LightBox },
   props: {},
   data() {
     return {
@@ -127,7 +133,6 @@ export default {
   methods: {},
 };
 </script>
-
 
 <style lang="scss" scoped>
 .portfolio {
@@ -162,5 +167,4 @@ p {
 h3 {
   margin: 6px 0 16px 0;
 }
-
 </style>
