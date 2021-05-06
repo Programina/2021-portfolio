@@ -11,7 +11,7 @@
     </a> 
      <portal to="destination" :order="order">
         <div class="lightbox-target" :id="image.substring(0, image.length - 4)">
-          <div :class="[!isMobile ? 'lightbox-img-container-lg' : 'lightbox-img-container-sm' ]">
+          <div :class="[[!isMobile ? 'lightbox-img-container-lg' : 'lightbox-img-container-sm' ], [isVertical ? 'is-vertical' : undefined]]">
            <v-img
               :alt="alt | image"
               :src="require('@/assets/' + image + '')"
@@ -52,6 +52,10 @@ export default {
     },
     alt: {
       type: String,
+      required: false
+    },
+    isVertical: {
+      type: Boolean,
       required: false
     }
   },
