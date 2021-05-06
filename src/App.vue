@@ -437,7 +437,7 @@ top: 0px;
   max-width: 450px;
 
   &.is-vertical {
-    height: 450px;
+    height: 750px;
     max-width: 350px;
   }
 }
@@ -447,8 +447,8 @@ top: 0px;
   max-height: 850px;
   max-width: 900px;
   &.is-vertical {
-    height: 1100px ;
-    max-width: 850px;
+    height: 850px ;
+    max-width: 400px;
   }
 }
 

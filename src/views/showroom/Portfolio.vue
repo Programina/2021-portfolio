@@ -65,11 +65,11 @@
 
         <v-row class="my-5">
           <v-col>
-            <LightBox image="old2.jpg" width="400" alt="design1" :order="13" />
+            <LightBox image="old2.jpg"  width="400" alt="design1" :order="13" />
           </v-col>
           <v-col>
             <LightBox
-              image="old3.jpg"
+              image="old3.jpg" v-bind:isVertical="true"
               width="130"
               alt="design1 mobile"
               :order="14"
