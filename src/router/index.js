@@ -91,7 +91,9 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   NavService.setCurrentRoute(to)
-  window.scrollTo(0,0)
+  if(!to.fullPath.includes('#') && !from.fullPath.includes('#')){
+    window.scrollTo(0,0)
+  }
   next()
 })
 

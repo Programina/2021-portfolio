@@ -21,9 +21,10 @@
       <v-col cols="12" class="ma-5" >
          <v-row justify="center" :class="[isMobile ? 'flex-column' : undefined]">
             <v-col cols="12" class="d-flex justify-center">
-              <a href="https://www.lotto-thueringen.de/eurojackpot/eurojackpot/spielschein.html ">
-                <v-img :height="mobileImage.height" :width="mobileImage.width" alt="lotto" src="@/assets/lotto.png"/>
-              </a>           
+              <div style="text-align: center">
+               <LightBox :image="'lotto.png'" :height="mobileImage.height"  :width="mobileImage.width" alt="lotto" imgClass="mb-2" :order="6"/>
+               <a href="https://www.lotto-thueringen.de/eurojackpot/eurojackpot/spielschein.html" style="text-decoration: none !important; text-transform: none !important; color: #3bcea0 !important; "> Click here for the current Website</a> 
+              </div>        
             </v-col>
             <v-col cols="12" class="py-5 justify-center" >
                   <div>
@@ -51,9 +52,10 @@
       <v-col cols="12" class="ma-5">
         <v-row justify="center" :class="[isMobile ? 'flex-column' : undefined]">
           <v-col cols="12" class="d-flex justify-center">
-              <a href="https://www.gardena.com/de/">
-                <v-img :height="mobileImage.height" :width="mobileImage.width"  alt="gardena" src="@/assets/gardena.png" />
-              </a>
+          <div style="text-align: center">
+              <LightBox :image="'gardena.png'" :height="mobileImage.height" :width="mobileImage.width" imgClass="mb-2" alt="gardena" :order="6"/>
+              <a href="https://www.gardena.com/de/" style="text-decoration: none !important; text-transform: none !important; color: #3bcea0 !important; "> Click here for the current Website</a> 
+          </div> 
           </v-col>
           <v-col cols="12" class="py-5 justify-center">
             <div>
@@ -82,6 +84,8 @@
 </template>
 
 <script>
+
+import LightBox from "@/components/LightBox"
 import ismobile from "@/mixins/ismobile";
 import MobileContentTemplate from "@/components/MobileContentTemplate";
 import DesktopContentTemplate from "@/components/DesktopContentTemplate";
@@ -89,7 +93,7 @@ import DesktopContentTemplate from "@/components/DesktopContentTemplate";
 export default {
   name: "Dev",
   mixins: [ismobile],
-  components: { MobileContentTemplate, DesktopContentTemplate },
+  components: { MobileContentTemplate, DesktopContentTemplate, LightBox },
   data() {
     return {
       cards: [

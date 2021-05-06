@@ -1,19 +1,22 @@
 <template>
 <div>
-    <a class="lightbox" href="#imgId">
+    <a class="lightbox" :href="'#' + image.substring(0, image.length - 4)">
       <v-img
-              class="ml-5"
-              :alt="image "
+              :class="imgClass"
+              :width="width"
+              :height="height"
+              :alt="alt | image"
               :src="require('@/assets/' + image + '')"
        ></v-img>
     </a> 
      <portal to="destination" :order="order">
-        <div class="lightbox-target" id="imgId">
+        <div class="lightbox-target" :id="image.substring(0, image.length - 4)">
+          <div :class="[!isMobile ? 'lightbox-img-container-lg' : 'lightbox-img-container-sm' ]">
            <v-img
-              class="ml-5"
-              :alt="image"
+              :alt="alt | image"
               :src="require('@/assets/' + image + '')"
             ></v-img>
+          </div>
           <a class="lightbox-close" href="#"></a>
         </div>
     </portal>
@@ -22,8 +25,10 @@
 </template>
 
 <script>
+import ismobile from '@/mixins/ismobile.js'
 export default {
   name: 'LightBox',
+  mixins: [ismobile],
   props: {
     image: {
       type: String,
@@ -31,6 +36,22 @@ export default {
     },
     order: {
       type: Number,
+      required: false
+    },
+    imgClass: {
+      type: String | Array,
+      required: false
+    }, 
+    width: {
+      type: String | Number,
+      required: false
+    }, 
+    height: {
+      type: String | Number,
+      required: false
+    },
+    alt: {
+      type: String,
       required: false
     }
   },

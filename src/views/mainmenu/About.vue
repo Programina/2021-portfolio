@@ -31,8 +31,7 @@
     <v-row class="my-5">
       <v-col >
         <h3>Current projects</h3>
-        
-    <a
+            <a
               href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20certification&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwgtWDBhDZARIsADEKwgOsbdETicgHXbb_Q--9T0REBsLycMQK29MHZc2XbwS6yc175Pkl8LsaAhioEALw_wcB"
               style="text-transform: none; text-decoration: none;"
               >
@@ -139,7 +138,7 @@
 
 <script>
 import scrollbehavior from "@/mixins/scrollbehavior.js"
-import Svgs from "@/components/Svgs";
+import Svgs from "@/components/Svgs"
 
 export default {
   name: "About",

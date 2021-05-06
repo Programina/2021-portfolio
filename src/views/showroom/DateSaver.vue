@@ -46,12 +46,13 @@
         
         <v-row >
           <v-col class="d-flex justify-center">
-             <a href="http://love.frontendpoint.com/">
-        <v-img
-          width="400"
-          :src="require('@/assets/datesaverold.jpg')"
-        ></v-img>
-      </a>
+            
+            <div style="text-align: center">
+              <LightBox  class="py-1" :image="'datesaverold.jpg'" :width="400" :order="3"/>
+              <a href="http://love.frontendpoint.com/" style="text-decoration: none !important; text-transform: none !important; color: #3bcea0 !important; "> Click here for the current Website</a>
+      
+            </div>
+      
           </v-col>
         </v-row>
      
@@ -66,10 +67,7 @@
         
         <v-row>
           <v-col class="d-flex justify-center">
-              <v-img
-              width="400"
-              :src="require('@/assets/redesignone.jpg')"
-            ></v-img>
+            <LightBox :image="'redesignone.jpg'" :width="400" :order="4"/>
           </v-col>
         </v-row>
 
@@ -81,11 +79,7 @@
 
         <v-row >
           <v-col class="d-flex justify-center">
-            
-        <v-img
-          width="400"
-          :src="require('@/assets/moodboarddatesaver.jpg')"
-        ></v-img>
+            <LightBox :image="'moodboarddatesaver.png'" :width="400" :order="5"/>
           </v-col>
         </v-row>
 
@@ -99,13 +93,7 @@
 
         <v-row >
           <v-col class="d-flex justify-center">
-            
-        <v-img
-          width="400"
-          class="mb-12"
-          :src="require('@/assets/datesavertwo.jpg')"
-        ></v-img>
-
+            <LightBox :image="'datesavertwo.jpg'" :width="400" imgClass="mb-12" :order="6"/>
           </v-col>
         </v-row>
 
@@ -116,10 +104,12 @@
 </template>
 
 <script>
+
+import LightBox from "@/components/LightBox"
 import StatsOverviewCard from "../../components/StatsOverviewCard.vue";
 export default {
   name: "DateSaver",
-  components: { StatsOverviewCard },
+  components: { StatsOverviewCard, LightBox },
   props: {},
   data() {
     return {

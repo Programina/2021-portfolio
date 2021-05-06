@@ -127,67 +127,67 @@ export default {
       height: '400',
       colors: [
         {  
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/home'
         },
         {  
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/'
         },
          { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/about'
         }, 
         {
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/contact'
         }, 
         {
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/contact-success'
         },
         { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/habit-stacks'
         },
         { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/date-saver'
         },
         { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/portfolio'
         },
         { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/ux-ui'
         },
         { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/development'
         },
         { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/other'
         },
         { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/imprint'
         },
         { 
-          color: 'transparent',
+          color: '#fff',
           fontColor: 'black',
           path: '/rss'
         }
@@ -220,7 +220,7 @@ export default {
         colr = this.colors.find(val => val.path === this.currentRoute.path) 
       } else {
         colr = {
-          color: 'transparent', 
+          color: '#fff', 
           fontColor: "black",
           path: '/'
         }
@@ -417,25 +417,42 @@ background: rgba(0,0,0,.7);
 -o-transition: opacity .5s ease-in-out;
 transition: opacity .5s ease-in-out;
 overflow: hidden;
+display: flex;
+flex-direction: row; 
+justify-content: center; 
+align-items: center;
+z-index: 3;
 }
 
-.lightbox-target:target .v-image  {
-max-height: 100%;
-max-width: 100%;
-}
+
 
 .lightbox-target:target a.lightbox-close {
 top: 0px;
 }
 
+.lightbox-img-container-sm {
+  overflow: hidden;
+  position: relative;
+  height: 350px;
+  max-width: 450px;
+}
+
+.lightbox-img-container-lg {
+  overflow: hidden;
+  height: 850px;
+  max-width: 1100px;
+}
 
 .lightbox-target .v-image {
-  margin: auto;
-  position: absolute;
-  top: 4%;
-  left: 4%;
-  right: 4%;
-  bottom: 4%;
+  // margin: auto;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
   box-shadow: 0px 0px 8px rgba(0,0,0,.3);
   box-sizing: border-box;
   -webkit-transition: .5s ease-in-out;
