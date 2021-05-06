@@ -42,30 +42,12 @@
       
       <!--image right -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 === 0" class="pl-12 mb-6">
-       <router-link
-            :to="card.href"
-            class="d-flex mb-10 justify-end"
-          >
-        <v-img
-          class="ml-5"
-          :alt="card.imgSrc"
-          :src="require('@/assets/' + card.imgSrc + '')"
-        ></v-img>
-        </router-link>
+           <LightBox :image="card.imgSrc" :order="1"/>
       </v-col>
 
       <!--image left -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 != 0" class="pr-12 mb-6">
-       <router-link
-            :to="card.href"
-            class="d-flex mb-10 justify-end"
-          >
-        <v-img
-          :alt="card.imgSrc"
-          class="ml-5"
-          :src="require('@/assets/' + card.imgSrc + '')"
-        ></v-img>
-        </router-link>
+           <LightBox :image="card.imgSrc" :order="2"/>
       </v-col>
       <v-spacer></v-spacer>
 
@@ -114,11 +96,13 @@
 import { gsap } from "gsap"
 import { mapState } from "vuex"
 import scrollbehavior from "@/mixins/scrollbehavior.js"
+import LightBox from "@/components/LightBox"
 
 
 export default {
   name: "DesktopContentTemplate",
   mixins: [scrollbehavior],
+  components: {LightBox},
   props: {
     cards: {
       type: Array,

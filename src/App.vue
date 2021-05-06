@@ -83,6 +83,8 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
         <span class="back-to-top__icon"></span>
       </div>
     </v-footer>
+
+   <portal-target name="destination" multiple></portal-target>
   </v-app>
 </template>
 
@@ -401,5 +403,53 @@ body {
     height: 60px;
   }
 }
+
+
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+width: 100%;
+background: rgba(0,0,0,.7);
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+
+.lightbox-target:target .v-image  {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0px;
+}
+
+
+.lightbox-target .v-image {
+  margin: auto;
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  right: 4%;
+  bottom: 4%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+}
+
 
 </style>

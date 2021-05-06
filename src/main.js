@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 import NavService from '@/services/NavService.js'
+import PortalVue from 'portal-vue'
+
+Vue.use(PortalVue)
 
 Vue.config.productionTip = false
 

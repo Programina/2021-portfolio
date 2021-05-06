@@ -11,6 +11,7 @@
     "emailjs-com": "^2.6.4",
     "gsap": "^3.6.1",
     "is-svg": "^4.3.1",
+    "portal-vue": "^2.1.7",
     "splitting": "^1.0.6",
     "ssri": "^8.0.1",
     "vee-validate": "^4.3.5",

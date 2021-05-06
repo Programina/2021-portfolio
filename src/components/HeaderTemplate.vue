@@ -154,7 +154,6 @@ export default {
         );
         
      mappedComponent = { ...comp, fontColor, backgroundColor }
-      console.log("Mapped",  mappedComponent)
       } else {
         mappedComponent = {
           title: "Default",
