@@ -2,10 +2,9 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
 
 <template>
   <v-app id="app-wrapper">
-    <NavBar :color="colr.color" :fontColor="colr.fontColor" @toggle-drawer="toggleDrawer"/>
-
+    <NavBar v-if="colr" :color="colr.color" :fontColor="colr.fontColor" @toggle-drawer="toggleDrawer"/>
     <v-main>
-      <v-row>
+      <v-row v-if="colr">
         <HeaderTemplate :colr="colr" />
       </v-row>
       <v-row class="ma-10 justify-center" >

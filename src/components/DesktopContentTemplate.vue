@@ -43,7 +43,6 @@
       <!--image right -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 === 0" class="pl-12 mb-6">
        <router-link
-            v-if="card.href"
             :to="card.href"
             class="d-flex mb-10 justify-end"
           >
@@ -58,7 +57,6 @@
       <!--image left -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 != 0" class="pr-12 mb-6">
        <router-link
-            v-if="card.href"
             :to="card.href"
             class="d-flex mb-10 justify-end"
           >

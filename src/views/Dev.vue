@@ -22,7 +22,7 @@
          <v-row justify="center" :class="[isMobile ? 'flex-column' : undefined]">
             <v-col cols="12" class="d-flex justify-center">
               <a href="https://www.lotto-thueringen.de/eurojackpot/eurojackpot/spielschein.html ">
-                <v-img :height="[isMobile ? 170 : 300]" :width="[isMobile ? 250 : 400]" alt="lotto" src="@/assets/lotto.png"/>
+                <v-img :height="mobileImage.height" :width="mobileImage.width" alt="lotto" src="@/assets/lotto.png"/>
               </a>           
             </v-col>
             <v-col cols="12" class="py-5 justify-center" >
@@ -52,7 +52,7 @@
         <v-row justify="center" :class="[isMobile ? 'flex-column' : undefined]">
           <v-col cols="12" class="d-flex justify-center">
               <a href="https://www.gardena.com/de/">
-                <v-img :height="[isMobile ? 170 : 300]" :width="[isMobile ? 250 : 400]"  alt="gardena" src="@/assets/gardena.png" />
+                <v-img :height="mobileImage.height" :width="mobileImage.width"  alt="gardena" src="@/assets/gardena.png" />
               </a>
           </v-col>
           <v-col cols="12" class="py-5 justify-center">
@@ -150,6 +150,23 @@ export default {
         // },
       ],
     };
+  },
+  computed: {
+    mobileImage(){
+      let mobImg = {
+        height: null,
+        width: null
+      }
+
+      if(this.isMobile) {
+        mobImg.height = 170
+        mobImg.width = 250
+      } else {
+        mobImg.height = 300
+        mobImg.width = 400
+      }
+      return  mobImg
+    }
   }
 };
 </script>
