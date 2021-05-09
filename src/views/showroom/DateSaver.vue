@@ -7,28 +7,19 @@
       <v-col class="d-flex flex-column justify-center mt-10">
 
       
-        <h3>Problem</h3>
+        <h3>Challenge</h3>
         <p>
-          Two years into our relationship, my boyfriend and I had developed the
-          habit of ping-ponging our decision on how to spend our evenings together.
-        </p>
-        <v-row >
-        </v-row>
-       
-        <p class="my-5">
-          We both love variety, but tire easily of making decisions.
-          I thought of a way to approach this recurring problem strategically. I
-          created an app.
+          My boyfriend and I had gotten in a rut deciding on what to do with our evenings together. 
         </p>
         <strong>
-          We needed something simple to help make viable decisions on the activity. It should not take much time to type in further considerations like our current budget, the weather and time of day. 
+          I wanted an app to help us make decisions. It should not take much time, be fun and easy to use and have a surprise factor. The suggestions should still be viable though.  
         </strong>
 
         
         <h3 class="mt-16">Process</h3>
          <div class="enumeration mt-5">01</div>
         <p> 
-          I wanted the interface to be familiar and fun, so I thought of a magic 8 ball.
+          I wanted the interface to be familiar and fun. My first iteration focussed on programming, so I did not give the interface enough thought. This was months ago. After having learned a lot about user experience, I would approach this differently.
         </p>
         <v-row >
         </v-row>
@@ -45,14 +36,9 @@
 
         
         <v-row >
-          <v-col class="d-flex justify-center">
-            
-            <div style="text-align: center">
+          <v-col class="d-flex flex-column justify-center text-center centered-image-group">
               <LightBox  class="py-1" :image="'datesaverold.jpg'" :width="400" :order="3"/>
-              <a href="http://love.frontendpoint.com/" style="text-decoration: none !important; text-transform: none !important; color: #3bcea0 !important; "> Click here for the current Website</a>
-      
-            </div>
-      
+              <a href="http://love.frontendpoint.com/"> Click here for the current Website</a>
           </v-col>
         </v-row>
      
@@ -60,16 +46,22 @@
 
         <div class="enumeration mt-12">03</div>
         <p> 
-         I had not put much effort into the design, so I redesigned it recently. I started making a rough sketch on paper.
+         I did a redesign and started with a rough sketch on paper.</p>
+
+         <p>
+         The app I had built did not 'spark joy', neither with me nor my boyfriend. So <strong>user testing revealed a bad user experience</strong>.
         </p>
-      
+
 
         
         <v-row>
-          <v-col class="d-flex justify-center">
+          <v-col class="d-flex justify-center mb-6">
             <LightBox :image="'redesignone.jpg'" :width="400" :order="4"/>
           </v-col>
         </v-row>
+        
+        <p>It simply was not pleasant to look at or fun enough to use. I wanted a simpler,less noisy interface and something fun and playful. Connecting that to decision-making, I thought of a magic 8 ball.</p>
+      
 
         <div class="enumeration mt-12">04</div>
         <p> 
@@ -87,15 +79,21 @@
 
          <div class="enumeration mt-12">05</div>
         <p> 
-        Thankfully the app was meant to be simple, so it did not take long to get to a nerly finished high fidelity mockup.
+        Here is the current mockup. I plan on introducing a better contrast around the buttons as well as more depth and add info on the time of day. 
         </p>
 
 
         <v-row >
-          <v-col class="d-flex justify-center">
-            <LightBox :image="'datesavertwo.jpg'" :width="400" imgClass="mb-12" :order="6"/>
+          <v-col class="d-flex flex-column justify-center text-center mb-12 centered-image-group">
+          
+            <LightBox :image="'datesavertwo.jpg'" :width="400"  :order="6"/> 
+            <a href="https://xd.adobe.com/view/dcb3ae1a-d272-464a-bd2d-89fa33031f24-89e0/"> Click here for the current Mockup</a>
+  
           </v-col>
         </v-row>
+
+        <p>I will then create a clickable prototype. 
+        I also plan on structuring my design systems better, so colors are not the first thing you see on clicking the Adobe link.</p>
 
 
       </v-col>
@@ -153,5 +151,17 @@ ul {
       text-transform: inherit;
     }
   }
+}
+
+.centered-image-group {
+  ::v-deep #lightbox {
+    display: flex;
+    justify-content: center;
+  }
+   a, a:hover, a:active, a:visited, a:focus {
+      text-decoration: none !important; 
+      text-transform: none !important; 
+      color: #3bcea0 !important; 
+    }
 }
 </style>

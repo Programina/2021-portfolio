@@ -46,25 +46,25 @@ export default {
         },
         {
           title: "I am Amina",
-          subtitle: "Design is my passion.",
+          subtitle: "Design is my passion",
           path: "/about",
           // img: "brushes.png"
         },
         {
           title: "Contact me",
-          subtitle: "I'd love to hear from you.",
+          subtitle: "I'd love to hear from you",
           path: "/contact",
           // img: "brushes.png"
         },
         {
           title: "Thank you!",
-          subtitle: "I am glad you got in touch.",
+          subtitle: "I am glad you got in touch",
           path: "/contact-success",
           // img: "brushes.png"
         },
         {
           title: "HabitStacks",
-          subtitle: "Build habits that last.",
+          subtitle: "Build habits that last",
           path: "/habit-stacks",
           // img: "brushes.png"
         },

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="lightbox">
     <div class="lightbox" @click="toggleLightBox">
       <v-img
               :class="imgClass"
