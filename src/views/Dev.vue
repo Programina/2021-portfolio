@@ -28,7 +28,7 @@
             </v-col>
             <v-col cols="12" class="py-5 justify-center" >
                   <div>
-                    <p :class="[isMobile ? undefined : 'mx-10  px-16']">
+                    <p :class="[isMobile ? undefined : 'mx-10  px-16 text-center']">
                       For about two months I worked on the corporate website for Lotto Thüringen as part of a team of frontend developers and UX designers. 
                     </p>
                     <div class="d-flex justify-center" style="flex-wrap: wrap;">
@@ -59,7 +59,7 @@
           </v-col>
           <v-col cols="12" class="py-5 justify-center">
             <div>
-              <p :class="[isMobile ? undefined : 'mx-10  px-16']">For about three months I worked on the corporate website for Gardena as part of a team of frontend developers and UX designers. </p>
+              <p :class="[isMobile ? undefined : 'mx-10  px-16  text-center']">For about three months I worked on the corporate website for Gardena as part of a team of frontend developers and UX designers. </p>
               <div class="d-flex justify-center" style="flex-wrap: wrap;">
                 <v-chip class="ma-2">
                   HTML

@@ -55,7 +55,7 @@ export default {
       stats: {
         client: "Me",
         time: "A weekend in 2020 - ongoing",
-        role: "Creator, includes branding strategist, UX designer, developer",
+        role: "Creator",
         sector: "Self-development",
         status: "WIP",
         tags: [

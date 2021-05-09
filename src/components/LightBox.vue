@@ -1,6 +1,6 @@
 <template>
 <div>
-    <a class="lightbox" :href="'#' + image.substring(0, image.length - 4)">
+    <div class="lightbox" @click="toggleLightBox">
       <v-img
               :class="imgClass"
               :width="width"
@@ -8,16 +8,16 @@
               :alt="alt | image"
               :src="require('@/assets/' + image + '')"
        ></v-img>
-    </a> 
+    </div> 
      <portal to="destination" :order="order">
-        <div class="lightbox-target" :id="image.substring(0, image.length - 4)">
+        <div class="lightbox-target" v-if="!lightBoxClosed">
           <div :class="[[!isMobile ? 'lightbox-img-container-lg' : 'lightbox-img-container-sm' ], [isVertical ? ' is-vertical' : undefined]]">
            <v-img
               :alt="alt | image"
               :src="require('@/assets/' + image + '')"
             ></v-img>
           </div>
-          <a class="lightbox-close" href="#"></a>
+          <div :class="[!lightBoxClosed ? 'lightbox-close' : undefined]" @click="toggleLightBox"></div>
         </div>
     </portal>
 </div>
@@ -29,6 +29,11 @@ import ismobile from '@/mixins/ismobile.js'
 export default {
   name: 'LightBox',
   mixins: [ismobile],
+  data() {
+    return {
+      lightBoxClosed: true
+    }
+  },
   props: {
     image: {
       type: String,
@@ -59,13 +64,18 @@ export default {
       required: false
     }
   },
+  methods: {
+    toggleLightBox(){
+      this.lightBoxClosed = !this.lightBoxClosed
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
 
-
-a.lightbox .v-image {
+.lightbox {
+  cursor: pointer;
 }
 
 
@@ -73,28 +83,9 @@ a.lightbox .v-image {
 
 
 
-/* Styles the close link, adds the slide down transition */
-
-a.lightbox-close {
-display: block;
-width:50px;
-height:50px;
-box-sizing: border-box;
-background: white;
-color: black;
-text-decoration: none;
-position: absolute;
-top: -80px;
-right: 0;
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
-}
-
 /* Provides part of the "X" to eliminate an image from the close link */
 
-a.lightbox-close:before {
+.lightbox-close:before {
 content: "";
 display: block;
 height: 30px;
@@ -109,22 +100,6 @@ top:10px;
 transform:rotate(45deg);
 }
 
-/* Provides part of the "X" to eliminate an image from the close link */
-
-a.lightbox-close:after {
-content: "";
-display: block;
-height: 30px;
-width: 1px;
-background: black;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(-45deg);
--moz-transform:rotate(-45deg);
--o-transform:rotate(-45deg);
-transform:rotate(-45deg);
-}
 
 /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
 

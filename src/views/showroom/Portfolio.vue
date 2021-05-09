@@ -111,7 +111,7 @@ export default {
       stats: {
         client: "Me",
         time: "Beginning of 2020 – ongoing",
-        role: "Creator, includes branding strategist, UX designer, developer",
+        role: "Creator",
         sector: "IT / Tech",
         status: "WIP",
         tags: [

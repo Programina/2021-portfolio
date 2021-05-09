@@ -77,7 +77,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
       <router-link to="/imprint" class="d-flex align-center justify-center">
         Imprint
       </router-link>
-      <div class="ma-5">Last update April 2021</div>
+      <div class="ma-5">Last update May 2021</div>
 
       <div :class="['back-to-top', [isScrolled ? 'on-scroll' : undefined]]" @click="scrollToTop">
         <span class="back-to-top__icon"></span>
@@ -410,6 +410,10 @@ body {
 
 .lightbox-target {
 position: fixed;
+top: 0;
+bottom: 0;
+left: 0; 
+right: 0;
 width: 100%;
 background: rgba(0,0,0,.7);
 -webkit-transition: opacity .5s ease-in-out;
@@ -426,9 +430,44 @@ z-index: 3;
 
 
 
-.lightbox-target:target a.lightbox-close {
-top: 0px;
+/* Provides part of the "X" to eliminate an image from the close link */
+
+.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
 }
+
+
+/* Styles the close link, adds the slide down transition */
+
+.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: 0;
+right: 0;
+cursor: pointer;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
 
 .lightbox-img-container-sm {
   overflow: hidden;

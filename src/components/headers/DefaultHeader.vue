@@ -37,12 +37,12 @@
 
                 <div v-if="designerImageDisplayed" style="display: inline-block; margin: 0 10px;">
                   <v-scroll-y-transition>
-                    <div class="heading-animated slideInDown" style="display: inline-block;">{{ copy.transitionItem[0] }}</div>
+                    <div :class="['heading-animated', [startSliding ? 'slideInDown' : undefined]]" style="display: inline-block;">{{ copy.transitionItem[0] }}</div>
                   </v-scroll-y-transition>
                 </div>
                 <div v-if="!designerImageDisplayed" style="display: inline-block; margin: 0 10px;" >
                     <v-scroll-y-transition>
-                    <div class="heading-animated slideInDown" >{{ copy.transitionItem[1] }}</div>
+                    <div :class="['heading-animated', [startSliding ? 'slideInDown' : undefined]]">{{ copy.transitionItem[1] }}</div>
                     </v-scroll-y-transition>
                 </div>
                 <span class="heading-animated" v-html="copy.profile2"></span>
@@ -86,6 +86,7 @@ export default {
   },
   data() {
     return {
+      startSliding: false,
       designerImageDisplayed: false,
       scrollY: false,
       interval: null,
@@ -119,7 +120,7 @@ export default {
     //    this.pseudoColor = window.getComputedStyle( document.querySelector('span'), ':after'
     //   ).getPropertyValue('background-color')
     // }
-    this.imageIntervall();
+    setTimeout( () => { this.designerImageDisplayed = !this.designerImageDisplayed; this.imageIntervall(); this.startSliding = true;  } , 2000);
     Splitting();
   },
   beforeDestroy() {
@@ -232,7 +233,7 @@ a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
 
 
 @keyframes slideInDown {
-  0%   {transform: translate3d(0, -100%, 0); opacity: 1;}
+  0%   {transform: translate3d(0, -50%, 0); opacity: 1;}
   50%  {transform: translate3d(0, -3%, 0); opacity: 1;}
   65%  {transform: translate3d(0, 0, 0);opacity: 1;}
   85%  {transform: translate3d(0, 0, 0); opacity: 0.8;}
