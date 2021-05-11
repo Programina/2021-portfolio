@@ -158,7 +158,7 @@
 
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon v-text="'mdi-heart'"></v-icon>
+                  <v-icon v-text="'mdi-school'"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
                  I even learned some Japanese, but forgot most of it.
@@ -209,7 +209,7 @@
                   <v-icon v-text="'mdi-balloon'"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content
-                  >One reason for becoming a programmer: I liked that IT
+                  >One reason for becoming a programmer: I liked that some IT
                   companies had ball pits.
                 </v-list-item-content>
               </v-list-item>
