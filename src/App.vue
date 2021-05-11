@@ -47,7 +47,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
           filetype="pdf"
           >
               <v-list-item-content>
-              <v-list-item-title v-html="'Resume (German)'"></v-list-item-title>
+              <v-list-item-title v-html="'CV (German PDF)'"></v-list-item-title>
             </v-list-item-content>
           
         </a

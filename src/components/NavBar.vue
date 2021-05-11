@@ -35,10 +35,10 @@
       </router-link>
       <a
         :style="{'color': fontColor + ' !important'}"
-        href="./abelabbesResume.pdf"
+        target="_blank"
         download="Amina_Belabbes_Resume_2021.pdf"
-        filetype="pdf"
-        >Resume (German)</a
+        @click="openPdf"
+        >German CV</a
       >
       <router-link :style="{'color': '#3bcea0' + ' !important', 'font-weight': 'bolder'}" to="contact"
         >Contact
@@ -70,6 +70,9 @@ export default {
   methods: {
     toggleDrawer(){
       this.$emit('toggle-drawer')
+    },
+    openPdf() {
+      window.open('./abelabbesResume.pdf');
     }
   },
   data() {
@@ -103,6 +106,9 @@ export default {
 
   #nav {
     a:hover, a:active {
+      background-image: linear-gradient(transparent 50%, #C9F8F7 0%);
+    }
+    .router-link-exact-active {
       background-image: linear-gradient(transparent 50%, #C9F8F7 0%);
     }
   }

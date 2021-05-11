@@ -11,26 +11,14 @@
     <div :class="['header-container d-flex justify-center align-center', [isMobile ? 'mobile-header flex-column' : 'desktop-header']]" >
 
       
-            <div v-if="isMobile" :class="[ isMobile ? 'flip-card is-mobile' : 'flip-card']" cols="6">
-                <div class="flip-card-inner mb-5">
-                  <div class="flip-card-front">    
-                    <v-img
-                        :src="require('@/assets/developer.png')"
-                        contain
-                        :key="'dev-gif'"
-                        :height="height"
-                      />
-                  </div>
-                  <div class="flip-card-back">
-                    <v-img
-                      :src="require('@/assets/designer.png')"
-                      contain
-                      :height="height"
-                    />
-                  </div>
-                </div>
-            </div>
-           
+          <v-img
+            v-if="isMobile"
+            :src="require('@/assets/amina.png')"
+            contain
+            :key="'dev-gif'"
+            :width="imageParameter"
+          />
+
 
             <div cols="5" :class="[isMobile ? 'text-container mobile': 'pr-8 text-container']">
                 <span class="heading-animated" v-html="copy.profile1"></span>
@@ -49,32 +37,22 @@
             </div>
             <div cols="1" style="width: 50px"> </div>
 
-            <div  v-if="isMobile" >
+            <div  v-if="isMobile">
               <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact" style="text-decoration: none">
                 <v-btn rounded elevation="10" color="primary" class="pa-6 mr-2">Get in touch </v-btn>
               </router-link>
             </div>
-
-            <div v-if="!isMobile" :class="[ isMobile ? 'flip-card is-mobile' : 'flip-card']" cols="6">
-                <div class="flip-card-inner mb-5">
-                  <div class="flip-card-front">    
-                    <v-img
-                        :src="require('@/assets/developer.png')"
-                        contain
-                        :key="'dev-gif'"
-                        :height="height"
-                      />
-                  </div>
-                  <div class="flip-card-back">
-                    <v-img
-                      :src="require('@/assets/designer.png')"
-                      contain
-                      :height="height"
-                    />
-                  </div>
-                </div>
+            <div cols="6">
+                <v-img v-if="!isMobile" 
+                  
+                  :src="require('@/assets/amina.png')"
+                  contain
+                  :height="imageParameter"
+                  :width="imageParameter"
+                />
             </div>
-         
+            
+  
       </div>
      
       
@@ -148,11 +126,11 @@ export default {
   },
   computed: {
     ...mapState(["currentRoute"]),
-    height() {
+    imageParameter() {
       if(this.isMobile) {
         return 200
       } else {
-        return 300
+        return 230
       }
     }
   },
@@ -266,15 +244,8 @@ a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
 }
 
 
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  perspective: 1000px;
-  height: 300px;
-
-  &.is-mobile {
-    height: 190px;
-  }
+.is-mobile {
+  height: 190px;
 }
 
 .flip-card-inner {

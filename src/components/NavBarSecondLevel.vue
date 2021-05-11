@@ -40,8 +40,8 @@ export default {
   mounted(){
     this.isHomeScreen = true
     if(this.currentRoute.path === ('/' || '/home' || '/ux-ui') && this.isHomeScreen) {
-      this.uxEl = document.getElementById('UX & UI');
-      this.uxEl.style.textDecoration = "underline"
+      this.uxEl = document.getElementById('UX & UI')
+      this.uxEl.style.backgroundImage = "linear-gradient(transparent 50%, #C9F8F7 0%)"
     } 
   }, 
   watch: {
@@ -57,3 +57,15 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+ #nav-second-level {
+
+    a:hover, a:active, .router-link-exact-active {
+      background-image: linear-gradient(transparent 50%, #C9F8F7 0%);
+    }
+
+   a, a:hover, a:visited, a:active, a:focus {
+     text-decoration: none;
+   }
+ }
+</style>
