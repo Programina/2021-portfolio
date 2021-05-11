@@ -11,7 +11,7 @@
     <div :class="['header-container d-flex justify-center align-center', [isMobile ? 'mobile-header flex-column' : 'desktop-header']]" >
 
       
-            <div :class="[ isMobile ? 'flip-card is-mobile' : 'flip-card']" cols="6">
+            <div v-if="isMobile" :class="[ isMobile ? 'flip-card is-mobile' : 'flip-card']" cols="6">
                 <div class="flip-card-inner mb-5">
                   <div class="flip-card-front">    
                     <v-img
@@ -28,9 +28,9 @@
                       :height="height"
                     />
                   </div>
-              </div>
+                </div>
             </div>
-            <div cols="1" style="width: 50px"> </div>
+           
 
             <div cols="5" :class="[isMobile ? 'text-container mobile': 'pr-8 text-container']">
                 <span class="heading-animated" v-html="copy.profile1"></span>
@@ -47,12 +47,32 @@
                 </div>
                 <span class="heading-animated" v-html="copy.profile2"></span>
             </div>
-
+            <div cols="1" style="width: 50px"> </div>
 
             <div  v-if="isMobile" >
               <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact" style="text-decoration: none">
                 <v-btn rounded elevation="10" color="primary" class="pa-6 mr-2">Get in touch </v-btn>
               </router-link>
+            </div>
+
+            <div v-if="!isMobile" :class="[ isMobile ? 'flip-card is-mobile' : 'flip-card']" cols="6">
+                <div class="flip-card-inner mb-5">
+                  <div class="flip-card-front">    
+                    <v-img
+                        :src="require('@/assets/developer.png')"
+                        contain
+                        :key="'dev-gif'"
+                        :height="height"
+                      />
+                  </div>
+                  <div class="flip-card-back">
+                    <v-img
+                      :src="require('@/assets/designer.png')"
+                      contain
+                      :height="height"
+                    />
+                  </div>
+                </div>
             </div>
          
       </div>
@@ -150,7 +170,7 @@ export default {
 }
 
 .text-container {
-  text-align: left;
+  text-align: right;
   margin: 30px 0;
   &.mobile {
     text-align: center;
