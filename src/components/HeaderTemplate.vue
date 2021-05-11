@@ -13,7 +13,6 @@
   
    <component v-else 
       is="DefaultHeader"
-      :style="{'height' : heightAndTop.height}, {'margin-top' : heightAndTop.top}"
       :color="component.backgroundColor"
       :fontColor="component.fontColor"
       :image="component.img"
@@ -126,7 +125,7 @@ export default {
       if(!this.isMobile){
        return {
           height: '350px',
-          defaultHeight: '350px',
+          defaultHeight: '375px',
           top: '0px'
         }
       } else {

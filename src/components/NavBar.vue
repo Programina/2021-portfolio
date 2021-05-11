@@ -7,13 +7,22 @@
   >
     <div class="d-flex align-center">
       <router-link :style="{'color': fontColor}" to="/">
-        <v-img
+        <v-img v-if="isMobile"
               alt="Amina Belabbes Logo"
               class="shrink mr-2"
               contain
-              src="@/assets/logo_transparent.png"
+              src="@/assets/logo.png"
               transition="scale-transition"
-              width="80"
+              width="60"
+            />
+
+         <v-img v-else
+              alt="Amina Belabbes Logo"
+              class="shrink mr-2"
+              contain
+              src="@/assets/logo_text.png"
+              transition="scale-transition"
+              width="140"
             />
       </router-link>
     </div>
@@ -31,7 +40,7 @@
         filetype="pdf"
         >Resume (German)</a
       >
-      <router-link :style="{'color': fontColor + ' !important', 'font-weight': 'bolder'}" to="contact"
+      <router-link :style="{'color': '#3bcea0' + ' !important', 'font-weight': 'bolder'}" to="contact"
         >Contact
       </router-link>
     </div>

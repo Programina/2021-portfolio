@@ -11,7 +11,7 @@
     <div :class="['header-container d-flex justify-center align-center', [isMobile ? 'mobile-header flex-column' : 'desktop-header']]" >
 
       
-            <div class="flip-card" cols="6">
+            <div :class="[ isMobile ? 'flip-card is-mobile' : 'flip-card']" cols="6">
                 <div class="flip-card-inner mb-5">
                   <div class="flip-card-front">    
                     <v-img
@@ -32,7 +32,7 @@
             </div>
             <div cols="1" style="width: 50px"> </div>
 
-            <div cols="5" class="pr-8" :class="[isMobile ? 'text-container mobile': 'text-container']">
+            <div cols="5" :class="[isMobile ? 'text-container mobile': 'pr-8 text-container']">
                 <span class="heading-animated" v-html="copy.profile1"></span>
 
                 <div v-if="designerImageDisplayed" style="display: inline-block; margin: 0 10px;">
@@ -249,8 +249,12 @@ a, a:hover, a:active, a:focus, .btn-link a, .theme--light.v-btn {
 .flip-card {
   background-color: transparent;
   width: 300px;
-  height: 300px;
   perspective: 1000px;
+  height: 300px;
+
+  &.is-mobile {
+    height: 190px;
+  }
 }
 
 .flip-card-inner {
