@@ -56,7 +56,6 @@ TODO: Add a loading spinner for while the email attempts to send
                 </v-btn>
                 <v-btn 
                   type="submit"
-                  elevation="10"
                   text
                   rounded
                   color="primary"

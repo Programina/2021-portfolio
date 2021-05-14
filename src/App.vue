@@ -63,9 +63,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
           ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-github' : 'fa fa-github is-mobile']"></i></a
         ><a data-v-2c037838="" href="https://codepen.io/programina"
           ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-codepen' : 'fa fa-codepen is-mobile']"></i></a
-        ><a data-v-2c037838="" href="https://stackblitz.com/@Programina"
-          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-flash' : 'fa fa-flash is-mobile']"></i
-        ></a>
+        >
         <a data-v-2c037838="" href="https://www.linkedin.com/in/amina-b-b98703149/"
           ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-linkedin' : 'fa fa-linkedin is-mobile']"></i
         ></a>

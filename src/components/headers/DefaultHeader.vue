@@ -39,7 +39,7 @@
 
             <div  v-if="isMobile">
               <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact" style="text-decoration: none">
-                <v-btn rounded elevation="10" color="primary" class="pa-6 mr-2">Get in touch </v-btn>
+                <v-btn rounded color="primary" class="pa-6 mr-2">Get in touch </v-btn>
               </router-link>
             </div>
             <div cols="6">
@@ -112,12 +112,6 @@ export default {
     },
   },
   mounted() {
-
-    // keep just in case
-    // if(this.color) {
-    //    this.pseudoColor = window.getComputedStyle( document.querySelector('span'), ':after'
-    //   ).getPropertyValue('background-color')
-    // }
     setTimeout( () => { this.designerImageDisplayed = !this.designerImageDisplayed; this.imageIntervall(); this.startSliding = true;  } , 2000);
     Splitting();
   },

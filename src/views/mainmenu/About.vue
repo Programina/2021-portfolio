@@ -5,7 +5,7 @@
     </h3>
 
     <p class="my-5">
-      I'm a frontend developer and UX designer from Germany with 3 years of
+      My name is Amina, I am a frontend developer and UX designer from Germany with 3 years of
       experience as a developer and half a year of experience as a designer.
     </p>
 
@@ -28,42 +28,47 @@
     </blockquote>
 
     <p>
-      It has been my dream for years to work as a designer and pursue a creative
-      career. I know I can do outstanding work in that area with not nearly as
-      much effort as I put into learning how to code.
+      It has been my dream of many years to pursue a creative
+      career. I know I can do outstanding work in that area if I put my heart and soul into it.
     </p>
     <p>
-      However, learning how to code gave me great confidence and the advantage
-      of being able to not only have ideas, but to make them come to life.
+      Learning to code, on the other hand, has been a fun challenge that I feel I may never excel at, but it gave me great confidence and the advantage
+      of being able to not only have ideas, but to have the skills to make them come to life.
     </p>
+
+
+    
+
+      
+
+    <v-row class="my-5">
+          <v-col class="d-flex flex-column justify-center">
+            <h3>UX Design Certificates</h3>
+            <LightBox image="GoogleCertificate.png" width="500px"></LightBox>
+          </v-col>
+    </v-row>
+    
 
     <v-row class="my-5">
       <v-col>
         <h3>Current projects</h3>
-        <a
-          href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20certification&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwgtWDBhDZARIsADEKwgOsbdETicgHXbb_Q--9T0REBsLycMQK29MHZc2XbwS6yc175Pkl8LsaAhioEALw_wcB"
-          style="text-transform: none; text-decoration: none;"
-        >
+
           <v-card class="my-5" :color="'#fff'">
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
                 <v-card-title class="text-h5"
-                  >Google UX Design Certificate</v-card-title
+                  >Google UX Design Professional Certificate</v-card-title
                 >
 
                 <v-card-subtitle class="pt-5">
-                  I attend Google's Coursera course to get the
+                  I attend Google's series of seven courses to get the 
                   <a
                     href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20design%20certificate&matchtype=p&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwsqmEBhDiARIsANV8H3ZFaveHjHXxApoC19Ly3i9HZPQdbKla8R2BvqkrM_vaJCNSSTvBNHMaAtjuEALw_wcB"
                     style="text-transform: inherit; color: #3bcea0 !important"
-                    >Google UX Design Certificate</a
-                  >
+                    >Google UX Design Professional Certificate</a
+                  >. <br/> I am currently at course 2 of 7:  "Start the UX Design Process: Empathize, Define, and Ideate". 
+    
                 </v-card-subtitle>
-
-                <!-- <v-card-actions>
-              
-
-                </v-card-actions> -->
               </div>
 
               <a
@@ -72,16 +77,13 @@
                 ><v-avatar class="ma-3" size="150" tile>
                   <v-img
                     src="@/assets/designcertificate.jpg"
-                  ></v-img> </v-avatar
-              ></a>
+                  ></v-img> </v-avatar></a>
             </div>
           </v-card>
-        </a>
 
-        <a
-          href="https://www.skillshare.com/classes/Adobe-Photoshop-CC-%E2%80%93-Essentials-Training-Course/1810443793/projects"
-          style="text-decoration: none; text-transform: inherit; color: #3bcea0 !important"
-        >
+      
+
+  
           <v-card class="my-5" :color="'#fff'">
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
@@ -94,12 +96,8 @@
                     style="text-transform: inherit; color: #3bcea0 !important"
                     >Daniel Scott on Skillshare
                   </a>
+
                 </v-card-subtitle>
-
-                <!-- <v-card-actions>
-              
-
-                </v-card-actions> -->
               </div>
 
               <a
@@ -109,7 +107,6 @@
               ></a>
             </div>
           </v-card>
-        </a>
       </v-col>
     </v-row>
 
@@ -124,9 +121,56 @@
     </v-row>
 
     <v-row class="my-8 justify-center">
+          <v-col>
+            <h3>Philosophy and Values</h3>
+              <v-card class="mx-auto" elevation="0" max-width="600" tile>
+                 <v-list dense>
+                   <v-list-item-group color="primary">
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-content
+                        >Be equitable and empathetic. The user always comes first! Thou shalt not design without research and thou shalt always consider not everyone is like you.</v-list-item-content
+                      >
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-content>
+                        Be humble. Whether it be towards the team or by challenging my own biases and beliefs, I don't always have the answer, but someone else might.
+                      </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-content>
+                        Be ethical. If you would not use or buy a product or service and if you don't understand it, don't sell it.
+                      </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-content>
+                        Be curious. Liz Gilbert suggested to always follow your curiosity and that helps fuel my creativity.
+                      </v-list-item-content>
+                    </v-list-item>
+                    </v-list-item-group>
+                 </v-list>
+            </v-card>
+          
+          </v-col>
+    </v-row>
+
+    <v-row class="my-8 justify-center">
       <v-col>
         <h3>Personal interests and fun facts</h3>
-        <v-card class="mx-auto" max-width="600" tile>
+        <v-card class="mx-auto" elevation="0" max-width="600" tile>
           <v-list dense>
             <v-list-item-group color="primary">
               <v-list-item>
@@ -222,13 +266,14 @@
 </template>
 
 <script>
-import scrollbehavior from "@/mixins/scrollbehavior.js";
-import Svgs from "@/components/Svgs";
+import scrollbehavior from "@/mixins/scrollbehavior.js"
+import Svgs from "@/components/Svgs"
+import LightBox from "@/components/LightBox"
 
 export default {
   name: "About",
   mixins: [scrollbehavior],
-  components: { Svgs },
+  components: { Svgs, LightBox},
 };
 </script>
 
@@ -252,6 +297,6 @@ ul {
 
 ::v-deep div.v-image__image--cover {
   background-position: left center !important;
-  width: 150px;
+  // width: 150px;
 }
 </style>
