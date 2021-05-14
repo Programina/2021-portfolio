@@ -196,7 +196,7 @@ export default {
 }
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .heading-animated {
     font-family: "Muli", Sans-serif;
     font-size: 1.6em;

@@ -29,11 +29,10 @@
 
     <p>
       It has been my dream of many years to pursue a creative
-      career. I know I can do outstanding work in that area if I put my heart and soul into it.
+      career and I know I can do outstanding work once I can dedicate myself to it.
     </p>
     <p>
-      Learning to code, on the other hand, has been a fun challenge that I feel I may never excel at, but it gave me great confidence and the advantage
-      of being able to not only have ideas, but to have the skills to make them come to life.
+      Learning to code has been a real challenge that I may never excel at, but it gave me great confidence and the ability to not only have ideas, but to make them come to life.
     </p>
 
 
@@ -131,7 +130,7 @@
                         <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
                       </v-list-item-icon>
                       <v-list-item-content
-                        >Be equitable and empathetic. The user always comes first! Thou shalt not design without research and thou shalt always consider not everyone is like you.</v-list-item-content
+                        >Be equitable and empathetic. The user always, always(!) comes first. Thou shalt not design without research and thou shalt always consider not everyone is like you.</v-list-item-content
                       >
                     </v-list-item>
                     <v-list-item>
@@ -215,8 +214,7 @@
                   <v-icon v-text="'mdi-kettle-steam'"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  I love British culture, tea time, British botanical gardens
-                  and British literature.
+                  I love British culture like tea time and botanical gardens.
                 </v-list-item-content>
               </v-list-item>
 
