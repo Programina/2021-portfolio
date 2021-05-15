@@ -1,40 +1,44 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col  cols="3">
+    <v-row class="svg-row">
+      <v-col>
         <div class="shadow-box" id="angular"></div>
       </v-col>
-      <v-col  cols="3">
+      <v-col>
         <div class="shadow-box" id="vue"></div>
       </v-col>
-      <v-col  cols="3">
+      <v-col>
         <div class="shadow-box" id="nodejs"></div>
       </v-col>
-      <v-col  cols="3">
+      <v-col>
         <div class="shadow-box" id="javascript"></div>
       </v-col>
-      <v-col  cols="3">
+    </v-row>
+    <v-row class="svg-row">
+      <v-col>
         <div class="shadow-box" id="adobexd"></div>
       </v-col>
-          <v-col  cols="3">
+      <v-col>
         <div class="shadow-box" id="figma"></div>
       </v-col>
-      <v-col  cols="3">
+      <v-col>
         <div class="shadow-box" id="photoshop"></div>
       </v-col>
-      <v-col  cols="3">
+      <v-col>
         <div class="shadow-box" id="typescript"></div>
       </v-col>
-      <v-col  cols="3">
+      </v-row>
+      <v-row class="svg-row">
+      <v-col>
         <div class="shadow-box" id="html"></div>
        </v-col>
-      <v-col  cols="3">
+      <v-col>
         <div class="shadow-box" id="css"></div>
       </v-col>
-      <v-col  cols="3">
+      <v-col>
         <div class="shadow-box" id="svelte"></div>
      </v-col>
-     <v-col  cols="3">
+     <v-col>
         <div class="shadow-box" id="bootstrap"></div>
      </v-col>
     </v-row>
@@ -55,7 +59,78 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
+
+.svg-row {
+    .col {
+      padding: 0;
+    }
+
+    .shadow-box {
+      width: 80px;
+      height: 80px;
+      border-radius: 50px;
+      /* center content using flex box */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* overlay */
+      box-shadow: 0 0 0 100px inset, 0 0 5px lightgrey;
+      /* hover out transition */
+      transition: box-shadow 1s;
+      float: left;
+      margin: 10px;
+      color: rgba(93, 175, 141, 0.9);
+      font-size: 0.85em;      
+    }
+
+     @media only screen and (max-width: 557px) {
+      .shadow-box {
+        width: 65px;
+        height: 65px;
+        font-size: 0.7em;
+      }
+     }
+
+     @media only screen and (max-width: 566px) {
+      .col {
+        max-width: 25%;
+      }
+     }
+
+    @media only screen and (max-width: 370px) {
+      .col {
+        max-width: 100%;
+      }
+    }
+
+    .shadow-box:hover {
+      box-shadow: 0 0 0 5px inset, 0 0 5px lightgrey, 0 0 10px lightgrey inset;
+      transition: box-shadow 1s;
+    }
+
+    .shadow-box:hover::after {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .shadow-box:after {
+      width: 80%;
+      height: 80%;
+      display: block;
+      white-space: pre;
+      color: white;
+      text-align: center;
+      /* center content using flex box */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* hover out transition */
+      transition: opacity 1s 0.5s;
+    }
+}
+
+
 ul {
   list-style: none;
 }
@@ -65,48 +140,7 @@ img {
   box-shadow: 0 0 0 100px inset, 0 0 5px lightgrey;
 }
 
-.shadow-box {
-  width: 80px;
-  height: 80px;
-  border-radius: 50px;
-  /* center content using flex box */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* overlay */
-  box-shadow: 0 0 0 100px inset, 0 0 5px lightgrey;
-  /* hover out transition */
-  transition: box-shadow 1s;
-  float: left;
-  margin: 10px;
-  
-  color: rgba(93, 175, 141, 0.9);
-}
 
-.shadow-box:hover {
-  box-shadow: 0 0 0 5px inset, 0 0 5px lightgrey, 0 0 10px lightgrey inset;
-  transition: box-shadow 1s;
-}
-
-.shadow-box:hover::after {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.shadow-box:after {
-  width: 80%;
-  height: 80%;
-  display: block;
-  white-space: pre;
-  color: white;
-  text-align: center;
-  /* center content using flex box */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* hover out transition */
-  transition: opacity 1s 0.5s;
-}
 
 #angular {
   background-image: url(https://res.cloudinary.com/academind-gmbh/image/upload/f_auto,q_auto/c_limit,dpr_1.0,g_center,w_200/v1/academind.com/site/topics/angular);

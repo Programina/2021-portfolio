@@ -1,5 +1,5 @@
 <template>
-  <v-container class="about">
+  <v-container :class="['about', [isMobile ? 'mobile-about' : undefined]]">
     <h3>
       I am passionate about making software beautiful, easy to use and fun.
     </h3>
@@ -29,10 +29,10 @@
 
     <p>
       It has been my dream of many years to pursue a creative
-      career and I know I can do outstanding work once I can dedicate myself to it.
+      career and I know I can do outstanding work being a UX designer.
     </p>
     <p>
-      Learning to code has been a real challenge that I may never excel at, but it gave me great confidence and the ability to not only have ideas, but to make them come to life.
+      Learning to code hasn't always been easy, but it gave me great confidence in my ability to not only have ideas, but to make them come to life.
     </p>
 
 
@@ -65,7 +65,7 @@
                     href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20design%20certificate&matchtype=p&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwsqmEBhDiARIsANV8H3ZFaveHjHXxApoC19Ly3i9HZPQdbKla8R2BvqkrM_vaJCNSSTvBNHMaAtjuEALw_wcB"
                     style="text-transform: inherit; color: #3bcea0 !important"
                     >Google UX Design Professional Certificate</a
-                  >. <br/> I am currently at course 2 of 7:  "Start the UX Design Process: Empathize, Define, and Ideate". 
+                  >. 
     
                 </v-card-subtitle>
               </div>
@@ -73,7 +73,7 @@
               <a
                 href="https://www.coursera.org/professional-certificates/google-ux-design?utm_source=gg&utm_medium=sem&utm_campaign=15-GoogleUXDesign-ROW&utm_content=15-GoogleUXDesign-ROW&campaignid=12566638067&adgroupid=119528847077&device=c&keyword=google%20ux%20certification&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=507197228289&hide_mobile_promo&gclid=Cj0KCQjwgtWDBhDZARIsADEKwgOsbdETicgHXbb_Q--9T0REBsLycMQK29MHZc2XbwS6yc175Pkl8LsaAhioEALw_wcB"
                 style="text-transform: inherit; color: #3bcea0 !important"
-                ><v-avatar class="ma-3" size="150" tile>
+                ><v-avatar class="ma-3"  tile>
                   <v-img
                     src="@/assets/designcertificate.jpg"
                   ></v-img> </v-avatar></a>
@@ -130,7 +130,7 @@
                         <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
                       </v-list-item-icon>
                       <v-list-item-content
-                        >Be equitable and empathetic. The user always, always(!) comes first. Thou shalt not design without research and thou shalt always consider not everyone is like you.</v-list-item-content
+                        ><b>The user always comes first.</b> Thou shalt not design without research and thou shalt always consider not everyone is like you.</v-list-item-content
                       >
                     </v-list-item>
                     <v-list-item>
@@ -138,7 +138,7 @@
                         <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
                       </v-list-item-icon>
                       <v-list-item-content>
-                        Be humble. Whether it be towards the team or by challenging my own biases and beliefs, I don't always have the answer, but someone else might.
+                        <b>Be humble.</b> Whether it be towards your team or by challenging your own biases and beliefs. You may not always have the answer, but someone else might.
                       </v-list-item-content>
                     </v-list-item>
 
@@ -147,7 +147,7 @@
                         <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
                       </v-list-item-icon>
                       <v-list-item-content>
-                        Be ethical. If you would not use or buy a product or service and if you don't understand it, don't sell it.
+                        <b>Be ethical.</b> If you would not use or buy a product or service and if you don't understand it, don't sell it.
                       </v-list-item-content>
                     </v-list-item>
 
@@ -156,7 +156,7 @@
                         <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
                       </v-list-item-icon>
                       <v-list-item-content>
-                        Be curious. Liz Gilbert suggested to always follow your curiosity and that helps fuel my creativity.
+                       <b>Be curious and never stop learning.</b> Liz Gilbert suggested to always follow your curiosity. Curiosity is great fuel for creativity.
                       </v-list-item-content>
                     </v-list-item>
                     </v-list-item-group>
@@ -267,10 +267,11 @@
 import scrollbehavior from "@/mixins/scrollbehavior.js"
 import Svgs from "@/components/Svgs"
 import LightBox from "@/components/LightBox"
+import ismobile from "@/mixins/ismobile"
 
 export default {
   name: "About",
-  mixins: [scrollbehavior],
+  mixins: [scrollbehavior, ismobile],
   components: { Svgs, LightBox},
 };
 </script>
@@ -279,6 +280,15 @@ export default {
 .about {
   max-width: 630px;
   padding: 0 20px;
+
+  &.mobile-about {
+    padding: 0 70px;
+    width: 100%;
+    max-width: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 ul {
@@ -297,4 +307,29 @@ ul {
   background-position: left center !important;
   // width: 150px;
 }
+
+.v-card__title {
+  word-break: break-word;
+}
+
+.v-avatar {
+  height: 150px !important;
+  width: 150px  !important;
+  min-width: 150px  !important;
+}
+ @media only screen and (max-width: 570px) {
+  .v-avatar {
+    height: 100px  !important;
+    width: 100px  !important;
+    min-width: 100px  !important;
+  }
+}
+
+ @media only screen and (max-width: 430px) {
+  .v-avatar {
+    display: none !important;
+  }
+}
+
+
 </style>
