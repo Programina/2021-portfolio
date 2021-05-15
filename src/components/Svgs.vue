@@ -98,7 +98,7 @@ export default {
       }
      }
 
-    @media only screen and (max-width: 370px) {
+    @media only screen and (max-width: 400px) {
       .col {
         max-width: 100%;
       }
