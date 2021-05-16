@@ -50,8 +50,7 @@
      <div style="widt: 100%" class="d-flex justify-center">
         <LightBox image="CommonBiases.png" height="990" :isXL="true" :isVertical="true" width="380" imgClass="my-12" alt="Info graphic on biases" :order="14"/>
      </div>
-     <p> 
-If this had not been a project for personal use, I would have done more in-depth foundational research, found out who the product was for and what problem it solved before engaging in the design process. </p>
+    
 
       </v-col>
     </v-row>
