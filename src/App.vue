@@ -64,6 +64,9 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
         ><a data-v-2c037838="" href="https://codepen.io/programina"
           ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-codepen' : 'fa fa-codepen is-mobile']"></i></a
         >
+        <a data-v-2c037838="" href="https://twitter.com/MsAminaBelabbes"
+          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-twitter' : 'fa fa-codepen is-mobile']"></i></a
+        >
         <a data-v-2c037838="" href="https://www.linkedin.com/in/amina-b-b98703149/"
           ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-linkedin' : 'fa fa-linkedin is-mobile']"></i
         ></a>
