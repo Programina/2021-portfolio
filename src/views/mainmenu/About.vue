@@ -28,7 +28,7 @@
     </blockquote>
 
     <p>
-      I learn something new about design or coding every day and that is great fun and excites me immensely. Learning to code, as opposed to learning to design, hasn't always come easy to me, but it gave me great confidence in my ability to not only have ideas, but to make them come to life.
+      I learn something new about design or coding every day and that is great fun and excites me immensely. Learning to code, as opposed to learning design, hasn't always come easy to me, but it gave me great confidence in my ability to not only have ideas, but to make them come to life.
     </p>
 
 
@@ -38,7 +38,7 @@
 
     <v-row class="my-5">
           <v-col class="d-flex flex-column justify-center">
-            <h3>UX Design Certificates</h3>
+            <h3>Latest proud achievement</h3>
             <LightBox image="GoogleCertificate.png" class="d-flex justify-center" width="500px"></LightBox>
           </v-col>
     </v-row>

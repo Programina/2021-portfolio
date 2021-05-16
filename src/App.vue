@@ -480,6 +480,11 @@ transition: .5s ease-in-out;
     height: 750px;
     max-width: 350px;
   }
+  &.is-extra-large {
+    max-height: 830px;
+    height: 830px ;
+    max-width: 300px;
+  }
 }
 
 .lightbox-img-container-lg {
@@ -489,6 +494,11 @@ transition: .5s ease-in-out;
   &.is-vertical {
     height: 850px ;
     max-width: 400px;
+  }
+  &.is-extra-large {
+    max-height: 1290px;
+    height: 1290px ;
+    max-width: 480px;
   }
 }
 
