@@ -96,7 +96,6 @@ export default {
 
   a, a:hover, a:active, a:visited, a:focus {
     text-decoration: none;
-    margin-left: 25px;
   }
 
   .navbar {
@@ -106,6 +105,9 @@ export default {
   }
 
   #nav {
+    a {
+       margin-left: 25px;
+    }
 
     a:active {
       background-image: linear-gradient(transparent 50%, #C9F8F7 0%);

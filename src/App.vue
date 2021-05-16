@@ -78,7 +78,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
       <router-link to="/imprint" class="d-flex align-center justify-center">
         Imprint
       </router-link>
-      <div class="ma-5">Last update May 2021</div>
+      <div class="ma-5 text-center">Last update May 2021. <br/> This website was coded by Amina Belabbes using Vue and Vuetify.</div>
 
       <div :class="['back-to-top', [isScrolled ? 'on-scroll' : undefined]]" @click="scrollToTop">
         <span class="back-to-top__icon"></span>
