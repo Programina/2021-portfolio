@@ -65,7 +65,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
           ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-codepen' : 'fa fa-codepen is-mobile']"></i></a
         >
         <a data-v-2c037838="" href="https://twitter.com/MsAminaBelabbes"
-          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-twitter' : 'fa fa-codepen is-mobile']"></i></a
+          ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-twitter' : 'fa fa-twitter is-mobile']"></i></a
         >
         <a data-v-2c037838="" href="https://www.linkedin.com/in/amina-b-b98703149/"
           ><i data-v-2c037838="" :class="[!isMobile ? 'fa fa-linkedin' : 'fa fa-linkedin is-mobile']"></i
@@ -370,7 +370,7 @@ body {
       font-size: 1.6em;
       padding: 10px;
        &.is-mobile {
-        font-size: 1em;
+        font-size: 1.3em;
       }
     }
   }
