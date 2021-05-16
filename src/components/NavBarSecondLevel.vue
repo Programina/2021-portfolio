@@ -62,6 +62,7 @@ export default {
 
     a:hover, a:active, .router-link-exact-active {
       background-image: linear-gradient(transparent 50%, #C9F8F7 0%);
+      transition: all .15s ease-out;
     }
 
    a, a:hover, a:visited, a:active, a:focus {

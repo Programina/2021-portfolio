@@ -334,13 +334,6 @@ body {
   }
 }
 
-#nav {
-  // margin-left: -48px !important; needs to be added if there is a logo
-
-  a {
-    padding: 0 15px;
-  }
-}
 
 // .button-gradient {
 //   background: transparent
