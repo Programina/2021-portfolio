@@ -6,6 +6,7 @@
 
     <p class="my-5">
        I am a frontend developer and UX designer from Germany with 3 years of experience.
+       Feel free to <router-link to="/contact" style="text-transform: inherit; color: #3bcea0 !important">contact me</router-link> if there is anything I can help you with.
     </p>
 
     <p>
@@ -27,11 +28,7 @@
     </blockquote>
 
     <p>
-      It has been my dream of many years to pursue a creative
-      career and I know I can do outstanding work being a UX designer.
-    </p>
-    <p>
-      Learning to code hasn't always been easy, but it gave me great confidence in my ability to not only have ideas, but to make them come to life.
+      I learn something new about design or coding every day and that is great fun and excites me immensely. Learning to code, as opposed to learning to design, hasn't always come easy to me, but it gave me great confidence in my ability to not only have ideas, but to make them come to life.
     </p>
 
 
