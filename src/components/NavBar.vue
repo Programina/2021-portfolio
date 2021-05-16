@@ -106,14 +106,20 @@ export default {
   }
 
   #nav {
-    
-    a:hover, a:active {
+
+    a:active {
       background-image: linear-gradient(transparent 50%, #C9F8F7 0%);
-      transition: all .15s ease-out;
     }
     .router-link-exact-active {
       background-image: linear-gradient(transparent 50%, #C9F8F7 0%);
-      transition: all .15s ease-out;
+    }
+
+    a:hover {
+      background-image: linear-gradient(transparent 50%, #C9F8F7 0%);
+      // background-size: 0 100%;
+      // background-repeat: no-repeat;
+      transition: all .2s ease-out;
+      -webkit-transition: all .2s ease-out;
     }
   }
  

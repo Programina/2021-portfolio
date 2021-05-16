@@ -30,7 +30,7 @@
         <h3>Research</h3>
 
          <p>
-          I will gather some data via secondary research and perhaps develop a short survey and a user persona to get an idea if this solves other people's problems as well as my own and if so, who might use the app and what kinds of apps they have been using in the past. 
+          No proper research done yet. Ideally, in the near future, I will conduct some foundational research, create a user persona to get an idea of my target audience. 
          
          </p>
          <p>The design might evoke too cool and distanced emotions, I want it to be engaging and fun. </p>
