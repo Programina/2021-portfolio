@@ -22,7 +22,7 @@
          <v-row justify="center" :class="[isMobile ? 'flex-column' : undefined]">
             <v-col cols="12" class="d-flex justify-center">
               <div style="text-align: center">
-               <LightBox :image="'lotto.png'" :height="mobileImage.height"  :width="mobileImage.width" alt="lotto" imgClass="mb-2" :order="9"/>
+               <LightBox :image="'lotto.png'" :height="mobileImage.height"  :width="mobileImage.width" alt="lotto" imgClass="rounded-lg mb-2" :order="9"/>
                <a href="https://www.lotto-thueringen.de/eurojackpot/eurojackpot/spielschein.html" style="text-decoration: none !important; text-transform: none !important; color: #3bcea0 !important; "> Click here for the current Website</a> 
               </div>        
             </v-col>
@@ -53,7 +53,7 @@
         <v-row justify="center" :class="[isMobile ? 'flex-column' : undefined]">
           <v-col cols="12" class="d-flex justify-center">
           <div style="text-align: center">
-              <LightBox :image="'gardena.png'" :height="mobileImage.height" :width="mobileImage.width" imgClass="mb-2" alt="gardena" :order="10"/>
+              <LightBox :image="'gardena.png'" :height="mobileImage.height" :width="mobileImage.width" imgClass="mb-2 rounded-lg" alt="gardena" :order="10"/>
               <a href="https://www.gardena.com/de/" style="text-decoration: none !important; text-transform: none !important; color: #3bcea0 !important; "> Click here for the current Website</a> 
           </div> 
           </v-col>

@@ -39,7 +39,7 @@
 
             <div  v-if="isMobile">
               <router-link  v-if="currentRoute.path != '/contact' || currentRoute.path != '/contact-success' " to="/contact" style="text-decoration: none">
-                <v-btn rounded color="primary" class="pa-6 mr-2">Get in touch </v-btn>
+                <v-btn rounded depressed color="primary" class="pa-6 mr-2">Get in touch </v-btn>
               </router-link>
             </div>
             <div cols="6">

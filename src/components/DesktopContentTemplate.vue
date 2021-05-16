@@ -33,7 +33,7 @@
             class="d-flex mb-10 justify-end"
              style="text-decoration: none"
           >
-            <v-btn rounded color="primary" class="pa-6"
+            <v-btn depressed rounded color="primary" class="pa-6"
               >Case Study
             </v-btn>
           </router-link>
@@ -42,12 +42,12 @@
       
       <!--image right -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 === 0" class="pl-12 mb-6">
-           <LightBox :image="card.imgSrc" imgClass="ml-5":order="1"/>
+           <LightBox :image="card.imgSrc" imgClass="ml-5 rounded-lg":order="1"/>
       </v-col>
 
       <!--image left -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 != 0" class="pr-12 mb-6">
-          <LightBox :image="card.imgSrc" imgClass="ml-5" :order="2"/>
+          <LightBox :image="card.imgSrc" imgClass="ml-5 rounded-lg" :order="2"/>
       </v-col>
       <v-spacer></v-spacer>
 
@@ -76,7 +76,7 @@
             class="d-flex mb-10 justify-start"
              style="text-decoration: none"
           >
-            <v-btn rounded color="primary" class="pa-6 pa-2"
+            <v-btn rounded depressed color="primary" class="pa-6 pa-2"
               >Case Study
             </v-btn></router-link
           >

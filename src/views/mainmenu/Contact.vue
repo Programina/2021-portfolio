@@ -51,13 +51,14 @@ TODO: Add a loading spinner for while the email attempts to send
               ></v-textarea>
 
               <v-row class="justify-end my-8">
-                <v-btn @click="resetValidation" text rounded color="warning">
+                <v-btn @click="resetValidation" text rounded depressed color="warning">
                   <span class="mr-2">Reset</span>
                 </v-btn>
                 <v-btn 
                   type="submit"
                   text
                   rounded
+                  depressed
                   color="primary"
                   :disabled="!formValidity"
                 >
