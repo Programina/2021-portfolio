@@ -44,8 +44,8 @@ export default {
           path: "/",
         },
         {
-          title: "I am Amina",
-          subtitle: "Design is my passion",
+          title: "About me",
+          subtitle: "The person behind the screen",
           path: "/about",
           // img: "brushes.png"
         },

@@ -1,16 +1,15 @@
 <template>
   <v-container :class="['about', [isMobile ? 'mobile-about' : undefined]]">
     <h3>
-      I am passionate about making software beautiful, easy to use and fun.
+     Hi, my name is Amina and I am addicted to... I mean passionate about making software beautiful, easy and fun to use.
     </h3>
 
     <p class="my-5">
-      My name is Amina, I am a frontend developer and UX designer from Germany with 3 years of
-      experience as a developer and half a year of experience as a designer.
+       I am a frontend developer and UX designer from Germany with 3 years of experience.
     </p>
 
     <p>
-      I am largely self-taught and will hopefully never stop learning. If you
+      I am largely self-taught, but I did collect some of my design and IT knowledge at university. If you
       are after degrees, I have one of those Master's degrees and you may find
       my
       <a
@@ -43,7 +42,7 @@
     <v-row class="my-5">
           <v-col class="d-flex flex-column justify-center">
             <h3>UX Design Certificates</h3>
-            <LightBox image="GoogleCertificate.png" width="500px"></LightBox>
+            <LightBox image="GoogleCertificate.png" class="d-flex justify-center" width="500px"></LightBox>
           </v-col>
     </v-row>
     
@@ -109,6 +108,33 @@
       </v-col>
     </v-row>
 
+     <v-row class="my-5">
+      <v-col>
+        <h3>Future goals and primary interests</h3>
+
+          <v-card class="mx-auto" elevation="0" max-width="600" tile>
+                 <v-list dense>
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon v-text="'mdi-target'"></v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-content
+                        v-html="'I am very intersted in <strong>visual, interaction and motion design</strong> and will learn more about how to become great at that.'" ></v-list-item-content
+                      >
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-icon>
+                        <v-icon v-text="'mdi-target'"></v-icon>
+                      </v-list-item-icon>
+                      <v-list-item-content>
+                         I really want to learn more about <strong>micro interactions, 3D designs and animation.</strong>
+                      </v-list-item-content>
+                    </v-list-item>
+                 </v-list>
+            </v-card>
+      </v-col>
+    </v-row>
+
     <v-row>
       <v-col> </v-col>
     </v-row>
@@ -123,45 +149,43 @@
           <v-col>
             <h3>Philosophy and Values</h3>
               <v-card class="mx-auto" elevation="0" max-width="600" tile>
-                 <v-list dense>
-                   <v-list-item-group color="primary">
-                    <v-list-item>
-                      <v-list-item-icon>
-                        <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content
-                        ><b>The user always comes first.</b> Thou shalt not design without research and thou shalt always consider not everyone is like you.</v-list-item-content
-                      >
-                    </v-list-item>
-                    <v-list-item>
-                      <v-list-item-icon>
-                        <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content>
-                        <b>Be humble.</b> Whether it be towards your team or by challenging your own biases and beliefs. You may not always have the answer, but someone else might.
-                      </v-list-item-content>
-                    </v-list-item>
+                  <v-list dense>
+                      <v-list-item>
+                        <v-list-item-icon>
+                          <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content
+                          ><b>The user always comes first.</b> Thou shalt not design without research and thou shalt always consider not everyone is like you.</v-list-item-content
+                        >
+                      </v-list-item>
+                      <v-list-item>
+                        <v-list-item-icon>
+                          <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                          <b>Be humble.</b> Whether it be towards your team or by challenging your own biases and beliefs. You may not always have the answer, but someone else might.
+                        </v-list-item-content>
+                      </v-list-item>
 
-                    <v-list-item>
-                      <v-list-item-icon>
-                        <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content>
-                        <b>Be ethical.</b> If you would not use or buy a product or service and if you don't understand it, don't sell it.
-                      </v-list-item-content>
-                    </v-list-item>
+                      <v-list-item>
+                        <v-list-item-icon>
+                          <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                          <b>Be ethical.</b> If you would not use or buy a product or service and if you don't understand it, don't sell it.
+                        </v-list-item-content>
+                      </v-list-item>
 
-                    <v-list-item>
-                      <v-list-item-icon>
-                        <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content>
-                       <b>Be curious and never stop learning.</b> Liz Gilbert suggested to always follow your curiosity. Curiosity is great fuel for creativity.
-                      </v-list-item-content>
-                    </v-list-item>
-                    </v-list-item-group>
-                 </v-list>
-            </v-card>
+                      <v-list-item>
+                        <v-list-item-icon>
+                          <v-icon v-text="'mdi-shield-sun-outline'"></v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                        <b>Be curious and never stop learning.</b> Liz Gilbert suggested to always follow your curiosity. Curiosity is great fuel for creativity.
+                        </v-list-item-content>
+                      </v-list-item>
+                  </v-list>
+              </v-card>
           
           </v-col>
     </v-row>
@@ -171,7 +195,6 @@
         <h3>Personal interests and fun facts</h3>
         <v-card class="mx-auto" elevation="0" max-width="600" tile>
           <v-list dense>
-            <v-list-item-group color="primary">
               <v-list-item>
                 <v-list-item-icon>
                   <v-icon v-text="'mdi-account-music'"></v-icon>
@@ -204,17 +227,24 @@
                   <v-icon v-text="'mdi-school'"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                 I even learned some Japanese, but forgot most of it.
+                 I learned some Japanese, but forgot most of it.
                 </v-list-item-content>
               </v-list-item>
 
               <v-list-item>
-
                 <v-list-item-icon>
                   <v-icon v-text="'mdi-kettle-steam'"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
                   I love British culture like tea time and botanical gardens.
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-icon v-text="'mdi-run'"></v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  I go for regular runs.
                 </v-list-item-content>
               </v-list-item>
 
@@ -228,7 +258,7 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon v-text="'mdi-book'"></v-icon>
+                  <v-icon v-text="'mdi-gift'"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
                   At 8 years old, other girls my age wanted Barbie dolls, I wanted a computer.</v-list-item-content
@@ -236,7 +266,7 @@
               </v-list-item>
               <v-list-item>
                 <v-list-item-icon>
-                  <v-icon v-text="'mdi-book'"></v-icon>
+                  <v-icon v-text="'mdi-laptop-windows'"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
                  I strongly prefer Windows over MacOS.</v-list-item-content
@@ -271,7 +301,6 @@
                   companies had ball pits.
                 </v-list-item-content>
               </v-list-item>
-            </v-list-item-group>
           </v-list>
         </v-card>
       </v-col>
