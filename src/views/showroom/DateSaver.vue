@@ -77,9 +77,9 @@
 
 
 
-         <div class="enumeration mt-12">05</div>
+        <h3 class="mt-15">Current Design</h3>
         <p> 
-        Here is the current mockup. I plan on introducing a better contrast around the buttons as well as more depth and add info on the time of day. 
+        The mockup is still work in progress. I plan on introducing a better contrast around the buttons as well as more depth and add info on the time of day. 
         </p>
 
 
