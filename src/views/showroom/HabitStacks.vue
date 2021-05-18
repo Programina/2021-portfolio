@@ -25,7 +25,7 @@
           I got inspiration from this design on Instagram. I had a weekend and was super
           eager to try and create my own version of it.
         </p>
-        <LightBox image="idea.jpg" height="250" imgClass="my-12" alt="Instagram mobile design" :order="8"/>
+        <LightBox image="idea.jpg" height="350" imgClass="my-12 rounded-lg" alt="Instagram mobile design" :order="8"/>
 
         <h3>Research</h3>
 
@@ -37,7 +37,7 @@
        
        <h3>Current Design</h3>
        
-        <LightBox image="habit.png" height="250" imgClass="my-12" alt="habit app adobe xd mockup" :order="7"/>
+        <LightBox image="habit.png" height="300" imgClass="my-12 rounded-lg" alt="habit app adobe xd mockup" :order="7"/>
 
         
           

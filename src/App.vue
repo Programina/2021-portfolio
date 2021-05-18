@@ -286,6 +286,10 @@ body {
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: auto;
+    &.lightbox-active {
+      overflow: hidden;
+    } 
   }
 
   h1 {
@@ -466,8 +470,7 @@ transition: .5s ease-in-out;
 .lightbox-img-container-sm {
   overflow: hidden;
   position: relative;
-  height: 350px;
-  max-width: 450px;
+  max-width: 85%;
 
   &.is-vertical {
     height: 750px;
@@ -482,16 +485,18 @@ transition: .5s ease-in-out;
 
 .lightbox-img-container-lg {
   overflow: hidden;
-  max-height: 850px;
-  max-width: 900px;
+  max-height: 95%;
+  max-width: 95%;
+  
   &.is-vertical {
     height: 850px ;
     max-width: 400px;
   }
   &.is-extra-large {
-    max-height: 1290px;
-    height: 1290px ;
-    max-width: 480px;
+    max-height: 95%;
+    height: 95%;
+    max-width: 29%;
+    width: 29%;
   }
 }
 

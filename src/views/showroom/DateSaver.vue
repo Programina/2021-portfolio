@@ -37,7 +37,7 @@
         
         <v-row >
           <v-col class="d-flex flex-column justify-center text-center centered-image-group">
-              <LightBox  class="py-1" :image="'datesaverold.jpg'" :width="400" :order="3"/>
+              <LightBox  class="py-1 rounded-lg" :image="'datesaverold.jpg'" :width="400" :order="3"/>
               <a href="http://love.frontendpoint.com/"> Click here for the current Website</a>
           </v-col>
         </v-row>
@@ -56,7 +56,7 @@
         
         <v-row>
           <v-col class="d-flex justify-center mb-6">
-            <LightBox :image="'redesignone.jpg'" :width="400" :order="4"/>
+            <LightBox :image="'redesignone.jpg'" imgClass="rounded-lg" :width="400" :order="4"/>
           </v-col>
         </v-row>
         
@@ -71,7 +71,7 @@
 
         <v-row >
           <v-col class="d-flex justify-center">
-            <LightBox :image="'moodboarddatesaver.png'" :width="400" :order="5"/>
+            <LightBox :image="'moodboarddatesaver.png'" imgClass="rounded-lg" :width="400" :order="5"/>
           </v-col>
         </v-row>
 

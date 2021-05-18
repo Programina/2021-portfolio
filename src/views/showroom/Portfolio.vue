@@ -27,7 +27,7 @@
         <LightBox
           image="firstwebsite.jpg"
           height="550"
-          imgClass="my-12"
+          imgClass="my-12 rounded-lg"
           alt="Amina's first Website"
           :order="11"
         />
@@ -40,6 +40,7 @@
 
         <LightBox
           image="portfoliomoodboard.jpg"
+          imgClass="rounded-lg"
           width="620"
           alt="Moodboard"
           :order="11"
@@ -53,6 +54,7 @@
         </p>
         <LightBox
           image="portfolio.jpg"
+          imgClass="rounded-lg"
           width="620"
           alt="Amina's first Website"
           :order="12"
@@ -65,11 +67,12 @@
 
         <v-row class="my-5">
           <v-col>
-            <LightBox image="old2.jpg"  width="400" alt="design1" :order="13" />
+            <LightBox image="old2.jpg" imgClass="rounded-lg" width="400" alt="design1" :order="13" />
           </v-col>
           <v-col>
             <LightBox
               image="old3.jpg" v-bind:isVertical="true"
+              imgClass="rounded-lg"
               width="130"
               alt="design1 mobile"
               :order="14"
@@ -87,6 +90,7 @@
         <v-row class="my-5">
           <v-col>
             <LightBox
+              imgClass="rounded-lg"
               image="colorpallette.jpg"
               width="620"
               alt="Third iteration"
