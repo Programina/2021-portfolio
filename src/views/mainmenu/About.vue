@@ -39,7 +39,9 @@
     <v-row class="my-5">
           <v-col class="d-flex flex-column justify-center">
             <h3>Latest proud achievement</h3>
-            <LightBox image="GoogleCertificate.png" class="d-flex justify-center" width="500px"></LightBox>
+            <div class="certificate">
+              <LightBox image="GoogleCertificate.png" class="d-flex justify-center"></LightBox>
+            </div>
           </v-col>
     </v-row>
     
@@ -373,5 +375,15 @@ ul {
   }
 }
 
-
+.certificate {
+  max-width: 100%;
+  width: 100%;
+  #lightbox {
+    width: 100%;
+    ::v-deep .lightbox {
+      width: 100%;
+    }
+  }
+ 
+}
 </style>

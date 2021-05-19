@@ -43,7 +43,7 @@
           imgClass="rounded-lg"
           width="620"
           alt="Moodboard"
-          :order="11"
+          :order="16"
         />
 
         <div class="enumeration mt-12">03</div>
@@ -71,7 +71,8 @@
           </v-col>
           <v-col>
             <LightBox
-              image="old3.jpg" v-bind:isVertical="true"
+              image="old3.jpg" 
+              :isVertical="true"
               imgClass="rounded-lg"
               width="130"
               alt="design1 mobile"
