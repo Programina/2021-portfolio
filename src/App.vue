@@ -382,7 +382,7 @@ body {
   opacity: 1;
   visibility: visible;
   position: absolute;
-  bottom: 30px;
+  bottom: 123px;
   right: 3%;
   cursor: pointer;
   z-index: 5;

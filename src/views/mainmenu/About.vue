@@ -4,11 +4,14 @@
      Hi, my name is Amina and I am addicted to... I mean passionate about making software beautiful, easy and fun to use.
     </h3>
 
+    <div class="aboutimages d-flex flex-column justify-center my-6">
+              <LightBox image="aminabw.jpeg" class="d-flex justify-center " imgClass="rounded-lg"></LightBox>
+              <div style="color: #959595 !important; text-align: center; font-size: 0.9em !important;">A friend took this photo of me in a pub during a pub quiz.</div>
+    </div>
     <p class="my-5">
        I am a frontend developer and UX designer from Germany with 3 years of experience.
        Feel free to <router-link to="/contact" style="text-transform: inherit; color: #3bcea0 !important">contact me</router-link> if there is anything I can help you with.
     </p>
-
     <p>
       I am largely self-taught, but I did collect some of my design and IT knowledge at university. If you
       are after degrees, I have one of those Master's degrees and you may find
@@ -31,15 +34,10 @@
       I learn something new about design or coding every day and that is great fun and excites me immensely. Learning to code, as opposed to learning design, hasn't always come easy to me, but it gave me great confidence in my ability to not only have ideas, but to make them come to life.
     </p>
 
-
-    
-
-      
-
     <v-row class="my-5">
           <v-col class="d-flex flex-column justify-center">
             <h3>Latest proud achievement</h3>
-            <div class="certificate">
+            <div class="aboutimages">
               <LightBox image="GoogleCertificate.png" class="d-flex justify-center"></LightBox>
             </div>
           </v-col>
@@ -50,7 +48,7 @@
       <v-col>
         <h3>Current projects</h3>
 
-          <v-card class="my-5" :color="'#fff'">
+         <v-card class="my-5" :color="'#fff'">
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
                 <v-card-title class="text-h5"
@@ -375,7 +373,7 @@ ul {
   }
 }
 
-.certificate {
+.aboutimages {
   max-width: 100%;
   width: 100%;
   #lightbox {
