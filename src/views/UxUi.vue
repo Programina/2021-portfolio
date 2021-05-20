@@ -25,24 +25,8 @@ export default {
   components: { MobileContentTemplate, DesktopContentTemplate },
   data: () => ({
     cards: [
-      {
-        id: 1,
-        title: "Habit Stacks",
-        href: "/habit-stacks",
-        imgSrc: "habitApp.png",
-        imgMblSrc: "habit.png",
-        description:
-          "My personal project for an app to create long-term habits.",
-        
-        chips: [
-          {
-            label: "Adobe Xd",
-          },
-        ],
-      }
-      ,
        {
-        id: 2,
+        id: 1,
         title: "Easy Tutor",
         href: "/easytutor",
         imgSrc: "easytutor.png",
@@ -58,7 +42,23 @@ export default {
             label: "Photoshop 2021",
           }
         ],
+      },
+      {
+        id: 2,
+        title: "Habit Stacks",
+        href: "/habit-stacks",
+        imgSrc: "habitApp.png",
+        imgMblSrc: "habit.png",
+        description:
+          "My personal project for an app to create long-term habits.",
+        
+        chips: [
+          {
+            label: "Adobe Xd",
+          },
+        ],
       }
+      
     ],
     
   }),
