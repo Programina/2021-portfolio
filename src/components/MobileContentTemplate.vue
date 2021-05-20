@@ -19,7 +19,7 @@
           <div class="d-flex flex-row flex-wrap justify-end" :data-qa="card.title">
             <div v-for="(tag, j) in card.tags" :key="j">
               <v-chip class="ma-2" color="primary" outlined>
-                  <a :href="tag.tagHref" class="px-2" style="text-decoration: none !important; text-transform: none !important; color: inherit !important;"> {{ tag.tag }}</a>
+                  <a :href="tag.tagHref" class="px-2 green-link"> {{ tag.tag }}</a>
 
                 <v-icon left> mdi-{{ tag.tagIcon }} </v-icon>
               </v-chip>

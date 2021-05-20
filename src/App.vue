@@ -375,7 +375,8 @@ body {
 
 .enumeration {
   font-size: 2em;
-  color: #F9E062;
+  color: #5DEAE8;
+  margin-bottom: 10px;
 }
 
 .back-to-top {
@@ -523,6 +524,12 @@ transition: .5s ease-in-out;
 opacity: 1;
 top: 0;
 bottom: 0;
+}
+
+.green-link {
+  text-decoration: none !important; 
+  text-transform: none !important; 
+  color: #3bcea0 !important; 
 }
 
 
