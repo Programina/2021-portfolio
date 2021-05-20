@@ -486,8 +486,8 @@ transition: .5s ease-in-out;
 
 .lightbox-img-container-lg {
   overflow: hidden;
-  max-height: 95%;
-  max-width: 95%;
+  max-height: 100%;
+  max-width: 70%;
   
   &.is-vertical {
     height: 850px ;

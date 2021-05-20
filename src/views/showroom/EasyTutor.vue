@@ -71,6 +71,7 @@
           image="mooddesignsystemeasytutor.png"
           height="670"
           width="395"
+          :isXL="true" 
           imgClass="my-12 rounded-lg elevation-2"
           alt="easy tutor current design"
           :order="7"
