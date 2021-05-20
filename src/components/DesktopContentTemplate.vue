@@ -111,7 +111,7 @@ export default {
   },
   data() {
     return {
-      components: [{ name: "DateSaver" }, { name: "HabitStacks" }],
+      components: [{ name: "DateSaver" }, { name: "HabitStacks" }, { name: "EasyTutor" }],
     };
   },
   computed: {

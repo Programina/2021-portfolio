@@ -40,22 +40,25 @@ export default {
           },
         ],
       }
-      // ,
-      //  {
-      //   id: 2,
-      //   title: "Rep Set Go",
-      //   href: "/rep-set-go",
-      //   imgSrc: "fitnessapp.png",
-      //   imgMblSrc: "fitx2.png",
-      //   description:
-      //     "A first attempt at designing a workout app with customized sets and reps.",
+      ,
+       {
+        id: 2,
+        title: "Easy Tutor",
+        href: "/easytutor",
+        imgSrc: "easytutor.png",
+        imgMblSrc: "easytutor.png",
+        description:
+          "An unsolicited redesign of an online tutoring website.",
         
-      //   chips: [
-      //     {
-      //       label: "Adobe Xd",
-      //     },
-      //   ],
-      // }
+        chips: [
+          {
+            label: "Figma",
+          },
+           {
+            label: "Photoshop 2021",
+          }
+        ],
+      }
     ],
     
   }),

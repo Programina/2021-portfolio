@@ -101,10 +101,10 @@ export default {
           id: 1,
           title: "This Portfolio",
           href: "/portfolio",
-          imgSrc: "portfolio.jpg",
-          imgMblSrc: "portfolio.jpg",
+          imgSrc: "portfolio.png",
+          imgMblSrc: "portfolio.png",
           description:
-            "This portfolio is still work in progress. I am documenting my changes and intentions.",
+            "I will always work on improving it, but here is the story behind what you see. It is a mix of UX/UI design and development.",
 
           chips: [
             {

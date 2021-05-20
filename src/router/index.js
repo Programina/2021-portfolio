@@ -12,7 +12,7 @@ import Dev from '../views/Dev.vue'
 import Other from '../views/Other.vue'
 import NavService from '@/services/NavService'
 import Portfolio from '@/views/showroom/Portfolio.vue'
-import Rss from '@/views/showroom/Rss.vue'
+import EasyTutor from '@/views/showroom/EasyTutor.vue'
 
 
 Vue.use(VueRouter)
@@ -77,9 +77,9 @@ const routes = [
     component: ContactSuccess
   },
   {
-    path: '/rss',
-    name: 'RSSApp',
-    component: Rss
+    path: '/easytutor',
+    name: 'EasyTutor',
+    component: EasyTutor
   }
 ]
 

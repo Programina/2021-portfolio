@@ -104,9 +104,9 @@ export default {
           // img: "brushes.png"
         },
         {
-          title: "Rss Feed",
-          subtitle: "A simple RSS feed single page application",
-          path: "/rss",
+          title: "Easy-Tutor",
+          subtitle: "An unsolicited redesign",
+          path: "/easytutor",
           // img: "brushes.png"
         },
       ],

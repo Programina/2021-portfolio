@@ -190,7 +190,7 @@ export default {
         { 
           color: '#fff',
           fontColor: 'black',
-          path: '/rss'
+          path: '/easytutor'
         }
 
       ]
