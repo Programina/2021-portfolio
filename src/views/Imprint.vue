@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-center imprint">
-    <div class="column mb-12">
+    <div class="column mb-12"  [isMobile ? 'mobile' : undefined]>
       <h2>Information pursuant to Sect. 5 German Telemedia Act (TMG)</h2>
       <p>Amina Belabbes<br />Postfach 13 13  <br />55003 Mainz</p>
       <h2>EU dispute resolution<br /></h2>

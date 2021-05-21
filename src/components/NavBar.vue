@@ -14,6 +14,7 @@
               src="@/assets/logo.png"
               transition="scale-transition"
               width="60"
+              height="60"
             />
 
          <v-img v-else

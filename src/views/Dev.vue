@@ -102,7 +102,7 @@ export default {
           title: "This Portfolio",
           href: "/portfolio",
           imgSrc: "portfolio.png",
-          imgMblSrc: "portfolio.png",
+          imgMblSrc: "portfoliomoodboard.jpg",
           description:
             "I will always work on improving it, but here is the story behind what you see. It is a mix of UX/UI design and development.",
 
@@ -126,7 +126,8 @@ export default {
           title: "DateSaver",
           href: "/date-saver",
           imgSrc: "datesaver.png",
-          imgMblSrc: "datesaver.png",
+          imgMblSrc: "datesavertwo.jpg",
+          isVertical: "true",
           description:
             "An app I am in the process of making to help people make  decisions about what to do on a date.",
           chips: [

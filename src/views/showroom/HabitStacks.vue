@@ -1,5 +1,5 @@
 <template>
-  <v-container class="habits">
+  <v-container class="habits" :class="[isMobile ? 'mobile' : undefined]">
     <v-row>
       <stats-overview-card :stats="stats"></stats-overview-card>
     </v-row>
@@ -30,7 +30,7 @@
         <h3>Research</h3>
 
          <p>
-          No proper research done yet. Ideally, in the near future, I will conduct some foundational research, create a user persona to get an idea of my target audience. 
+          This project is still in its early stages. Ideally, in the near future, I will conduct some foundational research, create a user persona to get an idea of my target audience. 
          
          </p>
          <p>The design might evoke too cool and distanced emotions, I want it to be engaging and fun. </p>
@@ -46,10 +46,7 @@
 
      <p>During the process I noticed that I had fallen prey to the "false consensus bias". Only because I like a design, other people might not. </p>
      
-     <p> Here is an info graphic I made on the biases I learned about at the Google UX Design Certificate Course.</p>
-     <div style="widt: 100%" class="d-flex justify-center">
-        <LightBox image="CommonBiases.png" height="990" :isXL="true" :isVertical="true" width="380" imgClass="my-12" alt="Info graphic on biases" :order="14"/>
-     </div>
+   
     
 
       </v-col>
@@ -60,10 +57,12 @@
 <script>
 import LightBox from '@/components/LightBox';
 import StatsOverviewCard from "../../components/StatsOverviewCard.vue";
+import ismobile from "@/mixins/ismobile";
+
 export default {
   name: "HabitStacks",
   components: { StatsOverviewCard, LightBox },
-  props: {},
+  mixins: [ismobile],
   data() {
     return {
       stats: {
@@ -89,6 +88,10 @@ export default {
 .habits {
   max-width: 630px;
   padding: 0 20px;
+
+   &.mobile {
+    padding: 0 70px;
+  }
 }
 
 ul {

@@ -11,7 +11,7 @@
     </div> 
      <portal to="destination" :order="order">
         <div class="lightbox-target" v-if="!lightBoxClosed">
-          <div :class="[[!isMobile ? 'lightbox-img-container-lg' : 'lightbox-img-container-sm' ], [isVertical ? ' is-vertical' : undefined], [isXL ? 'is-extra-large' : undefined]]">
+          <div :class="[[!isMobile ? 'lightbox-img-container-lg' : 'lightbox-img-container-sm' ], [isVertical ? ' is-vertical' : undefined], [isLong ? 'long' : undefined], [isXL ? 'is-extra-large' : undefined]]">
            <v-img
               :alt="alt | image"
               :src="require('@/assets/' + image + '')"
@@ -64,6 +64,10 @@ export default {
       required: false
     },
     isXL: {
+      type: Boolean,
+      required: false
+    },
+    isLong: {
       type: Boolean,
       required: false
     }

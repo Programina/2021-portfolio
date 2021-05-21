@@ -1,5 +1,5 @@
 <template>
-  <v-container class="easytutor">
+  <v-container class="easytutor" :class="[isMobile ? 'mobile' : undefined]">
     <v-row>
       <stats-overview-card :stats="stats"></stats-overview-card>
     </v-row>
@@ -73,7 +73,7 @@
           width="395"
           :isXL="true" 
           imgClass="my-12 rounded-lg elevation-2"
-          alt="easy tutor current design"
+          alt="easy tutor moodboard"
           :order="7"
         />
         </v-col>
@@ -85,13 +85,23 @@
         <p>I picked a rounded sans-serif font, as sans serif is more easily readable on screens, while rounded evokes emotions of friendliness and playfulness, yet it should still look sleek and professional. I got inspired googling "fonts for teachers".</p>
 
         <div class="enumeration">04</div>
-        <p>For the final design I also looked for an illustrated vector graphic tutorial image to replace the noisy loop video that is currently played on the website.</p>
-        <p>Without having confirmed this hypothesis, I believe people are less likely to be offended or irritated by illustrations than by imagery of actual people and it is a lot easier to match the company style and color scheme in the illustrations. </p>
+        <p>I also looked for an illustrated  video tutorials to replace the noisy loop video that is currently played on the website.</p>
+        <p>I would have to confirm with users, but I believe those are less irritating and have trended for a while. </p>
 
+        <div class="enumeration">05</div>
 
+         <p>This was the design I showed to Easy-Tutor. After presenting it I gave it a few more minutes to consider <strong>accessibility</strong>.</p>
+        <LightBox
+          image="easytutorfirstiteration.png"
+          height="450"
+          imgClass="my-12 rounded-lg elevation-2"
+          alt="easy tutor current design"
+          :order="7"
+        />
+        <p>Using the Figma plugin "Contrast", I checked if the colors were contrasting enough and it turned out the <strong>white on orange failed the tests</strong> throughout. So I switched from orange to blue.</p>
 
         
-        <h3>Current Design</h3>
+        <h3>Final Design</h3>
 
         <div class="my-12">
             <LightBox
@@ -111,21 +121,14 @@
         <h3>Learnings</h3>
 
         <p>
-         I have shown the design to one of the employees at Easy-Tutor. She agreed I had recognized some of their pain points as they were already in the process of redesining the page. 
+         I learned that my own intuition cannot be trusted when it comes to accesibility, so I will always double-check with tools.
         </p>
-        <p>What I would have liked more was user feedback though.</p>
-
-        <p><p>
-        Hypothetically speaking, if this were a longterm project, I would do some <strong>quantiative research</strong> first, using <strong>surveys</strong>. I would try and find a large group of people of different backgrounds that fit the criteria of "needing remote help and being willing to work from a computer at home" and "wanting to tutor or needing tutoring either for themselves or their children".</p>
+        <p>On a longer project I would focus on getting user feedback, e.g. through <strong>quantiative research</strong> using <strong>surveys</strong>. So far I assume the user group would consist of people "needing remote help and being willing to work from a computer at home" and "wanting to tutor or needing tutoring either for themselves or their children".</p>
         <p>
-         I would be asking about which products they have recently used that were similar and helpful. That gives me a good sense of what users  are looking for. I would also ask about how they feel about using the website and what kind of problems they may have come across (if any), to figure out <strong>user pain points</strong>. 
+         I would try to find out about similar products they found helpful or unhelpful and why, to know what users like and don't like how the software can be tailored around that.  
         </p>
-        <p>
-        It would also be interesting to know what kind of info they would be looking for in the Easy-Tutor website to make that info more easily accessible. </p>
-
-        <p>
-         Having collected data, I would create two to three <strong>user personas</strong> to see what kind of user we are dealing with. At the moment I only have a vague idea of the struggle of parents and tutors using the page. I don't know what other customers may be using the page.   
-        </p>
+        <p class="mb-16">
+        I would find out what kind of info they would be looking for in the Easy-Tutor website to make that info more easily accessible.
 </p>
       </v-col>
     </v-row>
@@ -134,11 +137,13 @@
 
 <script>
 import StatsOverviewCard from "../../components/StatsOverviewCard.vue";
-import LightBox from "@/components/LightBox"
+import LightBox from "@/components/LightBox";
+import ismobile from "@/mixins/ismobile";
+
 export default {
   name: "EasyTutor",
   components: { StatsOverviewCard, LightBox },
-  props: {},
+   mixins: [ismobile],
 
   data() {
     return {
@@ -166,6 +171,10 @@ export default {
 .easytutor {
   max-width: 630px;
   padding: 0 20px;
+
+  &.mobile {
+    padding: 0 70px;
+  }
 }
 
 a,

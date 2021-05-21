@@ -1,5 +1,5 @@
 <template>
-  <v-container class="dates">
+  <v-container class="dates" :class="[isMobile ? 'mobile' : undefined]">
     <v-row>
       <stats-overview-card :stats="stats"></stats-overview-card>
     </v-row>
@@ -37,7 +37,7 @@
         
         <v-row >
           <v-col class="d-flex flex-column justify-center text-center centered-image-group">
-              <LightBox  class="py-1 rounded-lg" :image="'datesaverold.jpg'" :width="400" :order="3"/>
+              <LightBox  class="py-1 rounded-lg" :image="'datesaverold.jpg'" :order="3"/>
               <a href="http://love.frontendpoint.com/"> Click here for the current Website</a>
           </v-col>
         </v-row>
@@ -53,9 +53,8 @@
         </p>
 
 
-        
         <v-row>
-          <v-col class="d-flex justify-center mb-6">
+          <v-col class="d-flex justify-center mb-6 centered-image-group">
             <LightBox :image="'redesignone.jpg'" imgClass="rounded-lg" :width="400" :order="4"/>
           </v-col>
         </v-row>
@@ -70,7 +69,7 @@
 
 
         <v-row >
-          <v-col class="d-flex justify-center">
+          <v-col class="d-flex justify-center centered-image-group">
             <LightBox :image="'moodboarddatesaver.png'" imgClass="rounded-lg" :width="400" :order="5"/>
           </v-col>
         </v-row>
@@ -105,10 +104,11 @@
 
 import LightBox from "@/components/LightBox"
 import StatsOverviewCard from "../../components/StatsOverviewCard.vue";
+import ismobile from "@/mixins/ismobile";
 export default {
   name: "DateSaver",
   components: { StatsOverviewCard, LightBox },
-  props: {},
+  mixins: [ismobile],
   data() {
     return {
       stats: {
@@ -139,6 +139,10 @@ export default {
 .dates {
   max-width: 630px;
   padding: 0 20px;
+
+  &.mobile {
+    padding: 0 70px;
+  }
 }
 
 ul {
@@ -153,10 +157,18 @@ ul {
   }
 }
 
+  
 .centered-image-group {
+  max-width: 100%;
+  width: 100%;
   ::v-deep #lightbox {
     display: flex;
     justify-content: center;
+    width: 100%;
+
+      .lightbox {
+      width: 100%;
+    }
   }
    a, a:hover, a:active, a:visited, a:focus {
       text-decoration: none !important; 

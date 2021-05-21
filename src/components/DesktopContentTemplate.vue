@@ -42,12 +42,12 @@
       
       <!--image right -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 === 0" class="pl-12 mb-6">
-           <LightBox :image="card.imgSrc" imgClass="ml-5 rounded-lg":order="1"/>
+           <LightBox :image="card.imgSrc" imgClass="ml-5 rounded-lg" :order="1" :isVertical="card.isVertical"/>
       </v-col>
 
       <!--image left -->
       <v-col ref="scrollTransition" cols="6" v-if="card.id % 2 != 0" class="pr-12 mb-6">
-          <LightBox :image="card.imgSrc" imgClass="ml-5 rounded-lg" :order="2"/>
+          <LightBox :image="card.imgSrc" imgClass="ml-5 rounded-lg" :order="2" :isVertical="card.isVertical"/>
       </v-col>
       <v-spacer></v-spacer>
 

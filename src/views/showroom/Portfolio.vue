@@ -1,5 +1,5 @@
 <template>
-  <v-container class="portfolio">
+  <v-container class="portfolio" :class="[isMobile ? 'mobile' : undefined]">
     <v-row>
       <stats-overview-card :stats="stats"></stats-overview-card>
     </v-row>
@@ -77,7 +77,7 @@
           <v-col>
             <LightBox
               image="old3.jpg" 
-              :isVertical="true"
+              :isLong="true"
               imgClass="rounded-lg elevation-2"
               width="126"
               alt="design1 mobile"
@@ -197,11 +197,12 @@
 
 <script>
 import LightBox from "@/components/LightBox";
+import ismobile from "@/mixins/ismobile";
 import StatsOverviewCard from "../../components/StatsOverviewCard.vue";
 export default {
   name: "Portfolio",
   components: { StatsOverviewCard, LightBox },
-  props: {},
+  mixins: [ismobile],
   data() {
     return {
       stats: {
@@ -234,6 +235,10 @@ export default {
 .portfolio {
   max-width: 630px;
   padding: 0 20px;
+  
+   &.mobile {
+    padding: 0 70px;
+  }
 }
 
 a,

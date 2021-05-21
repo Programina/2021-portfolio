@@ -383,8 +383,8 @@ body {
   opacity: 1;
   visibility: visible;
   position: absolute;
-  bottom: 123px;
-  right: 3%;
+  bottom: 230px;
+  right: 2%;
   cursor: pointer;
   z-index: 5;
   transition: all 0.3s;
@@ -474,8 +474,8 @@ transition: .5s ease-in-out;
   max-width: 85%;
 
   &.is-vertical {
-    height: 750px;
-    max-width: 350px;
+    height: 80%;
+    max-width: 45%;
   }
   &.is-extra-large {
     max-height: 830px;
@@ -490,14 +490,20 @@ transition: .5s ease-in-out;
   max-width: 70%;
   
   &.is-vertical {
-    height: 850px ;
-    max-width: 400px;
+    height: 80%;
+    max-width: 65%;
   }
+
+  &.long {
+    height: 90% !important;
+    width: 30% !important;
+  }
+
   &.is-extra-large {
-    max-height: 95%;
-    height: 95%;
-    max-width: 29%;
-    width: 29%;
+    max-height: 85%;
+    height: 85%;
+    max-width: 35%;
+    width: 35%;
   }
 }
 

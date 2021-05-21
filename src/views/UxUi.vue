@@ -27,10 +27,10 @@ export default {
     cards: [
        {
         id: 1,
-        title: "Easy Tutor",
+        title: "Easy-Tutor",
         href: "/easytutor",
         imgSrc: "easytutor.png",
-        imgMblSrc: "easytutor.png",
+        imgMblSrc: "easytutorcurrent.png",
         description:
           "An unsolicited redesign of an online tutoring website.",
         
