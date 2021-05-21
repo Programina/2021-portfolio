@@ -274,7 +274,6 @@ blockquote {
 html {
   scroll-behavior: smooth;
 }
-
 html,
 body {
     background: #fff;
@@ -286,10 +285,6 @@ body {
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow: auto;
-    &.lightbox-active {
-      overflow: hidden;
-    } 
   }
 
   h1 {
@@ -532,11 +527,16 @@ top: 0;
 bottom: 0;
 }
 
-.green-link {
+a.green-link, a.green-link:hover, a.green-link:active, a.green-link:focus {
   text-decoration: none !important; 
   text-transform: none !important; 
   color: #3bcea0 !important; 
 }
 
+.inline-arrow {
+  svg {
+    transform: translateY(10px);
+  }
+}
 
 </style>

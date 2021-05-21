@@ -191,6 +191,24 @@
       </v-col>
     </v-row>
 
+    <p class="mb-8" >
+    
+            <p class="text-center mb-16">
+              <router-link to="/date-saver" class="my-8 green-link" style="font-weight: bolder" > Next up is 'DateSaver'  
+              <span class="inline-arrow">
+               <svg  height="30px" fill="#3bcea0" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g id="XMLID_1_">
+                  <polyline id="XMLID_3_" points="0,263.9 506.5,263.9 506.5,248.1 0,248.1 	"/>
+                  <polygon id="XMLID_4_" points="439.5,334 512,261.5 512,250.5 439.5,178 428.5,189 494.7,256 428.5,323 	"/>
+                </g>
+                </svg>
+
+              </span>
+              </router-link>
+            </p>
+    </p>
+
     
   </v-container>
 </template>

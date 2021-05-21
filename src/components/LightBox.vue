@@ -1,5 +1,5 @@
 <template>
-<div id="lightbox">
+<div id="lightbox"  :class="[isMobile ? 'mobile' : undefined]">
     <div class="lightbox" @click="toggleLightBox">
       <v-img
               :class="imgClass"
@@ -81,6 +81,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+#lightbox {
+   
+}
 
 .lightbox {
   cursor: pointer;

@@ -37,7 +37,7 @@
         
         <v-row >
           <v-col class="d-flex flex-column justify-center text-center centered-image-group">
-              <LightBox  class="py-1 rounded-lg" :image="'datesaverold.jpg'" :order="3"/>
+              <LightBox  class="py-1"  imgClass="rounded-lg" :image="'datesaverold.jpg'" :order="3"/>
               <a href="http://love.frontendpoint.com/"> Click here for the current Website</a>
           </v-col>
         </v-row>
@@ -69,8 +69,8 @@
 
 
         <v-row >
-          <v-col class="d-flex justify-center centered-image-group">
-            <LightBox :image="'moodboarddatesaver.png'" imgClass="rounded-lg" :width="400" :order="5"/>
+          <v-col class="d-flex justify-center centered-image-group" >
+            <LightBox :image="'moodboarddatesaver.png'" imgClass="rounded-lg elevation-2" :width="400" :order="5"/>
           </v-col>
         </v-row>
 
@@ -85,7 +85,7 @@
         <v-row >
           <v-col class="d-flex flex-column justify-center text-center mb-12 centered-image-group">
           
-            <LightBox :image="'datesavertwo.jpg'" :width="400"  :order="6"/> 
+            <LightBox :image="'datesavertwo.jpg'" imgClass="rounded-lg elevation-2" :order="6"/> 
             <a href="https://xd.adobe.com/view/dcb3ae1a-d272-464a-bd2d-89fa33031f24-89e0/"> Click here for the current Mockup</a>
   
           </v-col>
@@ -161,11 +161,14 @@ ul {
 .centered-image-group {
   max-width: 100%;
   width: 100%;
+ 
   ::v-deep #lightbox {
     display: flex;
     justify-content: center;
-    width: 100%;
-
+    
+    &.is-mobile {
+     width: 100%;
+    }
       .lightbox {
       width: 100%;
     }
