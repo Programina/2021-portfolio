@@ -14,7 +14,7 @@
     
      
     <v-row class="d-flex justify-center align-center ma-10">
-    <v-col>
+    <v-col class="d-flex justify-center text-center">
        <h3>Honorable Mentions</h3>
     </v-col>
 
