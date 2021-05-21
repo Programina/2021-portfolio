@@ -78,7 +78,7 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
       <router-link to="/imprint" class="d-flex align-center justify-center">
         Imprint
       </router-link>
-      <div class="ma-5 text-center">Last update May 2021. <br/> This website was coded by Amina Belabbes using Vue and Vuetify.</div>
+      <div class="ma-5 text-center" :class="[isMobile ? 'narrow-footer-text' : undefined]">Last update May 2021. <br/> This website was coded by Amina Belabbes using Vue and Vuetify.</div>
 
       <div :class="['back-to-top', [isScrolled ? 'on-scroll' : undefined]]" @click="scrollToTop">
         <span class="back-to-top__icon"></span>
@@ -366,6 +366,10 @@ body {
       }
     }
   }
+
+  .narrow-footer-text {
+    max-width: 240px;
+  }
 }
 
 .enumeration {
@@ -378,8 +382,8 @@ body {
   opacity: 1;
   visibility: visible;
   position: absolute;
-  bottom: 230px;
-  right: 2%;
+  bottom: 50px;
+  right: 3%;
   cursor: pointer;
   z-index: 5;
   transition: all 0.3s;
