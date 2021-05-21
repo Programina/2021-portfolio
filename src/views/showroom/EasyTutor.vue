@@ -69,8 +69,6 @@
         <v-col class="d-flex justify-center centered-image-group">
         <LightBox
           image="mooddesignsystemeasytutor.png"
-          height="670"
-          width="395"
           :isXL="true" 
           imgClass="my-12 rounded-lg elevation-2"
           alt="easy tutor moodboard"
@@ -220,6 +218,23 @@ p {
 
 h3 {
   margin: 6px 0 16px 0;
+}
+
+.centered-image-group {
+  max-width: 100%;
+  width: 100%;
+ 
+  ::v-deep #lightbox {
+    display: flex;
+    justify-content: center;
+    
+    &.mobile {
+     width: 100%;
+    }
+      .lightbox {
+      width: 100%;
+    }
+  }
 }
 
 </style>

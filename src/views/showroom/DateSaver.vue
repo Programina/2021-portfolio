@@ -182,4 +182,21 @@ a, a:hover, a:active, a:visited, a:focus {
   color: #3bcea0 !important; 
 }
 
+.centered-image-group {
+  max-width: 100%;
+  width: 100%;
+ 
+  ::v-deep #lightbox {
+    display: flex;
+    justify-content: center;
+    
+    &.mobile {
+     width: 100%;
+    }
+      .lightbox {
+      width: 100%;
+    }
+  }
+}
+
 </style>
