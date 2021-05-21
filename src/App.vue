@@ -543,4 +543,20 @@ a.green-link, a.green-link:hover, a.green-link:active, a.green-link:focus {
   }
 }
 
+.centered-image-group {
+  max-width: 100%;
+  width: 100%;
+ 
+  ::v-deep #lightbox {
+    display: flex;
+    justify-content: center;
+    
+    &.is-mobile {
+     width: 100%;
+    }
+      .lightbox {
+      width: 100%;
+    }
+  }
+}
 </style>

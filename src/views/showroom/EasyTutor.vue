@@ -66,7 +66,7 @@
           Doing research is possible at any stage of the product development process, however it is usually very important to do some up front to be able to design with the user's needs in mind. Due to time restraints, this was not possible for this short project.</p>
 
         <v-row>
-        <v-col class="d-flex justify-center">
+        <v-col class="d-flex justify-center centered-image-group">
         <LightBox
           image="mooddesignsystemeasytutor.png"
           height="670"
@@ -172,7 +172,7 @@ export default {
         status: "Finished",
         tags: [
           {
-            tag: "Figma Mockup, Design System and Moodboard",
+            tag: "Figma files",
             tagIcon: "web",
             tagHref:
               "https://www.figma.com/file/gCIyRBm2RvCrelhRb2tZDh/Easy-Tutor?node-id=0%3A1",

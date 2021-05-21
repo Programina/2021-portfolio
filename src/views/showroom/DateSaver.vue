@@ -175,26 +175,11 @@ ul {
   }
 }
 
-  
-.centered-image-group {
-  max-width: 100%;
-  width: 100%;
- 
-  ::v-deep #lightbox {
-    display: flex;
-    justify-content: center;
-    
-    &.is-mobile {
-     width: 100%;
-    }
-      .lightbox {
-      width: 100%;
-    }
-  }
-   a, a:hover, a:active, a:visited, a:focus {
-      text-decoration: none !important; 
-      text-transform: none !important; 
-      color: #3bcea0 !important; 
-    }
+
+a, a:hover, a:active, a:visited, a:focus {
+  text-decoration: none !important; 
+  text-transform: none !important; 
+  color: #3bcea0 !important; 
 }
+
 </style>
