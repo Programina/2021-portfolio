@@ -5,7 +5,7 @@
               :class="imgClass"
               :width="width"
               :height="height"
-              :alt="alt | image"
+              :alt="alt"
               :src="require('@/assets/' + image + '')"
        ></v-img>
     </div> 
@@ -13,7 +13,7 @@
         <div class="lightbox-target" v-if="!lightBoxClosed">
           <div :class="[[!isMobile ? 'lightbox-img-container-lg' : 'lightbox-img-container-sm' ], [isVertical ? ' is-vertical' : undefined], [isLong ? 'long' : undefined], [isXL ? 'is-extra-large' : undefined]]">
            <v-img
-              :alt="alt | image"
+              :alt="alt"
               :src="require('@/assets/' + image + '')"
             ></v-img>
           </div>
@@ -75,6 +75,15 @@ export default {
   methods: {
     toggleLightBox(){
       this.lightBoxClosed = !this.lightBoxClosed
+      let bodyOverflow = document.body.style;
+      if(!this.lightBoxClosed) {
+        console.log("this.lightboxClosed", !this.lightBoxClosed, bodyOverflow.overflow)
+        bodyOverflow.overflow = "hidden"
+      } else {
+        console.log("this.lightboxClosed", !this.lightBoxClosed, bodyOverflow.overflow)
+        bodyOverflow.overflow = "auto"
+      }
+
     }
   }
 }

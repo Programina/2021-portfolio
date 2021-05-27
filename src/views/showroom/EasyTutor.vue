@@ -70,6 +70,7 @@
         <LightBox
           image="mooddesignsystemeasytutor.png"
           :isXL="true" 
+          width="450"
           imgClass="my-12 rounded-lg elevation-2"
           alt="easy tutor moodboard"
           :order="7"

@@ -365,9 +365,11 @@ body {
     a:active {
       padding: 10px;
       color: #959595;
+    }
 
-      &a:hover {
-        color: #3bcea0;
+    a:hover {
+      i {
+        color: #3bcea0 !important;
       }
     }
 
