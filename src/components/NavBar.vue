@@ -41,6 +41,13 @@
         @click="openPdf"
         >German CV</a
       >
+      <a
+        :style="{'color': fontColor + ' !important'}"
+        href="http://blog.ux-developer.com/"
+        >Blog</a
+      >
+
+      
       <router-link :style="{'color': '#3bcea0' + ' !important', 'font-weight': 'bolder'}" to="contact"
         >Contact
       </router-link>

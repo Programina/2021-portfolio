@@ -11,8 +11,6 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
          <NavBarSecondLevel/>
       </v-row>
       <router-view />
-
-      
   
     </v-main>
 
@@ -38,6 +36,18 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
           </v-list-item-content>
         </v-list-item >
 
+        <v-list-item link>
+          <a
+        :style="{'color': fontColor + ' !important'}"
+        href="http://blog.ux-developer.com/"
+        >
+         <v-list-item-content>
+              <v-list-item-title v-html="'Blog'"></v-list-item-title>
+            </v-list-item-content>
+            
+        </a>
+        </v-list-item>
+
           <v-list-item 
             link
           >
@@ -50,8 +60,9 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
               <v-list-item-title v-html="'CV (German PDF)'"></v-list-item-title>
             </v-list-item-content>
           
-        </a
-        > </v-list-item>
+        </a >
+        
+         </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -350,11 +361,14 @@ body {
   .footer-icons {
     margin: 10px;
     a,
-    a:hover,
     a:visited,
     a:active {
       padding: 10px;
       color: #959595;
+
+      &a:hover {
+        color: #3bcea0;
+      }
     }
 
     i{
