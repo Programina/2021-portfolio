@@ -38,7 +38,6 @@ TODO: add currentRoute in store to make header only displays when in HOME, chang
 
         <v-list-item link>
           <a
-        :style="{'color': fontColor + ' !important'}"
         href="http://blog.ux-developer.com/"
         >
          <v-list-item-content>
@@ -233,7 +232,7 @@ export default {
       } else {
         colr = {
           color: '#fff', 
-          fontColor: "black",
+          fontColor: 'black',
           path: '/'
         }
       }
