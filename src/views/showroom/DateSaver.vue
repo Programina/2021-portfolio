@@ -38,7 +38,7 @@
         <v-row >
           <v-col class="d-flex flex-column justify-center text-center centered-image-group">
               <LightBox  class="py-1"  imgClass="rounded-lg" :image="'datesaverold.jpg'" :order="3"/>
-              <a href="http://love.frontendpoint.com/"> Click here for the current Website</a>
+              <a href="http://www.programina.de/"> Click here for the current Website</a>
           </v-col>
         </v-row>
      
@@ -139,7 +139,7 @@ export default {
           {
             tag: "DateSaver Website",
             tagIcon: "web",
-            tagHref: "http://love.frontendpoint.com/",
+            tagHref: "http://www.programina.de/",
           },
           {
             tag: "Adobe Mockup",
